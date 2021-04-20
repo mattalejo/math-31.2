@@ -151,4 +151,4 @@ $$ dy = f'(x)dx $$
 
 ## Arc length
 
-## Variable-separable differential equations and models for population growthe editor.
+## Variable-separable differential equations and models for population growth
