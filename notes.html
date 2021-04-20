@@ -1666,9 +1666,10 @@ summary {
 <ul>
 <li><a href="#differentiability">Differentiability</a></li>
 <li><a href="#differentiation-rules">Differentiation rules</a></li>
-<li><a href="#differentiation-formulas">Differentiation formulas</a></li>
+<li><a href="#differentiation-formulas-i">Differentiation formulas I</a></li>
+<li><a href="#differentiation-formulas-ii">Differentiation formulas II</a></li>
 <li><a href="#mean-value-theorem">Mean value theorem</a></li>
-<li><a href="#corollaries-of-mvt">Corollaries of MVT</a>
+<li><a href="#consequences-of-mvt">Consequences of MVT</a>
 <ul>
 <li><a href="#zero-derivative">Zero Derivative</a></li>
 <li><a href="#equal-derivatives">Equal derivatives</a></li>
@@ -1710,7 +1711,7 @@ summary {
 <div id="differentiability" class="section level2">
 <h2>Differentiability</h2>
 <p>Let <span class="math inline">\(f\)</span> be a function on some open interval <span class="math inline">\(I\)</span> containing <span class="math inline">\(x\)</span>. The derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span>, denoted by <span class="math inline">\(f&#39;(x)\)</span>, is</p>
-<p><span class="math display">\[ f&#39;(x) = \lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h} \]</span></p>
+<p><span class="math display">\[ f&#39;(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} \]</span></p>
 </div>
 <div id="differentiation-rules" class="section level2">
 <h2>Differentiation rules</h2>
@@ -1722,8 +1723,21 @@ summary {
 <li><p><span class="math inline">\(\frac{d}{dx}(f(g(x))) = f&#39;(g(x))g&#39;(x)\)</span></p></li>
 </ol>
 </div>
-<div id="differentiation-formulas" class="section level2">
-<h2>Differentiation formulas</h2>
+<div id="differentiation-formulas-i" class="section level2">
+<h2>Differentiation formulas I</h2>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\frac{d}{dx}(c)=0, c \in \mathbb{R}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{d}{dx}(x^r)=rx^{r-1}, r \in \mathbb{R}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{d}{dx}(sinx)=cos x\)</span></p></li>
+<li><p><span class="math inline">\(\frac{d}{dx}(cosx)=-sin x\)</span></p></li>
+<li><p><span class="math inline">\(\frac{d}{dx}(tanx)=sec^2x\)</span></p></li>
+<li><p><span class="math inline">\(\frac{d}{dx}(cotx)=-csc^x\)</span></p></li>
+<li><p><span class="math inline">\(\frac{d}{dx}(secx) = secxtanx\)</span></p></li>
+<li><p><span class="math inline">\(\frac{d}{dx}(cscx)=-cscxcotx\)</span></p></li>
+</ol>
+</div>
+<div id="differentiation-formulas-ii" class="section level2">
+<h2>Differentiation formulas II</h2>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(\frac{d}{dx}(e^x) = e^x\)</span></p></li>
 <li><p><span class="math inline">\(\frac{d}{dx}(ln|x|) = \frac{1}{x}\)</span></p></li>
@@ -1737,15 +1751,15 @@ summary {
 <p>Let <span class="math inline">\(f\)</span> be a function that is continuous on <span class="math inline">\([a,b]\)</span> and is differentiable on <span class="math inline">\((a,b)\)</span>. Then there is a number <span class="math inline">\(c\in(a,b)\)</span> such that</p>
 <p><span class="math display">\[ f&#39;(c)=\frac{f(b)-f(a)}{b-a} \]</span></p>
 </div>
-<div id="corollaries-of-mvt" class="section level2">
-<h2>Corollaries of MVT</h2>
+<div id="consequences-of-mvt" class="section level2">
+<h2>Consequences of MVT</h2>
 <div id="zero-derivative" class="section level3">
 <h3>Zero Derivative</h3>
 <p>If <span class="math inline">\(f&#39;(x)=0 \;\forall x\)</span> in interval <span class="math inline">\(I\)</span>, then <span class="math inline">\(f(x)=c \;\forall x\in I\)</span> for some constant <span class="math inline">\(C\)</span>.</p>
 </div>
 <div id="equal-derivatives" class="section level3">
 <h3>Equal derivatives</h3>
-<p>If <span class="math inline">\(f&#39;(x)-g&#39;(x) \;\forall x\)</span> in an interval <span class="math inline">\(I\)</span>, then <span class="math inline">\(f(x)=g(x)+C\)</span> for some constant <span class="math inline">\(C\)</span>.</p>
+<p>If <span class="math inline">\(f&#39;(x)-g&#39;(x)=0 \;\forall x\)</span> in an interval <span class="math inline">\(I\)</span>, then <span class="math inline">\(f(x)=g(x)+C\)</span> for some constant <span class="math inline">\(C\)</span>.</p>
 </div>
 </div>
 <div id="differentials" class="section level2">
