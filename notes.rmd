@@ -79,6 +79,27 @@ If $f'(x)=0 \;\forall x$ in interval $I$, then $f(x)=c \;\forall x\in I$ for som
 
 If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some constant $C$.
 
+#### Example
+
+Let $f(x)=cos^{-1}x$ and $g(x)=-sin^{-1}x$
+
+This implies that $x \in [-1,1]$ and $f(x),g(x) \in [-\frac{\pi}{2},\frac{\pi}{2}]$
+
+$$ f'(x)=-\frac{1}{\sqrt{x^2+1}}$$
+
+$$ g'(x)=-\frac{1}{\sqrt{x^2+1}} $$
+Since $f'(x)-g'(x)=0$, then $f(x)-g(x)=C$ for some constant $C$ by a corollary.
+
+$$ cos^{-1}x - (-sin^{-1}x)=C $$
+$$ cos^{-1}x +sin^{-1}x=C $$
+Substituting $x \in [-1,1]$, in this case, let's use $x=0$,
+
+$$ cos^{-1}(0) +sin^{-1}(0)=C $$
+$$ 0 + \frac{\pi}{2} = C $$
+
+$$ C = \frac{\pi}{2} $$ 
+
+$$ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}$$
 ## Differentials
 
 $$ f'(x)=\frac{dy}{dx} $$

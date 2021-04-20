@@ -1674,7 +1674,6 @@ summary {
 <li><a href="#zero-derivative">Zero Derivative</a></li>
 <li><a href="#equal-derivatives">Equal derivatives</a></li>
 </ul></li>
-<li><a href="#differentials">Differentials</a></li>
 </ul></li>
 <li><a href="#module-1-indefinite-and-definite-integrals">Module 1: Indefinite and definite integrals</a>
 <ul>
@@ -1760,11 +1759,19 @@ summary {
 <div id="equal-derivatives" class="section level3">
 <h3>Equal derivatives</h3>
 <p>If <span class="math inline">\(f&#39;(x)-g&#39;(x)=0 \;\forall x\)</span> in an interval <span class="math inline">\(I\)</span>, then <span class="math inline">\(f(x)=g(x)+C\)</span> for some constant <span class="math inline">\(C\)</span>.</p>
-</div>
-</div>
-<div id="differentials" class="section level2">
-<h2>Differentials</h2>
+<div id="example" class="section level4">
+<h4>Example</h4>
+<p>Let <span class="math inline">\(f(x)=cos^{-1}x\)</span> and <span class="math inline">\(g(x)=-sin^{-1}x\)</span></p>
+<p>This implies that <span class="math inline">\(x \in [-1,1]\)</span> and <span class="math inline">\(f(x),g(x) \in [-\frac{\pi}{2},\frac{\pi}{2}]\)</span></p>
+<p><span class="math display">\[ f&#39;(x)=-\frac{1}{\sqrt{x^2+1}}\]</span></p>
+<p><span class="math display">\[ g&#39;(x)=-\frac{1}{\sqrt{x^2+1}} \]</span> Since <span class="math inline">\(f&#39;(x)-g&#39;(x)=0\)</span>, then <span class="math inline">\(f(x)-g(x)=C\)</span> for some constant <span class="math inline">\(C\)</span> by a corollary.</p>
+<p><span class="math display">\[ cos^{-1}x - (-sin^{-1}x)=C \]</span> <span class="math display">\[ cos^{-1}x +sin^{-1}x=C \]</span> Substituting <span class="math inline">\(x \in [-1,1]\)</span>, in this case, let’s use <span class="math inline">\(x=0\)</span>,</p>
+<p><span class="math display">\[ cos^{-1}(0) +sin^{-1}(0)=C \]</span> <span class="math display">\[ 0 + \frac{\pi}{2} = C \]</span></p>
+<p><span class="math display">\[ C = \frac{\pi}{2} \]</span></p>
+<p><span class="math display">\[ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}\]</span> ## Differentials</p>
 <p><span class="math display">\[ f&#39;(x)=\frac{dy}{dx} \]</span> <span class="math display">\[ dy = f&#39;(x)dx \]</span></p>
+</div>
+</div>
 </div>
 </div>
 <div id="module-1-indefinite-and-definite-integrals" class="section level1">
