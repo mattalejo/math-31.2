@@ -1,0 +1,105 @@
+---
+title: "Mathematical Analysis IB"
+author: "Matt Alejo"
+geometry: margin=1in
+---
+
+# Review on differentiation
+
+## Differentiability
+
+Let $f$ be a function on some open interval $I$ containing $x$. The derivative of $f$ at $x$, denoted by $f'(x)$, is
+
+$$ f'(x) = \lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h} $$
+
+## Differentiation rules
+
+1. $$ \frac{d}{dx}(cf(x))= cf'(x) $$
+
+2. $$ \frac{d}{dx}(f(x) \pm g(x)) = f'(x) \pm g'(x) $$
+
+3. $$ \frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + g(x)f'(x) $$
+
+4. $$ \frac{d}{dx}\frac{f(x)}{g(x)} = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2} $$
+
+5. $$ \frac{d}{dx}(f(g(x))) = f'(g(x))g'(x) $$
+
+## Differentiation formulas
+
+1. $$ \frac{d}{dx}(e^x) = e^x $$
+
+2. $$ \frac{d}{dx}(ln|x|) = \frac{1}{x} $$
+
+3. $$ \frac{d}{dx}(sin^{-1}x) = \frac{1}{\sqrt{1-x^2}} $$
+
+4. $$ \frac{d}{dx}(tan^{-1}x) = \frac{1}{1+x^2} $$
+
+5. $$ \frac{d}{dx}(sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}} $$
+
+## Mean value theorem
+
+Let $f$ be a function that is continuous on $[a,b]$ and is differentiable on $(a,b)$. Then there is a number $c\in(a,b)$ such that
+
+$$ f'(c)=\frac{f(b)-f(a)}{b-a} $$
+
+## Coroalrries of MVT
+
+### Zero Derivative
+
+If $f'(x)=0 \;\forall x$ in interval $I$, then $f(x)=c \;\forall x\in I$ for some constant $C$.
+
+### Equal derivatives
+
+If $f'(x)-g'(x) \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some constant $C$.
+
+## Differentials
+
+$$ f'(x)=\frac{dy}{dx} $$
+$$ dy = f'(x)dx $$
+
+
+# Module 1: Indefinite and definite integrals
+
+## Antiderivatives
+
+
+
+## Substitution rule
+
+## The area problem
+
+## The definite Integrals
+
+## The Fundamental Theorem of Calculus
+
+## Proof of Fundamental Theorem of Calculus
+
+
+
+
+# Module 2: Application I
+
+## Areas between curves
+
+## Volumes and volumes of revolution using disks and washers
+
+## Volumes of solids of revolution using cylindrical shells
+
+# Module 3: Techniques of integration
+
+## Integration by parts
+
+## Trigonometric integrals
+
+## Trigonometric Substitution
+
+## Partial fractions
+
+
+
+
+# Applications II
+
+## Arc length
+
+## Variable-separable differential equations and models for population growth
