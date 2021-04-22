@@ -1,7 +1,13 @@
 ---
-title: "Mathematical Analysis IB"
+output:
+  html_document:
+    toc: yes
+    toc_depth: '3'
+    df_print: paged
+  pdf_document: 
+  output: default
 author: "Matt Alejo"
-geometry: margin=1in
+title: "Mathematical Analysis IB"
 ---
 
 # Review on differentiation
@@ -10,31 +16,50 @@ geometry: margin=1in
 
 Let $f$ be a function on some open interval $I$ containing $x$. The derivative of $f$ at $x$, denoted by $f'(x)$, is
 
-$$ f'(x) = \lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h} $$
+$$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 
 ## Differentiation rules
 
-1. $$ \frac{d}{dx}(cf(x))= cf'(x) $$
+1. $\frac{d}{dx}(cf(x))= cf'(x)$
 
-2. $$ \frac{d}{dx}(f(x) \pm g(x)) = f'(x) \pm g'(x) $$
+2. $\frac{d}{dx}(f(x) \pm g(x)) = f'(x) \pm g'(x)$
 
-3. $$ \frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + g(x)f'(x) $$
+3. $\frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + g(x)f'(x)$
 
-4. $$ \frac{d}{dx}\frac{f(x)}{g(x)} = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2} $$
+4. $\frac{d}{dx}\frac{f(x)}{g(x)} = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$
 
-5. $$ \frac{d}{dx}(f(g(x))) = f'(g(x))g'(x) $$
+5. $\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)$
 
-## Differentiation formulas
 
-1. $$ \frac{d}{dx}(e^x) = e^x $$
+## Differentiation formulas I
 
-2. $$ \frac{d}{dx}(ln|x|) = \frac{1}{x} $$
+1. $\frac{d}{dx}(c)=0, c \in \mathbb{R}$
 
-3. $$ \frac{d}{dx}(sin^{-1}x) = \frac{1}{\sqrt{1-x^2}} $$
+2. $\frac{d}{dx}(x^r)=rx^{r-1}, r \in \mathbb{R}$
 
-4. $$ \frac{d}{dx}(tan^{-1}x) = \frac{1}{1+x^2} $$
+3. $\frac{d}{dx}(sinx)=cos x$ 
 
-5. $$ \frac{d}{dx}(sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}} $$
+4. $\frac{d}{dx}(cosx)=-sin x$
+
+5. $\frac{d}{dx}(tanx)=sec^2x$
+
+6. $\frac{d}{dx}(cotx)=-csc^x$
+
+7. $\frac{d}{dx}(secx) = secxtanx$
+
+8. $\frac{d}{dx}(cscx)=-cscxcotx$
+
+## Differentiation formulas II
+
+1. $\frac{d}{dx}(e^x) = e^x$
+
+2. $\frac{d}{dx}(ln|x|) = \frac{1}{x}$
+
+3. $\frac{d}{dx}(sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}$
+
+4. $\frac{d}{dx}(tan^{-1}x) = \frac{1}{1+x^2}$
+
+5. $\frac{d}{dx}(sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}$
 
 ## Mean value theorem
 
@@ -42,7 +67,7 @@ Let $f$ be a function that is continuous on $[a,b]$ and is differentiable on $(a
 
 $$ f'(c)=\frac{f(b)-f(a)}{b-a} $$
 
-## Coroalrries of MVT
+## Consequences of MVT
 
 ### Zero Derivative
 
@@ -50,7 +75,29 @@ If $f'(x)=0 \;\forall x$ in interval $I$, then $f(x)=c \;\forall x\in I$ for som
 
 ### Equal derivatives
 
-If $f'(x)-g'(x) \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some constant $C$.
+If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some constant $C$.
+
+#### Example
+
+Let $f(x)=cos^{-1}x$ and $g(x)=-sin^{-1}x$
+
+This implies that $x \in [-1,1]$ and $f(x),g(x) \in [-\frac{\pi}{2},\frac{\pi}{2}]$
+
+$$ f'(x)=-\frac{1}{\sqrt{x^2+1}}$$
+
+$$ g'(x)=-\frac{1}{\sqrt{x^2+1}} $$
+Since $f'(x)-g'(x)=0$ for $x \in [-1,1]$, then $f(x)-g(x)=C$ for some constant $C$ by a corollary.
+
+$$ cos^{-1}x - (-sin^{-1}x)=C $$
+$$ cos^{-1}x +sin^{-1}x=C $$
+Substituting $x \in [-1,1]$, in this case, let's use $x=0$,
+
+$$ cos^{-1}(0) +sin^{-1}(0)=C $$
+$$ 0 + \frac{\pi}{2} = C $$
+
+$$ C = \frac{\pi}{2} $$ 
+
+$$ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}$$
 
 ## Differentials
 
@@ -98,7 +145,7 @@ $$ dy = f'(x)dx $$
 
 
 
-# Applications II
+# Module 4: Applications II
 
 ## Arc length
 

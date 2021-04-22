@@ -1678,8 +1678,21 @@ summary {
 </ul></li>
 <li><a href="#module-1-indefinite-and-definite-integrals">Module 1: Indefinite and definite integrals</a>
 <ul>
-<li><a href="#antiderivatives">Antiderivatives</a></li>
-<li><a href="#substitution-rule">Substitution rule</a></li>
+<li><a href="#indefinite-integral">Indefinite integral</a>
+<ul>
+<li><a href="#definition-of-an-antiderivative">Definition of an antiderivative</a></li>
+</ul></li>
+<li><a href="#equal-derivatives-1">Equal derivatives</a>
+<ul>
+<li><a href="#integration-rules">Integration Rules</a></li>
+<li><a href="#integration-formulas-i">Integration formulas I</a></li>
+<li><a href="#integration-formulas-ii">Integration formulas II</a></li>
+<li><a href="#integration-formulas-iii">Integration formulas III</a></li>
+</ul></li>
+<li><a href="#substitution-rule">Substitution rule</a>
+<ul>
+<li><a href="#chain-rule-for-derivatives">Chain rule for derivatives</a></li>
+</ul></li>
 <li><a href="#the-area-problem">The area problem</a></li>
 <li><a href="#the-definite-integrals">The definite Integrals</a></li>
 <li><a href="#the-fundamental-theorem-of-calculus">The Fundamental Theorem of Calculus</a></li>
@@ -1762,6 +1775,9 @@ summary {
 <p>If <span class="math inline">\(f&#39;(x)-g&#39;(x)=0 \;\forall x\)</span> in an interval <span class="math inline">\(I\)</span>, then <span class="math inline">\(f(x)=g(x)+C\)</span> for some constant <span class="math inline">\(C\)</span>.</p>
 <div id="example" class="section level4">
 <h4>Example</h4>
+<summary>
+</summary>
+<details>
 <p>Let <span class="math inline">\(f(x)=cos^{-1}x\)</span> and <span class="math inline">\(g(x)=-sin^{-1}x\)</span></p>
 <p>This implies that <span class="math inline">\(x \in [-1,1]\)</span> and <span class="math inline">\(f(x),g(x) \in [-\frac{\pi}{2},\frac{\pi}{2}]\)</span></p>
 <p><span class="math display">\[ f&#39;(x)=-\frac{1}{\sqrt{x^2+1}}\]</span></p>
@@ -1769,7 +1785,8 @@ summary {
 <p><span class="math display">\[ cos^{-1}x - (-sin^{-1}x)=C \]</span> <span class="math display">\[ cos^{-1}x +sin^{-1}x=C \]</span> Substituting <span class="math inline">\(x \in [-1,1]\)</span>, in this case, let’s use <span class="math inline">\(x=0\)</span>,</p>
 <p><span class="math display">\[ cos^{-1}(0) +sin^{-1}(0)=C \]</span> <span class="math display">\[ 0 + \frac{\pi}{2} = C \]</span></p>
 <p><span class="math display">\[ C = \frac{\pi}{2} \]</span></p>
-<p><span class="math display">\[ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}\]</span></p>
+<span class="math display">\[ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}\]</span>
+</details>
 </div>
 </div>
 </div>
@@ -1780,11 +1797,105 @@ summary {
 </div>
 <div id="module-1-indefinite-and-definite-integrals" class="section level1">
 <h1>Module 1: Indefinite and definite integrals</h1>
-<div id="antiderivatives" class="section level2">
-<h2>Antiderivatives</h2>
+<div id="indefinite-integral" class="section level2">
+<h2>Indefinite integral</h2>
+<p>The main interpretation of derivative is the slope of a tangent line of a curve.</p>
+<div id="example-1" class="section level4">
+<h4>Example</h4>
+<summary>
+</summary>
+<details>
+<p>At any point <span class="math inline">\((x,y)\)</span> on a particular curve <span class="math inline">\(y=F(x)\)</span>, the tangent line has a slope equal to <span class="math inline">\(4x-5\)</span>. If the curve contains the point <span class="math inline">\((3,7)\)</span>, find <span class="math inline">\(F(x)\)</span>.</p>
+<p><strong>Solution:</strong> Since the slope is equal to <span class="math inline">\(4x-5\)</span> for any point <span class="math inline">\((x,y)\)</span>, then the slope at <span class="math inline">\((3,7)\)</span> is <span class="math inline">\(4(3)-5=7\)</span>.</p>
+<p><span class="math inline">\(4x-5\)</span> therefore represents the tangent slope for all values of <span class="math inline">\(x\)</span>. So</p>
+<p><span class="math display">\[ F&#39;(x)=4x-5 \]</span></p>
+<p>By intuition, we can conclude that <span class="math inline">\(F(x)=2x^2-5x\)</span>.</p>
+<p>However given <span class="math inline">\(F(x)=2x^2-5x+1\)</span>, <span class="math inline">\(F&#39;(x)\)</span> remains the same. And so is <span class="math inline">\(F(x)=2x^2-5x-3\)</span>, <span class="math inline">\(F(x)=2x^2-5x+\pi\)</span>, and infinitely more functions. We can arbitrarily assign a constant <span class="math inline">\(k\)</span>, so that <span class="math inline">\(F(x)=2x^2-5x+k\)</span>.</p>
+<p>Substituting <span class="math inline">\((x,y)=(3,7),\)</span></p>
+<p><span class="math display">\[ 7 = 2(3)^2 - 5(3) +k \]</span></p>
+<p><span class="math display">\[ 7 = 18 - 15 + k \]</span></p>
+<p><span class="math display">\[ k = 4 \]</span></p>
+<p>So <span class="math inline">\(F(x)=2x^2-5x+4\)</span>.</p>
+</details>
+</div>
+<div id="definition-of-an-antiderivative" class="section level3">
+<h3>Definition of an antiderivative</h3>
+<p>A function <span class="math inline">\(F\)</span> is called an antiderivative of the function <span class="math inline">\(f\)</span> on an interval <span class="math inline">\(I\)</span> if <span class="math inline">\(F&#39;(x) = f(x) \;\forall x \in I\)</span>.</p>
+<p><span class="math inline">\(F(x)=2x^2-5x\)</span> is a <em>possible</em> antiderivative of <span class="math inline">\(f(x)=4x-5\)</span>. <span class="math inline">\(F(x)=2x^2-5x+4\)</span> is also a <em>possible</em> antiderivative of <span class="math inline">\(f(x)=4x-5\)</span>.</p>
+</div>
+</div>
+<div id="equal-derivatives-1" class="section level2">
+<h2>Equal derivatives</h2>
+<p>If <span class="math inline">\(F&#39;(x)=G&#39;(x) \;\forall x\)</span> in an interval <span class="math inline">\(I\)</span>, then <span class="math inline">\(F(x) = G(x) + C \;\forall x \in I\)</span> for some constant <span class="math inline">\(C\)</span>.</p>
+<p>The collection of all antiderivatives of <span class="math inline">\(f\)</span> is denoted by</p>
+<p><span class="math display">\[ \int f(x)dx \]</span></p>
+<p>which is read as “the integral of <span class="math inline">\(f(x)dx\)</span>.”</p>
+<p>This collection is also called the <em>indefinite integral</em> of <span class="math inline">\(f\)</span>.</p>
+<p>The reverse process if differentiation is called **antidifferentiation* or <em>integration</em>.</p>
+<p><span class="math inline">\(\int (4x-5)dx = 2x^2-5x+C\)</span> for some constant <span class="math inline">\(C\)</span>.</p>
+<p><span class="math inline">\(C\)</span> is the constant of integration.</p>
+<p><span class="math inline">\(\int sinxdx = -cosx+C\)</span></p>
+<div id="integration-rules" class="section level3">
+<h3>Integration Rules</h3>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\int kf(x)dx = k \int f(x)dx\)</span>, <span class="math inline">\(k\)</span> constant</p></li>
+<li><p><span class="math inline">\(\int f(x) \pm g(x) dx = \int f(x)dx \pm \int g(x)dx\)</span></p></li>
+</ol>
+</div>
+<div id="integration-formulas-i" class="section level3">
+<h3>Integration formulas I</h3>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\int kdx = kx + C, k \in \mathbb{R}\)</span></p></li>
+<li><p><span class="math inline">\(\int x^n dx = \frac{x^{n+1}}{n+1}+C, n \in \mathbb{R}, n \neq -1\)</span></p></li>
+</ol>
+</div>
+<div id="integration-formulas-ii" class="section level3">
+<h3>Integration formulas II</h3>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\int sinxdx = -cosx + C\)</span></p></li>
+<li><p><span class="math inline">\(\int cosxdx = sinx + C\)</span></p></li>
+<li><p><span class="math inline">\(\int sec^2xdx = tanx + C\)</span></p></li>
+<li><p><span class="math inline">\(\int csc^2xdx = -cotx + C\)</span></p></li>
+<li><p><span class="math inline">\(\int secxtanxdx = secx + C\)</span></p></li>
+<li><p><span class="math inline">\(\int cscxcotx = -cscx +C\)</span></p></li>
+</ol>
+</div>
+<div id="integration-formulas-iii" class="section level3">
+<h3>Integration formulas III</h3>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\int e^xdx =e^x +C\)</span></p></li>
+<li><p><span class="math inline">\(\int \frac{1}{x}dx=ln|x|+C\)</span></p></li>
+<li><p><span class="math inline">\(\int \frac{1}{\sqrt{1-x^2}} = sin^{-1}x +C\)</span></p></li>
+<li><p><span class="math inline">\(\int \frac{1}{1+x^2} = tan^{-1}x +C\)</span></p></li>
+<li><p><span class="math inline">\(\int \frac{1}{x\sqrt{x^2-1}}= sec^{-1}+C\)</span></p></li>
+</ol>
+</div>
 </div>
 <div id="substitution-rule" class="section level2">
 <h2>Substitution rule</h2>
+<div id="chain-rule-for-derivatives" class="section level3">
+<h3>Chain rule for derivatives</h3>
+<p><span class="math display">\[ \frac{d}{dx}(f(g(x)))=f&#39;(g(x))g&#39;(x) \]</span></p>
+<p>If follows that</p>
+<p><span class="math display">\[ \int f&#39;(g(x))g&#39;(x)dx = f(g(x))+C \]</span></p>
+<div id="example-2" class="section level4">
+<h4>Example</h4>
+<summary>
+</summary>
+<details>
+<p>Evaluate <span class="math inline">\(\int 2xcosx^2dx\)</span>.</p>
+<p><strong>Preliminary work.</strong> By intuition, we can get <span class="math inline">\(f(x)=sinx\)</span> and <span class="math inline">\(g(x)=x^2\)</span></p>
+<p><span class="math display">\[ \int 2xcosx^2dx = f(g(x)) = sinx^2 \]</span></p>
+<p><strong>Solution.</strong> Suppose that <span class="math inline">\(f&#39;(x)=\frac{dy}{dx}\)</span></p>
+<p><span class="math display">\[ dy = f&#39;(x)dx \]</span></p>
+<p>Let <span class="math inline">\(u=g(x)\)</span>, then <span class="math inline">\(g&#39;(x)=\frac{du}{dx}\)</span></p>
+<p><span class="math display">\[ du = g&#39;(x)dx \]</span></p>
+<p>Let <span class="math inline">\(u=x^2\)</span></p>
+<p><span class="math display">\[ du=2xdx \]</span></p>
+<span class="math display">\[ \int 2xcosx^2dx = \int cosudu\]</span> <span class="math display">\[ =sinu+C \]</span> <span class="math display">\[ =sinx^2+C \]</span>
+</details>
+</div>
+</div>
 </div>
 <div id="the-area-problem" class="section level2">
 <h2>The area problem</h2>
