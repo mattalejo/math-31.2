@@ -149,7 +149,7 @@ A function $F$ is called an antiderivative of the function $f$ on an interval $I
 
 $F(x)=2x^2-5x$ is a *possible* antiderivative of $f(x)=4x-5$. $F(x)=2x^2-5x+4$ is also a *possible* antiderivative of $f(x)=4x-5$.
 
-## Equal derivatives
+### Equal derivatives
 
 If $F'(x)=G'(x) \;\forall x$ in an interval $I$, then $F(x) = G(x) + C \;\forall x \in I$ for some constant $C$.
 
