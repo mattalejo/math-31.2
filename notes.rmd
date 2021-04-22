@@ -1,10 +1,10 @@
 ---
 output:
+  pdf_document: 
   html_document:
     toc: yes
     toc_depth: '3'
     df_print: paged
-  pdf_document: 
   output: default
 author: "Matt Alejo"
 title: "Mathematical Analysis IB"
@@ -71,7 +71,7 @@ $$ f'(c)=\frac{f(b)-f(a)}{b-a} $$
 
 ## Consequences of MVT
 
-### Zero Derivative
+### Zero derivative
 
 If $f'(x)=0 \;\forall x$ in interval $I$, then $f(x)=c \;\forall x\in I$ for some constant $C$.
 
@@ -152,6 +152,8 @@ $F(x)=2x^2-5x$ is a *possible* antiderivative of $f(x)=4x-5$. $F(x)=2x^2-5x+4$ i
 ### Equal derivatives
 
 If $F'(x)=G'(x) \;\forall x$ in an interval $I$, then $F(x) = G(x) + C \;\forall x \in I$ for some constant $C$.
+
+### Integration notation
 
 The collection of all antiderivatives of $f$ is denoted by
 
