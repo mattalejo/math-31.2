@@ -171,7 +171,7 @@ $C$ is the constant of integration.
 
 $\int sinxdx = -cosx+C$
 
-### Integration Rules
+### Integration rules
 
 1. $\int kf(x)dx = k \int f(x)dx$, $k$ constant
 
