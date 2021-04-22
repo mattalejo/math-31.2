@@ -10,6 +10,8 @@ author: "Matt Alejo"
 title: "Mathematical Analysis IB"
 ---
 
+[Download the PDF copy of the notes here](../notes.pdf)
+
 # Review on differentiation
 
 ## Differentiability
