@@ -9,7 +9,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Matt Alejo" />
 
 
 <title>Mathematical Analysis IB</title>
@@ -1656,7 +1655,6 @@ summary {
 
 
 <h1 class="title toc-ignore">Mathematical Analysis IB</h1>
-<h4 class="author">Matt Alejo</h4>
 
 </div>
 
@@ -1691,6 +1689,7 @@ summary {
 <li><a href="#substitution-rule">Substitution rule</a>
 <ul>
 <li><a href="#chain-rule-for-derivatives">Chain rule for derivatives</a></li>
+<li><a href="#definition-of-the-substitution-rule">Definition of the substitution rule</a></li>
 </ul></li>
 <li><a href="#the-area-problem">The area problem</a></li>
 <li><a href="#the-definite-integrals">The definite Integrals</a></li>
@@ -1718,7 +1717,9 @@ summary {
 </ul>
 </div>
 
+<blockquote>
 <p><a href="../math-31.2/notes.pdf">Download the PDF copy of the notes here</a></p>
+</blockquote>
 <div id="review-on-differentiation" class="section level1">
 <h1>Review on differentiation</h1>
 <div id="differentiability" class="section level2">
@@ -1806,7 +1807,7 @@ summary {
 </summary>
 <details>
 <p>At any point <span class="math inline">\((x,y)\)</span> on a particular curve <span class="math inline">\(y=F(x)\)</span>, the tangent line has a slope equal to <span class="math inline">\(4x-5\)</span>. If the curve contains the point <span class="math inline">\((3,7)\)</span>, find <span class="math inline">\(F(x)\)</span>.</p>
-<p><strong>Solution:</strong> Since the slope is equal to <span class="math inline">\(4x-5\)</span> for any point <span class="math inline">\((x,y)\)</span>, then the slope at <span class="math inline">\((3,7)\)</span> is <span class="math inline">\(4(3)-5=7\)</span>.</p>
+<p><strong>Solution.</strong> Since the slope is equal to <span class="math inline">\(4x-5\)</span> for any point <span class="math inline">\((x,y)\)</span>, then the slope at <span class="math inline">\((3,7)\)</span> is <span class="math inline">\(4(3)-5=7\)</span>.</p>
 <p><span class="math inline">\(4x-5\)</span> therefore represents the tangent slope for all values of <span class="math inline">\(x\)</span>. So</p>
 <p><span class="math display">\[ F&#39;(x)=4x-5 \]</span></p>
 <p>By intuition, we can conclude that <span class="math inline">\(F(x)=2x^2-5x\)</span>.</p>
@@ -1898,6 +1899,11 @@ summary {
 <span class="math display">\[ \int 2xcosx^2dx = \int cosudu\]</span> <span class="math display">\[ =sinu+C \]</span> <span class="math display">\[ =sinx^2+C \]</span>
 </details>
 </div>
+</div>
+<div id="definition-of-the-substitution-rule" class="section level3">
+<h3>Definition of the substitution rule</h3>
+<p>If <span class="math inline">\(u=g(x)\)</span> is a differentiable function whose range is interval <span class="math inline">\(I\)</span> and <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\(I\)</span>, then</p>
+<p><span class="math display">\[ \int f&#39;(g(x))g&#39;(x) = \int f(u)du \]</span></p>
 </div>
 </div>
 <div id="the-area-problem" class="section level2">

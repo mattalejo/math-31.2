@@ -6,11 +6,10 @@ output:
     toc_depth: '3'
     df_print: paged
   output: default
-author: "Matt Alejo"
 title: "Mathematical Analysis IB"
 ---
 
-[Download the PDF copy of the notes here](../math-31.2/notes.pdf)
+>[Download the PDF copy of the notes here](../math-31.2/notes.pdf)
 
 # Review on differentiation
 
@@ -121,7 +120,7 @@ The main interpretation of derivative is the slope of a tangent line of a curve.
 <details>
 At any point $(x,y)$ on a particular curve $y=F(x)$, the tangent line has a slope equal to $4x-5$. If the curve contains the point $(3,7)$, find $F(x)$.
 
-**Solution:** Since the slope is equal to $4x-5$ for any point $(x,y)$, then the slope at $(3,7)$ is $4(3)-5=7$.
+**Solution.** Since the slope is equal to $4x-5$ for any point $(x,y)$, then the slope at $(3,7)$ is $4(3)-5=7$.
 
 $4x-5$ therefore represents the tangent slope for all values of $x$. So
 
@@ -244,6 +243,12 @@ $$ \int 2xcosx^2dx = \int cosudu$$
 $$ =sinu+C $$
 $$ =sinx^2+C $$
 </details>
+
+### Definition of the substitution rule
+
+If $u=g(x)$ is a differentiable function whose range is interval $I$ and $f$ is continuous on $I$, then
+
+$$ \int f'(g(x))g'(x) = \int f(u)du $$
 
 ## The area problem
 
