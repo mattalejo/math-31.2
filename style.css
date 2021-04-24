@@ -6,7 +6,6 @@ src: url("../math-31.2/fonts/Lexend[LXND,wght].ttf");
 body{
   background: #191919;
   font-family: Lexend Deca;
-  font-size: 14pt;
   color: #cccccc;
 }
 /* Headers */
