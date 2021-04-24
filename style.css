@@ -1,12 +1,12 @@
 @font-face {
 font-family: "Lexend Deca";
-src: url("../math-31.2/Lexend[LXND,wght].ttf");
+src: url("../math-31.2/fonts/Lexend[LXND,wght].ttf");
 }
 
 body{
   background: #191919;
   font-family: Lexend Deca;
-  font-size: 12pt;
+  font-size: 14pt;
   color: #cccccc;
 }
 /* Headers */

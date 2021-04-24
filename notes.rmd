@@ -92,31 +92,29 @@ $$ f'(x)=-\frac{1}{\sqrt{x^2+1}}$$
 $$ g'(x)=-\frac{1}{\sqrt{x^2+1}} $$
 Since $f'(x)-g'(x)=0$ for $x \in [-1,1]$, then $f(x)-g(x)=C$ for some constant $C$ by a corollary.
 
-
-\begin{aligned}
+\begin{align*}
 cos^{-1}x - (-sin^{-1}x)&=C \\
-
 cos^{-1}x +sin^{-1}x&=C
-\end{aligned}
+\end{align*}
+
 Substituting $x \in [-1,1]$, in this case, let's use $x=0$,
 
- \begin{aligned}
-cos^{-1}(0) +sin^{-1}(0)&=C \\
 
+\begin{align*}
+cos^{-1}(0) +sin^{-1}(0)&=C \\
 0 + \frac{\pi}{2} &= C \\
 C &= \frac{\pi}{2} 
-\end{aligned}
+\end{align*}
 
 $$ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}$$
 </details>
 
 ## Differentials
 
- \begin{aligned}
+\begin{align*}
 f'(x)&=\frac{dy}{dx}\\
 f'(x)dx &= dy
-\end{aligned}
-
+\end{align*}
 
 # Module 1: Indefinite and definite integrals
 
@@ -142,13 +140,11 @@ However given $F(x)=2x^2-5x+1$, $F'(x)$ remains the same. And so is $F(x)=2x^2-5
 Substituting $(x,y)=(3,7),$
 
 
-\begin{aligned}
+\begin{align*}
 7 &= 2(3)^2 - 5(3) +k\\
-
- 7 &= 18 - 15 + k \\
-
- k &= 4 
- \end{aligned}
+7 &= 18 - 15 + k \\
+k &= 4 
+\end{align*}
 
 
 So $F(x)=2x^2-5x+4$.
@@ -213,7 +209,7 @@ $\int sinxdx = -cosx+C$
 
 1. $\int e^xdx =e^x +C$
 
-2. $\int \frac{1}{x}dx=ln|x|+C$
+2. $\int \frac{1}{x}dx=ln\|x|+C$
 
 3. $\int \frac{1}{\sqrt{1-x^2}} = sin^{-1}x +C$
 
@@ -250,15 +246,14 @@ $$ du = g'(x)dx $$
 
 Let $u=x^2$
 
-$$ 
-\begin{aligned}
-du &=2xdx\\
 
+\begin{align*}
+du &=2xdx\\
  \int 2xcosx^2dx &= \int cosudu\\
  &=sinu+C \\
- &=sinx^2+C \\
-\end{aligned}
-$$
+ &=sinx^2+C
+\end{align*}
+
 </details>
 
 ### Definition of the substitution rule
