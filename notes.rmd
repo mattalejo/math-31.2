@@ -81,32 +81,32 @@ If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some c
 
 #### Example 
 
-<details>
-Let $f(x)=cos^{-1}x$ and $g(x)=-sin^{-1}x$
-
-This implies that $x \in [-1,1]$ and $f(x),g(x) \in [-\frac{\pi}{2},\frac{\pi}{2}]$
-
-$$ f'(x)=-\frac{1}{\sqrt{x^2+1}}$$
-
-$$ g'(x)=-\frac{1}{\sqrt{x^2+1}} $$
+> <details>
+>
+> Let $f(x)=cos^{-1}x$ and $g(x)=-sin^{-1}x$
+> 
+> This implies that $x \in [-1,1]$ and $f(x),g(x) \in [-\frac{\pi}{2},\frac{\pi}{2}]$
+> 
+> $$ f'(x)=-\frac{1}{\sqrt{x^2+1}}$$
+>
+> $$ g'(x)=-\frac{1}{\sqrt{x^2+1}} $$
 Since $f'(x)-g'(x)=0$ for $x \in [-1,1]$, then $f(x)-g(x)=C$ for some constant $C$ by a corollary.
-
-\begin{align*}
-cos^{-1}x - (-sin^{-1}x)&=C \\
-cos^{-1}x +sin^{-1}x&=C
-\end{align*}
-
-Substituting $x \in [-1,1]$, in this case, let's use $x=0$,
-
-
-\begin{align*}
-cos^{-1}(0) +sin^{-1}(0)&=C \\
-0 + \frac{\pi}{2} &= C \\
-C &= \frac{\pi}{2} 
-\end{align*}
-
-$$ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}$$
-</details>
+>
+> \begin{align*}
+> cos^{-1}x - (-sin^{-1}x)&=C \\
+> cos^{-1}x +sin^{-1}x&=C
+> \end{align*}
+> 
+> Substituting $x \in [-1,1]$, in this case, let's use $x=0$,
+> 
+> \begin{align*}
+> cos^{-1}(0) +sin^{-1}(0)&=C \\
+> 0 + \frac{\pi}{2} &= C \\
+> C &= \frac{\pi}{2} 
+> \end{align*}
+>
+> $$ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}$$
+> </details>
 
 ## Differentials
 
@@ -123,32 +123,30 @@ The main interpretation of derivative is the slope of a tangent line of a curve.
 
 #### Example 
 
-<details>
-At any point $(x,y)$ on a particular curve $y=F(x)$, the tangent line has a slope equal to $4x-5$. If the curve contains the point $(3,7)$, find $F(x)$.
-
-**Solution.** Since the slope is equal to $4x-5$ for any point $(x,y)$, then the slope at $(3,7)$ is $4(3)-5=7$.
-
-$4x-5$ therefore represents the tangent slope for all values of $x$. So
-
-$$ F'(x)=4x-5 $$
-
-By intuition, we can conclude that $F(x)=2x^2-5x$.
-
-However given $F(x)=2x^2-5x+1$, $F'(x)$ remains the same. And so is $F(x)=2x^2-5x-3$, $F(x)=2x^2-5x+\pi$, and infinitely more functions. We can arbitrarily assign a constant $k$, so that $F(x)=2x^2-5x+k$.
-
-Substituting $(x,y)=(3,7),$
-
-
-\begin{align*}
-7 &= 2(3)^2 - 5(3) +k\\
-7 &= 18 - 15 + k \\
-k &= 4 
-\end{align*}
-
-
-So $F(x)=2x^2-5x+4$.
-
-</details>
+> <details>
+> At any point $(x,y)$ on a particular curve $y=F(x)$, the tangent line has a slope equal to $4x-5$. If the curve contains the point $(3,7)$, find $F(x)$.
+> 
+> 
+> **Solution.** Since the slope is equal to $4x-5$ for any point $(x,y)$, then the slope at $(3,7)$ is $4(3)-5=7$.
+> 
+> $4x-5$ therefore represents the tangent slope for all values of $x$. So
+> 
+> $$ F'(x)=4x-5 $$
+> 
+> By intuition, we can conclude that $F(x)=2x^2-5x$.
+> 
+> However given $F(x)=2x^2-5x+1$, $F'(x)$ remains the same. And so is $F(x)=2x^2-5x-3$, $F(x)=2x^2-5x+\pi$, and infinitely more functions. We can arbitrarily assign a constant $k$, so that $F(x)=2x^2-5x+k$.
+> 
+> Substituting $(x,y)=(3,7),$
+>
+> \begin{align*}
+> 7 &= 2(3)^2 - 5(3) +k\\
+> 7 &= 18 - 15 + k \\
+> k &= 4 
+> \end{align*}
+>
+> So $F(x)=2x^2-5x+4$.
+> </details>
 
 ### Definition of an antiderivative
 
@@ -228,34 +226,32 @@ $$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
 
 #### Example
 
-<details>
-Evaluate $\int 2xcosx^2dx$.
+> <details>
+> Evaluate $\int 2xcosx^2dx$.
+>
+> **Preliminary work.** By intuition, we can get $f(x)=sinx$ and $g(x)=x^2$
+> 
+> $$ \int 2xcosx^2dx = f(g(x)) = sinx^2 $$
+> 
+> **Solution.** Suppose that $f'(x)=\frac{dy}{dx}$
+> 
+> $$ dy = f'(x)dx $$
+> 
+> Let $u=g(x)$, then $g'(x)=\frac{du}{dx}$
+> 
+> $$ du = g'(x)dx $$
+> 
+> Let $u=x^2$
+> 
+> \begin{align*}
+> du &=2xdx\\
+>  \int 2xcosx^2dx &= \int cosudu\\
+>  &=sinu+C \\
+>  &=sinx^2+C
+> \end{align*}
+> </details>
 
-**Preliminary work.** By intuition, we can get $f(x)=sinx$ and $g(x)=x^2$
-
-$$ \int 2xcosx^2dx = f(g(x)) = sinx^2 $$
-
-**Solution.** Suppose that $f'(x)=\frac{dy}{dx}$
-
-$$ dy = f'(x)dx $$
-
-Let $u=g(x)$, then $g'(x)=\frac{du}{dx}$
-
-$$ du = g'(x)dx $$
-
-Let $u=x^2$
-
-
-\begin{align*}
-du &=2xdx\\
- \int 2xcosx^2dx &= \int cosudu\\
- &=sinu+C \\
- &=sinx^2+C
-\end{align*}
-
-</details>
-
-### Definition of the substitution rule
+##Definition of the substitution rule
 
 If $u=g(x)$ is a differentiable function whose range is interval $I$ and $f$ is continuous on $I$, then
 

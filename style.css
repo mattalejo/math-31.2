@@ -3,14 +3,40 @@ font-family: "Lexend Deca";
 src: url("../math-31.2/fonts/Lexend[LXND,wght].ttf");
 }
 
-body{
+body,p{
+  padding-left: 2em;
   background: #191919;
   font-family: Lexend Deca;
+  font-size: large;
   color: #cccccc;
+}
+
+strong{
+  color: #ffffff  !important;
 }
 /* Headers */
 h1,h2,h3,h4,h5,h6{
   font-family: Lexend Deca;
   color: white;
+}
 
+h1{
+  padding-top: 1em;
+}
+h2{
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+}
+
+h3{
+  padding-left: 1em;
+}
+
+h4{
+  padding-left: 1.5em;
+}
+
+blockquote{
+  margin-left: 2.5em;
+  font-size: medium !important;
 }
