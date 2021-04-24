@@ -2,6 +2,7 @@
 output:
   pdf_document: 
   html_document:
+    css: style.css
     toc: yes
     toc_depth: '3'
     df_print: paged
