@@ -80,7 +80,6 @@ If $f'(x)=0 \;\forall x$ in interval $I$, then $f(x)=c \;\forall x\in I$ for som
 If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some constant $C$.
 
 #### Example 
-<summary></summary>
 
 <details>
 Let $f(x)=cos^{-1}x$ and $g(x)=-sin^{-1}x$
@@ -123,7 +122,7 @@ f'(x)dx &= dy
 The main interpretation of derivative is the slope of a tangent line of a curve.
 
 #### Example 
-<summary></summary>
+
 <details>
 At any point $(x,y)$ on a particular curve $y=F(x)$, the tangent line has a slope equal to $4x-5$. If the curve contains the point $(3,7)$, find $F(x)$.
 
@@ -228,7 +227,7 @@ If follows that
 $$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
 
 #### Example
-<summary></summary>
+
 <details>
 Evaluate $\int 2xcosx^2dx$.
 
