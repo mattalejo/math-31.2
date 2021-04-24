@@ -1,12 +1,17 @@
 @font-face {
 font-family: "Lexend Deca";
-src: url("http://mattalejo.github.io/math-31.2/Lexend[LXND,wght].ttf");
+src: url("../math-31.2/Lexend[LXND,wght].ttf");
 }
+
 body{
+  background: #191919;
   font-family: Lexend Deca;
   font-size: 12pt;
+  color: #cccccc;
 }
 /* Headers */
 h1,h2,h3,h4,h5,h6{
   font-family: Lexend Deca;
+  color: white;
+
 }
