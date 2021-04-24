@@ -251,7 +251,7 @@ $$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
 > \end{align*}
 > </details>
 
-##Definition of the substitution rule
+## Definition of the substitution rule
 
 If $u=g(x)$ is a differentiable function whose range is interval $I$ and $f$ is continuous on $I$, then
 
