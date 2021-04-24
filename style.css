@@ -1,3 +1,7 @@
+@font-face {
+font-family: "Lexend Deca";
+src: url("http://mattalejo.github.io/math-31.2/Lexend[LXND,wght].ttf");
+}
 body{
   font-family: Lexend Deca;
   font-size: 12pt;

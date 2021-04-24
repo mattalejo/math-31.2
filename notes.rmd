@@ -1,11 +1,11 @@
 ---
 output:
-  pdf_document: 
   html_document:
     css: style.css
     toc: yes
     toc_depth: '3'
     df_print: paged
+  pdf_document: 
   output: default
 title: "Mathematical Analysis IB"
 ---
@@ -147,7 +147,7 @@ So $F(x)=2x^2-5x+4$.
 
 A function $F$ is called an antiderivative of the function $f$ on an interval $I$ if $F'(x) = f(x) \;\forall x \in I$.
 
-$F(x)=2x^2-5x$ is a *possible* antiderivative of $f(x)=4x-5$. $F(x)=2x^2-5x+4$ is also a *possible* antiderivative of $f(x)=4x-5$.
+$F(x)=2x^2-5x$ is a **possible** antiderivative of $f(x)=4x-5$. $F(x)=2x^2-5x+4$ is also a **possible** antiderivative of $f(x)=4x-5$.
 
 ### Equal derivatives
 
@@ -161,9 +161,9 @@ $$ \int f(x)dx $$
 
 which is read as "the integral of $f(x)dx$."
 
-This collection is also called the *indefinite integral* of $f$.
+This collection is also called the **indefinite integral** of $f$.
 
-The reverse process if differentiation is called *antidifferentiation* or *integration*. 
+The reverse process if differentiation is called **antidifferentiation** or **integration**. 
 
 $\int (4x-5)dx = 2x^2-5x+C$ for some constant $C$.
 
