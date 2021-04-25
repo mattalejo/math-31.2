@@ -189,7 +189,7 @@ $\int \sin xdx = -\cos x+C$
 
 1. $\int kdx = kx + C, k \in \mathbb{R}$
 
-2. $\int x^n dx =  \frac{x^{n+1}}{n+1}+C, n \in \mathbb{R}, n \neq -1$
+2. $\int x^ndx =  \frac{x^{n+1}}{n+1}+C, n \in \mathbb{R}, n \neq -1$
 
 ### Integration formulas II
 
@@ -203,7 +203,7 @@ $\int \sin xdx = -\cos x+C$
 
 5. $\int \sec x\tan xdx = \sec x + C$
 
-6. $\int \csc x\cot x = -\csc x +C$
+6. $\int \csc x\cot xdx = -\csc x +C$
 
 ### Integration formulas III
 
@@ -211,11 +211,11 @@ $\int \sin xdx = -\cos x+C$
 
 2. $\int \frac{1}{x}dx=\ln|x|+C$
 
-3. $\int \frac{1}{\sqrt{1-x^2}} = \sin^{-1}x +C$
+3. $\int \frac{1}{\sqrt{1-x^2}}dx = \sin^{-1}x +C$
 
-4. $\int \frac{1}{1+x^2} = \tan^{-1}x +C$
+4. $\int \frac{1}{1+x^2}dx = \tan^{-1}x +C$
 
-5. $\int \frac{1}{x\sqrt{x^2-1}}= \sec^{-1}+C$
+5. $\int \frac{1}{x\sqrt{x^2-1}}dx= \sec^{-1}+C$
 
 ## Substitution rule
 
