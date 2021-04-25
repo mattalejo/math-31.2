@@ -1,5 +1,6 @@
 ---
 output:
+  pdf_document: 
   html_document:
     css: style.css
     toc: yes
@@ -8,14 +9,13 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
-  pdf_document: 
   output: default
 title: "Mathematical Analysis IB"
 ---
 
 >[Download the PDF copy of the notes here](../math-31.2/notes.pdf)
 
-# Review on differentiation {-}
+# 0 - Review on differentiation {-}
 
 ## Differentiability
 
@@ -31,7 +31,7 @@ $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 
 3. $\frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + g(x)f'(x)$
 
-4. $\frac{d}{dx}\frac{f(x)}{g(x)} = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$
+4. $\frac{d}{dx}(\frac{f(x)}{g(x)}) = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$
 
 5. $\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)$
 
@@ -42,29 +42,29 @@ $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 
 2. $\frac{d}{dx}(x^r)=rx^{r-1}, r \in \mathbb{R}$
 
-3. $\frac{d}{dx}(sinx)=cos x$ 
+3. $\frac{d}{dx}(\sin x)=\cos x$ 
 
-4. $\frac{d}{dx}(cosx)=-sin x$
+4. $\frac{d}{dx}(\cos x)=\sin x$
 
-5. $\frac{d}{dx}(tanx)=sec^2x$
+5. $\frac{d}{dx}(\tan x)=\sec^2x$
 
-6. $\frac{d}{dx}(cotx)=-csc^x$
+6. $\frac{d}{dx}(\cot x)=-\csc^2x$
 
-7. $\frac{d}{dx}(secx) = secxtanx$
+7. $\frac{d}{dx}(\sec x) = \sec x\tan x$
 
-8. $\frac{d}{dx}(cscx)=-cscxcotx$
+8. $\frac{d}{dx}(\csc x)=-\csc x\cot x$
 
 ## Differentiation formulas II
 
 1. $\frac{d}{dx}(e^x) = e^x$
 
-2. $\frac{d}{dx}(ln|x|) = \frac{1}{x}$
+2. $\frac{d}{dx}(\ln|x|) = \frac{1}{x}$
 
-3. $\frac{d}{dx}(sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}$
+3. $\frac{d}{dx}(\sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}$
 
-4. $\frac{d}{dx}(tan^{-1}x) = \frac{1}{1+x^2}$
+4. $\frac{d}{dx}(\tan^{-1}x) = \frac{1}{1+x^2}$
 
-5. $\frac{d}{dx}(sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}$
+5. $\frac{d}{dx}(\sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}$
 
 ## Mean value theorem
 
@@ -86,7 +86,7 @@ If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some c
 
 > <details>
 >
-> Let $f(x)=cos^{-1}x$ and $g(x)=-sin^{-1}x$
+> Let $f(x)=\cos^{-1}x$ and $g(x)=-\sin^{-1}x$
 > 
 > This implies that $x \in [-1,1]$ and $f(x),g(x) \in [-\frac{\pi}{2},\frac{\pi}{2}]$
 > 
@@ -96,14 +96,14 @@ If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some c
 Since $f'(x)-g'(x)=0$ for $x \in [-1,1]$, then $f(x)-g(x)=C$ for some constant $C$ by a corollary.
 >
 > \begin{align*}
-> cos^{-1}x - (-sin^{-1}x)&=C \\
-> cos^{-1}x +sin^{-1}x&=C
+> \cos^{-1}x - (-\sin^{-1}x)&=C \\
+> \cos^{-1}x +\sin^{-1}x&=C
 > \end{align*}
 > 
 > Substituting $x \in [-1,1]$, in this case, let's use $x=0$,
 > 
 > \begin{align*}
-> cos^{-1}(0) +sin^{-1}(0)&=C \\
+> \cos^{-1}(0) +\sin^{-1}(0)&=C \\
 > 0 + \frac{\pi}{2} &= C \\
 > C &= \frac{\pi}{2} 
 > \end{align*}
@@ -118,7 +118,7 @@ f'(x)&=\frac{dy}{dx}\\
 f'(x)dx &= dy
 \end{align*}
 
-# Module 1: Indefinite and definite integrals
+# 1 - Indefinite and definite integrals
 
 ## Indefinite integral
 
@@ -177,7 +177,7 @@ $\int (4x-5)dx = 2x^2-5x+C$ for some constant $C$.
 
 $C$ is the constant of integration.
  
-$\int sinxdx = -cosx+C$
+$\int \sin xdx = -\cos x+C$
 
 ### Integration rules
 
@@ -193,29 +193,29 @@ $\int sinxdx = -cosx+C$
 
 ### Integration formulas II
 
-1. $\int sinxdx = -cosx + C$
+1. $\int \sin xdx = -\cos x + C$
 
-2. $\int cosxdx = sinx + C$
+2. $\int \cos xdx = \sin x + C$
 
-3. $\int sec^2xdx = tanx + C$
+3. $\int \sec^2xdx = \tan x + C$
 
-4. $\int csc^2xdx = -cotx + C$
+4. $\int \csc^2xdx = -\cot x + C$
 
-5. $\int secxtanxdx = secx + C$
+5. $\int \sec x\tan xdx = \sec x + C$
 
-6. $\int cscxcotx = -cscx +C$
+6. $\int \csc x\cot x = -\csc x +C$
 
 ### Integration formulas III
 
 1. $\int e^xdx =e^x +C$
 
-2. $\int \frac{1}{x}dx=ln|x|+C$
+2. $\int \frac{1}{x}dx=\ln|x|+C$
 
-3. $\int \frac{1}{\sqrt{1-x^2}} = sin^{-1}x +C$
+3. $\int \frac{1}{\sqrt{1-x^2}} = \sin^{-1}x +C$
 
-4. $\int \frac{1}{1+x^2} = tan^{-1}x +C$
+4. $\int \frac{1}{1+x^2} = \tan^{-1}x +C$
 
-5. $\int \frac{1}{x\sqrt{x^2-1}}= sec^{-1}+C$
+5. $\int \frac{1}{x\sqrt{x^2-1}}= \sec^{-1}+C$
 
 ## Substitution rule
 
@@ -234,7 +234,7 @@ $$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
 >
 > **Preliminary work.** By intuition, we can get $f(x)=sinx$ and $g(x)=x^2$
 > 
-> $$ \int 2xcosx^2dx = f(g(x)) = sinx^2 $$
+> $$ \int 2x\cos x^2dx = f(g(x)) = \sin x^2 $$
 > 
 > **Solution.** Suppose that $f'(x)=\frac{dy}{dx}$
 > 
@@ -248,9 +248,9 @@ $$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
 > 
 > \begin{align*}
 > du &=2xdx\\
->  \int 2xcosx^2dx &= \int cosudu\\
->  &=sinu+C \\
->  &=sinx^2+C
+>  \int 2x\cos x^2dx &= \int \cos udu\\
+>  &=\sin u+C \\
+>  &=\sin x^2+C
 > \end{align*}
 > </details>
 
@@ -271,7 +271,7 @@ $$ \int f'(g(x))g'(x) = \int f(u)du $$
 
 
 
-# Module 2: Application I
+# 2 - Application I
 
 ## Areas between curves
 
@@ -279,20 +279,20 @@ $$ \int f'(g(x))g'(x) = \int f(u)du $$
 
 ## Volumes of solids of revolution using cylindrical shells
 
-# Module 3: Techniques of integration
+# 3 - Techniques of integration
 
 ## Integration by parts
 
 ## Trigonometric integrals
 
-## Trigonometric Substitution
+## Trigonometric substitution
 
 ## Partial fractions
 
 
 
 
-# Module 4: Applications II
+# 4 - Applications II
 
 ## Arc length
 
