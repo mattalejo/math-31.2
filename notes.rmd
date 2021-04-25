@@ -5,6 +5,9 @@ output:
     toc: yes
     toc_depth: '3'
     df_print: paged
+    includes:
+      in_header: header.html
+      after_body: footer.html
   pdf_document: 
   output: default
 title: "Mathematical Analysis IB"
@@ -12,7 +15,7 @@ title: "Mathematical Analysis IB"
 
 >[Download the PDF copy of the notes here](../math-31.2/notes.pdf)
 
-# Review on differentiation
+# Review on differentiation {-}
 
 ## Differentiability
 
@@ -173,7 +176,7 @@ The reverse process if differentiation is called **antidifferentiation** or **in
 $\int (4x-5)dx = 2x^2-5x+C$ for some constant $C$.
 
 $C$ is the constant of integration.
-
+ 
 $\int sinxdx = -cosx+C$
 
 ### Integration rules
@@ -206,7 +209,7 @@ $\int sinxdx = -cosx+C$
 
 1. $\int e^xdx =e^x +C$
 
-2. $\int \frac{1}{x}dx=ln\|x|+C$
+2. $\int \frac{1}{x}dx=ln|x|+C$
 
 3. $\int \frac{1}{\sqrt{1-x^2}} = sin^{-1}x +C$
 
