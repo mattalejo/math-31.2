@@ -1,6 +1,5 @@
 ---
 output:
-  pdf_document: 
   html_document:
     css: style.css
     toc: yes
@@ -9,6 +8,7 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
+  pdf_document: 
   output: default
 title: "Mathematical Analysis IB"
 ---
