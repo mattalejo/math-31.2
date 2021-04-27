@@ -1691,12 +1691,18 @@ summary {
 <li><a href="#substitution-rule">Substitution rule</a>
 <ul>
 <li><a href="#chain-rule-for-derivatives">Chain rule for derivatives</a></li>
-</ul></li>
 <li><a href="#definition-of-the-substitution-rule">Definition of the substitution rule</a></li>
+</ul></li>
+<li><a href="#the-fundamental-theorem-of-calculus">The Fundamental Theorem of Calculus</a>
+<ul>
 <li><a href="#the-area-problem">The area problem</a></li>
+<li><a href="#definite-integral-and-integrability">Definite integral and integrability</a></li>
+<li><a href="#conventions-on-definite-integral">Conventions on definite integral</a></li>
+<li><a href="#properties-of-the-definite-integral">Properties of the definite integral</a></li>
+</ul></li>
+<li><a href="#proof-of-the-fundamental-theorem-of-calculus">Proof of the Fundamental Theorem of Calculus</a></li>
+<li><a href="#the-area-problem-1">The area problem</a></li>
 <li><a href="#the-definite-integrals">The definite Integrals</a></li>
-<li><a href="#the-fundamental-theorem-of-calculus">The Fundamental Theorem of Calculus</a></li>
-<li><a href="#proof-of-fundamental-theorem-of-calculus">Proof of Fundamental Theorem of Calculus</a></li>
 </ul></li>
 <li><a href="#application-i">2 - Application I</a>
 <ul>
@@ -1794,7 +1800,7 @@ summary {
 0 + \frac{\pi}{2} &amp;= C \\
 C &amp;= \frac{\pi}{2} 
 \end{align*}\]</span></p>
-<span class="math display">\[ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}\]</span>
+<p><span class="math display">\[ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}\]</span></p>
 </details>
 </blockquote>
 </div>
@@ -1829,7 +1835,7 @@ f&#39;(x)dx &amp;= dy
 7 &amp;= 18 - 15 + k \\
 k &amp;= 4 
 \end{align*}\]</span></p>
-So <span class="math inline">\(F(x)=2x^2-5x+4\)</span>.
+<p>So <span class="math inline">\(F(x)=2x^2-5x+4\)</span>.</p>
 </details>
 </blockquote>
 </div>
@@ -1908,33 +1914,129 @@ So <span class="math inline">\(F(x)=2x^2-5x+4\)</span>.
 <p>Let <span class="math inline">\(u=g(x)\)</span>, then <span class="math inline">\(g&#39;(x)=\frac{du}{dx}\)</span></p>
 <p><span class="math display">\[ du = g&#39;(x)dx \]</span></p>
 <p>Let <span class="math inline">\(u=x^2\)</span></p>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
 du &amp;=2xdx\\
  \int 2x\cos x^2dx &amp;= \int \cos udu\\
  &amp;=\sin u+C \\
  &amp;=\sin x^2+C
-\end{align*}\]</span>
+\end{align*}\]</span></p>
 </details>
 </blockquote>
 </div>
 </div>
-</div>
-<div id="definition-of-the-substitution-rule" class="section level2">
-<h2>Definition of the substitution rule</h2>
+<div id="definition-of-the-substitution-rule" class="section level3">
+<h3>Definition of the substitution rule</h3>
 <p>If <span class="math inline">\(u=g(x)\)</span> is a differentiable function whose range is interval <span class="math inline">\(I\)</span> and <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\(I\)</span>, then</p>
 <p><span class="math display">\[ \int f&#39;(g(x))g&#39;(x) = \int f(u)du \]</span></p>
 </div>
-<div id="the-area-problem" class="section level2">
+</div>
+<div id="the-fundamental-theorem-of-calculus" class="section level2">
+<h2>The Fundamental Theorem of Calculus</h2>
+<div id="the-area-problem" class="section level3">
+<h3>The area problem</h3>
+<p>Let <span class="math inline">\(f\)</span> be a continuous nonnegative function on <span class="math inline">\([a,b]\)</span>. Find the area of the regiom bounded by the curve <span class="math inline">\(y=f(x)\)</span>, the lines <span class="math inline">\(x=a\)</span>, <span class="math inline">\(x=b\)</span>, and the <span class="math inline">\(x\)</span>-axis.</p>
+<blockquote>
+<p>The area is often coined the <strong>region under the curve</strong>, which generally means the area in between the curve and the <span class="math inline">\(x\)</span>-axis</p>
+</blockquote>
+<div id="example-3" class="section level4">
+<h4>Example</h4>
+<blockquote>
+<details>
+<p>Consider <span class="math inline">\(f(x) = x^2 +1\)</span> on <span class="math inline">\([0,2]\)</span>.</p>
+<p><strong>Solution.</strong> Let <span class="math inline">\(A\)</span> be the area under the curve\</p>
+<p>Using right endpoints (5 rectangles)</p>
+<p><span class="math display">\[ \Delta x = \frac{2-0}{5} = \frac{2}{5} = 0.4 \]</span> Rectangle 1: <span class="math inline">\((\Delta x)(f(0.4)) = (0.4)(1.16)\)</span></p>
+<p>Rectangle 2: <span class="math inline">\((\Delta x)(f(0.8)) = (0.4)(1.64)\)</span></p>
+<p>Rectangle 3: <span class="math inline">\((\Delta x)(f(1.2)) = (0.4)(2.44)\)</span></p>
+<p>Rectangle 4: <span class="math inline">\((\Delta x)(f(1.6)) = (0.4)(3.56)\)</span></p>
+<p>Rectangle 5: <span class="math inline">\((\Delta x)(f(2.0)) = (0.4)(5)\)</span></p>
+<p><span class="math display">\[ A_5^+ = (0.4)(1.16) + (0.4)(1.64) + (0.4)(2.44) + (0.4)(3.56) +(0.4)(5) = 5.52 \]</span> <span class="math inline">\(A_5^+\)</span> is an overestimation of <span class="math inline">\(A\)</span>.\</p>
+<p>Using left endpoints (5 rectangles):</p>
+<p>Rectangle 1: <span class="math inline">\((\Delta x)(f(0)) = (0.4)(1)\)</span></p>
+<p>Rectangle 2: <span class="math inline">\((\Delta x)(f(0.4)) = (0.4)(1.16)\)</span></p>
+<p>Rectangle 3: <span class="math inline">\((\Delta x)(f(0.8)) = (0.4)(1.64)\)</span></p>
+<p>Rectangle 4: <span class="math inline">\((\Delta x)(f(1.2)) = (0.4)(2.44)\)</span></p>
+<p>Rectangle 5: <span class="math inline">\((\Delta x)(f(1.6)) = (0.4)(3.56)\)</span></p>
+<p><span class="math display">\[ A_5^- = (0.4)(1) + (0.4)(1.16) + (0.4)(1.64) + (0.4)(2.44) + (0.4)(3.56) + =3.92 \]</span></p>
+<p><span class="math inline">\(A_5^-\)</span> is an underestimation of <span class="math inline">\(A\)</span>\</p>
+<p>We can increase the number of rectangles and compute the area <span class="math inline">\(A\)</span> more <strong>accurately</strong> by computing the area as the number of rectangles approach infinity.\</p>
+<p>Let the number of rectangles be <span class="math inline">\(n\)</span></p>
+<p><span class="math display">\[ \Delta x = \frac{2-0}{n}=\frac{2}{n} \]</span> Let <span class="math inline">\(x_0\)</span> be the first point: <span class="math inline">\(x_0=0\)</span></p>
+<p><span class="math display">\[\begin{align*}
+x_1 &amp;= \frac{2}{n} &amp; x_2 &amp;= \frac{4}{n} &amp; x_3 &amp;= \frac{6}{n}\\
+x_4 &amp;= \frac{8}{n} &amp; x_5 &amp;= \frac{10}{n} &amp; x_6 &amp;= \frac{12}{n}\\
+x_7 &amp;= \frac{14}{n} &amp;    &amp;\cdots      &amp; x_i &amp;= \frac{2i}{n}
+\end{align*}\]</span><br />
+</p>
+<p><span class="math display">\[\begin{align*}
+A_n^+ &amp;= R_1 + R_2 + R_3 + R_4 + \cdots + R_n\\
+&amp;= \sum_{i=0}^n \Delta x (f(x_i))\\
+&amp;= \sum_{i=0}^n \frac{2}{n} ((\frac{2i}{n})^2 +1)\\
+&amp;= \frac{2}{n} \sum_{i=0}^n (\frac{4i^2}{n^2} +1)\\
+&amp;= \frac{2}{n} \Big[\sum_{i=0}^n (\frac{4i^2}{n^2}) + \sum_{i=0}^n(1)\Big]\\
+&amp;= \frac{2}{n} \Big[\frac{4}{n^2}\sum_{i=0}^n (i^2) + \sum_{i=0}^n(1)\Big]\\
+&amp;= \frac{2}{n} \Big[\frac{4}{n^2} \Big(\frac{(n)(n+1)(2n+1)}{6}\Big)+n\Big]\\
+A_n&amp;= \frac{8}{n^3} \frac{(n)(n+1)(2n+1)}{6} +2
+
+\end{align*}\]</span><br />
+</p>
+<p><span class="math display">\[\begin{align*}
+A &amp;= \lim_{n \to\infty} A_n\\
+&amp;= \lim_{n \to \infty}  \frac{8}{n^3} \frac{(n)(n+1)(2n+1)}{6} + 2\\
+&amp;= \lim_{n \to \infty} \frac{8(n)(n+1)(2n+1)}{6n^3} +2\\
+&amp;= \lim_{n \to \infty} \frac{8(n+1)(2n+1)}{6n^2} +2\\
+&amp;= \frac{16}{6} +2\\
+&amp;= \frac{28}{6} = \frac{14}{3}
+\end{align*}\]</span></p>
+</details>
+</blockquote>
+<p>Consider $y=f(x) $ on <span class="math inline">\([a,b]\)</span>.</p>
+<p>Let <span class="math inline">\(x_0=a, x_1,x_2, \ldots, x_n = b\)</span>,</p>
+<p><span class="math display">\[A_n = \sum_{i=1}{n}f(x_i^*)\Delta x \]</span></p>
+<p>This is also called the <strong>Riemann sum</strong>.</p>
+</div>
+</div>
+<div id="definite-integral-and-integrability" class="section level3">
+<h3>Definite integral and integrability</h3>
+<p>The definite integral of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> is</p>
+<p><span class="math display">\[ \int_a^b f(x)dx = \lim_{x\to\infty}\sum_{i=1}{n}f(x_i^*)\Delta x \]</span> provided that such limit exists.</p>
+<p>We say that <span class="math inline">\(f\)</span> is integrable on <span class="math inline">\([a,b]\)</span></p>
+<div id="remarks" class="section level4">
+<h4>Remarks</h4>
+<ol style="list-style-type: decimal">
+<li><p>If a function is continuous on <span class="math inline">\([a,b]\)</span>, it is integrable on <span class="math inline">\([a,b]\)</span>.</p></li>
+<li><p>If <span class="math inline">\(f\)</span> is a nonnegative continuous function on <span class="math inline">\([a,b]\)</span>, then <span class="math inline">\(\int_a^b f(x)dx\)</span> is the area under the curve <span class="math inline">\(y=f(x)\)</span> from <span class="math inline">\(x=a\)</span> and <span class="math inline">\(x=b\)</span></p></li>
+<li></li>
+</ol>
+</div>
+</div>
+<div id="conventions-on-definite-integral" class="section level3">
+<h3>Conventions on definite integral</h3>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\int_b^a f(x)dx = -\int_a^b f(x)dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_a^a f(x)dx = 0\)</span></p></li>
+</ol>
+</div>
+<div id="properties-of-the-definite-integral" class="section level3">
+<h3>Properties of the definite integral</h3>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\int_a^b cf(x)dx = c\int_a^b f(x)dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_a^b [f(x) \pm g(x)] dx = \int_a^b f(x) \pm \int_a^b g(x)\)</span></p></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</div>
+</div>
+<div id="proof-of-the-fundamental-theorem-of-calculus" class="section level2">
+<h2>Proof of the Fundamental Theorem of Calculus</h2>
+</div>
+<div id="the-area-problem-1" class="section level2">
 <h2>The area problem</h2>
 </div>
 <div id="the-definite-integrals" class="section level2">
 <h2>The definite Integrals</h2>
-</div>
-<div id="the-fundamental-theorem-of-calculus" class="section level2">
-<h2>The Fundamental Theorem of Calculus</h2>
-</div>
-<div id="proof-of-fundamental-theorem-of-calculus" class="section level2">
-<h2>Proof of Fundamental Theorem of Calculus</h2>
 </div>
 </div>
 <div id="application-i" class="section level1">

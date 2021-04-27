@@ -109,6 +109,7 @@ Since $f'(x)-g'(x)=0$ for $x \in [-1,1]$, then $f(x)-g(x)=C$ for some constant $
 > \end{align*}
 >
 > $$ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}$$
+>
 > </details>
 
 ## Differentials
@@ -149,6 +150,7 @@ The main interpretation of derivative is the slope of a tangent line of a curve.
 > \end{align*}
 >
 > So $F(x)=2x^2-5x+4$.
+>
 > </details>
 
 ### Definition of an antiderivative
@@ -252,21 +254,155 @@ $$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
 >  &=\sin u+C \\
 >  &=\sin x^2+C
 > \end{align*}
+>
 > </details>
 
-## Definition of the substitution rule
+### Definition of the substitution rule
 
 If $u=g(x)$ is a differentiable function whose range is interval $I$ and $f$ is continuous on $I$, then
 
 $$ \int f'(g(x))g'(x) = \int f(u)du $$
 
-## The area problem
-
-## The definite Integrals
-
 ## The Fundamental Theorem of Calculus
 
-## Proof of Fundamental Theorem of Calculus
+### The area problem
+
+Let $f$ be a continuous nonnegative function on $[a,b]$. Find the area of the regiom bounded by the curve $y=f(x)$, the lines $x=a$, $x=b$, and the $x$-axis.
+
+> The area is often coined the **region under the curve**, which generally means the area in between the curve and the $x$-axis
+
+#### Example
+> <details>
+> Consider $f(x) = x^2 +1$ on $[0,2]$.
+>
+> **Solution.**
+> Let $A$ be the area under the curve\\
+>
+> Using right endpoints (5 rectangles) 
+>
+> $$ \Delta x = \frac{2-0}{5} = \frac{2}{5} = 0.4 $$
+> Rectangle 1: $(\Delta x)(f(0.4)) = (0.4)(1.16)$
+>
+> Rectangle 2: $(\Delta x)(f(0.8)) = (0.4)(1.64)$
+>
+> Rectangle 3: $(\Delta x)(f(1.2)) = (0.4)(2.44)$
+>
+> Rectangle 4: $(\Delta x)(f(1.6)) = (0.4)(3.56)$
+>
+> Rectangle 5: $(\Delta x)(f(2.0)) = (0.4)(5)$
+>
+> $$ A_5^+ = (0.4)(1.16) + (0.4)(1.64) + (0.4)(2.44) + (0.4)(3.56) +(0.4)(5) = 5.52 $$
+> $A_5^+$ is an overestimation of $A$.\\
+>
+> Using left endpoints (5 rectangles):
+>
+> Rectangle 1: $(\Delta x)(f(0)) = (0.4)(1)$
+>
+> Rectangle 2: $(\Delta x)(f(0.4)) = (0.4)(1.16)$
+>
+> Rectangle 3: $(\Delta x)(f(0.8)) = (0.4)(1.64)$
+>
+> Rectangle 4: $(\Delta x)(f(1.2)) = (0.4)(2.44)$
+>
+> Rectangle 5: $(\Delta x)(f(1.6)) = (0.4)(3.56)$
+>
+> $$ A_5^- = (0.4)(1) + (0.4)(1.16) + (0.4)(1.64) + (0.4)(2.44) + (0.4)(3.56) + =3.92 $$
+>
+> $A_5^-$ is an underestimation of $A$\\
+>
+> We can increase the number of rectangles and compute the area $A$ more **accurately** by computing the area as the number of rectangles approach infinity.\\
+>
+> Let the number of rectangles be $n$
+> 
+> $$ \Delta x = \frac{2-0}{n}=\frac{2}{n} $$
+> Let $x_0$ be the first point: $x_0=0$
+>
+> \begin{align*}
+> x_1 &= \frac{2}{n} & x_2 &= \frac{4}{n} & x_3 &= \frac{6}{n}\\
+> x_4 &= \frac{8}{n} & x_5 &= \frac{10}{n} & x_6 &= \frac{12}{n}\\
+> x_7 &= \frac{14}{n} &    &\cdots      & x_i &= \frac{2i}{n}
+> \end{align*}\
+>
+> 
+> 
+> \begin{align*}
+> A_n^+ &= R_1 + R_2 + R_3 + R_4 + \cdots + R_n\\
+> &= \sum_{i=0}^n \Delta x (f(x_i))\\
+> &= \sum_{i=0}^n \frac{2}{n} ((\frac{2i}{n})^2 +1)\\
+> &= \frac{2}{n} \sum_{i=0}^n (\frac{4i^2}{n^2} +1)\\
+> &= \frac{2}{n} \Big[\sum_{i=0}^n (\frac{4i^2}{n^2}) + \sum_{i=0}^n(1)\Big]\\
+> &= \frac{2}{n} \Big[\frac{4}{n^2}\sum_{i=0}^n (i^2) + \sum_{i=0}^n(1)\Big]\\
+> &= \frac{2}{n} \Big[\frac{4}{n^2} \Big(\frac{(n)(n+1)(2n+1)}{6}\Big)+n\Big]\\
+> A_n&= \frac{8}{n^3} \frac{(n)(n+1)(2n+1)}{6} +2
+> 
+> \end{align*}\
+> 
+> \begin{align*}
+> A &= \lim_{n \to\infty} A_n\\
+> &= \lim_{n \to \infty}  \frac{8}{n^3} \frac{(n)(n+1)(2n+1)}{6} + 2\\
+> &= \lim_{n \to \infty} \frac{8(n)(n+1)(2n+1)}{6n^3} +2\\
+> &= \lim_{n \to \infty} \frac{8(n+1)(2n+1)}{6n^2} +2\\
+> &= \frac{16}{6} +2\\
+> &= \frac{28}{6} = \frac{14}{3}
+> \end{align*}
+>
+> </details>
+
+Consider $y=f(x) $ on $[a,b]$.
+
+Let $x_0=a, x_1,x_2, \ldots, x_n = b$,
+
+$$A_n = \sum_{i=1}{n}f(x_i^*)\Delta x $$
+
+This is also called the **Riemann sum**.
+
+### Definite integral and integrability
+
+The definite integral of $f$ from $a$ to $b$ is
+
+$$ \int_a^b f(x)dx = \lim_{x\to\infty}\sum_{i=1}{n}f(x_i^*)\Delta x $$
+provided that such limit exists.
+
+We say that $f$ is integrable on $[a,b]$
+
+#### Remarks
+
+1. If a function is continuous on $[a,b]$, it is integrable on $[a,b]$.
+
+2. If $f$ is a nonnegative continuous function on $[a,b]$, then $\int_a^b f(x)dx$ is the area under the curve $y=f(x)$ from $x=a$ and $x=b$
+
+3.
+
+### Conventions on definite integral
+
+1. $\int_b^a f(x)dx = -\int_a^b f(x)dx$
+
+2. $\int_a^a f(x)dx = 0$
+
+### Properties of the definite integral
+
+1. $\int_a^b cf(x)dx = c\int_a^b f(x)dx$
+
+2. $\int_a^b [f(x) \pm g(x)] dx = \int_a^b f(x) \pm \int_a^b g(x)$
+
+3.
+
+4.
+
+5.
+
+6.
+
+## Proof of the Fundamental Theorem of Calculus
+
+
+
+
+## The area problem
+
+
+
+## The definite Integrals
 
 
 
