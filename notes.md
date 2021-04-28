@@ -1,16 +1,24 @@
 ---
 output:
+  pdf_document:
   html_document:
+    css: style.css
     toc: yes
     toc_depth: '3'
     df_print: paged
-  pdf_document: 
-  output: default
-author: "Matt Alejo"
+    includes:
+      in_header: header.html
+      after_body: footer.html
 title: "Mathematical Analysis IB"
 ---
 
-# Review on differentiation
+```{r check, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+
+>[Download the PDF copy of the notes here](../math-31.2/notes.pdf)
+
+# 0 - Review on differentiation {-}
 
 ## Differentiability
 
@@ -26,7 +34,7 @@ $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 
 3. $\frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + g(x)f'(x)$
 
-4. $\frac{d}{dx}\frac{f(x)}{g(x)} = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$
+4. $\frac{d}{dx}(\frac{f(x)}{g(x)}) = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$
 
 5. $\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)$
 
@@ -37,29 +45,29 @@ $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 
 2. $\frac{d}{dx}(x^r)=rx^{r-1}, r \in \mathbb{R}$
 
-3. $\frac{d}{dx}(sinx)=cos x$ 
+3. $\frac{d}{dx}(\sin x)=\cos x$ 
 
-4. $\frac{d}{dx}(cosx)=-sin x$
+4. $\frac{d}{dx}(\cos x)=\sin x$
 
-5. $\frac{d}{dx}(tanx)=sec^2x$
+5. $\frac{d}{dx}(\tan x)=\sec^2x$
 
-6. $\frac{d}{dx}(cotx)=-csc^x$
+6. $\frac{d}{dx}(\cot x)=-\csc^2x$
 
-7. $\frac{d}{dx}(secx) = secxtanx$
+7. $\frac{d}{dx}(\sec x) = \sec x\tan x$
 
-8. $\frac{d}{dx}(cscx)=-cscxcotx$
+8. $\frac{d}{dx}(\csc x)=-\csc x\cot x$
 
 ## Differentiation formulas II
 
 1. $\frac{d}{dx}(e^x) = e^x$
 
-2. $\frac{d}{dx}(ln|x|) = \frac{1}{x}$
+2. $\frac{d}{dx}(\ln|x|) = \frac{1}{x}$
 
-3. $\frac{d}{dx}(sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}$
+3. $\frac{d}{dx}(\sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}$
 
-4. $\frac{d}{dx}(tan^{-1}x) = \frac{1}{1+x^2}$
+4. $\frac{d}{dx}(\tan^{-1}x) = \frac{1}{1+x^2}$
 
-5. $\frac{d}{dx}(sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}$
+5. $\frac{d}{dx}(\sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}$
 
 ## Mean value theorem
 
@@ -69,7 +77,7 @@ $$ f'(c)=\frac{f(b)-f(a)}{b-a} $$
 
 ## Consequences of MVT
 
-### Zero Derivative
+### Zero derivative
 
 If $f'(x)=0 \;\forall x$ in interval $I$, then $f(x)=c \;\forall x\in I$ for some constant $C$.
 
@@ -77,54 +85,332 @@ If $f'(x)=0 \;\forall x$ in interval $I$, then $f(x)=c \;\forall x\in I$ for som
 
 If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some constant $C$.
 
-#### Example
+#### Example 
 
-Let $f(x)=cos^{-1}x$ and $g(x)=-sin^{-1}x$
-
-This implies that $x \in [-1,1]$ and $f(x),g(x) \in [-\frac{\pi}{2},\frac{\pi}{2}]$
-
-$$ f'(x)=-\frac{1}{\sqrt{x^2+1}}$$
-
-$$ g'(x)=-\frac{1}{\sqrt{x^2+1}} $$
+> <details>
+>
+> Let $f(x)=\cos^{-1}x$ and $g(x)=-\sin^{-1}x$
+> 
+> This implies that $x \in [-1,1]$ and $f(x),g(x) \in [-\frac{\pi}{2},\frac{\pi}{2}]$
+> 
+> $$ f'(x)=-\frac{1}{\sqrt{x^2+1}}$$
+>
+> $$ g'(x)=-\frac{1}{\sqrt{x^2+1}} $$
 Since $f'(x)-g'(x)=0$ for $x \in [-1,1]$, then $f(x)-g(x)=C$ for some constant $C$ by a corollary.
-
-$$ cos^{-1}x - (-sin^{-1}x)=C $$
-$$ cos^{-1}x +sin^{-1}x=C $$
-Substituting $x \in [-1,1]$, in this case, let's use $x=0$,
-
-$$ cos^{-1}(0) +sin^{-1}(0)=C $$
-$$ 0 + \frac{\pi}{2} = C $$
-
-$$ C = \frac{\pi}{2} $$ 
-
-$$ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}$$
+>
+> \begin{align*}
+> \cos^{-1}x - (-\sin^{-1}x)&=C \\
+> \cos^{-1}x +\sin^{-1}x&=C
+> \end{align*}
+> 
+> Substituting $x \in [-1,1]$, in this case, let's use $x=0$,
+> 
+> \begin{align*}
+> \cos^{-1}(0) +\sin^{-1}(0)&=C \\
+> 0 + \frac{\pi}{2} &= C \\
+> C &= \frac{\pi}{2} 
+> \end{align*}
+>
+> $$ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}$$
+>
+> </details>
 
 ## Differentials
 
-$$ f'(x)=\frac{dy}{dx} $$
-$$ dy = f'(x)dx $$
+\begin{align*}
+f'(x)&=\frac{dy}{dx}\\
+f'(x)dx &= dy
+\end{align*}
 
+# 1 - Indefinite and definite integrals
 
-# Module 1: Indefinite and definite integrals
+## Indefinite integral
 
-## Antiderivatives
+The main interpretation of derivative is the slope of a tangent line of a curve.
 
+#### Example 
 
+> <details>
+> At any point $(x,y)$ on a particular curve $y=F(x)$, the tangent line has a slope equal to $4x-5$. If the curve contains the point $(3,7)$, find $F(x)$.
+> 
+> 
+> **Solution.** Since the slope is equal to $4x-5$ for any point $(x,y)$, then the slope at $(3,7)$ is $4(3)-5=7$.
+> 
+> $4x-5$ therefore represents the tangent slope for all values of $x$. So
+> 
+> $$ F'(x)=4x-5 $$
+> 
+> By intuition, we can conclude that $F(x)=2x^2-5x$.
+> 
+> However given $F(x)=2x^2-5x+1$, $F'(x)$ remains the same. And so is $F(x)=2x^2-5x-3$, $F(x)=2x^2-5x+\pi$, and infinitely more functions. We can arbitrarily assign a constant $k$, so that $F(x)=2x^2-5x+k$.
+> 
+> Substituting $(x,y)=(3,7),$
+>
+> \begin{align*}
+> 7 &= 2(3)^2 - 5(3) +k\\
+> 7 &= 18 - 15 + k \\
+> k &= 4 
+> \end{align*}
+>
+> So $F(x)=2x^2-5x+4$.
+>
+> </details>
+
+### Definition of an antiderivative
+
+A function $F$ is called an antiderivative of the function $f$ on an interval $I$ if $F'(x) = f(x) \;\forall x \in I$.
+
+$F(x)=2x^2-5x$ is a **possible** antiderivative of $f(x)=4x-5$. $F(x)=2x^2-5x+4$ is also a **possible** antiderivative of $f(x)=4x-5$.
+
+### Equal derivatives
+
+If $F'(x)=G'(x) \;\forall x$ in an interval $I$, then $F(x) = G(x) + C \;\forall x \in I$ for some constant $C$.
+
+### Integration notation
+
+The collection of all antiderivatives of $f$ is denoted by
+
+$$ \int f(x)dx $$
+
+which is read as "the integral of $f(x)dx$."
+
+This collection is also called the **indefinite integral** of $f$.
+
+The reverse process if differentiation is called **antidifferentiation** or **integration**. 
+
+$\int (4x-5)dx = 2x^2-5x+C$ for some constant $C$.
+
+$C$ is the constant of integration.
+ 
+$\int \sin xdx = -\cos x+C$
+
+### Integration rules
+
+1. $\int kf(x)dx = k \int f(x)dx$, $k$ constant
+
+2. $\int f(x) \pm g(x) dx = \int f(x)dx \pm \int g(x)dx$
+
+### Integration formulas I
+
+1. $\int kdx = kx + C, k \in \mathbb{R}$
+
+2. $\int x^ndx =  \frac{x^{n+1}}{n+1}+C, n \in \mathbb{R}, n \neq -1$
+
+### Integration formulas II
+
+1. $\int \sin xdx = -\cos x + C$
+
+2. $\int \cos xdx = \sin x + C$
+
+3. $\int \sec^2xdx = \tan x + C$
+
+4. $\int \csc^2xdx = -\cot x + C$
+
+5. $\int \sec x\tan xdx = \sec x + C$
+
+6. $\int \csc x\cot xdx = -\csc x +C$
+
+### Integration formulas III
+
+1. $\int e^xdx =e^x +C$
+
+2. $\int \frac{1}{x}dx=\ln|x|+C$
+
+3. $\int \frac{1}{\sqrt{1-x^2}}dx = \sin^{-1}x +C$
+
+4. $\int \frac{1}{1+x^2}dx = \tan^{-1}x +C$
+
+5. $\int \frac{1}{x\sqrt{x^2-1}}dx= \sec^{-1}+C$
 
 ## Substitution rule
 
+### Chain rule for derivatives
+
+$$ \frac{d}{dx}(f(g(x)))=f'(g(x))g'(x) $$
+
+If follows that 
+
+$$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
+
+#### Example
+
+> <details>
+> Evaluate $\int 2xcosx^2dx$.
+>
+> **Preliminary work.** By intuition, we can get $f(x)=sinx$ and $g(x)=x^2$
+> 
+> $$ \int 2x\cos x^2dx = f(g(x)) = \sin x^2 $$
+> 
+> **Solution.** Suppose that $f'(x)=\frac{dy}{dx}$
+> 
+> $$ dy = f'(x)dx $$
+> 
+> Let $u=g(x)$, then $g'(x)=\frac{du}{dx}$
+> 
+> $$ du = g'(x)dx $$
+> 
+> Let $u=x^2$
+> 
+> \begin{align*}
+> du &=2xdx\\
+>  \int 2x\cos x^2dx &= \int \cos udu\\
+>  &=\sin u+C \\
+>  &=\sin x^2+C
+> \end{align*}
+>
+> </details>
+
+### Definition of the substitution rule
+
+If $u=g(x)$ is a differentiable function whose range is interval $I$ and $f$ is continuous on $I$, then
+
+$$ \int f'(g(x))g'(x) = \int f(u)du $$
+
+## Definite integrals
+
+### The area problem
+
+Let $f$ be a continuous nonnegative function on $[a,b]$. Find the area of the regiom bounded by the curve $y=f(x)$, the lines $x=a$, $x=b$, and the $x$-axis.
+
+> The area is often coined the **region under the curve**, which generally means the area in between the curve and the $x$-axis
+
+#### Example
+
+> <details>
+> Consider $f(x) = x^2 +1$ on $[0,2]$.
+>
+> **Solution.**
+> Let $A$ be the area under the curve\\
+>
+> Using right endpoints (5 rectangles) 
+>
+> $$ \Delta x = \frac{2-0}{5} = \frac{2}{5} = 0.4 $$
+> Rectangle 1: $(\Delta x)(f(0.4)) = (0.4)(1.16)$
+>
+> Rectangle 2: $(\Delta x)(f(0.8)) = (0.4)(1.64)$
+>
+> Rectangle 3: $(\Delta x)(f(1.2)) = (0.4)(2.44)$
+>
+> Rectangle 4: $(\Delta x)(f(1.6)) = (0.4)(3.56)$
+>
+> Rectangle 5: $(\Delta x)(f(2.0)) = (0.4)(5)$
+>
+> $$ A_5^+ = (0.4)(1.16) + (0.4)(1.64) + (0.4)(2.44) + (0.4)(3.56) +(0.4)(5) = 5.52 $$
+> $A_5^+$ is an overestimation of $A$.\\
+>
+> Using left endpoints (5 rectangles):
+>
+> Rectangle 1: $(\Delta x)(f(0)) = (0.4)(1)$
+>
+> Rectangle 2: $(\Delta x)(f(0.4)) = (0.4)(1.16)$
+>
+> Rectangle 3: $(\Delta x)(f(0.8)) = (0.4)(1.64)$
+>
+> Rectangle 4: $(\Delta x)(f(1.2)) = (0.4)(2.44)$
+>
+> Rectangle 5: $(\Delta x)(f(1.6)) = (0.4)(3.56)$
+>
+> $$ A_5^- = (0.4)(1) + (0.4)(1.16) + (0.4)(1.64) + (0.4)(2.44) + (0.4)(3.56) + =3.92 $$
+>
+> $A_5^-$ is an underestimation of $A$\\
+>
+> We can increase the number of rectangles and compute the area $A$ more **accurately** by computing the area as the number of rectangles approach infinity.\\
+>
+> Let the number of rectangles be $n$
+> 
+> $$ \Delta x = \frac{2-0}{n}=\frac{2}{n} $$
+> Let $x_0$ be the first point: $x_0=0$
+>
+> \begin{align*}
+> x_1 &= \frac{2}{n} & x_2 &= \frac{4}{n} & x_3 &= \frac{6}{n}\\
+> x_4 &= \frac{8}{n} & x_5 &= \frac{10}{n} & x_6 &= \frac{12}{n}\\
+> x_7 &= \frac{14}{n} &    &\cdots      & x_i &= \frac{2i}{n}
+> \end{align*}\
+>
+> 
+> 
+> \begin{align*}
+> A_n^+ &= R_1 + R_2 + R_3 + R_4 + \cdots + R_n\\
+> &= \sum_{i=0}^n \Delta x (f(x_i))\\
+> &= \sum_{i=0}^n \frac{2}{n} \Big(\Big(\frac{2i}{n}\Big)^2 +1)\Big\\
+> &= \frac{2}{n} \sum_{i=0}^n (\frac{4i^2}{n^2} +1)\\
+> &= \frac{2}{n} \Big[\sum_{i=0}^n (\frac{4i^2}{n^2}) + \sum_{i=0}^n(1)\Big]\\
+> &= \frac{2}{n} \Big[\frac{4}{n^2}\sum_{i=0}^n (i^2) + \sum_{i=0}^n(1)\Big]\\
+> &= \frac{2}{n} \Big[\frac{4}{n^2} \Big(\frac{(n)(n+1)(2n+1)}{6}\Big)+n\Big]\\
+> A_n&= \frac{8}{n^3} \frac{(n)(n+1)(2n+1)}{6} +2
+> \end{align*}\
+> 
+> \begin{align*}
+> A &= \lim_{n \to\infty} A_n\\
+> &= \lim_{n \to \infty}  \frac{8}{n^3} \frac{(n)(n+1)(2n+1)}{6} + 2\\
+> &= \lim_{n \to \infty} \frac{8(n)(n+1)(2n+1)}{6n^3} +2\\
+> &= \lim_{n \to \infty} \frac{8(n+1)(2n+1)}{6n^2} +2\\
+> &= \frac{16}{6} +2\\
+> &= \frac{28}{6} = \frac{14}{3}
+> \end{align*}
+>
+> </details>
+
+Consider $y=f(x)$ on $[a,b]$.
+
+Let $x_0=a, x_1,x_2, \ldots, x_n = b$,
+
+$$A_n = \sum_{i=1}{n}f(x_i^*)\Delta x $$
+
+This is also called the **Riemann sum**.
+
+### Definite integral and integrability
+
+The definite integral of $f$ from $a$ to $b$ is
+
+$$ \int_a^b f(x)dx = \lim_{x\to\infty}\sum_{i=1}{n}f(x_i^*)\Delta x $$
+provided that such limit exists.
+
+We say that $f$ is integrable on $[a,b]$
+
+#### Remarks
+
+1. If a function is continuous on $[a,b]$, it is integrable on $[a,b]$.
+
+2. If $f$ is a nonnegative continuous function on $[a,b]$, then $\int_a^b f(x)dx$ is the area under the curve $y=f(x)$ from $x=a$ and $x=b$
+
+3.
+
+### Conventions on definite integral
+
+1. $\int_b^a f(x)dx = -\int_a^b f(x)dx$
+
+2. $\int_a^a f(x)dx = 0$
+
+### Properties of the definite integral
+
+1. $\int_a^b cf(x)dx = c\int_a^b f(x)dx$
+
+2. $\int_a^b [f(x) \pm g(x)] dx = \int_a^b f(x) \pm \int_a^b g(x)$
+
+3.
+
+4.
+
+5.
+
+6.
+
+## Proof of the Fundamental Theorem of Calculus
+
+
+
+
 ## The area problem
+
+
 
 ## The definite Integrals
 
-## The Fundamental Theorem of Calculus
-
-## Proof of Fundamental Theorem of Calculus
 
 
 
-
-# Module 2: Application I
+# 2 - Application I
 
 ## Areas between curves
 
@@ -132,20 +418,20 @@ $$ dy = f'(x)dx $$
 
 ## Volumes of solids of revolution using cylindrical shells
 
-# Module 3: Techniques of integration
+# 3 - Techniques of integration
 
 ## Integration by parts
 
 ## Trigonometric integrals
 
-## Trigonometric Substitution
+## Trigonometric substitution
 
 ## Partial fractions
 
 
 
 
-# Module 4: Applications II
+# 4 - Applications II
 
 ## Arc length
 
