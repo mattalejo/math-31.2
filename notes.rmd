@@ -401,13 +401,9 @@ We say that $f$ is integrable on $[a,b]$
 
 3. $\int_a^c f(x)dx + \int_c^b f(x)dx = \int_a^b f(x)dx$
 
-4. If $f(x)\geq0 \;\forall x \in[a,b]$, then
+4. If $f(x)\geq0 \;\forall x \in[a,b]$, then $$ \int_a^b f(x)dx \geq 0 $$
 
-$$ \int_a^b f(x)dx \geq 0 $$
-
-5. If $f(x) \geq g(x)\;\forall x\in[a,b]$, then 
-
-$$ \int_a^b f(x)dx \geq \int_a^b g(x)dx $$
+5. If $f(x) \geq g(x)\;\forall x\in[a,b]$, then $$ \int_a^b f(x)dx \geq \int_a^b g(x)dx $$
 
 6. If $m \leq f(x) \leq M \;\forall x\in[a,b]$, then $$ m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)$$
 
