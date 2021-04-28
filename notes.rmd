@@ -379,7 +379,7 @@ provided that such limit exists.
 
 We say that $f$ is integrable on $[a,b]$
 
-### Remarks on definit integrals
+### Remarks on the definite integral
 
 1. If a function is continuous on $[a,b]$, it is integrable on $[a,b]$.
 
@@ -387,7 +387,7 @@ We say that $f$ is integrable on $[a,b]$
 
 3. $\int_a^b f(x)dx = \int_a^b f(y)dy$
 
-### Conventions on definite integral
+### Conventions on the definite integral
 
 1. $\int_b^a f(x)dx = -\int_a^b f(x)dx$
 
@@ -408,6 +408,39 @@ We say that $f$ is integrable on $[a,b]$
 6. If $m \leq f(x) \leq M \;\forall x\in[a,b]$, then $$ m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)$$
 
 ## The Fundamental Theorem of Calculus
+
+> <details>
+>
+> Let's bring back $f(x)=x^2+1$ on $[0,2]$.
+> 
+> $f$ is continuous on $[0,2] \implies f$ is integrable on $[0,2]$. 
+> 
+> $\implies \int_0^2 (x^2+1)dx = \frac{14}{3}$
+> 
+> Let $F(x)= \frac{x^3}{3}+ x-1$.
+> 
+> \begin{align*}
+> F(2) &= \frac{2^3}{3}+2-1 = \frac{8}{3}+1 = \frac{11}{3}\\
+> F(0) &= \frac{0^3}{3}+0-1 = 0-1 = - 1\\
+> F(2) - F(0) &= \frac{11}{3} -(-1) = \frac{14}{3} \\
+> \int_0^2 (x^2+1)dx &= F(2)-F(0)
+> \end{align*}
+> 
+> Observe that $F'(x) = x^2 +1 \implies F(x)$ is the an antiderivative of $x^2+1$.
+> 
+> </details>
+
+### Second part of the Fundamental Theorem of Calculus
+
+If a function $f$ is continuous on $[a,b]$, then
+
+$$ \int_a^b f(x)dx = F(b)-F(a) $$
+
+where $F$ is any antiderivative of $f$ on $[a,b]$
+
+> The following notations for $F(b)-F(a)$ are very useful in evaluating definite integrals:
+>
+> $F(x)\Big]_a^b$ or $F(x)\Big|_a^b$
 
 ## Proof of the Fundamental Theorem of Calculus
 

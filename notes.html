@@ -1675,11 +1675,14 @@ pre code {
 <li><a href="#the-area-problem">The area problem</a></li>
 <li><a href="#riemann-sum">Riemann sum</a></li>
 <li><a href="#definite-integral-and-integrability">Definite integral and integrability</a></li>
-<li><a href="#remarks-on-definit-integrals">Remarks on definit integrals</a></li>
-<li><a href="#conventions-on-definite-integral">Conventions on definite integral</a></li>
+<li><a href="#remarks-on-the-definite-integral">Remarks on the definite integral</a></li>
+<li><a href="#conventions-on-the-definite-integral">Conventions on the definite integral</a></li>
 <li><a href="#properties-of-the-definite-integral">Properties of the definite integral</a></li>
 </ul></li>
-<li><a href="#the-fundamental-theorem-of-calculus">The Fundamental Theorem of Calculus</a></li>
+<li><a href="#the-fundamental-theorem-of-calculus">The Fundamental Theorem of Calculus</a>
+<ul>
+<li><a href="#second-part-of-the-fundamental-theorem-of-calculus">Second part of the Fundamental Theorem of Calculus</a></li>
+</ul></li>
 <li><a href="#proof-of-the-fundamental-theorem-of-calculus">Proof of the Fundamental Theorem of Calculus</a></li>
 </ul></li>
 <li><a href="#application-i">2 - Application I</a>
@@ -1986,16 +1989,16 @@ A &amp;= \frac{14}{3}
 <p><span class="math display">\[ \int_a^b f(x)dx = \lim_{x\to\infty}\sum_{i=1}^{n} f(x_i^*)\Delta x \]</span> provided that such limit exists.</p>
 <p>We say that <span class="math inline">\(f\)</span> is integrable on <span class="math inline">\([a,b]\)</span></p>
 </div>
-<div id="remarks-on-definit-integrals" class="section level3">
-<h3>Remarks on definit integrals</h3>
+<div id="remarks-on-the-definite-integral" class="section level3">
+<h3>Remarks on the definite integral</h3>
 <ol style="list-style-type: decimal">
 <li><p>If a function is continuous on <span class="math inline">\([a,b]\)</span>, it is integrable on <span class="math inline">\([a,b]\)</span>.</p></li>
 <li><p>If <span class="math inline">\(f\)</span> is a nonnegative continuous function on <span class="math inline">\([a,b]\)</span>, then <span class="math inline">\(\int_a^b f(x)dx\)</span> is the area under the curve <span class="math inline">\(y=f(x)\)</span> from <span class="math inline">\(x=a\)</span> and <span class="math inline">\(x=b\)</span></p></li>
 <li><p><span class="math inline">\(\int_a^b f(x)dx = \int_a^b f(y)dy\)</span></p></li>
 </ol>
 </div>
-<div id="conventions-on-definite-integral" class="section level3">
-<h3>Conventions on definite integral</h3>
+<div id="conventions-on-the-definite-integral" class="section level3">
+<h3>Conventions on the definite integral</h3>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(\int_b^a f(x)dx = -\int_a^b f(x)dx\)</span></p></li>
 <li><p><span class="math inline">\(\int_a^a f(x)dx = 0\)</span></p></li>
@@ -2015,6 +2018,31 @@ A &amp;= \frac{14}{3}
 </div>
 <div id="the-fundamental-theorem-of-calculus" class="section level2">
 <h2>The Fundamental Theorem of Calculus</h2>
+<blockquote>
+<details>
+<p>Let’s bring back <span class="math inline">\(f(x)=x^2+1\)</span> on <span class="math inline">\([0,2]\)</span>.</p>
+<p><span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([0,2] \implies f\)</span> is integrable on <span class="math inline">\([0,2]\)</span>.</p>
+<p><span class="math inline">\(\implies \int_0^2 (x^2+1)dx = \frac{14}{3}\)</span></p>
+<p>Let <span class="math inline">\(F(x)= \frac{x^3}{3}+ x-1\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+F(2) &amp;= \frac{2^3}{3}+2-1 = \frac{8}{3}+1 = \frac{11}{3}\\
+F(0) &amp;= \frac{0^3}{3}+0-1 = 0-1 = - 1\\
+F(2) - F(0) &amp;= \frac{11}{3} -(-1) = \frac{14}{3} \\
+\int_0^2 (x^2+1)dx &amp;= F(2)-F(0)
+\end{align*}\]</span></p>
+<p>Observe that <span class="math inline">\(F&#39;(x) = x^2 +1 \implies F(x)\)</span> is the an antiderivative of <span class="math inline">\(x^2+1\)</span>.</p>
+</details>
+</blockquote>
+<div id="second-part-of-the-fundamental-theorem-of-calculus" class="section level3">
+<h3>Second part of the Fundamental Theorem of Calculus</h3>
+<p>If a function <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a,b]\)</span>, then</p>
+<p><span class="math display">\[ \int_a^b f(x)dx = F(b)-F(a) \]</span></p>
+<p>where <span class="math inline">\(F\)</span> is any antiderivative of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span></p>
+<blockquote>
+<p>The following notations for <span class="math inline">\(F(b)-F(a)\)</span> are very useful in evaluating definite integrals:</p>
+<p><span class="math inline">\(F(x)\Big]_a^b\)</span> or <span class="math inline">\(F(x)\Big|_a^b\)</span></p>
+</blockquote>
+</div>
 </div>
 <div id="proof-of-the-fundamental-theorem-of-calculus" class="section level2">
 <h2>Proof of the Fundamental Theorem of Calculus</h2>
