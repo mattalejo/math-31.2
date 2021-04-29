@@ -3,7 +3,9 @@ output:
   html_document:
     css: style.css
     toc: yes
-    toc_depth: '3'
+    toc_float: true
+    toc_collapsed: false
+    toc_depth: '2'
     df_print: paged
     includes:
       in_header: header.html

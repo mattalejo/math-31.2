@@ -50,3 +50,17 @@ blockquote{
   width: 100%;
   color: #191919;
 }
+
+.tocify{
+  background-color: #303030;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.list-group-item{
+  background-color: #303030;
+}
+
+.tocify ul, .tocify li {
+    line-height: 32px !important;
+}}
