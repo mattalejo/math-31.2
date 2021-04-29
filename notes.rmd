@@ -1,5 +1,6 @@
 ---
 output:
+  pdf_document:
   html_document:
     css: style.css
     toc: yes
@@ -10,11 +11,10 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
-  pdf_document:
 title: "Mathematical Analysis IB"
 ---
 
-```{r check, include=FALSE}
+```{r check, message=TRUE, include=FALSE}
 options(tinytex.verbose = TRUE)
 ```
 
@@ -28,48 +28,49 @@ Let $f$ be a function on some open interval $I$ containing $x$. The derivative o
 
 $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 
+
 ## Differentiation rules
 
-1. $\frac{d}{dx}(cf(x))= cf'(x)$
+1. $\displaystyle\frac{d}{dx}(cf(x))= cf'(x)$
 
-2. $\frac{d}{dx}(f(x) \pm g(x)) = f'(x) \pm g'(x)$
+2. $\displaystyle\frac{d}{dx}(f(x) \pm g(x)) = f'(x) \pm g'(x)$
 
-3. $\frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + g(x)f'(x)$
+3. $\displaystyle\frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + g(x)f'(x)$
 
-4. $\frac{d}{dx}(\frac{f(x)}{g(x)}) = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$
+4. $\displaystyle\frac{d}{dx}\Big(\frac{f(x)}{g(x)}\Big) = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$
 
-5. $\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)$
+5. $\displaystyle\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)$
 
 
 ## Differentiation formulas I
 
-1. $\frac{d}{dx}(c)=0, c \in \mathbb{R}$
+1. $\displaystyle\frac{d}{dx}(c)=0, c \in \mathbb{R}$
 
-2. $\frac{d}{dx}(x^r)=rx^{r-1}, r \in \mathbb{R}$
+2. $\displaystyle\frac{d}{dx}(x^r)=rx^{r-1}, r \in \mathbb{R}$
 
-3. $\frac{d}{dx}(\sin x)=\cos x$ 
+3. $\displaystyle\frac{d}{dx}(\sin x)=\cos x$ 
 
-4. $\frac{d}{dx}(\cos x)=\sin x$
+4. $\displaystyle\frac{d}{dx}(\cos x)=\sin x$
 
-5. $\frac{d}{dx}(\tan x)=\sec^2x$
+5. $\displaystyle\frac{d}{dx}(\tan x)=\sec^2x$
 
-6. $\frac{d}{dx}(\cot x)=-\csc^2x$
+6. $\displaystyle\frac{d}{dx}(\cot x)=-\csc^2x$
 
-7. $\frac{d}{dx}(\sec x) = \sec x\tan x$
+7. $\displaystyle\frac{d}{dx}(\sec x) = \sec x\tan x$
 
-8. $\frac{d}{dx}(\csc x)=-\csc x\cot x$
+8. $\displaystyle\frac{d}{dx}(\csc x)=-\csc x\cot x$
 
 ## Differentiation formulas II
 
-1. $\frac{d}{dx}(e^x) = e^x$
+1. $\displaystyle\frac{d}{dx}(e^x) = e^x$
 
-2. $\frac{d}{dx}(\ln|x|) = \frac{1}{x}$
+2. $\displaystyle\frac{d}{dx}(\ln|x|) = \frac{1}{x}$
 
-3. $\frac{d}{dx}(\sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}$
+3. $\displaystyle\frac{d}{dx}(\sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}$
 
-4. $\frac{d}{dx}(\tan^{-1}x) = \frac{1}{1+x^2}$
+4. $\displaystyle\frac{d}{dx}(\tan^{-1}x) = \frac{1}{1+x^2}$
 
-5. $\frac{d}{dx}(\sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}$
+5. $\displaystyle\frac{d}{dx}(\sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}$
 
 ## Mean value theorem
 
@@ -93,7 +94,7 @@ If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some c
 >
 > Let $f(x)=\cos^{-1}x$ and $g(x)=-\sin^{-1}x$
 > 
-> This implies that $x \in [-1,1]$ and $f(x),g(x) \in [-\frac{\pi}{2},\frac{\pi}{2}]$
+> This implies that $x \in [-1,1]$ and $\displaystyle f(x),g(x) \in \Big[-\frac{\pi}{2},\frac{\pi}{2}\Big]$
 > 
 > $$ f'(x)=-\frac{1}{\sqrt{x^2+1}}$$
 >
@@ -180,49 +181,49 @@ This collection is also called the **indefinite integral** of $f$.
 
 The reverse process if differentiation is called **antidifferentiation** or **integration**. 
 
-$\int (4x-5)dx = 2x^2-5x+C$ for some constant $C$.
+$\displaystyle\int (4x-5)dx = 2x^2-5x+C$ for some constant $C$.
 
 $C$ is the constant of integration.
  
-$\int \sin xdx = -\cos x+C$
+$\displaystyle\int \sin xdx = -\cos x+C$
 
 ### Integration rules
 
-1. $\int kf(x)dx = k \int f(x)dx$, $k$ constant
+1. $\displaystyle\int kf(x)dx = k \int f(x)dx$, $k$ constant
 
-2. $\int f(x) \pm g(x) dx = \int f(x)dx \pm \int g(x)dx$
+2. $\displaystyle\int f(x) \pm g(x) dx = \int f(x)dx \pm \int g(x)dx$
 
 ### Integration formulas I
 
-1. $\int kdx = kx + C, k \in \mathbb{R}$
+1. $\displaystyle\int kdx = kx + C, k \in \mathbb{R}$
 
-2. $\int x^ndx =  \frac{x^{n+1}}{n+1}+C, n \in \mathbb{R}, n \neq -1$
+2. $\displaystyle\int x^ndx =  \frac{x^{n+1}}{n+1}+C, n \in \mathbb{R}, n \neq -1$
 
 ### Integration formulas II
 
-1. $\int \sin xdx = -\cos x + C$
+1. $\displaystyle\int \sin xdx = -\cos x + C$
 
-2. $\int \cos xdx = \sin x + C$
+2. $\displaystyle\int \cos xdx = \sin x + C$
 
-3. $\int \sec^2xdx = \tan x + C$
+3. $\displaystyle\int \sec^2xdx = \tan x + C$
 
-4. $\int \csc^2xdx = -\cot x + C$
+4. $\displaystyle\int \csc^2xdx = -\cot x + C$
 
-5. $\int \sec x\tan xdx = \sec x + C$
+5. $\displaystyle\int \sec x\tan xdx = \sec x + C$
 
-6. $\int \csc x\cot xdx = -\csc x +C$
+6. $\displaystyle\int \csc x\cot xdx = -\csc x +C$
 
 ### Integration formulas III
 
-1. $\int e^xdx =e^x +C$
+1. $\displaystyle\int e^xdx =e^x +C$
 
-2. $\int \frac{1}{x}dx=\ln|x|+C$
+2. $\displaystyle\int \frac{1}{x}dx=\ln|x|+C$
 
-3. $\int \frac{1}{\sqrt{1-x^2}}dx = \sin^{-1}x +C$
+3. $\displaystyle\int \frac{1}{\sqrt{1-x^2}}dx = \sin^{-1}x +C$
 
-4. $\int \frac{1}{1+x^2}dx = \tan^{-1}x +C$
+4. $\displaystyle\int \frac{1}{1+x^2}dx = \tan^{-1}x +C$
 
-5. $\int \frac{1}{x\sqrt{x^2-1}}dx= \sec^{-1}+C$
+5. $\displaystyle\int \frac{1}{x\sqrt{x^2-1}}dx= \sec^{-1}+C$
 
 ## Substitution rule
 
@@ -385,29 +386,29 @@ We say that $f$ is integrable on $[a,b]$
 
 1. If a function is continuous on $[a,b]$, it is integrable on $[a,b]$.
 
-2. If $f$ is a nonnegative continuous function on $[a,b]$, then $\int_a^b f(x)dx$ is the area under the curve $y=f(x)$ from $x=a$ and $x=b$
+2. If $f$ is a nonnegative continuous function on $[a,b]$, then $\displaystyle\int_a^b f(x)dx$ is the area under the curve $y=f(x)$ from $x=a$ and $x=b$
 
-3. $\int_a^b f(x)dx = \int_a^b f(y)dy$
+3. $\displaystyle\int_a^b f(x)dx = \int_a^b f(y)dy$
 
 ### Conventions on the definite integral
 
-1. $\int_b^a f(x)dx = -\int_a^b f(x)dx$
+1. $\displaystyle\int_b^a f(x)dx = -\int_a^b f(x)dx$
 
-2. $\int_a^a f(x)dx = 0$
+2. $\displaystyle\int_a^a f(x)dx = 0$
 
 ### Properties of the definite integral
 
-1. $\int_a^b cf(x)dx = c\int_a^b f(x)dx$
+1. $\displaystyle\int_a^b cf(x)dx = c\int_a^b f(x)dx$
 
-2. $\int_a^b [f(x) \pm g(x)] dx = \int_a^b f(x) \pm \int_a^b g(x)$
+2. $\displaystyle\int_a^b [f(x) \pm g(x)] dx = \int_a^b f(x) \pm \int_a^b g(x)$
 
-3. $\int_a^c f(x)dx + \int_c^b f(x)dx = \int_a^b f(x)dx$
+3. $\displaystyle\int_a^c f(x)dx + \int_c^b f(x)dx = \int_a^b f(x)dx$
 
-4. If $f(x)\geq0 \;\forall x \in[a,b]$, then $$ \int_a^b f(x)dx \geq 0 $$
+4. If $f(x)\geq0 \;\forall x \in[a,b]$, then $\displaystyle\int_a^b f(x)dx \geq 0$
 
-5. If $f(x) \geq g(x)\;\forall x\in[a,b]$, then $$ \int_a^b f(x)dx \geq \int_a^b g(x)dx $$
+5. If $f(x) \geq g(x)\;\forall x\in[a,b]$, then $\displaystyle\int_a^b f(x)dx \geq \int_a^b g(x)dx$
 
-6. If $m \leq f(x) \leq M \;\forall x\in[a,b]$, then $$ m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)$$
+6. If $m \leq f(x) \leq M \;\forall x\in[a,b]$, then $\displaystyle m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)$
 
 ## The Fundamental Theorem of Calculus
 
@@ -417,9 +418,9 @@ We say that $f$ is integrable on $[a,b]$
 > 
 > $f$ is continuous on $[0,2] \implies f$ is integrable on $[0,2]$. 
 > 
-> $\implies \int_0^2 (x^2+1)dx = \frac{14}{3}$
+> $$ \implies \int_0^2 (x^2+1)dx = \frac{14}{3} $$
 > 
-> Let $F(x)= \frac{x^3}{3}+ x-1$.
+> Let $\displaystyle F(x)= \frac{x^3}{3}+ x-1$.
 > 
 > \begin{align*}
 > F(2) &= \frac{2^3}{3}+2-1 = \frac{8}{3}+1 = \frac{11}{3}\\
@@ -442,20 +443,76 @@ where $F$ is any antiderivative of $f$ on $[a,b]$
 
 > The following notations for $F(b)-F(a)$ are very useful in evaluating definite integrals:
 >
-> $F(x)\Big]_a^b$ or $F(x)\Big|_a^b$
-
-## Proof of the Fundamental Theorem of Calculus
-
-
-
-
-
-
+> $\displaystyle F(x)\Big]_a^b$ or $\displaystyle F(x)\Big|_a^b$
 
 
 # 2 - Application I
 
 ## Areas between curves
+
+#### Example 1
+
+> <details>
+> Find the area of the region under the curve $y=x^2-1$ from $x=-1$ to $x=2$.
+>
+> **Solution.** Area is simply not $\int_{-1}^2 (x^2-1)dx$ because $\int_{-1}^1 (x^2-1)dx$ is negative and cancels the positive area.
+> 
+> Therefore, we get $\int_{-1}^1 -(x^2-1)dx$ to get the area of the curve between -1 and 1.
+> \begin{align*}
+> A &= \int_{-1}^1-(x^2-1)dx+\int_1^2(x^2-1)dx \\
+> &= \Big(-\frac{x^3}{3}+x\Big)\Bigg|_{-1}^1+\Big(\frac{x^3}{3}-x\Big)\Bigg|_1^2\\
+> &= \Big(\frac{1^3}{3}+1\Big)-\Big[\frac{(-1)^3}{3}+(-1)\Big]+\Big(\frac{2^3}{3}-2\Big)-\Big(\frac{1^3}{3}-1\Big)\\
+> &= \frac{2}{3}+\frac{2}{3}+\frac{8}{3}-2+\frac{2}{3}\\
+> A &= \frac{8}{3} 
+> \end{align*}
+>
+> </details>
+
+#### Example 2
+
+> <details>
+> 
+> Find the area of the region bounded by the curves of $y=x^2$ and $y = 4x-x^2$.
+> 
+> **Solution.** Note that both curves intersect at $(0,0)$ and $(2,4)$.
+> 
+> When we use Riemann sum, we only get the rectangles in between the region bounded by the area by subtracting the upper function ($y=4x-x^2$) to the lower function ($y=x^2$)
+> 
+> $$ \implies A_n = \sum [(4x-x^2)-x^2]\Delta x $$
+> 
+> \begin{align*}
+> A &= \int_0^2[(4x-x^2)-x^2]dx\\
+> &= \int_0^2(4x-2x^2)dx\\
+> &= \Big(2x^2-\frac{2x^3}{3}\Big)\Bigg|_0^2\\
+> &= \Big[2(2)^2-\frac{2(2)^3}{3}\Big]-\Big[2(0)^2-\frac{2(0)^3}{3}\Big]\\
+> &= \Big[8-\frac{16}{3}\Big]-0\\
+> A &= \frac{8}{3}
+> \end{align*}
+> 
+> </details> 
+
+#### Example 3
+
+> <details>
+>
+> Find the area of the region bounded by the curve $y=\sqrt(x)$, the line $x+2y =3$, and the $x$-axis.
+> 
+> **Solution.** The graphs intersect at $(0,0)$, $(1,1)$, and $(3,0)$.
+> 
+> $$ x+2y = 3 \implies y  = -\frac{1}{2}x + \frac{3}{2} $$
+> 
+> \begin{align*}
+> A &= \int_0^1 (\sqrt{x})dx + \int_1^3 \Big(-\frac{1}{2}(3-x)\Big)dx\\
+> &= \Big(\frac{2x^{\frac{3}{2}}}{3}\Big) \Bigg|_0^1 + \Big(\frac{1}{2}(3x - \frac{x^2}{2})\Big)\Bigg|_1^3\\
+> &= \frac{2(1)^{\frac{3}{2}}}{3} - \frac{2(0)^{\frac{3}{2}}} + \frac{1}{2}(3(3) - \frac{3^2}{2}) - \frac{1}{2}(3(1) - \frac{1^2}{2})\\
+> &= \frac{2}{3}+ \frac{9}{4} - \frac{5}{4}\\
+> &= \frac{8-27+15}{12}\\
+> &= \frac{20}{12}\\
+> A &= \frac{5}{3}
+> \end{align*}
+> 
+> </details>
+
 
 ## Volumes and volumes of revolution using disks and washers
 
