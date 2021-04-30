@@ -513,7 +513,7 @@ where $F$ is any antiderivative of $f$ on $[a,b]$
 
 > <details>
 >
-> Find the area of the region bounded by the curve $y=\sqrt(x)$, the line $x+2y =3$, and the $x$-axis.
+> Find the area of the region bounded by the curve $y=\sqrt{x}$, the line $x+2y =3$, and the $x$-axis.
 > 
 > **Solution.** The graphs intersect at $(0,0)$, $(1,1)$, and $(3,0)$.
 > 
