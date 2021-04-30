@@ -3106,6 +3106,101 @@ A &amp;= \frac{14}{3}
 </div>
 <div id="the-fundamental-theorem-of-calculus" class="section level2">
 <h2>The Fundamental Theorem of Calculus</h2>
+<div id="mean-value-theorem-for-integrals" class="section level3">
+<h3>Mean Value Theorem for integrals</h3>
+<div id="proof" class="section level4">
+<h4>Proof</h4>
+<blockquote>
+<details>
+<p><span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a,b]\)</span>, <span class="math inline">\(\exists c \in [a,b]\)</span> such that</p>
+<p><span class="math display">\[ \int_b^a f(x)dx = f(c)(b-a) \]</span> Since <span class="math inline">\(f\)</span> is continuous on [a,b]. f is integrable on [a,b] — i.e. <span class="math inline">\(\int_a^b f(x)dx\)</span> has a a value.</p>
+<p>Since f is continuous on [a,b], by the <strong>Extreme Value Theorem</strong>, <span class="math inline">\(\exists m, M \in \mathbb{R}\)</span> such that <span class="math inline">\(f(x_m) = m, f(x_M) = M, m \leq f(x) \leq M \;\forall x \in [a,b]\)</span> and for some <span class="math inline">\(x_m, x_M \in [a,b]\)</span>.</p>
+<p>By Property 6 of the definite integral, <span class="math inline">\(\displaystyle m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)\)</span></p>
+<p><span class="math display">\[\begin{align*}
+m      &amp;\leq \frac{\int_a^b f(x)dx}{b-a} \leq&amp; M \\
+f(x_m) &amp;\leq \frac{\int_a^b f(x)dx}{b-a} \leq&amp; f(x_M)  \\
+\end{align*}\]</span></p>
+<p>By the IVT, <span class="math inline">\(\exists c \in [a,b]\)</span> such that</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\int_a^b f(x)dx}{b-a} &amp;= f(c)\\
+\int_a^b f(x)dx &amp;= f(c)(b-a)
+\end{align*}\]</span></p>
+</details>
+</blockquote>
+</div>
+</div>
+<div id="average-value-of-a-function" class="section level3">
+<h3>Average value of a function</h3>
+<p>Let <span class="math inline">\(f\)</span> be a continuous on [a,b]. The average value of f at [a,b], denoted by f_{avg} is</p>
+<p><span class="math display">\[ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} \]</span></p>
+<div id="proof-1" class="section level4">
+<h4>Proof</h4>
+<blockquote>
+<details>
+<p>Given a function continuous on <span class="math inline">\([a,b]\)</span>, we can get the average value of the function at <span class="math inline">\([a,b]\)</span> by dividing the curve into <span class="math inline">\(n\)</span> equal-width rectangles, &gt; getting the value of each sample points, and dividing by <span class="math inline">\(n\)</span>.</p>
+<p>Average area <span class="math inline">\(\displaystyle = \frac{\sum_{i=1}^n f(x_i^*)i}{n}\)</span></p>
+<p>But then, <span class="math inline">\(\displaystyle \Delta x = \frac{b-a}{n} \implies n = \frac{b-a}{\Delta x}\)</span></p>
+<p><span class="math display">\[\begin{align*}
+\frac{\sum_{i=1}^n f(x_i^*)i}{n} &amp;= \frac{\sum_{i=1}^n f(x_i^*)i}{\frac{b-a}{x}}\\
+&amp;= \frac{1}{b-a}\sum_{i=1}^n f(x_i^*)i \Delta x
+\end{align*}\]</span></p>
+<p>We want to make <span class="math inline">\(n\)</span> larger in order to make the average more accurate.</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{n\to\infty}\frac{\sum_{i=1}^n f(x_i^*)i}{n} &amp;= \lim_{n\to\infty}\frac{1}{b-a}\sum_{i=1}^n f(x_i^*)i \Delta x\\
+&amp;= \frac{1}{b-a}\lim_{n\to\infty}\sum_{i=1}^n f(x_i^*)i \Delta x\\
+&amp;= \frac{1}{b-a}\int_a^b f(x)dx
+\end{align*}\]</span></p>
+<p>Therefore, given function <span class="math inline">\(f\)</span> that is continuous on <span class="math inline">\([a,b]\)</span>, there exists <span class="math inline">\(c \in [a,b]\)</span> such that</p>
+<p><span class="math display">\[ f_{avg} = f(c) \]</span></p>
+</details>
+</blockquote>
+<p>Let <span class="math inline">\(y=f(t)\)</span> that is continuous on <span class="math inline">\([a,b]\)</span>.</p>
+<hr />
+</div>
+</div>
+<div id="first-part-of-the-fundamental-theorem-of-calculus" class="section level3">
+<h3>First part of the Fundamental Theorem of Calculus</h3>
+<p>If <span class="math inline">\(x \in [a,b]\)</span>, then the function is also continuous on <span class="math inline">\([a,x] \implies\)</span> the function is also continuous on <span class="math inline">\([a,x]\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+F(x) &amp;= \int_a^x f(t)dt \\
+F(a) &amp;= \int_a^a f(t)dt = 0 \\
+F(b) &amp;= \int_a^b f(t)dt
+\end{align*}\]</span></p>
+<p>Let <span class="math inline">\(f\)</span> be continuous on <span class="math inline">\([a,b]\)</span>. If f is the function defined by</p>
+<p><span class="math display">\[ F(x) = \int_a^x f(t)dt \]</span></p>
+<p>then <span class="math inline">\(F&#39;(x) = f(x) \;\forall x \in [a,b]\)</span>.</p>
+<div id="proof-2" class="section level4">
+<h4>Proof</h4>
+<blockquote>
+<details>
+<p>Let <span class="math inline">\(x, x+h \in [a,b], h\neq 0\)</span>.</p>
+<p><span class="math display">\[ F(x+h)-F(x) = \int_a^{x+h} f(t)dt -\int_a^x f(t)dt \]</span></p>
+<p>By the Property 3 of definite integrals, <span class="math display">\[\begin{align*}
+\int_a^{x+h} f(t)dt -\int_a^x f(t)dt &amp;= \int_a^x f(t)dt + \int_x^{x+h}f(t)dt -\int_a^x f(t)dt\\
+&amp;= \int_x^{x+h}f(t)dt
+\end{align*}\]</span></p>
+<p>By the Mean Value Theorem for integrals, <span class="math inline">\(\exists c \in [x,x+h]\)</span> such that</p>
+<p><span class="math display">\[\begin{align*}
+\int_x^{x+h}f(t)dt &amp;= f(c)(x+h-x)\\
+&amp;=hf(c)\\
+implies F(x+h)-F(x) &amp;= hf(c)\\
+\frac{F(x+h)-F(x)}{h} &amp;= f(c)\\
+\lim_{h\to 0}\frac{F(x+h)-F(x)}{h} &amp;= \lim_{h\to 0}f(c)
+\end{align*}\]</span></p>
+<p>Note that <span class="math inline">\(\displaystyle \lim_{h\to 0}x = x\)</span> and <span class="math inline">\(\displaystyle \lim_{h\to 0}(x+h) = x \implies \lim_{h\to 0}c = x\)</span> by Squeeze Theorem.</p>
+<p>Since <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x\)</span>,</p>
+<p><span class="math display">\[ \lim_{h\to 0}f(c) = f(x) \]</span></p>
+<p><span class="math display">\[\begin{align*}
+\implies F&#39;(x) &amp;= f(x) \;\forall x \in [a,b]\\
+\frac{d}{dx}\int_a^x f(t)dt &amp;= f(x)
+\end{align*}\]</span></p>
+</details>
+</blockquote>
+<hr />
+</div>
+</div>
+<div id="second-part-of-the-fundamental-theorem-of-calculus" class="section level3">
+<h3>Second part of the Fundamental Theorem of Calculus</h3>
 <blockquote>
 <details>
 <p>Let’s bring back <span class="math inline">\(f(x)=x^2+1\)</span> on <span class="math inline">\([0,2]\)</span>.</p>
@@ -3121,16 +3216,33 @@ F(2) - F(0) &amp;= \frac{11}{3} -(-1) = \frac{14}{3} \\
 <p>Observe that <span class="math inline">\(F&#39;(x) = x^2 +1 \implies F(x)\)</span> is the an antiderivative of <span class="math inline">\(x^2+1\)</span>.</p>
 </details>
 </blockquote>
-<div id="second-part-of-the-fundamental-theorem-of-calculus" class="section level3">
-<h3>Second part of the Fundamental Theorem of Calculus</h3>
 <p>If a function <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a,b]\)</span>, then</p>
 <p><span class="math display">\[ \int_a^b f(x)dx = F(b)-F(a) \]</span></p>
-<p>where <span class="math inline">\(F\)</span> is any antiderivative of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span></p>
+<p>where <span class="math inline">\(F\)</span> is any antiderivative of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span>.</p>
 <blockquote>
 <p>The following notations for <span class="math inline">\(F(b)-F(a)\)</span> are very useful in evaluating definite integrals:</p>
 <p><span class="math inline">\(\displaystyle F(x)\Big]_a^b\)</span> or <span class="math inline">\(\displaystyle F(x)\Big|_a^b\)</span></p>
 </blockquote>
+<div id="proof-3" class="section level4">
+<h4>Proof</h4>
+<blockquote>
+<details>
+<p>By FTC - Part 1, the function</p>
+<p><span class="math display">\[ \int_a^x f(t)dt \]</span></p>
+<p>is an antiderivative of f on <span class="math inline">\([a,b]\)</span>.</p>
+<p>By the Equal Derivatives Theorem,</p>
+<p><span class="math display">\[ \int_a^x f(t)dt = F(x) + C \]</span></p>
+<p>where <span class="math inline">\(F\)</span> is any antiderivative of <span class="math inline">\(f\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+ x= b, \int_a^b f(t)dt &amp;= F(b) + C \\
+ x=a , \int_a^a f(t)dt &amp;= F(a) + C = 0 \\
+\int_a^b f(t)dt - \int_a^a f(t)dt &amp;= [ F(b)+C ] - [F(a)+C] \\
+\int_a^b f(t)dt &amp;= F(b)-F(a)
+\end{align*}\]</span></p>
+</details>
+</blockquote>
 <hr />
+</div>
 </div>
 </div>
 </div>

@@ -427,7 +427,136 @@ We say that $f$ is integrable on $[a,b]$
 
 ***
 
+
 ## The Fundamental Theorem of Calculus
+
+### Mean Value Theorem for integrals
+
+#### Proof
+
+> <details>
+>
+> $f$ is continuous on $[a,b]$, $\exists c \in [a,b]$ such that
+> 
+> $$ \int_b^a f(x)dx = f(c)(b-a) $$
+> Since $f$ is continuous on [a,b]. f is integrable on [a,b] --- i.e. $\int_a^b f(x)dx$ has a a value.
+> 
+> Since f is continuous on [a,b], by the **Extreme Value Theorem**, $\exists m, M \in \mathbb{R}$ such that $f(x_m) = m, f(x_M) = M, m \leq f(x) \leq M \;\forall x \in [a,b]$ and for some $x_m, x_M \in [a,b]$.
+> 
+> By Property 6 of the definite integral, $\displaystyle m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)$
+> 
+> \begin{align*}
+> m      &\leq \frac{\int_a^b f(x)dx}{b-a} \leq& M \\
+> f(x_m) &\leq \frac{\int_a^b f(x)dx}{b-a} \leq& f(x_M)  \\
+> \end{align*}
+> 
+> By the IVT, $\exists c  \in [a,b]$ such that 
+> 
+> \begin{align*}
+> \frac{\int_a^b f(x)dx}{b-a} &= f(c)\\
+> \int_a^b f(x)dx &= f(c)(b-a)
+> \end{align*}
+> 
+> </details>
+
+### Average value of a function
+
+Let $f$ be a continuous on [a,b]. The average value of f at [a,b], denoted by f_{avg} is
+
+$$ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} $$
+
+#### Proof
+
+> <details>
+> 
+> Given a function continuous on $[a,b]$, we can get the average value of the function at $[a,b]$ by dividing the curve into $n$ equal-width rectangles, > getting the value of each sample points, and dividing by $n$.
+> 
+> Average area $\displaystyle = \frac{\sum_{i=1}^n f(x_i^*)i}{n}$
+> 
+> But then, $\displaystyle \Delta x = \frac{b-a}{n} \implies n = \frac{b-a}{\Delta x}$
+> 
+> \begin{align*}
+> \frac{\sum_{i=1}^n f(x_i^*)i}{n} &= \frac{\sum_{i=1}^n f(x_i^*)i}{\frac{b-a}{x}}\\
+> &= \frac{1}{b-a}\sum_{i=1}^n f(x_i^*)i \Delta x
+> \end{align*}
+> 
+> We want to make $n$ larger in order to make the average more accurate.
+> 
+> \begin{align*}
+> \lim_{n\to\infty}\frac{\sum_{i=1}^n f(x_i^*)i}{n} &= \lim_{n\to\infty}\frac{1}{b-a}\sum_{i=1}^n f(x_i^*)i \Delta x\\
+> &= \frac{1}{b-a}\lim_{n\to\infty}\sum_{i=1}^n f(x_i^*)i \Delta x\\
+> &= \frac{1}{b-a}\int_a^b f(x)dx
+> \end{align*}
+> 
+> Therefore, given function $f$ that is continuous on $[a,b]$, there exists $c \in [a,b]$ such that
+> 
+> $$ f_{avg} = f(c) $$
+> 
+> </details>
+
+
+
+***
+
+### First part of the Fundamental Theorem of Calculus
+
+Let $y=f(t)$ that is continuous on $[a,b]$.
+
+If $x \in [a,b]$, then the function is also continuous on $[a,x] \implies$ the function is also continuous on $[a,x]$.
+
+\begin{align*}
+F(x) &= \int_a^x f(t)dt \\
+F(a) &= \int_a^a f(t)dt = 0 \\
+F(b) &= \int_a^b f(t)dt
+\end{align*}
+
+
+Let $f$ be continuous on $[a,b]$. If f is the function defined by
+
+$$ F(x) = \int_a^x f(t)dt $$
+
+then $F'(x) = f(x) \;\forall x \in [a,b]$.
+
+#### Proof
+
+> <details>
+> 
+> Let $x, x+h \in [a,b], h\neq 0$.
+> 
+> $$ F(x+h)-F(x) = \int_a^{x+h} f(t)dt -\int_a^x f(t)dt $$
+> 
+> By the Property 3 of definite integrals, 
+> \begin{align*}
+> \int_a^{x+h} f(t)dt -\int_a^x f(t)dt &= \int_a^x f(t)dt + \int_x^{x+h}f(t)dt -\int_a^x f(t)dt\\
+> &= \int_x^{x+h}f(t)dt
+> \end{align*}
+> 
+> By the Mean Value Theorem for integrals, $\exists c \in [x,x+h]$ such that
+> 
+> \begin{align*}
+> \int_x^{x+h}f(t)dt &= f(c)(x+h-x)\\
+> &=hf(c)\\
+> implies F(x+h)-F(x) &= hf(c)\\
+> \frac{F(x+h)-F(x)}{h} &= f(c)\\
+> \lim_{h\to 0}\frac{F(x+h)-F(x)}{h} &= \lim_{h\to 0}f(c)
+> \end{align*}
+> 
+> Note that $\displaystyle \lim_{h\to 0}x = x$ and $\displaystyle \lim_{h\to 0}(x+h) = x \implies \lim_{h\to 0}c = x$ by Squeeze Theorem.
+>  
+> Since $f$ is continuous at $x$, 
+>  
+> $$ \lim_{h\to 0}f(c) = f(x) $$
+> 
+> \begin{align*}
+> \implies F'(x) &= f(x) \;\forall x \in [a,b]\\
+> \frac{d}{dx}\int_a^x f(t)dt &= f(x)
+> \end{align*}
+> 
+> </details>
+
+***
+
+### Second part of the Fundamental Theorem of Calculus
 
 > <details>
 >
@@ -450,17 +579,40 @@ We say that $f$ is integrable on $[a,b]$
 > 
 > </details>
 
-### Second part of the Fundamental Theorem of Calculus
-
 If a function $f$ is continuous on $[a,b]$, then
 
 $$ \int_a^b f(x)dx = F(b)-F(a) $$
 
-where $F$ is any antiderivative of $f$ on $[a,b]$
+where $F$ is any antiderivative of $f$ on $[a,b]$.
 
 > The following notations for $F(b)-F(a)$ are very useful in evaluating definite integrals:
 >
 > $\displaystyle F(x)\Big]_a^b$ or $\displaystyle F(x)\Big|_a^b$
+
+#### Proof
+
+> <details>
+> 
+> By FTC - Part 1, the function
+> 
+> $$ \int_a^x f(t)dt $$
+> 
+> is an antiderivative of f on $[a,b]$.
+> 
+> By the Equal Derivatives Theorem,
+> 
+> $$ \int_a^x f(t)dt = F(x) + C $$
+> 
+> where $F$ is any antiderivative of $f$.
+> 
+> \begin{align*}
+>  x= b, \int_a^b f(t)dt &= F(b) + C \\
+>  x=a , \int_a^a f(t)dt &= F(a) + C = 0 \\
+> \int_a^b f(t)dt - \int_a^a f(t)dt &= [ F(b)+C ] - [F(a)+C] \\
+> \int_a^b f(t)dt &= F(b)-F(a)
+> \end{align*}
+> 
+> </details>
 
 ***
 
