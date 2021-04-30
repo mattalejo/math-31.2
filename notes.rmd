@@ -28,6 +28,7 @@ Let $f$ be a function on some open interval $I$ containing $x$. The derivative o
 
 $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 
+***
 
 ## Differentiation rules
 
@@ -40,7 +41,6 @@ $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 4. $\displaystyle\frac{d}{dx}\Big(\frac{f(x)}{g(x)}\Big) = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$
 
 5. $\displaystyle\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)$
-
 
 ## Differentiation formulas I
 
@@ -71,6 +71,8 @@ $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 4. $\displaystyle\frac{d}{dx}(\tan^{-1}x) = \frac{1}{1+x^2}$
 
 5. $\displaystyle\frac{d}{dx}(\sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}$
+
+***
 
 ## Mean value theorem
 
@@ -118,12 +120,16 @@ If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some c
 >
 > </details>
 
+***
+
 ## Differentials
 
 \begin{align*}
 f'(x)   &= \frac{dy}{dx}\\
 f'(x)dx &= dy
 \end{align*}
+
+***
 
 # 1 - Indefinite and definite integrals
 
@@ -187,6 +193,8 @@ $C$ is the constant of integration.
  
 $\displaystyle\int \sin xdx = -\cos x+C$
 
+***
+
 ### Integration rules
 
 1. $\displaystyle\int kf(x)dx = k \int f(x)dx$, $k$ constant
@@ -224,6 +232,8 @@ $\displaystyle\int \sin xdx = -\cos x+C$
 4. $\displaystyle\int \frac{1}{1+x^2}dx = \tan^{-1}x +C$
 
 5. $\displaystyle\int \frac{1}{x\sqrt{x^2-1}}dx= \sec^{-1}+C$
+
+***
 
 ## Substitution rule
 
@@ -268,6 +278,8 @@ $$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
 If $u=g(x)$ is a differentiable function whose range is interval $I$ and $f$ is continuous on $I$, then
 
 $$ \int f'(g(x))g'(x) = \int f(u)du $$
+
+***
 
 ## Definite integrals
 
@@ -354,6 +366,7 @@ Let $f$ be a continuous nonnegative function on $[a,b]$. Find the area of the re
 >
 > </details>
 
+
 ### Riemann sum
 Let $f$ be a function defined on $[a,b]$.
 
@@ -382,6 +395,8 @@ provided that such limit exists.
 
 We say that $f$ is integrable on $[a,b]$
 
+***
+
 ### Remarks on the definite integral
 
 1. If a function is continuous on $[a,b]$, it is integrable on $[a,b]$.
@@ -409,6 +424,8 @@ We say that $f$ is integrable on $[a,b]$
 5. If $f(x) \geq g(x)\;\forall x\in[a,b]$, then $\displaystyle\int_a^b f(x)dx \geq \int_a^b g(x)dx$
 
 6. If $m \leq f(x) \leq M \;\forall x\in[a,b]$, then $\displaystyle m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)$
+
+***
 
 ## The Fundamental Theorem of Calculus
 
@@ -445,6 +462,7 @@ where $F$ is any antiderivative of $f$ on $[a,b]$
 >
 > $\displaystyle F(x)\Big]_a^b$ or $\displaystyle F(x)\Big|_a^b$
 
+***
 
 # 2 - Application I
 
@@ -513,6 +531,7 @@ where $F$ is any antiderivative of $f$ on $[a,b]$
 > 
 > </details>
 
+***
 
 ## Volumes and volumes of revolution using disks and washers
 
