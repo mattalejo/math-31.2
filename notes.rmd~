@@ -94,7 +94,7 @@ If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some c
 
 > <details>
 >
-> <summary> Let $f(x)=\cos^{-1}x$ and $g(x)=-\sin^{-1}x$. </summary>
+> Let $f(x)=\cos^{-1}x$ and $g(x)=-\sin^{-1}x$
 > 
 > This implies that $x \in [-1,1]$ and $\displaystyle f(x),g(x) \in \Big[-\frac{\pi}{2},\frac{\pi}{2}\Big]$
 > 
@@ -140,7 +140,7 @@ The main interpretation of derivative is the slope of a tangent line of a curve.
 #### Example 
 
 > <details>
-> <summary> At any point $(x,y)$ on a particular curve $y=F(x)$, the tangent line has a slope equal to $4x-5$. If the curve contains the point $(3,7)$, find $F(x)$. </summary>
+> At any point $(x,y)$ on a particular curve $y=F(x)$, the tangent line has a slope equal to $4x-5$. If the curve contains the point $(3,7)$, find $F(x)$.
 > 
 > 
 > **Solution.** Since the slope is equal to $4x-5$ for any point $(x,y)$, then the slope at $(3,7)$ is $4(3)-5=7$.
@@ -248,7 +248,7 @@ $$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
 #### Example
 
 > <details>
-> <summary> Evaluate $\int 2x\cos x^2dx$. </summary>
+> Evaluate $\int 2xcosx^2dx$.
 >
 > **Preliminary work.** By intuition, we can get $f(x)=sinx$ and $g(x)=x^2$
 > 
@@ -292,7 +292,7 @@ Let $f$ be a continuous nonnegative function on $[a,b]$. Find the area of the re
 #### Example
 
 > <details>
-> <summary> Consider $f(x) = x^2 +1$ on $[0,2]$. </summary>
+> Consider $f(x) = x^2 +1$ on $[0,2]$.
 >
 > **Solution.**
 > Let $A$ be the area under the curve
@@ -560,7 +560,7 @@ then $F'(x) = f(x) \;\forall x \in [a,b]$.
 
 > <details>
 >
-> <summary> Let's bring back $f(x)=x^2+1$ on $[0,2]$. </summary>
+> Let's bring back $f(x)=x^2+1$ on $[0,2]$.
 > 
 > $f$ is continuous on $[0,2] \implies f$ is integrable on $[0,2]$. 
 > 
@@ -623,7 +623,7 @@ where $F$ is any antiderivative of $f$ on $[a,b]$.
 #### Example 1
 
 > <details>
-> <summary> Find the area of the region under the curve $y=x^2-1$ from $x=-1$ to $x=2$. </summary>
+> Find the area of the region under the curve $y=x^2-1$ from $x=-1$ to $x=2$.
 >
 > **Solution.** Area is simply not $\int_{-1}^2 (x^2-1)dx$ because $\int_{-1}^1 (x^2-1)dx$ is negative and cancels the positive area.
 > 
@@ -642,7 +642,7 @@ where $F$ is any antiderivative of $f$ on $[a,b]$.
 
 > <details>
 > 
-> <summary> Find the area of the region bounded by the curves of $y=x^2$ and $y = 4x-x^2$. </summary>
+> Find the area of the region bounded by the curves of $y=x^2$ and $y = 4x-x^2$.
 > 
 > **Solution.** Note that both curves intersect at $(0,0)$ and $(2,4)$.
 > 
@@ -665,7 +665,7 @@ where $F$ is any antiderivative of $f$ on $[a,b]$.
 
 > <details>
 >
-> <summary> Find the area of the region bounded by the curve $y=\sqrt{x}$, the line $x+2y =3$, and the $x$-axis. </summary>
+> Find the area of the region bounded by the curve $y=\sqrt{x}$, the line $x+2y =3$, and the $x$-axis.
 > 
 > **Solution.** The graphs intersect at $(0,0)$, $(1,1)$, and $(3,0)$.
 > 
@@ -687,121 +687,7 @@ where $F$ is any antiderivative of $f$ on $[a,b]$.
 
 ## Volumes and volumes of revolution using disks and washers
 
-### Volume of a right cylinder
-
-$$ V = ah $$
-
-$$ V_n = \sum_{i=1}^n A(x)\Delta x $$
-
-Let $S$ be a solid that lies between $x=a$ and $x=b$. If the cross-sectional area of $S$ in the plane $P_x$ through $x$ and perpendicular to the $x$-axis is $A(x)$, where $A$ is a continuous function on $[a,b]$, then the volume $V$ of $S$ is
-
-$$ V = \lim_{n \to\infty} \sum_{i=1}^n A(x_i^*)\Delta x = \int_b^a A(x)dx $$ 
-
-#### Example 1 
-
-> <details>
-> 
-> <summary> Let us find the volume of a sphere of radius $r$.</summary>
-> 
-> **Solution.** 
-> 
-> radius of the cross-section circle at $x = \sqrt{r^2-x^2}$
-> 
-> \begin{align*}
-> A(x) &= \pi (\sqrt{r^2-x^2})^2\\
-> &= \pi (r^2-x^2)
-> \end{align*}
-> 
-> \begin{align*}
-> V_{\text{sphere}} &= \int_{-r}^r A(x)dx \\
-> &= \int_{-r}^r \pi (r^2-x^2) dx \\
-> &= \pi(r^2x - \frac{x^3}{3})\Big|_{-r}^r \\
-> &= \pi\Bigg[r^2(r) - \frac{r^3}{3}\Bigg] - \pi\Bigg[r^2(-r) - \frac{(-r)^3}{3}\Bigg] \\
-> V_{\text{sphere}} &= \frac{4}{3}\pi r^3
-> \end{align*}
-> 
-> </details>
-
-#### Example 2
-
-> <details>
-> 
-> <summary> The base of a solid is the region bounded by $y=x^2$ and $y=4$. Its parallel cross-sections perpendicular to the base and the $y$-axis are squares. Find the volume of the solid. </summary>
-> 
-> **Solution.** side of the cross-section at $y = 2\sqrt{y}$
-> 
-> $$ A(y) = (2\sqrt{y})^2 = 4y $$
-> 
-> \begin{align*}
-> V &= \int_0^4 A(y)dy \\
-> &=\int_0^4 4y dy \\
-> &= 2y^2 \Big|_0^4 \\
-> &= 2(4)^2 - 2(0)^2 \\
-> V &= 32
-> \end{align*}
-> 
-> </details>
-
-***
-
-### Volume of solids of revolution
-
-If we revolve a region about a line, we obtain a **solid of revolution**.
-
-#### Example 1
-
-> <details>
-> 
-> <summary> Consider the region under the curve $y=x^2 +1$ from $x=-1$ to $x=2$. We revolve this region about the $x$-axis. </summary>
-> 
-> **Solution.** radius of the cross-section at $x = f(x)$
-> 
-> $$ A(x) = \pi [f(x)]^2 $$
-> 
-> \begin{align*}
-> V &= \int_{-1}^2 \pi (x^2+1)^2 dx \\
-> &= \int_{-1}^2 \pi (x^4 +2x^2 +1) dx \\
-> &= \pi \Bigg(\frac{x^5}{5}+\frac{2x^3}{3}+x\Bigg) |_{-1}^2 \\
-> &= \pi\Bigg[\frac{2^5}{5}+\frac{2(2)^3}{3}+2\Bigg] - \pi\Bigg[\frac{(-1)^5}{5}+\frac{2(-1)^3}{3}+(-1)\Bigg] \\
-> V &= \frac{78\pi}{5}
-> \end{align*}
-> 
-> </details>
-
-The cross-section of a solid of revolution is always a circle.
-
-#### Example 2
-
-> <details>
-> 
-> <summary> A solid is obtained by revolving about the $x$-axis the region bounded by $x=y^2$ and $2y=x$. Find the volume of the solid. </summary>
-> 
-> **Solution.**
-> 
-> \begin{align*}
-> V &= \int_0^4 \pi(\sqrt{x})^2 dx - \int_0^4 \pi\Big(\frac{x}{2}\Big)^2 dx \\
-> &= \int_0^4 \pi (x) dx - \int_0^4 \pi \frac{x^4}{4} dx \\
-> V &= \frac{8\pi}{3}
-> \end{align*}
-> 
-> </details>
-
-#### Example 3
-
-> <details>
-> 
-> <summary> A solid is obtained by revolving about the y-axis the region bounded by $2x=y^2$, $y=4$, and the $y$-axis. Find the volume of the solid. </summary>
-> 
-> **Solution.**
-> 
-> \begin{align*}
-> V &= \int_0^4 \pi (\frac{y^2}{2})^2 dy \\
-> &= \int_0^4 \pi (\frac{y^4}{4}) dy \\
-> &= \frac{\pi y^5}{20} \Bigg|_0^4 \\
-> V &= \frac{256\pi}{5}
-> \end{align*}
-> 
-> </details>
+## Volumes of solids of revolution using cylindrical shells
 
 # 3 - Techniques of integration
 
