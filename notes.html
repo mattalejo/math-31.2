@@ -3068,6 +3068,8 @@ A &amp;= \frac{14}{3}
 </div>
 <div id="riemann-sum" class="section level3">
 <h3>Riemann sum</h3>
+<blockquote>
+<details>
 <p>Let <span class="math inline">\(f\)</span> be a function defined on <span class="math inline">\([a,b]\)</span>.</p>
 <p>Divide <span class="math inline">\([a,b]\)</span> into <span class="math inline">\(n\)</span> subintervals, each with width</p>
 <p><span class="math display">\[ \Delta x = \frac{b-a}{n} \]</span></p>
@@ -3076,6 +3078,9 @@ A &amp;= \frac{14}{3}
 <p>Compute the sum</p>
 <p><span class="math display">\[A_n = \sum_{i=1}^{n}f(x_i^*)\Delta x \]</span></p>
 <p>This is also called the <strong>Riemann sum</strong>.</p>
+</details>
+</blockquote>
+<p><span class="math display">\[A_n = \sum_{i=1}^{n}f(x_i^*)\Delta x \]</span></p>
 </div>
 <div id="definite-integral-and-integrability" class="section level3">
 <h3>Definite integral and integrability</h3>
@@ -3116,12 +3121,12 @@ A &amp;= \frac{14}{3}
 <h2>The Fundamental Theorem of Calculus</h2>
 <div id="mean-value-theorem-for-integrals" class="section level3">
 <h3>Mean Value Theorem for integrals</h3>
-<div id="proof" class="section level4">
-<h4>Proof</h4>
 <blockquote>
 <details>
-<p><span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a,b]\)</span>, <span class="math inline">\(\exists c \in [a,b]\)</span> such that</p>
-<p><span class="math display">\[ \int_b^a f(x)dx = f(c)(b-a) \]</span> Since <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a,b]\)</span>, then <span class="math inline">\(f\)</span> is integrable on <span class="math inline">\([a,b]\)</span> — i.e. <span class="math inline">\(\int_a^b f(x)dx\)</span> has a value.</p>
+<summary>
+Proof
+</summary>
+<p>Since <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a,b]\)</span>, then <span class="math inline">\(f\)</span> is integrable on <span class="math inline">\([a,b]\)</span> — i.e. <span class="math inline">\(\int_a^b f(x)dx\)</span> has a value.</p>
 <p>Since f is continuous on [a,b], by the <strong>Extreme Value Theorem</strong>, <span class="math inline">\(\exists m, M \in \mathbb{R}\)</span> such that <span class="math inline">\(f(x_m) = m, f(x_M) = M, m \leq f(x) \leq M \;\forall x \in [a,b]\)</span> and for some <span class="math inline">\(x_m, x_M \in [a,b]\)</span>.</p>
 <p>By Property 6 of the definite integral, <span class="math inline">\(\displaystyle m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)\)</span></p>
 <p><span class="math display">\[\begin{align*}
@@ -3135,16 +3140,16 @@ f(x_m) &amp;\leq \frac{\int_a^b f(x)dx}{b-a} \leq&amp; f(x_M)  \\
 \end{align*}\]</span></p>
 </details>
 </blockquote>
-</div>
+<p>If <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a,b]\)</span>, <span class="math inline">\(\exists c \in [a,b]\)</span> such that</p>
+<p><span class="math display">\[ \int_b^a f(x)dx = f(c)(b-a) \]</span></p>
 </div>
 <div id="average-value-of-a-function" class="section level3">
 <h3>Average value of a function</h3>
-<p>Let <span class="math inline">\(f\)</span> be a continuous on <span class="math inline">\([a,b]\)</span>. The average value of <span class="math inline">\(f\)</span> at <span class="math inline">\([a,b]\)</span>, denoted by <span class="math inline">\(f_{avg}\)</span> is</p>
-<p><span class="math display">\[ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} \]</span></p>
-<div id="proof-1" class="section level4">
-<h4>Proof</h4>
 <blockquote>
 <details>
+<summary>
+Proof
+</summary>
 <p>Given a function continuous on <span class="math inline">\([a,b]\)</span>, we can get the average value of the function at <span class="math inline">\([a,b]\)</span> by dividing the curve into <span class="math inline">\(n\)</span> equal-width rectangles, getting the value of each sample points, and dividing by <span class="math inline">\(n\)</span>.</p>
 <p>Average area <span class="math inline">\(\displaystyle = \frac{\sum_{i=1}^n f(x_i^*)i}{n}\)</span></p>
 <p>But then, <span class="math inline">\(\displaystyle \Delta x = \frac{b-a}{n} \implies n = \frac{b-a}{\Delta x}\)</span></p>
@@ -3162,8 +3167,9 @@ f(x_m) &amp;\leq \frac{\int_a^b f(x)dx}{b-a} \leq&amp; f(x_M)  \\
 <p><span class="math display">\[ f_{avg} = f(c) \]</span></p>
 </details>
 </blockquote>
+<p>Let <span class="math inline">\(f\)</span> be a continuous on <span class="math inline">\([a,b]\)</span>. The average value of <span class="math inline">\(f\)</span> at <span class="math inline">\([a,b]\)</span>, denoted by <span class="math inline">\(f_{avg}\)</span> is</p>
+<p><span class="math display">\[ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} \]</span></p>
 <hr />
-</div>
 </div>
 <div id="first-part-of-the-fundamental-theorem-of-calculus" class="section level3">
 <h3>First part of the Fundamental Theorem of Calculus</h3>
@@ -3177,10 +3183,11 @@ F(b) &amp;= \int_a^b f(t)dt
 <p>Let <span class="math inline">\(f\)</span> be continuous on <span class="math inline">\([a,b]\)</span>. If f is the function defined by</p>
 <p><span class="math display">\[ F(x) = \int_a^x f(t)dt \]</span></p>
 <p>then <span class="math inline">\(F&#39;(x) = f(x) \;\forall x \in [a,b]\)</span>.</p>
-<div id="proof-2" class="section level4">
-<h4>Proof</h4>
 <blockquote>
 <details>
+<summary>
+Proof
+</summary>
 <p>Let <span class="math inline">\(x, x+h \in [a,b], h\neq 0\)</span>.</p>
 <p><span class="math display">\[ F(x+h)-F(x) = \int_a^{x+h} f(t)dt -\int_a^x f(t)dt \]</span></p>
 <p>By the Property 3 of definite integrals, <span class="math display">\[\begin{align*}
@@ -3205,7 +3212,6 @@ F(b) &amp;= \int_a^b f(t)dt
 </details>
 </blockquote>
 <hr />
-</div>
 </div>
 <div id="second-part-of-the-fundamental-theorem-of-calculus" class="section level3">
 <h3>Second part of the Fundamental Theorem of Calculus</h3>
@@ -3233,10 +3239,11 @@ F(2) - F(0) &amp;= \frac{11}{3} -(-1) = \frac{14}{3} \\
 <p>The following notations for <span class="math inline">\(F(b)-F(a)\)</span> are very useful in evaluating definite integrals:</p>
 <p><span class="math inline">\(\displaystyle F(x)\Big]_a^b\)</span> or <span class="math inline">\(\displaystyle F(x)\Big|_a^b\)</span></p>
 </blockquote>
-<div id="proof-3" class="section level4">
-<h4>Proof</h4>
 <blockquote>
 <details>
+<summary>
+Proof
+</summary>
 <p>By FTC - Part 1, the function</p>
 <p><span class="math display">\[ \int_a^x f(t)dt \]</span></p>
 <p>is an antiderivative of f on <span class="math inline">\([a,b]\)</span>.</p>
@@ -3252,7 +3259,6 @@ F(2) - F(0) &amp;= \frac{11}{3} -(-1) = \frac{14}{3} \\
 </details>
 </blockquote>
 <hr />
-</div>
 </div>
 </div>
 </div>
@@ -3432,29 +3438,101 @@ V &amp;= \frac{256\pi}{5}
 </div>
 </div>
 </div>
+<div id="volumes-by-cylindrical-shells" class="section level2">
+<h2>Volumes by cylindrical shells</h2>
+<p>There are times that disks-and-washers technique is not the best way to solve a volume problem – e.g. <span class="math inline">\(y = 4x-x\)</span> rotated about the <span class="math inline">\(y\)</span>-axis.</p>
+<div id="volume-of-a-cylindrical-shell" class="section level3">
+<h3>Volume of a cylindrical shell</h3>
+<blockquote>
+<details>
+<p>Let <span class="math inline">\(r_1\)</span> be the inner radius of the cylinder, <span class="math inline">\(r_2\)</span> be the outer (and larger) radius of the cylinder. <span class="math inline">\(r\)</span> be the average of both</p>
+<p><span class="math display">\[\begin{align*}
+\Delta r &amp;= r_2 - r_1 \\
+r &amp;= \frac{r_2+r_1}{2}
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{align*}
+V_{\text{cylindrical shell}} &amp;= \pi r_2^2 h - r_1^2 h \\
+&amp;= \pi(r_2^2 - r_1^2)h \\
+&amp;= \pi(r_2+r_1)h(r_2-r_1) \\
+&amp;= 2\pi \Bigg(\frac{r_2+r_1}{2}\Bigg) h \Delta r \\
+V_{\text{cylindrical shell}} &amp;= 2\pi r h \Delta r
+\end{align*}\]</span></p>
+<p>Given a curve <span class="math inline">\(y=f(x)\)</span> in <span class="math inline">\([a,b]\)</span> rotated about the <span class="math inline">\(y\)</span>-axis, the Riemann sum of the volume is</p>
+<p><span class="math display">\[ V = \sum 2\pi r h \Delta r \]</span></p>
+<p>In this context, <span class="math inline">\(r = x\)</span> (horizontal distance), <span class="math inline">\(h = f(x)\)</span> (vertical distance), and <span class="math inline">\(\Delta r = \Delta x\)</span></p>
+<p><span class="math display">\[\begin{align*}
+V &amp;= \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x \\
+&amp;= \int_a^b 2\pi xf(x)dx
+\end{align*}\]</span></p>
+</details>
+</blockquote>
+<p>The volume of a solid obtained by rotating about the <span class="math inline">\(y\)</span>-axis the region under the curve <span class="math inline">\(y = f(x)\)</span> (continuous and nonnegative) from <span class="math inline">\(x=a\)</span> (nonnegative) to <span class="math inline">\(x = b\)</span> is</p>
+<p><span class="math display">\[ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2\pi xf(x)dx \]</span></p>
+<div id="example-1-4" class="section level4">
+<h4>Example 1</h4>
+<blockquote>
+<details>
+<summary>
+A solid is obtained by revolving about the <span class="math inline">\(y\)</span>-axis the region bounded by <span class="math inline">\(y = 4x - x^2\)</span> and the <span class="math inline">\(x\)</span>-axis. Use cylindrical shells to find the volume of the solid.
+</summary>
+<p><strong>Solution.</strong></p>
+<p><span class="math display">\[\begin{align*}
+V &amp;= \int_0^4 2 \pi x (4x-x^2) dx \\
+&amp;= \int_0^4 2 \pi (4x^2 - x^3)dx \\
+&amp;= 2\pi \Big( \frac{4}{3}x^3 - \frac{x^4}{4} \Big) \Bigg|_0^4\\
+&amp;= 2\pi \Big[ \frac{4}{3} (4)^3 - \frac{4^4}{4} \Big] - 0\\
+&amp;= \frac{128\pi}{3}
+\end{align*}\]</span></p>
+</details>
+</blockquote>
 </div>
-<div id="techniques-of-integration" class="section level1">
-<h1>3 - Techniques of integration</h1>
-<div id="integration-by-parts" class="section level2">
-<h2>Integration by parts</h2>
+<div id="example-2-4" class="section level4">
+<h4>Example 2</h4>
+<blockquote>
+<details>
+<summary>
+A solid is obatined by revolving about the <span class="math inline">\(x\)</span>-axis the region bounded by <span class="math inline">\(y = \sqrt{x}\)</span>, <span class="math inline">\(y = 2-x\)</span>, and the <span class="math inline">\(x\)</span>-axis. Find the volume of the solid.
+</summary>
+<p><strong>Solution.</strong></p>
+<p><em>Disks:</em></p>
+<p><span class="math inline">\(y = \sqrt{x}\)</span> and <span class="math inline">\(y = 2-x\)</span> intersect at <span class="math inline">\((1,1)\)</span></p>
+<p><span class="math inline">\(\forall x \in [0,1]\)</span>, $  -x $ we use <span class="math inline">\(\sqrt{x}\)</span> at this interval</p>
+<p><span class="math inline">\(\forall x \in [1,2]\)</span>, <span class="math inline">\(2-x \leq \sqrt{x} \implies\)</span> we use <span class="math inline">\(2-x\)</span> at this interval</p>
+<p><span class="math display">\[\begin{align*}
+V &amp;= \int_0^1 \pi (\sqrt{x})^2 dx + \int_1^2 \pi (2-x)^2 dx \\
+&amp;= \int_0^1 \pi x dx + \int_1^2 \pi (x^2 - 4x +4) dx
+\end{align*}\]</span></p>
+<p>(This exercise is left to the reader lol don’t wanna solve this myself)</p>
+<p><em>cylindrical shell:</em></p>
+<p><span class="math inline">\(y = \sqrt{x}\)</span> and <span class="math inline">\(y = 2-x\)</span> intersect at <span class="math inline">\((1,1)\)</span>.</p>
+<p><span class="math display">\[ y = \sqrt{x} \implies x = y^2 \]</span> <span class="math display">\[ y = 2-x \implies x = 2-y \]</span></p>
+<p><span class="math display">\[ V = \int_0^1 2\pi y (2-y^2-y) dy \]</span></p>
+<p>(Just solve this yourselves)</p>
+</blockquote>
 </div>
-<div id="trigonometric-integrals" class="section level2">
-<h2>Trigonometric integrals</h2>
+<div id="example-3-3" class="section level4">
+<h4>Example 3</h4>
+<blockquote>
+<details>
+<summary>
+A solid is obtained by the revolving about the line <span class="math inline">\(x=-2\)</span> the region bounded by <span class="math inline">\(y=x^3\)</span>, <span class="math inline">\(y=8\)</span>, and the <span class="math inline">\(y\)</span>-axis. Find the volume of the solid.
+</summary>
+<p><strong>Solution.</strong></p>
+<p><em>disks:</em> <span class="math inline">\(\displaystyle V = \int_0^8 \pi \big[ (\sqrt[3]{y} +2)^2 -2^2 \big] dy = \frac{336\pi}{5}\)</span></p>
+<p><em>cylindrical shells:</em> <span class="math inline">\(\displaystyle V = \int_0^2 2\pi (x+2)(8-x^3) dx = \frac{336\pi}{5}\)</span></p>
+</details>
+</blockquote>
+<hr />
+<!-- # 3 - Techniques of integration -->
+<!-- ## Integration by parts -->
+<!-- ## Trigonometric integrals -->
+<!-- ## Trigonometric substitution -->
+<!-- ## Partial fractions -->
+<!-- # 4 - Applications II -->
+<!-- ## Arc length -->
+<!-- ## Variable-separable differential equations and models for population growth -->
 </div>
-<div id="trigonometric-substitution" class="section level2">
-<h2>Trigonometric substitution</h2>
 </div>
-<div id="partial-fractions" class="section level2">
-<h2>Partial fractions</h2>
-</div>
-</div>
-<div id="applications-ii" class="section level1">
-<h1>4 - Applications II</h1>
-<div id="arc-length" class="section level2">
-<h2>Arc length</h2>
-</div>
-<div id="variable-separable-differential-equations-and-models-for-population-growth" class="section level2">
-<h2>Variable-separable differential equations and models for population growth</h2>
 </div>
 </div>
 

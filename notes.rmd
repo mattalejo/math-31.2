@@ -368,23 +368,28 @@ Let $f$ be a continuous nonnegative function on $[a,b]$. Find the area of the re
 
 
 ### Riemann sum
-Let $f$ be a function defined on $[a,b]$.
 
-Divide $[a,b]$ into $n$ subintervals, each with width
-
-$$ \Delta x = \frac{b-a}{n} $$
-
-
-
-Let $x_0=a, x_1,x_2, \ldots, x_n = b$,
-
-For each subinterval $[x_{i-1},x_i]$, choose a sample point $x_i^*$
-
-Compute the sum
+> <details>
+> 
+> Let $f$ be a function defined on $[a,b]$.
+> 
+> Divide $[a,b]$ into $n$ subintervals, each with width
+> 
+> $$ \Delta x = \frac{b-a}{n} $$
+> 
+> Let $x_0=a, x_1,x_2, \ldots, x_n = b$,
+> 
+> For each subinterval $[x_{i-1},x_i]$, choose a sample point $x_i^*$
+> 
+> Compute the sum
+> 
+> $$A_n = \sum_{i=1}^{n}f(x_i^*)\Delta x $$
+> 
+> This is also called the **Riemann sum**.
+> 
+> </details>
 
 $$A_n = \sum_{i=1}^{n}f(x_i^*)\Delta x $$
-
-This is also called the **Riemann sum**.
 
 ### Definite integral and integrability
 
@@ -432,13 +437,10 @@ We say that $f$ is integrable on $[a,b]$
 
 ### Mean Value Theorem for integrals
 
-#### Proof
-
 > <details>
 >
-> $f$ is continuous on $[a,b]$, $\exists c \in [a,b]$ such that
-> 
-> $$ \int_b^a f(x)dx = f(c)(b-a) $$
+> <summary> Proof </summary>
+>
 > Since $f$ is continuous on $[a,b]$, then $f$ is integrable on $[a,b]$ --- i.e. $\int_a^b f(x)dx$ has a value.
 > 
 > Since f is continuous on [a,b], by the **Extreme Value Theorem**, $\exists m, M \in \mathbb{R}$ such that $f(x_m) = m, f(x_M) = M, m \leq f(x) \leq M \;\forall x \in [a,b]$ and for some $x_m, x_M \in [a,b]$.
@@ -459,16 +461,16 @@ We say that $f$ is integrable on $[a,b]$
 > 
 > </details>
 
+If $f$ is continuous on $[a,b]$, $\exists c \in [a,b]$ such that
+
+$$ \int_b^a f(x)dx = f(c)(b-a) $$
+
 ### Average value of a function
-
-Let $f$ be a continuous on $[a,b]$. The average value of $f$ at $[a,b]$, denoted by $f_{avg}$ is
-
-$$ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} $$
-
-#### Proof
 
 > <details>
 > 
+> <summary> Proof </summary>
+>
 > Given a function continuous on $[a,b]$, we can get the average value of the function at $[a,b]$ by dividing the curve into $n$ equal-width rectangles, getting the value of each sample points, and dividing by $n$.
 > 
 > Average area $\displaystyle = \frac{\sum_{i=1}^n f(x_i^*)i}{n}$
@@ -494,7 +496,9 @@ $$ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} $$
 > 
 > </details>
 
+Let $f$ be a continuous on $[a,b]$. The average value of $f$ at $[a,b]$, denoted by $f_{avg}$ is
 
+$$ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} $$
 
 ***
 
@@ -517,10 +521,11 @@ $$ F(x) = \int_a^x f(t)dt $$
 
 then $F'(x) = f(x) \;\forall x \in [a,b]$.
 
-#### Proof
 
 > <details>
 > 
+> <summary> Proof </summary>
+>
 > Let $x, x+h \in [a,b], h\neq 0$.
 > 
 > $$ F(x+h)-F(x) = \int_a^{x+h} f(t)dt -\int_a^x f(t)dt $$
@@ -589,10 +594,10 @@ where $F$ is any antiderivative of $f$ on $[a,b]$.
 >
 > $\displaystyle F(x)\Big]_a^b$ or $\displaystyle F(x)\Big|_a^b$
 
-#### Proof
-
 > <details>
 > 
+> <summary> Proof </summary>
+>
 > By FTC - Part 1, the function
 > 
 > $$ \int_a^x f(t)dt $$
@@ -803,21 +808,130 @@ The cross-section of a solid of revolution is always a circle.
 > 
 > </details>
 
-# 3 - Techniques of integration
+## Volumes by cylindrical shells
 
-## Integration by parts
+There are times that disks-and-washers technique is not the best way to solve a volume problem -- e.g. $y = 4x-x$ rotated about the $y$-axis.
 
-## Trigonometric integrals
+### Volume of a cylindrical shell
 
-## Trigonometric substitution
+> <details>
+> 
+> Let $r_1$ be the inner radius of the cylinder, $r_2$ be the outer (and larger) radius of the cylinder. $r$ be the average of both
+> 
+> \begin{align*}
+> \Delta r &= r_2 - r_1 \\
+> r &= \frac{r_2+r_1}{2}
+> \end{align*}
+> 
+> \begin{align*}
+> V_{\text{cylindrical shell}} &= \pi r_2^2 h - r_1^2 h \\
+> &= \pi(r_2^2 - r_1^2)h \\
+> &= \pi(r_2+r_1)h(r_2-r_1) \\
+> &= 2\pi \Bigg(\frac{r_2+r_1}{2}\Bigg) h \Delta r \\
+> V_{\text{cylindrical shell}} &= 2\pi r h \Delta r
+> \end{align*}
+> 
+> Given a curve $y=f(x)$ in $[a,b]$ rotated about the $y$-axis, the Riemann sum of the volume is
+> 
+> $$ V = \sum 2\pi r h \Delta r $$ 
+> 
+> In this context, $r = x$ (horizontal distance), $h = f(x)$ (vertical distance), and $\Delta r = \Delta x$
+> 
+> \begin{align*}
+> V &= \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x \\
+> &= \int_a^b 2\pi xf(x)dx
+> \end{align*}
+> 
+> </details>
 
-## Partial fractions
+The volume of a solid obtained by rotating about the $y$-axis the region under the curve $y = f(x)$ (continuous and nonnegative) from $x=a$ (nonnegative) to $x = b$ is
+
+$$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2\pi xf(x)dx $$
+
+
+#### Example 1
+
+> <details>
+> 
+> <summary> A solid is obtained by revolving about the $y$-axis the region bounded by $y = 4x - x^2$ and the $x$-axis. Use cylindrical shells to find the volume of the solid. </summary>
+> 
+> **Solution.**
+> 
+> \begin{align*}
+> V &= \int_0^4 2 \pi x (4x-x^2) dx \\
+> &= \int_0^4 2 \pi (4x^2 - x^3)dx \\
+> &= 2\pi \Big( \frac{4}{3}x^3 - \frac{x^4}{4} \Big) \Bigg|_0^4\\
+> &= 2\pi \Big[ \frac{4}{3} (4)^3 - \frac{4^4}{4} \Big] - 0\\
+> &= \frac{128\pi}{3}
+> \end{align*}
+> 
+> </details>
+
+#### Example 2
+
+> <details>
+> 
+> <summary> A solid is obatined by revolving about the $x$-axis the region bounded by $y = \sqrt{x}$, $y = 2-x$, and the $x$-axis. Find the volume of the solid. </summary>
+> 
+> **Solution.**
+> 
+> *Disks:*
+> 
+> $y = \sqrt{x}$ and $y = 2-x$ intersect at $(1,1)$
+> 
+> $\forall x \in [0,1]$, $ \sqrt{x} \leq 2-x \implies$ we use $\sqrt{x}$ at this interval
+> 
+> $\forall x \in [1,2]$, $2-x \leq  \sqrt{x} \implies$ we use $2-x$ at this interval
+> 
+> \begin{align*}
+> V &= \int_0^1 \pi (\sqrt{x})^2 dx + \int_1^2 \pi (2-x)^2 dx \\
+> &= \int_0^1 \pi x dx + \int_1^2 \pi (x^2 - 4x +4) dx
+> \end{align*}
+> 
+> (This exercise is left to the reader lol don't wanna solve this myself)
+> 
+> *cylindrical shell:*
+> 
+> $y = \sqrt{x}$ and $y = 2-x$ intersect at $(1,1)$.
+> 
+> $$ y = \sqrt{x} \implies x = y^2 $$
+> $$ y = 2-x \implies x = 2-y $$ 
+> 
+> $$ V = \int_0^1 2\pi y (2-y^2-y) dy $$
+> 
+> (Just solve this yourselves)
+
+#### Example 3
+
+> <details>
+> 
+> <summary> A solid is obtained by the revolving about the line $x=-2$ the region bounded by $y=x^3$, $y=8$, and the $y$-axis. Find the volume of the solid. </summary>
+> 
+> **Solution.**
+> 
+> *disks:* $\displaystyle V = \int_0^8 \pi \big[ (\sqrt[3]{y} +2)^2 -2^2  \big] dy = \frac{336\pi}{5}$
+> 
+> *cylindrical shells:* $\displaystyle V = \int_0^2 2\pi (x+2)(8-x^3) dx = \frac{336\pi}{5}$
+> 
+> </details>
+
+***
+
+<!-- # 3 - Techniques of integration -->
+
+<!-- ## Integration by parts -->
+
+<!-- ## Trigonometric integrals -->
+
+<!-- ## Trigonometric substitution -->
+
+<!-- ## Partial fractions -->
 
 
 
 
-# 4 - Applications II
+<!-- # 4 - Applications II -->
 
-## Arc length
+<!-- ## Arc length -->
 
-## Variable-separable differential equations and models for population growth
+<!-- ## Variable-separable differential equations and models for population growth -->
