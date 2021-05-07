@@ -1,5 +1,6 @@
 ---
 output: 
+  pdf_document:
   html_document:
     css: style.css
     toc: yes
@@ -10,7 +11,6 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
-  pdf_document:
 title: "Mathematical Analysis IB"
 ---
 
@@ -879,7 +879,7 @@ $$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2
 > 
 > $y = \sqrt{x}$ and $y = 2-x$ intersect at $(1,1)$
 > 
-> $\forall x \in [0,1]$, $ \sqrt{x} \leq 2-x \implies$ we use $\sqrt{x}$ at this interval
+> $\forall x \in [0,1]$, $\sqrt{x} \leq 2-x \implies$ we use $\sqrt{x}$ at this interval
 > 
 > $\forall x \in [1,2]$, $2-x \leq  \sqrt{x} \implies$ we use $2-x$ at this interval
 > 
