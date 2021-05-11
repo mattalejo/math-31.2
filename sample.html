@@ -1,0 +1,489 @@
+<p><code>{r check, message=TRUE, include=FALSE} options(tinytex.verbose = TRUE)</code></p>
+<blockquote>
+<p><a href="../math-31.2/notes.pdf">Download the PDF copy of the notes here</a></p>
+</blockquote>
+<h1 class="unnumbered" id="review-on-differentiation">0 - Review on differentiation</h1>
+<h2 id="differentiability">Differentiability</h2>
+<p>Let <span class="math inline"><em>f</em></span> be a function on some open interval <span class="math inline"><em>I</em></span> containing <span class="math inline"><em>x</em></span>. The derivative of <span class="math inline"><em>f</em></span> at <span class="math inline"><em>x</em></span>, denoted by <span class="math inline"><em>f</em>′(<em>x</em>)</span>, is</p>
+<p><span class="math display">$$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$</span></p>
+<hr />
+<h2 id="differentiation-rules">Differentiation rules</h2>
+<ol class="incremental" type="1">
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(cf(x))= cf'(x)$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(f(x) \pm g(x)) = f'(x) \pm g'(x)$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + g(x)f'(x)$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}\Big(\frac{f(x)}{g(x)}\Big) = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)$</span></p></li>
+</ol>
+<h2 id="differentiation-formulas-i">Differentiation formulas I</h2>
+<ol class="incremental" type="1">
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(c)=0, c \in \mathbb{R}$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(x^r)=rx^{r-1}, r \in \mathbb{R}$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(\sin x)=\cos x$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(\cos x)=\sin x$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(\tan x)=\sec^2x$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(\cot x)=-\csc^2x$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(\sec x) = \sec x\tan x$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(\csc x)=-\csc x\cot x$</span></p></li>
+</ol>
+<h2 id="differentiation-formulas-ii">Differentiation formulas II</h2>
+<ol class="incremental" type="1">
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(e^x) = e^x$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(\ln|x|) = \frac{1}{x}$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(\sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(\tan^{-1}x) = \frac{1}{1+x^2}$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\frac{d}{dx}(\sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}$</span></p></li>
+</ol>
+<hr />
+<h2 id="mean-value-theorem">Mean value theorem</h2>
+<p>Let <span class="math inline"><em>f</em></span> be a function that is continuous on <span class="math inline">[<em>a</em>, <em>b</em>]</span> and is differentiable on <span class="math inline">(<em>a</em>, <em>b</em>)</span>. Then there is a number <span class="math inline"><em>c</em> ∈ (<em>a</em>, <em>b</em>)</span> such that</p>
+<p><span class="math display">$$ f'(c)=\frac{f(b)-f(a)}{b-a} $$</span></p>
+<h2 id="consequences-of-mvt">Consequences of MVT</h2>
+<h3 id="zero-derivative">Zero derivative</h3>
+<p>If <span class="math inline"><em>f</em>′(<em>x</em>) = 0 ∀<em>x</em></span> in interval <span class="math inline"><em>I</em></span>, then <span class="math inline"><em>f</em>(<em>x</em>) = <em>c</em> ∀<em>x</em> ∈ <em>I</em></span> for some constant <span class="math inline"><em>C</em></span>.</p>
+<h3 id="equal-derivatives">Equal derivatives</h3>
+<p>If <span class="math inline"><em>f</em>′(<em>x</em>) − <em>g</em>′(<em>x</em>) = 0 ∀<em>x</em></span> in an interval <span class="math inline"><em>I</em></span>, then <span class="math inline"><em>f</em>(<em>x</em>) = <em>g</em>(<em>x</em>) + <em>C</em></span> for some constant <span class="math inline"><em>C</em></span>.</p>
+<h4 id="example">Example</h4>
+<blockquote>
+<details>
+<summary>
+Let <span class="math inline"><em>f</em>(<em>x</em>) = cos<sup> − 1</sup><em>x</em></span> and <span class="math inline"><em>g</em>(<em>x</em>) =  − sin<sup> − 1</sup><em>x</em></span>.
+</summary>
+<p>This implies that <span class="math inline"><em>x</em> ∈ [ − 1, 1]</span> and <span class="math inline">$\displaystyle f(x),g(x) \in \Big[-\frac{\pi}{2},\frac{\pi}{2}\Big]$</span></p>
+<p><span class="math display">$$ f'(x)=-\frac{1}{\sqrt{x^2+1}}$$</span></p>
+<p><span class="math display">$$ g'(x)=-\frac{1}{\sqrt{x^2+1}} $$</span> Since <span class="math inline"><em>f</em>′(<em>x</em>) − <em>g</em>′(<em>x</em>) = 0</span> for <span class="math inline"><em>x</em> ∈ [ − 1, 1]</span>, then <span class="math inline"><em>f</em>(<em>x</em>) − <em>g</em>(<em>x</em>) = <em>C</em></span> for some constant <span class="math inline"><em>C</em></span> by a corollary.</p>
+<p></p>
+<p>Substituting <span class="math inline"><em>x</em> ∈ [ − 1, 1]</span>, in this case, let’s use <span class="math inline"><em>x</em> = 0</span>,</p>
+<p></p>
+<p><span class="math display">$$ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}$$</span></p>
+</details>
+</blockquote>
+<hr />
+<h2 id="differentials">Differentials</h2>
+<p></p>
+<hr />
+<h1 id="indefinite-and-definite-integrals">1 - Indefinite and definite integrals</h1>
+<h2 id="indefinite-integral">Indefinite integral</h2>
+<p>The main interpretation of derivative is the slope of a tangent line of a curve.</p>
+<h4 id="example-1">Example</h4>
+<blockquote>
+<details>
+<summary>
+At any point <span class="math inline">(<em>x</em>, <em>y</em>)</span> on a particular curve <span class="math inline"><em>y</em> = <em>F</em>(<em>x</em>)</span>, the tangent line has a slope equal to <span class="math inline">4<em>x</em> − 5</span>. If the curve contains the point <span class="math inline">(3, 7)</span>, find <span class="math inline"><em>F</em>(<em>x</em>)</span>.
+</summary>
+<p><strong>Solution.</strong> Since the slope is equal to <span class="math inline">4<em>x</em> − 5</span> for any point <span class="math inline">(<em>x</em>, <em>y</em>)</span>, then the slope at <span class="math inline">(3, 7)</span> is <span class="math inline">4(3) − 5 = 7</span>.</p>
+<p><span class="math inline">4<em>x</em> − 5</span> therefore represents the tangent slope for all values of <span class="math inline"><em>x</em></span>. So</p>
+<p><span class="math display"><em>F</em>′(<em>x</em>) = 4<em>x</em> − 5</span></p>
+<p>By intuition, we can conclude that <span class="math inline"><em>F</em>(<em>x</em>) = 2<em>x</em><sup>2</sup> − 5<em>x</em></span>.</p>
+<p>However given <span class="math inline"><em>F</em>(<em>x</em>) = 2<em>x</em><sup>2</sup> − 5<em>x</em> + 1</span>, <span class="math inline"><em>F</em>′(<em>x</em>)</span> remains the same. And so is <span class="math inline"><em>F</em>(<em>x</em>) = 2<em>x</em><sup>2</sup> − 5<em>x</em> − 3</span>, <span class="math inline"><em>F</em>(<em>x</em>) = 2<em>x</em><sup>2</sup> − 5<em>x</em> + <em>π</em></span>, and infinitely more functions. We can arbitrarily assign a constant <span class="math inline"><em>k</em></span>, so that <span class="math inline"><em>F</em>(<em>x</em>) = 2<em>x</em><sup>2</sup> − 5<em>x</em> + <em>k</em></span>.</p>
+<p>Substituting <span class="math inline">(<em>x</em>, <em>y</em>) = (3, 7),</span></p>
+<p></p>
+<p>So <span class="math inline"><em>F</em>(<em>x</em>) = 2<em>x</em><sup>2</sup> − 5<em>x</em> + 4</span>.</p>
+</details>
+</blockquote>
+<h3 id="definition-of-an-antiderivative">Definition of an antiderivative</h3>
+<p>A function <span class="math inline"><em>F</em></span> is called an antiderivative of the function <span class="math inline"><em>f</em></span> on an interval <span class="math inline"><em>I</em></span> if <span class="math inline"><em>F</em>′(<em>x</em>) = <em>f</em>(<em>x</em>) ∀<em>x</em> ∈ <em>I</em></span>.</p>
+<p><span class="math inline"><em>F</em>(<em>x</em>) = 2<em>x</em><sup>2</sup> − 5<em>x</em></span> is a <strong>possible</strong> antiderivative of <span class="math inline"><em>f</em>(<em>x</em>) = 4<em>x</em> − 5</span>. <span class="math inline"><em>F</em>(<em>x</em>) = 2<em>x</em><sup>2</sup> − 5<em>x</em> + 4</span> is also a <strong>possible</strong> antiderivative of <span class="math inline"><em>f</em>(<em>x</em>) = 4<em>x</em> − 5</span>.</p>
+<h3 id="equal-derivatives-1">Equal derivatives</h3>
+<p>If <span class="math inline"><em>F</em>′(<em>x</em>) = <em>G</em>′(<em>x</em>) ∀<em>x</em></span> in an interval <span class="math inline"><em>I</em></span>, then <span class="math inline"><em>F</em>(<em>x</em>) = <em>G</em>(<em>x</em>) + <em>C</em> ∀<em>x</em> ∈ <em>I</em></span> for some constant <span class="math inline"><em>C</em></span>.</p>
+<h3 id="integration-notation">Integration notation</h3>
+<p>The collection of all antiderivatives of <span class="math inline"><em>f</em></span> is denoted by</p>
+<p><span class="math display">∫<em>f</em>(<em>x</em>)<em>d</em><em>x</em></span></p>
+<p>which is read as “the integral of <span class="math inline"><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span>.”</p>
+<p>This collection is also called the <strong>indefinite integral</strong> of <span class="math inline"><em>f</em></span>.</p>
+<p>The reverse process if differentiation is called <strong>antidifferentiation</strong> or <strong>integration</strong>.</p>
+<p><span class="math inline">∫(4<em>x</em> − 5)<em>d</em><em>x</em> = 2<em>x</em><sup>2</sup> − 5<em>x</em> + <em>C</em></span> for some constant <span class="math inline"><em>C</em></span>.</p>
+<p><span class="math inline"><em>C</em></span> is the constant of integration.</p>
+<p><span class="math inline">∫sin <em>x</em><em>d</em><em>x</em> =  − cos <em>x</em> + <em>C</em></span></p>
+<hr />
+<h3 id="integration-rules">Integration rules</h3>
+<ol class="incremental" type="1">
+<li><p><span class="math inline">∫<em>k</em><em>f</em>(<em>x</em>)<em>d</em><em>x</em> = <em>k</em>∫<em>f</em>(<em>x</em>)<em>d</em><em>x</em></span>, <span class="math inline"><em>k</em></span> constant</p></li>
+<li><p><span class="math inline">∫<em>f</em>(<em>x</em>) ± <em>g</em>(<em>x</em>)<em>d</em><em>x</em> = ∫<em>f</em>(<em>x</em>)<em>d</em><em>x</em> ± ∫<em>g</em>(<em>x</em>)<em>d</em><em>x</em></span></p></li>
+</ol>
+<h3 id="integration-formulas-i">Integration formulas I</h3>
+<ol class="incremental" type="1">
+<li><p><span class="math inline">∫<em>k</em><em>d</em><em>x</em> = <em>k</em><em>x</em> + <em>C</em>, <em>k</em> ∈ ℝ</span></p></li>
+<li><p><span class="math inline">$\displaystyle\int x^ndx = \frac{x^{n+1}}{n+1}+C, n \in \mathbb{R}, n \neq -1$</span></p></li>
+</ol>
+<h3 id="integration-formulas-ii">Integration formulas II</h3>
+<ol class="incremental" type="1">
+<li><p><span class="math inline">∫sin <em>x</em><em>d</em><em>x</em> =  − cos <em>x</em> + <em>C</em></span></p></li>
+<li><p><span class="math inline">∫cos <em>x</em><em>d</em><em>x</em> = sin <em>x</em> + <em>C</em></span></p></li>
+<li><p><span class="math inline">∫sec<sup>2</sup><em>x</em><em>d</em><em>x</em> = tan <em>x</em> + <em>C</em></span></p></li>
+<li><p><span class="math inline">∫csc<sup>2</sup><em>x</em><em>d</em><em>x</em> =  − cot <em>x</em> + <em>C</em></span></p></li>
+<li><p><span class="math inline">∫sec <em>x</em>tan <em>x</em><em>d</em><em>x</em> = sec <em>x</em> + <em>C</em></span></p></li>
+<li><p><span class="math inline">∫csc <em>x</em>cot <em>x</em><em>d</em><em>x</em> =  − csc <em>x</em> + <em>C</em></span></p></li>
+</ol>
+<h3 id="integration-formulas-iii">Integration formulas III</h3>
+<ol class="incremental" type="1">
+<li><p><span class="math inline">∫<em>e</em><sup><em>x</em></sup><em>d</em><em>x</em> = <em>e</em><sup><em>x</em></sup> + <em>C</em></span></p></li>
+<li><p><span class="math inline">$\displaystyle\int \frac{1}{x}dx=\ln|x|+C$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\int \frac{1}{\sqrt{1-x^2}}dx = \sin^{-1}x +C$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\int \frac{1}{1+x^2}dx = \tan^{-1}x +C$</span></p></li>
+<li><p><span class="math inline">$\displaystyle\int \frac{1}{x\sqrt{x^2-1}}dx= \sec^{-1}+C$</span></p></li>
+</ol>
+<hr />
+<h2 id="substitution-rule">Substitution rule</h2>
+<h3 id="chain-rule-for-derivatives">Chain rule for derivatives</h3>
+<p><span class="math display">$$ \frac{d}{dx}(f(g(x)))=f'(g(x))g'(x) $$</span></p>
+<p>If follows that</p>
+<p><span class="math display">∫<em>f</em>′(<em>g</em>(<em>x</em>))<em>g</em>′(<em>x</em>)<em>d</em><em>x</em> = <em>f</em>(<em>g</em>(<em>x</em>)) + <em>C</em></span></p>
+<h4 id="example-2">Example</h4>
+<blockquote>
+<details>
+<summary>
+Evaluate <span class="math inline">∫2<em>x</em>cos <em>x</em><sup>2</sup><em>d</em><em>x</em></span>.
+</summary>
+<p><strong>Preliminary work.</strong> By intuition, we can get <span class="math inline"><em>f</em>(<em>x</em>) = <em>s</em><em>i</em><em>n</em><em>x</em></span> and <span class="math inline"><em>g</em>(<em>x</em>) = <em>x</em><sup>2</sup></span></p>
+<p><span class="math display">∫2<em>x</em>cos <em>x</em><sup>2</sup><em>d</em><em>x</em> = <em>f</em>(<em>g</em>(<em>x</em>)) = sin <em>x</em><sup>2</sup></span></p>
+<p><strong>Solution.</strong> Suppose that <span class="math inline">$f'(x)=\frac{dy}{dx}$</span></p>
+<p><span class="math display"><em>d</em><em>y</em> = <em>f</em>′(<em>x</em>)<em>d</em><em>x</em></span></p>
+<p>Let <span class="math inline"><em>u</em> = <em>g</em>(<em>x</em>)</span>, then <span class="math inline">$g'(x)=\frac{du}{dx}$</span></p>
+<p><span class="math display"><em>d</em><em>u</em> = <em>g</em>′(<em>x</em>)<em>d</em><em>x</em></span></p>
+<p>Let <span class="math inline"><em>u</em> = <em>x</em><sup>2</sup></span></p>
+<p></p>
+</details>
+</blockquote>
+<h3 id="definition-of-the-substitution-rule">Definition of the substitution rule</h3>
+<p>If <span class="math inline"><em>u</em> = <em>g</em>(<em>x</em>)</span> is a differentiable function whose range is interval <span class="math inline"><em>I</em></span> and <span class="math inline"><em>f</em></span> is continuous on <span class="math inline"><em>I</em></span>, then</p>
+<p><span class="math display">∫<em>f</em>′(<em>g</em>(<em>x</em>))<em>g</em>′(<em>x</em>) = ∫<em>f</em>(<em>u</em>)<em>d</em><em>u</em></span></p>
+<hr />
+<h2 id="definite-integrals">Definite integrals</h2>
+<h3 id="the-area-problem">The area problem</h3>
+<p>Let <span class="math inline"><em>f</em></span> be a continuous nonnegative function on <span class="math inline">[<em>a</em>, <em>b</em>]</span>. Find the area of the regiom bounded by the curve <span class="math inline"><em>y</em> = <em>f</em>(<em>x</em>)</span>, the lines <span class="math inline"><em>x</em> = <em>a</em></span>, <span class="math inline"><em>x</em> = <em>b</em></span>, and the <span class="math inline"><em>x</em></span>-axis.</p>
+<blockquote>
+<p>The area is often coined the <strong>region under the curve</strong>, which generally means the area in between the curve and the <span class="math inline"><em>x</em></span>-axis</p>
+</blockquote>
+<h4 id="example-3">Example</h4>
+<blockquote>
+<details>
+<summary>
+Consider <span class="math inline"><em>f</em>(<em>x</em>) = <em>x</em><sup>2</sup> + 1</span> on <span class="math inline">[0, 2]</span>.
+</summary>
+<p><strong>Solution.</strong> Let <span class="math inline"><em>A</em></span> be the area under the curve</p>
+<p>Using right endpoints (5 rectangles)</p>
+<p><span class="math display">$$ \Delta x = \frac{2-0}{5} = \frac{2}{5} = 0.4 $$</span> Rectangle 1: <span class="math inline">(<em>Δ</em><em>x</em>)(<em>f</em>(0.4)) = (0.4)(1.16)</span></p>
+<p>Rectangle 2: <span class="math inline">(<em>Δ</em><em>x</em>)(<em>f</em>(0.8)) = (0.4)(1.64)</span></p>
+<p>Rectangle 3: <span class="math inline">(<em>Δ</em><em>x</em>)(<em>f</em>(1.2)) = (0.4)(2.44)</span></p>
+<p>Rectangle 4: <span class="math inline">(<em>Δ</em><em>x</em>)(<em>f</em>(1.6)) = (0.4)(3.56)</span></p>
+<p>Rectangle 5: <span class="math inline">(<em>Δ</em><em>x</em>)(<em>f</em>(2.0)) = (0.4)(5)</span></p>
+<p><span class="math display"><em>A</em><sub>5</sub><sup>+</sup> = (0.4)(1.16) + (0.4)(1.64) + (0.4)(2.44) + (0.4)(3.56) + (0.4)(5) = 5.52</span> <span class="math inline"><em>A</em><sub>5</sub><sup>+</sup></span> is an overestimation of <span class="math inline"><em>A</em></span>.</p>
+<p>Using left endpoints (5 rectangles):</p>
+<p>Rectangle 1: <span class="math inline">(<em>Δ</em><em>x</em>)(<em>f</em>(0)) = (0.4)(1)</span></p>
+<p>Rectangle 2: <span class="math inline">(<em>Δ</em><em>x</em>)(<em>f</em>(0.4)) = (0.4)(1.16)</span></p>
+<p>Rectangle 3: <span class="math inline">(<em>Δ</em><em>x</em>)(<em>f</em>(0.8)) = (0.4)(1.64)</span></p>
+<p>Rectangle 4: <span class="math inline">(<em>Δ</em><em>x</em>)(<em>f</em>(1.2)) = (0.4)(2.44)</span></p>
+<p>Rectangle 5: <span class="math inline">(<em>Δ</em><em>x</em>)(<em>f</em>(1.6)) = (0.4)(3.56)</span></p>
+<p><span class="math display"><em>A</em><sub>5</sub><sup>−</sup> = (0.4)(1) + (0.4)(1.16) + (0.4)(1.64) + (0.4)(2.44) + (0.4)(3.56) +  = 3.92</span></p>
+<p><span class="math inline"><em>A</em><sub>5</sub><sup>−</sup></span> is an underestimation of <span class="math inline"><em>A</em></span>.</p>
+<p>We can increase the number of rectangles and compute the area <span class="math inline"><em>A</em></span> more <strong>accurately</strong> by computing the area as the number of rectangles approach infinity.</p>
+<p>Let the number of rectangles be <span class="math inline"><em>n</em></span></p>
+<p><span class="math display">$$ \Delta x = \frac{2-0}{n}=\frac{2}{n} $$</span> Let <span class="math inline"><em>x</em><sub>0</sub></span> be the first point: <span class="math inline"><em>x</em><sub>0</sub> = 0</span></p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p></p>
+</details>
+</blockquote>
+<h3 id="riemann-sum">Riemann sum</h3>
+<blockquote>
+<details>
+<p>Let <span class="math inline"><em>f</em></span> be a function defined on <span class="math inline">[<em>a</em>, <em>b</em>]</span>.</p>
+<p>Divide <span class="math inline">[<em>a</em>, <em>b</em>]</span> into <span class="math inline"><em>n</em></span> subintervals, each with width</p>
+<p><span class="math display">$$ \Delta x = \frac{b-a}{n} $$</span></p>
+<p>Let <span class="math inline"><em>x</em><sub>0</sub> = <em>a</em>, <em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, …, <em>x</em><sub><em>n</em></sub> = <em>b</em></span>,</p>
+<p>For each subinterval <span class="math inline">[<em>x</em><sub><em>i</em> − 1</sub>, <em>x</em><sub><em>i</em></sub>]</span>, choose a sample point <span class="math inline"><em>x</em><sub><em>i</em></sub><sup>*</sup></span></p>
+<p>Compute the sum</p>
+<p><span class="math display">$$A_n = \sum_{i=1}^{n}f(x_i^*)\Delta x $$</span></p>
+<p>This is also called the <strong>Riemann sum</strong>.</p>
+</details>
+</blockquote>
+<p><span class="math display">$$A_n = \sum_{i=1}^{n}f(x_i^*)\Delta x $$</span></p>
+<h3 id="definite-integral-and-integrability">Definite integral and integrability</h3>
+<p>The definite integral of <span class="math inline"><em>f</em></span> from <span class="math inline"><em>a</em></span> to <span class="math inline"><em>b</em></span> is</p>
+<p><span class="math display">$$ \int_a^b f(x)dx = \lim_{x\to\infty}\sum_{i=1}^{n} f(x_i^*)\Delta x $$</span> provided that such limit exists.</p>
+<p>We say that <span class="math inline"><em>f</em></span> is integrable on <span class="math inline">[<em>a</em>, <em>b</em>]</span></p>
+<hr />
+<h3 id="remarks-on-the-definite-integral">Remarks on the definite integral</h3>
+<ol class="incremental" type="1">
+<li><p>If a function is continuous on <span class="math inline">[<em>a</em>, <em>b</em>]</span>, it is integrable on <span class="math inline">[<em>a</em>, <em>b</em>]</span>.</p></li>
+<li><p>If <span class="math inline"><em>f</em></span> is a nonnegative continuous function on <span class="math inline">[<em>a</em>, <em>b</em>]</span>, then <span class="math inline">∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span> is the area under the curve <span class="math inline"><em>y</em> = <em>f</em>(<em>x</em>)</span> from <span class="math inline"><em>x</em> = <em>a</em></span> and <span class="math inline"><em>x</em> = <em>b</em></span></p></li>
+<li><p><span class="math inline">∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>y</em>)<em>d</em><em>y</em></span></p></li>
+</ol>
+<h3 id="conventions-on-the-definite-integral">Conventions on the definite integral</h3>
+<ol class="incremental" type="1">
+<li><p><span class="math inline">∫<sub><em>b</em></sub><sup><em>a</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> =  − ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span></p></li>
+<li><p><span class="math inline">∫<sub><em>a</em></sub><sup><em>a</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> = 0</span></p></li>
+</ol>
+<h3 id="properties-of-the-definite-integral">Properties of the definite integral</h3>
+<ol class="incremental" type="1">
+<li><p><span class="math inline">∫<sub><em>a</em></sub><sup><em>b</em></sup><em>c</em><em>f</em>(<em>x</em>)<em>d</em><em>x</em> = <em>c</em>∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span></p></li>
+<li><p><span class="math inline">∫<sub><em>a</em></sub><sup><em>b</em></sup>[<em>f</em>(<em>x</em>) ± <em>g</em>(<em>x</em>)]<em>d</em><em>x</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>) ± ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>g</em>(<em>x</em>)</span></p></li>
+<li><p><span class="math inline">∫<sub><em>a</em></sub><sup><em>c</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> + ∫<sub><em>c</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span></p></li>
+<li><p>If <span class="math inline"><em>f</em>(<em>x</em>) ≥ 0 ∀<em>x</em> ∈ [<em>a</em>, <em>b</em>]</span>, then <span class="math inline">∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> ≥ 0</span></p></li>
+<li><p>If <span class="math inline"><em>f</em>(<em>x</em>) ≥ <em>g</em>(<em>x</em>) ∀<em>x</em> ∈ [<em>a</em>, <em>b</em>]</span>, then <span class="math inline">∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> ≥ ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>g</em>(<em>x</em>)<em>d</em><em>x</em></span></p></li>
+<li><p>If <span class="math inline"><em>m</em> ≤ <em>f</em>(<em>x</em>) ≤ <em>M</em> ∀<em>x</em> ∈ [<em>a</em>, <em>b</em>]</span>, then <span class="math inline"><em>m</em>(<em>b</em> − <em>a</em>) ≤ ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> ≤ <em>M</em>(<em>b</em> − <em>a</em>)</span></p></li>
+</ol>
+<hr />
+<h2 id="the-fundamental-theorem-of-calculus">The Fundamental Theorem of Calculus</h2>
+<h3 id="mean-value-theorem-for-integrals">Mean Value Theorem for integrals</h3>
+<blockquote>
+<details>
+<summary>
+Proof
+</summary>
+<p>Since <span class="math inline"><em>f</em></span> is continuous on <span class="math inline">[<em>a</em>, <em>b</em>]</span>, then <span class="math inline"><em>f</em></span> is integrable on <span class="math inline">[<em>a</em>, <em>b</em>]</span> — i.e. <span class="math inline">∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span> has a value.</p>
+<p>Since f is continuous on [a,b], by the <strong>Extreme Value Theorem</strong>, <span class="math inline">∃<em>m</em>, <em>M</em> ∈ ℝ</span> such that <span class="math inline"><em>f</em>(<em>x</em><sub><em>m</em></sub>) = <em>m</em>, <em>f</em>(<em>x</em><sub><em>M</em></sub>) = <em>M</em>, <em>m</em> ≤ <em>f</em>(<em>x</em>) ≤ <em>M</em> ∀<em>x</em> ∈ [<em>a</em>, <em>b</em>]</span> and for some <span class="math inline"><em>x</em><sub><em>m</em></sub>, <em>x</em><sub><em>M</em></sub> ∈ [<em>a</em>, <em>b</em>]</span>.</p>
+<p>By Property 6 of the definite integral, <span class="math inline"><em>m</em>(<em>b</em> − <em>a</em>) ≤ ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> ≤ <em>M</em>(<em>b</em> − <em>a</em>)</span></p>
+<p></p>
+<p>By the IVT, <span class="math inline">∃<em>c</em> ∈ [<em>a</em>, <em>b</em>]</span> such that</p>
+<p></p>
+</details>
+</blockquote>
+<p>If <span class="math inline"><em>f</em></span> is continuous on <span class="math inline">[<em>a</em>, <em>b</em>]</span>, <span class="math inline">∃<em>c</em> ∈ [<em>a</em>, <em>b</em>]</span> such that</p>
+<p><span class="math display">∫<sub><em>b</em></sub><sup><em>a</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> = <em>f</em>(<em>c</em>)(<em>b</em> − <em>a</em>)</span></p>
+<h3 id="average-value-of-a-function">Average value of a function</h3>
+<blockquote>
+<details>
+<summary>
+Proof
+</summary>
+<p>Given a function continuous on <span class="math inline">[<em>a</em>, <em>b</em>]</span>, we can get the average value of the function at <span class="math inline">[<em>a</em>, <em>b</em>]</span> by dividing the curve into <span class="math inline"><em>n</em></span> equal-width rectangles, getting the value of each sample points, and dividing by <span class="math inline"><em>n</em></span>.</p>
+<p>Average area <span class="math inline">$\displaystyle = \frac{\sum_{i=1}^n f(x_i^*)i}{n}$</span></p>
+<p>But then, <span class="math inline">$\displaystyle \Delta x = \frac{b-a}{n} \implies n = \frac{b-a}{\Delta x}$</span></p>
+<p></p>
+<p>We want to make <span class="math inline"><em>n</em></span> larger in order to make the average more accurate.</p>
+<p></p>
+<p>Therefore, given function <span class="math inline"><em>f</em></span> that is continuous on <span class="math inline">[<em>a</em>, <em>b</em>]</span>, there exists <span class="math inline"><em>c</em> ∈ [<em>a</em>, <em>b</em>]</span> such that</p>
+<p><span class="math display"><em>f</em><sub><em>a</em><em>v</em><em>g</em></sub> = <em>f</em>(<em>c</em>)</span></p>
+</details>
+</blockquote>
+<p>Let <span class="math inline"><em>f</em></span> be a continuous on <span class="math inline">[<em>a</em>, <em>b</em>]</span>. The average value of <span class="math inline"><em>f</em></span> at <span class="math inline">[<em>a</em>, <em>b</em>]</span>, denoted by <span class="math inline"><em>f</em><sub><em>a</em><em>v</em><em>g</em></sub></span> is</p>
+<p><span class="math display">$$ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} $$</span></p>
+<hr />
+<h3 id="first-part-of-the-fundamental-theorem-of-calculus">First part of the Fundamental Theorem of Calculus</h3>
+<p>Let <span class="math inline"><em>y</em> = <em>f</em>(<em>t</em>)</span> that is continuous on <span class="math inline">[<em>a</em>, <em>b</em>]</span>.</p>
+<p>If <span class="math inline"><em>x</em> ∈ [<em>a</em>, <em>b</em>]</span>, then the function is also continuous on <span class="math inline">[<em>a</em>, <em>b</em>]⟹</span> the function is also continuous on <span class="math inline">[<em>a</em>, <em>x</em>]</span>.</p>
+<p></p>
+<p>Let <span class="math inline"><em>f</em></span> be continuous on <span class="math inline">[<em>a</em>, <em>b</em>]</span>. If f is the function defined by</p>
+<p><span class="math display"><em>F</em>(<em>x</em>) = ∫<sub><em>a</em></sub><sup><em>x</em></sup><em>f</em>(<em>t</em>)<em>d</em><em>t</em></span></p>
+<p>then <span class="math inline"><em>F</em>′(<em>x</em>) = <em>f</em>(<em>x</em>) ∀<em>x</em> ∈ [<em>a</em>, <em>b</em>]</span>.</p>
+<blockquote>
+<details>
+<summary>
+Proof
+</summary>
+<p>Let <span class="math inline"><em>x</em>, <em>x</em> + <em>h</em> ∈ [<em>a</em>, <em>b</em>], <em>h</em> ≠ 0</span>.</p>
+<p><span class="math display"><em>F</em>(<em>x</em> + <em>h</em>) − <em>F</em>(<em>x</em>) = ∫<sub><em>a</em></sub><sup><em>x</em> + <em>h</em></sup><em>f</em>(<em>t</em>)<em>d</em><em>t</em> − ∫<sub><em>a</em></sub><sup><em>x</em></sup><em>f</em>(<em>t</em>)<em>d</em><em>t</em></span></p>
+<p>By the Property 3 of definite integrals, </p>
+<p>By the Mean Value Theorem for integrals, <span class="math inline">∃<em>c</em> ∈ [<em>x</em>, <em>x</em> + <em>h</em>]</span> such that</p>
+<p></p>
+<p>Note that <span class="math inline">lim<sub><em>h</em> → 0</sub><em>x</em> = <em>x</em></span> and <span class="math inline">lim<sub><em>h</em> → 0</sub>(<em>x</em> + <em>h</em>) = <em>x</em> ⟹ lim<sub><em>h</em> → 0</sub><em>c</em> = <em>x</em></span> by Squeeze Theorem.</p>
+<p>Since <span class="math inline"><em>f</em></span> is continuous at <span class="math inline"><em>x</em></span>,</p>
+<p><span class="math display">lim<sub><em>h</em> → 0</sub><em>f</em>(<em>c</em>) = <em>f</em>(<em>x</em>)</span></p>
+<p></p>
+</details>
+</blockquote>
+<hr />
+<h3 id="second-part-of-the-fundamental-theorem-of-calculus">Second part of the Fundamental Theorem of Calculus</h3>
+<blockquote>
+<details>
+<summary>
+Let’s bring back <span class="math inline"><em>f</em>(<em>x</em>) = <em>x</em><sup>2</sup> + 1</span> on <span class="math inline">[0, 2]</span>.
+</summary>
+<p><span class="math inline"><em>f</em></span> is continuous on <span class="math inline">[0, 2] ⟹ <em>f</em></span> is integrable on <span class="math inline">[0, 2]</span>.</p>
+<p><span class="math display">$$ \implies \int_0^2 (x^2+1)dx = \frac{14}{3} $$</span></p>
+<p>Let <span class="math inline">$\displaystyle F(x)= \frac{x^3}{3}+ x-1$</span>.</p>
+<p></p>
+<p>Observe that <span class="math inline"><em>F</em>′(<em>x</em>) = <em>x</em><sup>2</sup> + 1 ⟹ <em>F</em>(<em>x</em>)</span> is the an antiderivative of <span class="math inline"><em>x</em><sup>2</sup> + 1</span>.</p>
+</details>
+</blockquote>
+<p>If a function <span class="math inline"><em>f</em></span> is continuous on <span class="math inline">[<em>a</em>, <em>b</em>]</span>, then</p>
+<p><span class="math display">∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em> = <em>F</em>(<em>b</em>) − <em>F</em>(<em>a</em>)</span></p>
+<p>where <span class="math inline"><em>F</em></span> is any antiderivative of <span class="math inline"><em>f</em></span> on <span class="math inline">[<em>a</em>, <em>b</em>]</span>.</p>
+<blockquote>
+<p>The following notations for <span class="math inline"><em>F</em>(<em>b</em>) − <em>F</em>(<em>a</em>)</span> are very useful in evaluating definite integrals:</p>
+<p><span class="math inline"><em>F</em>(<em>x</em>)]<sub><em>a</em></sub><sup><em>b</em></sup></span> or <span class="math inline"><em>F</em>(<em>x</em>)|<sub><em>a</em></sub><sup><em>b</em></sup></span></p>
+</blockquote>
+<blockquote>
+<details>
+<summary>
+Proof
+</summary>
+<p>By FTC - Part 1, the function</p>
+<p><span class="math display">∫<sub><em>a</em></sub><sup><em>x</em></sup><em>f</em>(<em>t</em>)<em>d</em><em>t</em></span></p>
+<p>is an antiderivative of f on <span class="math inline">[<em>a</em>, <em>b</em>]</span>.</p>
+<p>By the Equal Derivatives Theorem,</p>
+<p><span class="math display">∫<sub><em>a</em></sub><sup><em>x</em></sup><em>f</em>(<em>t</em>)<em>d</em><em>t</em> = <em>F</em>(<em>x</em>) + <em>C</em></span></p>
+<p>where <span class="math inline"><em>F</em></span> is any antiderivative of <span class="math inline"><em>f</em></span>.</p>
+<p></p>
+</details>
+</blockquote>
+<hr />
+<h1 id="application-i">2 - Application I</h1>
+<h2 id="areas-between-curves">Areas between curves</h2>
+<h4 id="example-1-1">Example 1</h4>
+<blockquote>
+<details>
+<summary>
+Find the area of the region under the curve <span class="math inline"><em>y</em> = <em>x</em><sup>2</sup> − 1</span> from <span class="math inline"><em>x</em> =  − 1</span> to <span class="math inline"><em>x</em> = 2</span>.
+</summary>
+<p><strong>Solution.</strong> Area is simply not <span class="math inline">∫<sub> − 1</sub><sup>2</sup>(<em>x</em><sup>2</sup> − 1)<em>d</em><em>x</em></span> because <span class="math inline">∫<sub> − 1</sub><sup>1</sup>(<em>x</em><sup>2</sup> − 1)<em>d</em><em>x</em></span> is negative and cancels the positive area.</p>
+<p>Therefore, we get <span class="math inline">∫<sub> − 1</sub><sup>1</sup> − (<em>x</em><sup>2</sup> − 1)<em>d</em><em>x</em></span> to get the area of the curve between -1 and 1. </p>
+</details>
+</blockquote>
+<h4 id="example-2-1">Example 2</h4>
+<blockquote>
+<details>
+<summary>
+Find the area of the region bounded by the curves of <span class="math inline"><em>y</em> = <em>x</em><sup>2</sup></span> and <span class="math inline"><em>y</em> = 4<em>x</em> − <em>x</em><sup>2</sup></span>.
+</summary>
+<p><strong>Solution.</strong> Note that both curves intersect at <span class="math inline">(0, 0)</span> and <span class="math inline">(2, 4)</span>.</p>
+<p>When we use Riemann sum, we only get the rectangles in between the region bounded by the area by subtracting the upper function (<span class="math inline"><em>y</em> = 4<em>x</em> − <em>x</em><sup>2</sup></span>) to the lower function (<span class="math inline"><em>y</em> = <em>x</em><sup>2</sup></span>)</p>
+<p><span class="math display"> ⟹ <em>A</em><sub><em>n</em></sub> = ∑[(4<em>x</em> − <em>x</em><sup>2</sup>) − <em>x</em><sup>2</sup>]<em>Δ</em><em>x</em></span></p>
+<p></p>
+</details>
+</blockquote>
+<h4 id="example-3-1">Example 3</h4>
+<blockquote>
+<details>
+<summary>
+Find the area of the region bounded by the curve <span class="math inline">$y=\sqrt{x}$</span>, the line <span class="math inline"><em>x</em> + 2<em>y</em> = 3</span>, and the <span class="math inline"><em>x</em></span>-axis.
+</summary>
+<p><strong>Solution.</strong> The graphs intersect at <span class="math inline">(0, 0)</span>, <span class="math inline">(1, 1)</span>, and <span class="math inline">(3, 0)</span>.</p>
+<p><span class="math display">$$ x+2y = 3 \implies y  = -\frac{1}{2}x + \frac{3}{2} $$</span></p>
+<p></p>
+</details>
+</blockquote>
+<hr />
+<h2 id="volumes-and-volumes-of-revolution-using-disks-and-washers">Volumes and volumes of revolution using disks and washers</h2>
+<h3 id="volume-of-a-right-cylinder">Volume of a right cylinder</h3>
+<p><span class="math display"><em>V</em> = <em>a</em><em>h</em></span></p>
+<p><span class="math display">$$ V_n = \sum_{i=1}^n A(x)\Delta x $$</span></p>
+<p>Let <span class="math inline"><em>S</em></span> be a solid that lies between <span class="math inline"><em>x</em> = <em>a</em></span> and <span class="math inline"><em>x</em> = <em>b</em></span>. If the cross-sectional area of <span class="math inline"><em>S</em></span> in the plane <span class="math inline"><em>P</em><sub><em>x</em></sub></span> through <span class="math inline"><em>x</em></span> and perpendicular to the <span class="math inline"><em>x</em></span>-axis is <span class="math inline"><em>A</em>(<em>x</em>)</span>, where <span class="math inline"><em>A</em></span> is a continuous function on <span class="math inline">[<em>a</em>, <em>b</em>]</span>, then the volume <span class="math inline"><em>V</em></span> of <span class="math inline"><em>S</em></span> is</p>
+<p><span class="math display">$$ V = \lim_{n \to\infty} \sum_{i=1}^n A(x_i^*)\Delta x = \int_b^a A(x)dx $$</span></p>
+<h4 id="example-1-2">Example 1</h4>
+<blockquote>
+<details>
+<summary>
+Let us find the volume of a sphere of radius <span class="math inline"><em>r</em></span>.
+</summary>
+<p><strong>Solution.</strong></p>
+<p>radius of the cross-section circle at <span class="math inline">$x = \sqrt{r^2-x^2}$</span></p>
+<p></p>
+<p></p>
+</details>
+</blockquote>
+<h4 id="example-2-2">Example 2</h4>
+<blockquote>
+<details>
+<summary>
+The base of a solid is the region bounded by <span class="math inline"><em>y</em> = <em>x</em><sup>2</sup></span> and <span class="math inline"><em>y</em> = 4</span>. Its parallel cross-sections perpendicular to the base and the <span class="math inline"><em>y</em></span>-axis are squares. Find the volume of the solid.
+</summary>
+<p><strong>Solution.</strong> side of the cross-section at <span class="math inline">$y = 2\sqrt{y}$</span></p>
+<p><span class="math display">$$ A(y) = (2\sqrt{y})^2 = 4y $$</span></p>
+<p></p>
+</details>
+</blockquote>
+<hr />
+<h3 id="volume-of-solids-of-revolution">Volume of solids of revolution</h3>
+<p>If we revolve a region about a line, we obtain a <strong>solid of revolution</strong>.</p>
+<h4 id="example-1-3">Example 1</h4>
+<blockquote>
+<details>
+<summary>
+Consider the region under the curve <span class="math inline"><em>y</em> = <em>x</em><sup>2</sup> + 1</span> from <span class="math inline"><em>x</em> =  − 1</span> to <span class="math inline"><em>x</em> = 2</span>. We revolve this region about the <span class="math inline"><em>x</em></span>-axis.
+</summary>
+<p><strong>Solution.</strong> radius of the cross-section at <span class="math inline"><em>x</em> = <em>f</em>(<em>x</em>)</span></p>
+<p><span class="math display"><em>A</em>(<em>x</em>) = <em>π</em>[<em>f</em>(<em>x</em>)]<sup>2</sup></span></p>
+<p></p>
+</details>
+</blockquote>
+<p>The cross-section of a solid of revolution is always a circle.</p>
+<h4 id="example-2-3">Example 2</h4>
+<blockquote>
+<details>
+<summary>
+A solid is obtained by revolving about the <span class="math inline"><em>x</em></span>-axis the region bounded by <span class="math inline"><em>x</em> = <em>y</em><sup>2</sup></span> and <span class="math inline">2<em>y</em> = <em>x</em></span>. Find the volume of the solid.
+</summary>
+<p><strong>Solution.</strong></p>
+<p></p>
+</details>
+</blockquote>
+<h4 id="example-3-2">Example 3</h4>
+<blockquote>
+<details>
+<summary>
+A solid is obtained by revolving about the y-axis the region bounded by <span class="math inline">2<em>x</em> = <em>y</em><sup>2</sup></span>, <span class="math inline"><em>y</em> = 4</span>, and the <span class="math inline"><em>y</em></span>-axis. Find the volume of the solid.
+</summary>
+<p><strong>Solution.</strong></p>
+<p></p>
+</details>
+</blockquote>
+<h2 id="volumes-by-cylindrical-shells">Volumes by cylindrical shells</h2>
+<p>There are times that disks-and-washers technique is not the best way to solve a volume problem – e.g. <span class="math inline"><em>y</em> = 4<em>x</em> − <em>x</em></span> rotated about the <span class="math inline"><em>y</em></span>-axis.</p>
+<h3 id="volume-of-a-cylindrical-shell">Volume of a cylindrical shell</h3>
+<blockquote>
+<details>
+<p>Let <span class="math inline"><em>r</em><sub>1</sub></span> be the inner radius of the cylinder, <span class="math inline"><em>r</em><sub>2</sub></span> be the outer (and larger) radius of the cylinder. <span class="math inline"><em>r</em></span> be the average of both</p>
+<p></p>
+<p></p>
+<p>Given a curve <span class="math inline"><em>y</em> = <em>f</em>(<em>x</em>)</span> in <span class="math inline">[<em>a</em>, <em>b</em>]</span> rotated about the <span class="math inline"><em>y</em></span>-axis, the Riemann sum of the volume is</p>
+<p><span class="math display"><em>V</em> = ∑2<em>π</em><em>r</em><em>h</em><em>Δ</em><em>r</em></span></p>
+<p>In this context, <span class="math inline"><em>r</em> = <em>x</em></span> (horizontal distance), <span class="math inline"><em>h</em> = <em>f</em>(<em>x</em>)</span> (vertical distance), and <span class="math inline"><em>Δ</em><em>r</em> = <em>Δ</em><em>x</em></span></p>
+<p></p>
+</details>
+</blockquote>
+<p>The volume of a solid obtained by rotating about the <span class="math inline"><em>y</em></span>-axis the region under the curve <span class="math inline"><em>y</em> = <em>f</em>(<em>x</em>)</span> (continuous and nonnegative) from <span class="math inline"><em>x</em> = <em>a</em></span> (nonnegative) to <span class="math inline"><em>x</em> = <em>b</em></span> is</p>
+<p><span class="math display">$$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2\pi xf(x)dx $$</span></p>
+<h4 id="example-1-4">Example 1</h4>
+<blockquote>
+<details>
+<summary>
+A solid is obtained by revolving about the <span class="math inline"><em>y</em></span>-axis the region bounded by <span class="math inline"><em>y</em> = 4<em>x</em> − <em>x</em><sup>2</sup></span> and the <span class="math inline"><em>x</em></span>-axis. Use cylindrical shells to find the volume of the solid.
+</summary>
+<p><strong>Solution.</strong></p>
+<p></p>
+</details>
+</blockquote>
+<h4 id="example-2-4">Example 2</h4>
+<blockquote>
+<details>
+<summary>
+A solid is obatined by revolving about the <span class="math inline"><em>x</em></span>-axis the region bounded by <span class="math inline">$y = \sqrt{x}$</span>, <span class="math inline"><em>y</em> = 2 − <em>x</em></span>, and the <span class="math inline"><em>x</em></span>-axis. Find the volume of the solid.
+</summary>
+<p><strong>Solution.</strong></p>
+<p><em>Disks:</em></p>
+<p><span class="math inline">$y = \sqrt{x}$</span> and <span class="math inline"><em>y</em> = 2 − <em>x</em></span> intersect at <span class="math inline">(1, 1)</span></p>
+<p><span class="math inline">∀<em>x</em> ∈ [0, 1]</span>, <span class="math inline">$\sqrt{x} \leq 2-x \implies$</span> we use <span class="math inline">$\sqrt{x}$</span> at this interval</p>
+<p><span class="math inline">∀<em>x</em> ∈ [1, 2]</span>, <span class="math inline">$2-x \leq \sqrt{x} \implies$</span> we use <span class="math inline">2 − <em>x</em></span> at this interval</p>
+<p></p>
+<p>(This exercise is left to the reader lol don’t wanna solve this myself)</p>
+<p><em>cylindrical shell:</em></p>
+<p><span class="math inline">$y = \sqrt{x}$</span> and <span class="math inline"><em>y</em> = 2 − <em>x</em></span> intersect at <span class="math inline">(1, 1)</span>.</p>
+<p><span class="math display">$$ y = \sqrt{x} \implies x = y^2 $$</span> <span class="math display"><em>y</em> = 2 − <em>x</em> ⟹ <em>x</em> = 2 − <em>y</em></span></p>
+<p><span class="math display"><em>V</em> = ∫<sub>0</sub><sup>1</sup>2<em>π</em><em>y</em>(2 − <em>y</em><sup>2</sup> − <em>y</em>)<em>d</em><em>y</em></span></p>
+<p>(Just solve this yourselves)</p>
+</blockquote>
+<h4 id="example-3-3">Example 3</h4>
+<blockquote>
+<details>
+<summary>
+A solid is obtained by the revolving about the line <span class="math inline"><em>x</em> =  − 2</span> the region bounded by <span class="math inline"><em>y</em> = <em>x</em><sup>3</sup></span>, <span class="math inline"><em>y</em> = 8</span>, and the <span class="math inline"><em>y</em></span>-axis. Find the volume of the solid.
+</summary>
+<p><strong>Solution.</strong></p>
+<p><em>disks:</em> <span class="math inline">$\displaystyle V = \int_0^8 \pi \big[ (\sqrt[3]{y} +2)^2 -2^2 \big] dy = \frac{336\pi}{5}$</span></p>
+<p><em>cylindrical shells:</em> <span class="math inline">$\displaystyle V = \int_0^2 2\pi (x+2)(8-x^3) dx = \frac{336\pi}{5}$</span></p>
+</details>
+</blockquote>
+<hr />
+<!-- # 3 - Techniques of integration -->
+<!-- ## Integration by parts -->
+<!-- ## Trigonometric integrals -->
+<!-- ## Trigonometric substitution -->
+<!-- ## Partial fractions -->
+<!-- # 4 - Applications II -->
+<!-- ## Arc length -->
+<!-- ## Variable-separable differential equations and models for population growth -->

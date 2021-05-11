@@ -1,6 +1,5 @@
 ---
 output: 
-  pdf_document:
   html_document:
     css: style.css
     toc: yes
@@ -11,6 +10,7 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
+  pdf_document:
 title: "Mathematical Analysis IB"
 ---
 
@@ -277,7 +277,7 @@ $$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
 
 If $u=g(x)$ is a differentiable function whose range is interval $I$ and $f$ is continuous on $I$, then
 
-$$ \int f'(g(x))g'(x) = \int f(u)du $$
+$$ \int f'(g(x))g'(x)dx = \int f(u)du $$
 
 ***
 
@@ -917,9 +917,165 @@ $$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2
 
 ***
 
-<!-- # 3 - Techniques of integration -->
+# 3 - Techniques of integration
 
-<!-- ## Integration by parts -->
+## Integration by parts
+
+### Product rule and the differentials
+
+> <details>
+> 
+> Recalling the product rule in derivatives,
+> 
+> \begin{align*}
+> \frac{d}{dx} (f(x)g(x)) &= f(x)g'(x) + g(x)f'(x)\\
+> d(f(x)g(x)) &= f(x)g'(x)dx + g(x)f'(x)dx
+> \end{align*}
+> 
+> Let $u = f(x)$, $v=g(x)$
+> 
+> $du = f'(x)dx$, $v = g'(x)dx$
+> 
+> \begin{align*}
+> d(f(x)g(x)) = f(x)g'(x)dx +g(x)f'(x)dx \implies d(uv) &= udv + vdu\\
+> udv &= d(uv) - vdu\\
+> \int udv &= \int d(uv)- \int vdu\\
+> \int udv &= uv - \int vdu
+> \end{align*}
+> 
+> </details>
+
+$$ \int udv = uv - \int vdu $$
+
+> This is also called the integration-by-parts formula.
+
+<!-- \int f(x) = \int udv -->
+
+#### Example 1
+
+> <details>
+> 
+> <summary> Evaluate $\displaystyle\int \ln x dx$ </summary>
+> 
+> **Preliminary work.**
+> 
+> $$ \int \ln x dx \implies x > 0 $$
+> 
+> Let $u = 1$, $dv = \ln x dx$
+> 
+> $du = 0$, $v = \int \ln x dx$
+> 
+> Note that this solution is not correct because we just went back to our original statement, leading us nowhere.
+> 
+> **Solution.**
+> Let $u = \ln x$, $dv = dx$
+> 
+> $du = \frac{1}{x}dx$, $v = \int dx = x + C$
+> 
+> Following the integration-by-parts formula,
+> 
+> \begin{align*}
+> \int \ln x dx &= (\ln x)(x+c) - \int (x+C)\frac{1}{x} dx\\
+> &= x \ln x + C \ln x - \int (1+\frac{C}{x})dx\\
+> &= x \ln x + C \ln x - (x + C \ln |x| + C_1)\\
+> &= x \ln x + C \ln x - x - C \ln |x| - C_1\text{;  note that  }x > 0\text{, thus }\ln|x| = \ln x\\
+> &= x \ln x - x + C
+> \end{align*}
+> 
+> </details>
+
+> As observed, the contribution of $+C$ in $v$ just cancels at $uv - \int vdu$, so it is not necessary to put $+C$ when using integration by parts.
+
+#### Example 2
+
+> <details>
+> 
+> <summary> Evaluate $\displaystyle \int t^2 \sin {\beta t} dt$ </summary>
+> 
+> **Solution.**
+> Let $u = t^2$, $dv = \sin {\beta t} dt$
+> 
+> $du = 2tdt$, $v = \int \sin {\beta t} dt = -\dfrac{\cos {\beta t}}{\beta}$
+> 
+> \begin{align*}
+> \int t^2 \sin \beta t dt  = -\frac{t^2\cos{\beta t}}{\beta} - \int -\frac{2t\cos{\beta t}}{\beta}dt
+> = -\frac{t^2\cos{\beta t}}{\beta} - \int \frac{2}{\beta} t \cos{\beta t}dt
+> \end{align*}
+> 
+> Let $u = t$, $dv = \cos{\beta t}dt$
+> du = dt$, $v = \dfrac{\sin{\beta t}}{{\beta}}$
+> 
+> \begin{align*}
+> -\frac{t^2\cos{\beta t}}{\beta} - \int \frac{2}{\beta} t\cos{\beta t}dt &= -\frac{t^2\cos{\beta t}}{\beta} - \frac{2}{\beta}\Big(\frac{t \sin{\beta t}}{{\beta}} - \int \frac{\sin{\beta t}}{{\beta}}dt\Big)\\
+> &= -\frac{t^2\cos{\beta t}}{\beta} - \frac{2t \sin{\beta t}}{\beta^2} - \frac{2}{\beta} \Big(\int \frac{\sin{\beta t}}{\beta} dt\Big)\\
+> &= -\frac{t^2\cos{\beta t}}{\beta} - \frac{2t \sin{\beta t}}{\beta^2} + \frac{2\cos {\beta t}}{\beta^3} + C
+> \end{align*}
+> 
+> </details>
+
+#### Example 3
+
+> <details>
+> 
+> <summary> Evaluate $\displaystyle \int e^x \sin {\pi x}dx$ </summary>
+> 
+> **Solution.**
+> Let $u = \sin {\pi x}$, $dv = e^x dx$
+> 
+> $du = \pi \cos {\pi x}dx$, $v = e^x$
+> 
+> By integration by parts,
+> 
+> $$ \int e^x \sin {\pi x}dx = e^x \sin {\pi x} - \pi \int e^x \cos {\pi x}dx $$
+> 
+> Let $u = \cos {\pi x}$, $dv = e^xdx$
+> 
+> $du = -\pi \sin {\pi x}$, $v = e^x$
+> 
+> By integration by parts,
+> 
+> $$ e^x \sin {\pi x} - \pi \int e^x \cos {\pi x}dx = e^x \sin {\pi x} - \pi (e^x\cos {\pi x} - \pi \int - e^x \sin {\pi x}dx) $$
+> 
+> 
+> (Solution to be continued...)
+>
+> </details>
+
+#### Example 4 (definite integral)
+
+> <details>
+> 
+> <summary> Evaluate $\displaystyle \int_0^1 \tan^{-1}x dx$. </summary>
+> 
+> **Solution.**
+> Let $u = \arctan x$, $dv = dx$ 
+> 
+> $du = \dfrac{1}{x^2+1}dx$ , $v = x$
+> 
+> By integration by parts,
+> 
+> $$ \int_0^1 \tan^{-1}x dx = x\arctan x - \int \frac{x}{x^2+1}dx $$
+> 
+> Let $u = x^2 + 1 \implies du = 2xdx$
+> 
+> Using the substitution rule, 
+> 
+> \begin{align*}
+> x\arctan x - \int \frac{x}{x^2+1}dx &= x\arctan x - \frac{1}{2}\int \frac{1}{u}du\\
+> &= x\arctan x - \frac{\ln |u|}{2}\\
+> &= x\arctan x - \frac{\ln |x^2+1|}{2}\text{, note that }\forall x \in \mathbb{R}, x^2+1 > 0 \\
+> &= x\arctan x - \frac{\ln (x^2+1)}{2}
+> \end{align*}
+> 
+> By FTC2,
+> 
+> \begin{align*}
+> \int_0^1 \tan^{-1}x dx &= (x\arctan x - \frac{\ln (x^2+1)}{2}) |_0^1\\
+> &= [\arctan 1 - \frac{\ln (1^2+1)}{2}] - [ - \frac{\ln (0^2+1)}{2}]\\
+> &= \frac{\pi - 2\ln(2)}{4}
+> \end{align*}
+> 
+> </details>
 
 <!-- ## Trigonometric integrals -->
 
