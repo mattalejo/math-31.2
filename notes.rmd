@@ -1,5 +1,6 @@
 ---
 output: 
+  pdf_document:
   html_document:
     css: style.css
     toc: yes
@@ -10,7 +11,6 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
-  pdf_document:
 title: "Mathematical Analysis IB"
 ---
 
@@ -945,9 +945,10 @@ $$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2
 > 
 > </details>
 
+
 $$ \int udv = uv - \int vdu $$
 
-> This is also called the integration-by-parts formula.
+> This is also called the **integration-by-parts formula**.
 
 <!-- \int f(x) = \int udv -->
 
@@ -1034,10 +1035,13 @@ $$ \int udv = uv - \int vdu $$
 > 
 > By integration by parts,
 > 
-> $$ e^x \sin {\pi x} - \pi \int e^x \cos {\pi x}dx = e^x \sin {\pi x} - \pi (e^x\cos {\pi x} - \pi \int - e^x \sin {\pi x}dx) $$
-> 
-> 
-> (Solution to be continued...)
+> \begin{align*}
+> \int e^x \sin {\pi x}dx = e^x \sin {\pi x} - \pi \int e^x \cos {\pi x}dx &= e^x \sin {\pi x} - \pi \Big(e^x\cos {\pi x} - \pi \int - e^x \sin {\pi x}dx \Big)\\
+> &=  e^x \sin {\pi x} - \pi e^x\cos {\pi x} - \pi^2 \int  e^x \sin {\pi x}dx \\
+> \int e^x \sin {\pi x}dx + \pi^2 \int  e^x \sin {\pi x}dx &= e^x \sin {\pi x} - \pi e^x\cos {\pi x}\\
+> (1 + \pi^2) \int e^x \sin {\pi x}dx &= e^x \sin {\pi x} - \pi e^x\cos {\pi x}\\
+> \int e^x \sin {\pi x}dx &= \frac{e^x \sin {\pi x} - \pi e^x\cos {\pi x}}{1 + \pi^2} + C
+> \end{align*}
 >
 > </details>
 

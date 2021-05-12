@@ -3619,8 +3619,13 @@ Evaluate <span class="math inline">\(\displaystyle \int e^x \sin {\pi x}dx\)</sp
 <p>Let <span class="math inline">\(u = \cos {\pi x}\)</span>, <span class="math inline">\(dv = e^xdx\)</span></p>
 <p><span class="math inline">\(du = -\pi \sin {\pi x}\)</span>, <span class="math inline">\(v = e^x\)</span></p>
 <p>By integration by parts,</p>
-<p><span class="math display">\[ e^x \sin {\pi x} - \pi \int e^x \cos {\pi x}dx = e^x \sin {\pi x} - \pi (e^x\cos {\pi x} - \pi \int - e^x \sin {\pi x}dx) \]</span></p>
-<p>(Solution to be continued…)</p>
+<p><span class="math display">\[\begin{align*}
+\int e^x \sin {\pi x}dx = e^x \sin {\pi x} - \pi \int e^x \cos {\pi x}dx &amp;= e^x \sin {\pi x} - \pi \Big(e^x\cos {\pi x} - \pi \int - e^x \sin {\pi x}dx \Big)\\
+&amp;=  e^x \sin {\pi x} - \pi e^x\cos {\pi x} - \pi^2 \int  e^x \sin {\pi x}dx \\
+\int e^x \sin {\pi x}dx + \pi^2 \int  e^x \sin {\pi x}dx &amp;= e^x \sin {\pi x} - \pi e^x\cos {\pi x}\\
+(1 + \pi^2) \int e^x \sin {\pi x}dx &amp;= e^x \sin {\pi x} - \pi e^x\cos {\pi x}\\
+\int e^x \sin {\pi x}dx &amp;= \frac{e^x \sin {\pi x} - \pi e^x\cos {\pi x}}{1 + \pi^2} + C
+\end{align*}\]</span></p>
 </details>
 </blockquote>
 </div>
