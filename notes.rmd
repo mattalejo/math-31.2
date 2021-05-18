@@ -934,7 +934,7 @@ $$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2
 > 
 > Let $u = f(x)$, $v=g(x)$
 > 
-> $du = f'(x)dx$, $v = g'(x)dx$
+> $du = f'(x)dx$, $dv = g'(x)dx$
 > 
 > \begin{align*}
 > d(f(x)g(x)) = f(x)g'(x)dx +g(x)f'(x)dx \implies d(uv) &= udv + vdu\\
@@ -946,9 +946,18 @@ $$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2
 > </details>
 
 
+$$ \int f(x)g'(x)dx = f(x)g(x) - \int g(x)f'(x)dx $$
+Letting $u = f(x)$, $v=g(x) \implies du = f'(x)dx$, $dv = g'(x)dx$,
+
 $$ \int udv = uv - \int vdu $$
 
 > This is also called the **integration-by-parts formula**.
+
+### Integration by parts and definite integrals
+
+Combining the integration-by-parts formula and FTC2,
+
+$$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 
 <!-- \int f(x) = \int udv -->
 
@@ -985,7 +994,7 @@ $$ \int udv = uv - \int vdu $$
 > 
 > </details>
 
-> As observed, the contribution of $+C$ in $v$ just cancels at $uv - \int vdu$, so it is not necessary to put $+C$ when using integration by parts.
+> Note that the contribution of $+C$ in $v$ just cancels at $uv - \int vdu$, so it is **not necessary** to put $+C$ when using integration by parts.
 
 #### Example 2
 
@@ -1004,7 +1013,8 @@ $$ \int udv = uv - \int vdu $$
 > \end{align*}
 > 
 > Let $u = t$, $dv = \cos{\beta t}dt$
-> du = dt$, $v = \dfrac{\sin{\beta t}}{{\beta}}$
+> 
+> $du = dt$, $v = \dfrac{\sin{\beta t}}{{\beta}}$
 > 
 > \begin{align*}
 > -\frac{t^2\cos{\beta t}}{\beta} - \int \frac{2}{\beta} t\cos{\beta t}dt &= -\frac{t^2\cos{\beta t}}{\beta} - \frac{2}{\beta}\Big(\frac{t \sin{\beta t}}{{\beta}} - \int \frac{\sin{\beta t}}{{\beta}}dt\Big)\\
@@ -1052,13 +1062,15 @@ $$ \int udv = uv - \int vdu $$
 > <summary> Evaluate $\displaystyle \int_0^1 \tan^{-1}x dx$. </summary>
 > 
 > **Solution.**
+> We shall first get the antiderivative of the function before evaluating the definite integral.
+> 
 > Let $u = \arctan x$, $dv = dx$ 
 > 
 > $du = \dfrac{1}{x^2+1}dx$ , $v = x$
 > 
 > By integration by parts,
 > 
-> $$ \int_0^1 \tan^{-1}x dx = x\arctan x - \int \frac{x}{x^2+1}dx $$
+> $$ \int \tan^{-1}x dx = x\arctan x - \int \frac{x}{x^2+1}dx $$
 > 
 > Let $u = x^2 + 1 \implies du = 2xdx$
 > 

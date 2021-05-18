@@ -3550,10 +3550,16 @@ udv &amp;= d(uv) - vdu\\
 \end{align*}\]</span></p>
 </details>
 </blockquote>
+<p><span class="math display">\[ \int f(x)g&#39;(x)dx = f(x)g(x) - \int g(x)f&#39;(x)dx \]</span> Let <span class="math inline">\(u = f(x)\)</span>, <span class="math inline">\(v=g(x) \implies du = f&#39;(x)dx\)</span>, <span class="math inline">\(v = g&#39;(x)dx\)</span>,</p>
 <p><span class="math display">\[ \int udv = uv - \int vdu \]</span></p>
 <blockquote>
-<p>This is also called the integration-by-parts formula.</p>
+<p>This is also called the <strong>integration-by-parts formula</strong>.</p>
 </blockquote>
+</div>
+<div id="integration-by-parts-and-definite-integrals" class="section level3">
+<h3>Integration by parts and definite integrals</h3>
+<p>Combining the integration-by-parts formula and FTC2,</p>
+<p><span class="math display">\[ \int_a^b f(x)g&#39;(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f&#39;(x)dx \]</span></p>
 <!-- \int f(x) = \int udv -->
 <div id="example-1-5" class="section level4">
 <h4>Example 1</h4>
@@ -3596,7 +3602,8 @@ Evaluate <span class="math inline">\(\displaystyle \int t^2 \sin {\beta t} dt\)<
 \int t^2 \sin \beta t dt  = -\frac{t^2\cos{\beta t}}{\beta} - \int -\frac{2t\cos{\beta t}}{\beta}dt
 = -\frac{t^2\cos{\beta t}}{\beta} - \int \frac{2}{\beta} t \cos{\beta t}dt
 \end{align*}\]</span></p>
-<p>Let <span class="math inline">\(u = t\)</span>, <span class="math inline">\(dv = \cos{\beta t}dt\)</span> du = dt$, <span class="math inline">\(v = \dfrac{\sin{\beta t}}{{\beta}}\)</span></p>
+<p>Let <span class="math inline">\(u = t\)</span>, <span class="math inline">\(dv = \cos{\beta t}dt\)</span></p>
+<p><span class="math inline">\(du = dt\)</span>, <span class="math inline">\(v = \dfrac{\sin{\beta t}}{{\beta}}\)</span></p>
 <p><span class="math display">\[\begin{align*}
 -\frac{t^2\cos{\beta t}}{\beta} - \int \frac{2}{\beta} t\cos{\beta t}dt &amp;= -\frac{t^2\cos{\beta t}}{\beta} - \frac{2}{\beta}\Big(\frac{t \sin{\beta t}}{{\beta}} - \int \frac{\sin{\beta t}}{{\beta}}dt\Big)\\
 &amp;= -\frac{t^2\cos{\beta t}}{\beta} - \frac{2t \sin{\beta t}}{\beta^2} - \frac{2}{\beta} \Big(\int \frac{\sin{\beta t}}{\beta} dt\Big)\\
@@ -3636,10 +3643,11 @@ Evaluate <span class="math inline">\(\displaystyle \int e^x \sin {\pi x}dx\)</sp
 <summary>
 Evaluate <span class="math inline">\(\displaystyle \int_0^1 \tan^{-1}x dx\)</span>.
 </summary>
-<p><strong>Solution.</strong> Let <span class="math inline">\(u = \arctan x\)</span>, <span class="math inline">\(dv = dx\)</span></p>
+<p><strong>Solution.</strong> We shall first get the antiderivative of the function before evaluating the definite integral.</p>
+<p>Let <span class="math inline">\(u = \arctan x\)</span>, <span class="math inline">\(dv = dx\)</span></p>
 <p><span class="math inline">\(du = \dfrac{1}{x^2+1}dx\)</span> , <span class="math inline">\(v = x\)</span></p>
 <p>By integration by parts,</p>
-<p><span class="math display">\[ \int_0^1 \tan^{-1}x dx = x\arctan x - \int \frac{x}{x^2+1}dx \]</span></p>
+<p><span class="math display">\[ \int \tan^{-1}x dx = x\arctan x - \int \frac{x}{x^2+1}dx \]</span></p>
 <p>Let <span class="math inline">\(u = x^2 + 1 \implies du = 2xdx\)</span></p>
 <p>Using the substitution rule,</p>
 <p><span class="math display">\[\begin{align*}
