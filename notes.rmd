@@ -1,6 +1,7 @@
 ---
 output: 
   html_document:
+    number_sections: true
     css: style.css
     toc: yes
     toc_float: true
@@ -22,7 +23,7 @@ options(tinytex.verbose = TRUE)
 
 >[Download the formula sheet here](../math-31.2/formulas.pdf)
 
-# 0 - Review on differentiation {-}
+# Review on differentiation
 
 ## Differentiability
 
@@ -32,7 +33,7 @@ $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 
 ***
 
-## Differentiation rules
+### Differentiation rules
 
 1. $\displaystyle\frac{d}{dx}(cf(x))= cf'(x)$
 
@@ -44,7 +45,7 @@ $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 
 5. $\displaystyle\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)$
 
-## Differentiation formulas I
+### Differentiation formulas I
 
 1. $\displaystyle\frac{d}{dx}(c)=0, c \in \mathbb{R}$
 
@@ -62,7 +63,7 @@ $$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
 
 8. $\displaystyle\frac{d}{dx}(\csc x)=-\csc x\cot x$
 
-## Differentiation formulas II
+### Differentiation formulas II
 
 1. $\displaystyle\frac{d}{dx}(e^x) = e^x$
 
@@ -84,7 +85,7 @@ $$ f'(c)=\frac{f(b)-f(a)}{b-a} $$
 
 ## Consequences of MVT
 
-### Zero derivative
+### Zero derivative 
 
 If $f'(x)=0 \;\forall x$ in interval $I$, then $f(x)=c \;\forall x\in I$ for some constant $C$.
 
@@ -92,7 +93,7 @@ If $f'(x)=0 \;\forall x$ in interval $I$, then $f(x)=c \;\forall x\in I$ for som
 
 If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some constant $C$.
 
-#### Example 
+#### Example  {-}
 
 > <details>
 >
@@ -133,13 +134,13 @@ f'(x)dx &= dy
 
 ***
 
-# 1 - Indefinite and definite integrals
+# Indefinite and definite integrals
 
 ## Indefinite integral
 
 The main interpretation of derivative is the slope of a tangent line of a curve.
 
-#### Example 
+#### Example  {-}
 
 > <details>
 > <summary> At any point $(x,y)$ on a particular curve $y=F(x)$, the tangent line has a slope equal to $4x-5$. If the curve contains the point $(3,7)$, find $F(x)$. </summary>
@@ -247,7 +248,7 @@ If follows that
 
 $$ \int f'(g(x))g'(x)dx = f(g(x))+C $$
 
-#### Example
+#### Example {-}
 
 > <details>
 > <summary> Evaluate $\int 2x\cos x^2dx$. </summary>
@@ -291,7 +292,7 @@ Let $f$ be a continuous nonnegative function on $[a,b]$. Find the area of the re
 
 > The area is often coined the **region under the curve**, which generally means the area in between the curve and the $x$-axis
 
-#### Example
+#### Example {-}
 
 > <details>
 > <summary> Consider $f(x) = x^2 +1$ on $[0,2]$. </summary>
@@ -623,11 +624,11 @@ where $F$ is any antiderivative of $f$ on $[a,b]$.
 
 ***
 
-# 2 - Application I
+# Application I
 
 ## Areas between curves
 
-#### Example 1
+#### Example 1 {-}
 
 > <details>
 > <summary> Find the area of the region under the curve $y=x^2-1$ from $x=-1$ to $x=2$. </summary>
@@ -645,7 +646,7 @@ where $F$ is any antiderivative of $f$ on $[a,b]$.
 >
 > </details>
 
-#### Example 2
+#### Example 2 {-}
 
 > <details>
 > 
@@ -668,7 +669,7 @@ where $F$ is any antiderivative of $f$ on $[a,b]$.
 > 
 > </details> 
 
-#### Example 3
+#### Example 3 {-}
 
 > <details>
 >
@@ -704,7 +705,7 @@ Let $S$ be a solid that lies between $x=a$ and $x=b$. If the cross-sectional are
 
 $$ V = \lim_{n \to\infty} \sum_{i=1}^n A(x_i^*)\Delta x = \int_b^a A(x)dx $$ 
 
-#### Example 1 
+#### Example 1  {-}
 
 > <details>
 > 
@@ -729,7 +730,7 @@ $$ V = \lim_{n \to\infty} \sum_{i=1}^n A(x_i^*)\Delta x = \int_b^a A(x)dx $$
 > 
 > </details>
 
-#### Example 2
+#### Example 2 {-}
 
 > <details>
 > 
@@ -755,7 +756,7 @@ $$ V = \lim_{n \to\infty} \sum_{i=1}^n A(x_i^*)\Delta x = \int_b^a A(x)dx $$
 
 If we revolve a region about a line, we obtain a **solid of revolution**.
 
-#### Example 1
+#### Example 1 {-}
 
 > <details>
 > 
@@ -777,7 +778,7 @@ If we revolve a region about a line, we obtain a **solid of revolution**.
 
 The cross-section of a solid of revolution is always a circle.
 
-#### Example 2
+#### Example 2 {-}
 
 > <details>
 > 
@@ -793,7 +794,7 @@ The cross-section of a solid of revolution is always a circle.
 > 
 > </details>
 
-#### Example 3
+#### Example 3 {-}
 
 > <details>
 > 
@@ -851,7 +852,7 @@ The volume of a solid obtained by rotating about the $y$-axis the region under t
 $$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2\pi xf(x)dx $$
 
 
-#### Example 1
+#### Example 1 {-}
 
 > <details>
 > 
@@ -869,7 +870,7 @@ $$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2
 > 
 > </details>
 
-#### Example 2
+#### Example 2 {-}
 
 > <details>
 > 
@@ -903,7 +904,7 @@ $$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2
 > 
 > (Just solve this yourselves)
 
-#### Example 3
+#### Example 3 {-}
 
 > <details>
 > 
@@ -919,7 +920,7 @@ $$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2
 
 ***
 
-# 3 - Techniques of integration
+# Techniques of integration
 
 ## Integration by parts
 
@@ -963,7 +964,7 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 
 <!-- \int f(x) = \int udv -->
 
-#### Example 1
+#### Example 1 {-}
 
 > <details>
 > 
@@ -998,7 +999,7 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 
 > Note that the contribution of $+C$ in $v$ just cancels at $uv - \int vdu$, so it is **not necessary** to put $+C$ when using integration by parts.
 
-#### Example 2
+#### Example 2 {-}
 
 > <details>
 > 
@@ -1026,7 +1027,7 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 > 
 > </details>
 
-#### Example 3
+#### Example 3 {-}
 
 > <details>
 > 
@@ -1057,7 +1058,7 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 >
 > </details>
 
-#### Example 4 (definite integral)
+#### Example 4 (definite integral) {-}
 
 > <details>
 > 
@@ -1150,7 +1151,7 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 
 ***
 
-#### Example 1 
+#### Example 1  {-}
 
 > <details>
 > 
@@ -1180,7 +1181,7 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 > 
 > </details>
 
-#### Example 2
+#### Example 2 {-}
 
 > <details>
 > 
@@ -1204,7 +1205,7 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 > 
 > </details>
 
-#### Example 3 (definite integral)
+#### Example 3 (definite integral) {-}
 
 > <details>
 > 
@@ -1233,7 +1234,7 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 > 
 > </details>
 
-#### Example 4 (definite integral)
+#### Example 4 (definite integral) {-}
 
 > <details>
 > 
@@ -1250,7 +1251,7 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 > 
 > </details>
 
-#### Example 5
+#### Example 5 {-}
 
 > <details>
 > 

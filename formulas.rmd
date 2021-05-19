@@ -1,11 +1,12 @@
 ---
+geometry: top=0.5in, left=0.5in, right=0.5in, bottom=0.75in
+fontsize: 10pt
 output:
-  pdf_document: 
-  includes:
-    in_header: "formulas-preamble.tex"
+  pdf_document
 ---
 
 \twocolumn
+
 # Differentiation
 
 ## Definition of derivatives
