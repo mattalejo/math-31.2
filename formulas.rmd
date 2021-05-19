@@ -1,0 +1,336 @@
+---
+output:
+  pdf_document: 
+  includes:
+    in_header: "formulas-preamble.tex"
+---
+
+\twocolumn
+# Differentiation
+
+## Definition of derivatives
+
+The derivative of $f$ at $x$, denoted by $f'(x)$, is
+
+$$ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} $$
+
+***
+
+## Differentiation rules
+
+1. $\displaystyle\frac{d}{dx}(cf(x))= cf'(x)$
+
+2. $\displaystyle\frac{d}{dx}(f(x) \pm g(x)) = f'(x) \pm g'(x)$
+
+3. $\displaystyle\frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + g(x)f'(x)$
+
+4. $\displaystyle\frac{d}{dx}\Big(\frac{f(x)}{g(x)}\Big) = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}$
+
+5. $\displaystyle\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)$
+
+***
+
+## Differentiation formulas I
+
+1. $\displaystyle\frac{d}{dx}(c)=0, c \in \mathbb{R}$
+
+2. $\displaystyle\frac{d}{dx}(x^r)=rx^{r-1}, r \in \mathbb{R}$
+
+3. $\displaystyle\frac{d}{dx}(\sin x)=\cos x$ 
+
+4. $\displaystyle\frac{d}{dx}(\cos x)=\sin x$
+
+5. $\displaystyle\frac{d}{dx}(\tan x)=\sec^2x$
+
+6. $\displaystyle\frac{d}{dx}(\cot x)=-\csc^2x$
+
+7. $\displaystyle\frac{d}{dx}(\sec x) = \sec x\tan x$
+
+8. $\displaystyle\frac{d}{dx}(\csc x)=-\csc x\cot x$
+
+***
+
+## Differentiation formulas II
+
+1. $\displaystyle\frac{d}{dx}(e^x) = e^x$
+
+2. $\displaystyle\frac{d}{dx}(\ln|x|) = \frac{1}{x}$
+
+3. $\displaystyle\frac{d}{dx}(\sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}$
+
+4. $\displaystyle\frac{d}{dx}(\tan^{-1}x) = \frac{1}{1+x^2}$
+
+5. $\displaystyle\frac{d}{dx}(\sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}$
+
+***
+
+## Mean value theorem
+
+Let $f$ be a function that is continuous on $[a,b]$ and is differentiable on $(a,b)$. Then there is a number $c\in(a,b)$ such that
+
+$$ f'(c)=\frac{f(b)-f(a)}{b-a} $$
+
+***
+
+## Consequences of MVT
+
+### Zero derivative
+
+If $f'(x)=0 \;\forall x$ in interval $I$, then $f(x)=c \;\forall x\in I$ for some constant $C$.
+
+***
+
+### Equal derivatives
+
+If $f'(x)-g'(x)=0 \;\forall x$ in an interval $I$, then $f(x)=g(x)+C$ for some constant $C$.
+
+***
+
+## Differentials
+
+\begin{align*}
+f'(x)   &= \frac{dy}{dx}\\
+f'(x)dx &= dy
+\end{align*}
+
+***
+
+# Integration
+
+## Definition of an antiderivative
+
+A function $F$ is called an antiderivative of the function $f$ on an interval $I$ if $F'(x) = f(x) \;\forall x \in I$.
+
+***
+
+### Equal derivatives (antiderivatives)
+
+If $F'(x)=G'(x) \;\forall x$ in an interval $I$, then $F(x) = G(x) + C \;\forall x \in I$ for some constant $C$.
+
+***
+
+## Integration rules
+
+1. $\displaystyle\int kf(x)dx = k \int f(x)dx$, $k \in \mathbb{R}$
+
+2. $\displaystyle\int f(x) \pm g(x) dx = \int f(x)dx \pm \int g(x)dx$
+
+***
+
+## Integration formulas I
+
+1. $\displaystyle\int kdx = kx + C, k \in \mathbb{R}$
+
+2. $\displaystyle\int x^ndx =  \frac{x^{n+1}}{n+1}+C, n \in \mathbb{R}, n \neq -1$
+
+***
+
+## Integration formulas II
+
+1. $\displaystyle\int \sin xdx = -\cos x + C$
+
+2. $\displaystyle\int \cos xdx = \sin x + C$
+
+3. $\displaystyle\int \sec^2xdx = \tan x + C$
+
+4. $\displaystyle\int \csc^2xdx = -\cot x + C$
+
+5. $\displaystyle\int \sec x\tan xdx = \sec x + C$
+
+6. $\displaystyle\int \csc x\cot xdx = -\csc x +C$
+
+***
+
+## Integration formulas III
+
+1. $\displaystyle\int e^xdx =e^x +C$
+
+2. $\displaystyle\int \frac{1}{x}dx=\ln|x|+C$
+
+3. $\displaystyle\int \frac{1}{\sqrt{1-x^2}}dx = \sin^{-1}x +C$
+
+4. $\displaystyle\int \frac{1}{1+x^2}dx = \tan^{-1}x +C$
+
+5. $\displaystyle\int \frac{1}{x\sqrt{x^2-1}}dx= \sec^{-1}+C$
+
+***
+
+## Substitution rule
+
+If $u=g(x)$ is a differentiable function whose range is interval $I$ and $f$ is continuous on $I$, then
+
+$$ \int f'(g(x))g'(x)dx = \int f(u)du $$
+
+***
+
+## Riemann Sum
+
+$$A_n = \sum_{i=1}^{n}f(x_i^*)\Delta x $$
+
+***
+
+## Definite integrals
+
+The definite integral of $f$ from $a$ to $b$ is
+
+$$ \int_a^b f(x)dx = \lim_{x\to\infty}\sum_{i=1}^{n} f(x_i^*)\Delta x $$
+provided that such limit exists.
+
+We say that $f$ is integrable on $[a,b]$
+
+***
+
+## Remarks on the definite integral
+
+1. If a function is continuous on $[a,b]$, it is integrable on $[a,b]$.
+
+2. If $f$ is a nonnegative continuous function on $[a,b]$, then $\displaystyle\int_a^b f(x)dx$ is the area under the curve $y=f(x)$ from $x=a$ and $x=b$
+
+3. $\displaystyle\int_a^b f(x)dx = \int_a^b f(y)dy$
+
+***
+
+## Conventions on the definite integral
+
+1. $\displaystyle\int_b^a f(x)dx = -\int_a^b f(x)dx$
+
+2. $\displaystyle\int_a^a f(x)dx = 0$
+
+***
+
+## Properties of the definite integral
+
+1. $\displaystyle\int_a^b cf(x)dx = c\int_a^b f(x)dx$
+
+2. $\displaystyle\int_a^b [f(x) \pm g(x)] dx = \int_a^b f(x) \pm \int_a^b g(x)$
+
+3. $\displaystyle\int_a^c f(x)dx + \int_c^b f(x)dx = \int_a^b f(x)dx$
+
+4. If $f(x)\geq0 \;\forall x \in[a,b]$, then $\displaystyle\int_a^b f(x)dx \geq 0$
+
+5. If $f(x) \geq g(x)\;\forall x\in[a,b]$, then $\displaystyle\int_a^b f(x)dx \geq \int_a^b g(x)dx$
+
+6. If $m \leq f(x) \leq M \;\forall x\in[a,b]$, then $\displaystyle m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)$
+
+***
+
+## Mean value theorem (integrals)
+
+If $f$ is continuous on $[a,b]$, $\exists c \in [a,b]$ such that
+
+$$ \int_b^a f(x)dx = f(c)(b-a) $$
+
+***
+
+## Average value of a function
+
+Let $f$ be a continuous on $[a,b]$. The average value of $f$ at $[a,b]$, denoted by $f_{avg}$ is
+
+$$ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} $$
+
+***
+
+## FTC 1
+
+Let $f$ be continuous on $[a,b]$. If f is the function defined by
+
+$$ F(x) = \int_a^x f(t)dt $$
+
+then $F'(x) = f(x) \;\forall x \in [a,b]$.
+
+***
+
+## FTC 2
+
+If a function $f$ is continuous on $[a,b]$, then
+
+$$ \int_a^b f(x)dx = F(b)-F(a) $$
+
+The following notations for $F(b)-F(a)$ are very useful in evaluating definite integrals: $\displaystyle F(x)\Big]_a^b$ or $\displaystyle F(x)\Big|_a^b$
+
+***
+
+## Area between curves
+
+Given two curves $y = f(x)$ and $y = g(x)$, where $f(x) > g(x) \;\forall x \in [a,b]$, then the area between both curves from $x=a$ and $x=b$ is
+
+$$ A = \int_a^b f(x)-g(x)dx $$
+
+
+***
+
+## Volume of a solid
+
+Let $S$ be a solid that lies between $x=a$ and $x=b$. If the cross-sectional area of $S$ in the plane $P_x$ through $x$ and perpendicular to the $x$-axis is $A(x)$, where $A$ is a continuous function on $[a,b]$, then the volume $V$ of $S$ is
+
+$$ V = \lim_{n \to\infty} \sum_{i=1}^n A(x_i^*)\Delta x = \int_b^a A(x)dx $$ 
+
+***
+
+## Volumes of revolution
+
+### Disk and washers technique
+
+\begin{align*}
+A(x) &= \pi [f(x)]^2 \\
+\therefore V &=  \int_b^a \pi [f(x)]^2dx 
+\end{align*}
+
+***
+
+### Cylindrical shells
+
+The volume of a solid obtained by rotating about the $y$-axis the region under the curve $y = f(x)$ (continuous and nonnegative) from $x=a$ (nonnegative) to $x = b$ is
+
+$$ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2\pi xf(x)dx $$
+
+***
+
+## Integration by parts
+
+$$ \int f(x)g'(x)dx = f(x)g(x) - \int g(x)f'(x)dx $$
+Letting $u = f(x)$, $v=g(x) \implies du = f'(x)dx$, $dv = g'(x)dx$,
+
+$$ \int udv = uv - \int vdu $$
+
+***
+
+## Integration by parts and definite integrals
+
+Combining the integration-by-parts formula and FTC2,
+
+$$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
+
+***
+
+## Trigonometric identities
+
+1. $\displaystyle \sin^2 x + \cos^2 x = 1$
+
+2. $\displaystyle \tan^2 x + 1 = sec^2 x$
+
+3. $\displaystyle \cot^2 x + 1 = csc^2 x$
+
+4. $\displaystyle \sin^2 x = \frac{1}{2}(1-\cos 2x)$
+
+5. $\displaystyle \cos^2 x = \frac{1}{2}(1+\cos 2x)$
+
+6. $\displaystyle \sin A\cos B = \frac{1}{2}[\sin(A-B)+\sin(A+B)]$
+
+7. $\displaystyle \sin A\sin B = \frac{1}{2}[\cos(A-B) ]- \cos(A+B)]$
+
+8. $\displaystyle \cos A\cos B = \frac{1}{2}[\cos(A-B)+\cos(A+B)]$
+
+***
+
+## Integrals of trigonometric functions
+
+1. $\displaystyle \int \tan x dx = \ln |\sec x| +C$
+
+2. $\displaystyle \int \sec x dx = \ln|\sec x + \tan x| + C$
+
+3. $\displaystyle \int \cot x dx = \ln|\sin x| + C$
+
+4. $\displaystyle \int \csc x dx = \ln|\csc x - \cot x| + C$
+
+***

@@ -1,6 +1,5 @@
 ---
 output: 
-  pdf_document:
   html_document:
     css: style.css
     toc: yes
@@ -11,6 +10,7 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
+  pdf_document:
 title: "Mathematical Analysis IB"
 ---
 
@@ -19,6 +19,8 @@ options(tinytex.verbose = TRUE)
 ```
 
 >[Download the PDF copy of the notes here](../math-31.2/notes.pdf)
+
+>[Download the formula sheet here](../math-31.2/formulas.pdf)
 
 # 0 - Review on differentiation {-}
 
@@ -197,7 +199,7 @@ $\displaystyle\int \sin xdx = -\cos x+C$
 
 ### Integration rules
 
-1. $\displaystyle\int kf(x)dx = k \int f(x)dx$, $k$ constant
+1. $\displaystyle\int kf(x)dx = k \int f(x)dx$, $k \in \mathbb{R}$
 
 2. $\displaystyle\int f(x) \pm g(x) dx = \int f(x)dx \pm \int g(x)dx$
 
@@ -1093,7 +1095,182 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 > 
 > </details>
 
-<!-- ## Trigonometric integrals -->
+***
+
+## Trigonometric integrals
+
+### Trigonometric identities
+
+1. $\displaystyle \sin^2 x + \cos^2 x = 1$
+
+2. $\displaystyle \tan^2 x + 1 = sec^2 x$
+
+3. $\displaystyle \cot^2 x + 1 = csc^2 x$
+
+4. $\displaystyle \sin^2 x = \frac{1}{2}(1-\cos 2x)$
+
+5. $\displaystyle \cos^2 x = \frac{1}{2}(1+\cos 2x)$
+
+6. $\displaystyle \sin A\cos B = \frac{1}{2}[\sin(A-B)+\sin(A+B)]$
+
+7. $\displaystyle \sin A\sin B = \frac{1}{2}[\cos(A-B) ]- \cos(A+B)]$
+
+8. $\displaystyle \cos A\cos B = \frac{1}{2}[\cos(A-B)+\cos(A+B)]$
+
+***
+
+### Integrals of trigonometric functions
+
+1. $\displaystyle \int \tan x dx = \ln |\sec x| +C$
+
+> <details>
+> 
+> \begin{align*}
+> \int \tan x dx = \int \frac{\sin x}{\cos x} dx &= -\ln|\cos x| + C\\
+> &= \ln|\sec x| + C
+> \end{align*}
+> 
+> </details>
+
+2. $\displaystyle \int \sec x dx = \ln|\sec x + \tan x| + C$
+
+> <details>
+> 
+> \begin{align*}
+> \int \sec x dx &= \int sec x \frac{\sec x + \tan x}{\sec x + \tan x} dx\\
+> &= \int \frac{\sec^2 + \sec x\tan x}{\sec x + \tan x}dx\\
+> &= \ln |\sec x + \tan x| + C
+> \end{align*}
+
+</details>
+
+3. $\displaystyle \int \cot x dx = \ln|\sin x| + C$
+
+4. $\displaystyle \int \csc x dx = \ln|\csc x - \cot x| + C$
+
+***
+
+#### Example 1 
+
+> <details>
+> 
+> <summary> Evaluate $\displaystyle \int \sqrt{cos \theta} sin^3 \theta d\theta$. </summary>
+> 
+> **Solution.**
+> 
+> \begin{align*}
+> \int \sqrt{\cos \theta} \sin^3 \theta d\theta &= \int \sqrt{\cos \theta}\sin^2 \theta \sin \theta d\theta \\
+> &= \int \sqrt{\cos \theta}(1 - \cos^2 \theta) \sin \theta d\theta
+> \end{align*}
+> 
+> Let $u = \sqrt{\cos \theta}$  
+> 
+> $\implies u^2 = \cos \theta$  
+> 
+> $\implies 2udu = -\sin \theta d\theta$ 
+> 
+> $\implies -2udu = \sin \theta d\theta$
+> 
+> \begin{align*}
+> \int \sqrt{\cos \theta}(1 - \cos^2 \theta) \sin \theta d\theta &= \int u(1-u^4)(-2u)du \\
+> &= \int (-2u^2 + 2u^6)du \\
+> &= -\frac{2}{3}u^3 +\frac{2}{7} u^7 + C \\
+> &= -\frac{2}{3}(\cos \theta)^{3/2} + \frac{2}{7}(\cos \theta)^{7/2}+C
+> \end{align*}
+> 
+> </details>
+
+#### Example 2
+
+> <details>
+> 
+> <summary> Evaluate $\displaystyle \int \tan^2 t \sec^4 t dt$. </summary>
+> 
+> **Solution.**
+>
+> \begin{align*}
+> \int \tan^2 t \sec^4 t dt &= \int \tan^2 t \sec^2 t \sec^2 t dt \\
+> &= \int \tan^2 t (1 + \tan^2 t) \sec^2 t dt
+> \end{align*}
+> 
+> Let $u = \tan t \implies du = \sec^2 t dt$.
+> 
+> \begin{align*}
+> \int \tan^2 t (1 + \tan^2 t) \sec^2 t dt &= \int u^2 (1+u^2) du \\
+> &= \int (u^2 + u^4)du\\
+> &= \frac{u^3}{3} + \frac{u^5}{5}\\
+> &= \frac{\tan^5 t}{5} + \frac{\tan^3 t}{3} + C
+> \end{align*}
+> 
+> </details>
+
+#### Example 3 (definite integral)
+
+> <details>
+> 
+> <summary> Evaluate $\displaystyle \int_{\pi/4}^{\pi/2} \csc^5 x \cot^3 x dx$. </summary>
+> 
+> \begin{align*}
+> \int_{\pi/4}^{\pi/2} \csc^5 x \cot^3 x dx &= \int_{\pi/4}^{\pi/2} \csc^4 x \cot^2 x \csc x\cot x dx\\
+> &= \int_{\pi/4}^{\pi/2} \csc^4 x (\csc^2 x - 1) \csc x\cot x dx
+> \end{align*}
+> 
+> Let $u = \csc x \implies du = -\csc x \cot x dx \implies -du = \csc x \cot x dx$
+> 
+> $x = \dfrac{\pi}{4} \implies u = \sqrt{2}$
+> 
+> $x = \dfrac{\pi}{2} \implies u = 1$
+> 
+> \begin{align*}
+> \int_{\pi/4}^{\pi/2} \csc^4 x (\csc^2 x - 1) \csc x\cot x dx &= \int_{1}^{\sqrt{2}} u^4(u^2-1)(-du)\\
+> &= \int_{1}^{\sqrt{2}} - u^6 + u^4 du\\
+> &= \int_{\sqrt{2}}^1 u^6 - u^4 du\\
+> &= \frac{u^7}{7} - \frac{u^5}{5} \Bigg|_1^{\sqrt{2}}\\
+> &= \frac{8\sqrt{2}}{7} - \frac{4\sqrt{2}}{5} - \frac{1}{7} + \frac{1}{5}\\
+> &= \frac{40\sqrt{2}-28\sqrt{2} -5 +7}{35}\\
+> &= \frac{12\sqrt{2} +2}{35}
+> \end{align*}
+> 
+> </details>
+
+#### Example 4 (definite integral)
+
+> <details>
+> 
+> <summary> Evaluate $\displaystyle \int_0^{\pi/2} \cos 5t \cos 10t dt$. </summary>
+> 
+> \begin{align*}
+> \int_0^{\pi/2} \cos 5t \cos 10t dt &= \int_0^{\pi/2} \frac{1}{2} [\cos(5t-10t) + cos(5t+10t)]dt\\
+> &= \int_0^{\pi/2} \frac{1}{2} [\cos(-5t)+\cos 15t]dt \text{; note that } \cos(-5t) = \cos{5t} \forall t\\
+> &= \int_0^{\pi/2} \frac{1}{2} \cos 5t + \frac{1}{2}\cos 15t\\
+> &= \frac{1}{10}\sin 5t + \frac{1}{30} \sin 15t \Bigg|_0^{\pi/2}\\
+> &= \frac{1}{10}\sin {\frac{5\pi}{2}} + \frac{1}{30} \sin {\frac{15\pi}{2}} - 0\\
+> &= \frac{1}{15}
+> \end{align*}
+> 
+> </details>
+
+#### Example 5
+
+> <details>
+> 
+> <summary> Evaluate $\displaystyle \int \frac{\sin^2(1/t)}{t^2}dt$. </summary>
+> 
+> Let $u = \dfrac{1}{t} \implies du = -\dfrac{1}{t^2} \implies -du = \dfrac{1}{t^2}$
+> 
+> $$ \int \frac{\sin^2(1/t)}{t^2}dt = \int -\sin^2 u du $$
+> 
+> Note that $\sin^2 u = \frac{1}{2}(1-\cos 2u)$
+> 
+> \begin{align*}
+> \int -\sin^2 u du &= \int -\frac{1}{2}(1-cos2u)du\\
+> &= -\frac{1}{2}(u - \frac{sin 2u}{2})\\
+> &= -\frac{1}{2t} + \frac{\sin (2/t)}{4} + C
+> \end{align*}
+> 
+> </details>
+
+***
 
 <!-- ## Trigonometric substitution -->
 
