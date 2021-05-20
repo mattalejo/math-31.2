@@ -2,7 +2,9 @@
 geometry: top=0.5in, left=0.5in, right=0.5in, bottom=0.75in
 fontsize: 10pt
 output:
-  pdf_document
+  pdf_document: default
+  html_document:
+    df_print: paged
 ---
 
 \twocolumn
@@ -335,3 +337,28 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 4. $\displaystyle \int \csc x dx = \ln|\csc x - \cot x| + C$
 
 ***
+
+\onecolumn
+
+## Trigonometric substitution
+
+| Expression | Substitution | Identity |
+|:-:|:-:|:-:|
+| $\sqrt{a^2-x^2}$ | $x = a\sin \theta, -\dfrac{\pi}{2} \leq \theta \leq \dfrac{\pi}{2}$ | $1 - \sin^2 \theta = \cos^2 \theta$ |
+||||
+| $\sqrt{a^2+x^2}$ | $x = a\tan \theta, -\dfrac{\pi}{2} \leq \theta \leq \dfrac{\pi}{2}$ | $1 - \tan^2 \theta = \sec^2 \theta$ |
+||||
+| $\sqrt{x^2-a^2}$ | $x = a \sec \theta, 0 \leq \theta \leq \dfrac{\pi}{2}$ or $\pi \leq \theta \leq \dfrac{3\pi}{2}$ | $\sec^2 \theta - 1 = \tan^2 \theta$ |
+||||
+
+***
+
+## Integrals of trigonometric functions
+
+1. $\displaystyle \int \tan x dx = \ln |\sec x| +C$
+
+2. $\displaystyle \int \sec x dx = \ln|\sec x + \tan x| + C$
+
+3. $\displaystyle \int \cot x dx = \ln|\sin x| + C$
+
+4. $\displaystyle \int \csc x dx = \ln|\csc x - \cot x| + C$
