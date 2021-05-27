@@ -2,9 +2,8 @@
 geometry: top=0.5in, left=0.5in, right=0.5in, bottom=0.75in
 fontsize: 10pt
 output:
-  pdf_document: default
-  html_document:
-    df_print: paged
+  pdf_document: 
+    keep_tex: true
 ---
 
 \twocolumn
@@ -229,7 +228,7 @@ $$ \int_b^a f(x)dx = f(c)(b-a) $$
 
 Let $f$ be a continuous on $[a,b]$. The average value of $f$ at $[a,b]$, denoted by $f_{avg}$ is
 
-$$ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} $$
+$$ f_{avg} =  \frac{\int_a^b f(x)dx}{b-a}  $$
 
 ***
 
@@ -322,7 +321,7 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 
 7. $\displaystyle \sin A\sin B = \frac{1}{2}[\cos(A-B) ]- \cos(A+B)]$
 
-8. $\displaystyle \cos A\cos B = \frac{1}{2}[\cos(A-B)+\cos(A+B)]$
+8. $\displaystyle \cos A\cos B = \frac{1}{2} \left[ \cos(A-B)+\cos(A+B) \right]$
 
 ***
 
@@ -353,12 +352,24 @@ $$ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx $$
 
 ***
 
-## Integrals of trigonometric functions
+\twocolumn
 
-1. $\displaystyle \int \tan x dx = \ln |\sec x| +C$
+## Partial fractions
 
-2. $\displaystyle \int \sec x dx = \ln|\sec x + \tan x| + C$
+Let $f(x) = \dfrac{P(x)}{Q(x)}$ where $P$,$Q$ are polynomial functions.
 
-3. $\displaystyle \int \cot x dx = \ln|\sin x| + C$
+If $\deg(P) \leq \deg(Q)$, then continue doing partial fractions.
 
-4. $\displaystyle \int \csc x dx = \ln|\csc x - \cot x| + C$
+If $\deg(P) \geq \deg(Q)$, then we need to do preliminary work:
+
+$$ f(x) = S(x) + \frac{R(x)}{Q(x)} $$
+
+where $S$ is a polynomial function and $R$ is the remainder of the long division between $P$ and $Q$.
+
+***
+
+## Arc length
+
+If $f'$ is continuous on $[a,b]$, then the length $L$ of the curve $y = f(x)$, $a \leq x \leq b$, is given by
+
+$$ L = \int_a^b \sqrt{1+[f(x)]^2}dx $$ 

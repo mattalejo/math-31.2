@@ -1,5 +1,7 @@
 ---
 output: 
+  pdf_document:
+    keep_tex: true
   html_document:
     number_sections: true
     css: style.css
@@ -11,13 +13,8 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
-  pdf_document:
 title: "Mathematical Analysis IB"
 ---
-
-```{r check, message=TRUE, include=FALSE}
-options(tinytex.verbose = TRUE)
-```
 
 >[Download the PDF copy of the notes here](../math-31.2/notes.pdf)
 
@@ -1420,13 +1417,117 @@ We can therefore rename $(x,y)$ to $(r\cos \theta, r\sin \theta)$. It implies th
 > 
 > </details>
 
-<!-- ## Partial fractions -->
+## Integration of rational functions by partial fractions
 
+#### Quick review {-}
 
+> <details>
+>
+> $\displaystyle\int \frac{2}{3-2x}dx = \ln |3-2x| + C$
+> 
+> $\displaystyle\int \frac{2}{(3-2x)^2} dx = \frac{1}{3-2x} +C$
+> 
+> $\displaystyle\int \frac{x}{x^2 + 4} dx = \frac{1}{2}\ln(x^2+4) + C \text{; note that } x^2 + 4 \geq 0 \;\forall x \in \mathbb{R}$
+> 
+> $\displaystyle\int \frac{x}{(x^2 +4)^2} dx = -\frac{1}{2(x^2+4)} + C$
+> 
+> $\displaystyle\int \frac{1}{x^2 + a^2} dx = \frac{1}{a}\arctan \left( \frac{x}{a} \right) + C$
+> 
+> </details> 
 
+### Partial fractions
 
-<!-- # 4 - Applications II -->
+#### Example {-}
 
-<!-- ## Arc length -->
+> <details>
+> 
+> $$ \frac{1}{x+2} - \frac{1}{x-3} = \frac{x-2-(x+2)}{(x+2)(x-3)} = \frac{-5}{(x+2)(x-3)} $$
+> 
+> This is an identity because it is true for all $x$.
+> 
+> $$\implies \frac{-5}{(x+2)(x-3)} = \frac{A}{x+2} + \frac{B}{x-3},\; A,B \in \mathbb{R} $$
+> 
+> \begin{align*} 
+> (x+2)(x-3) \Bigg[ \frac{-5}{(x+2)(x-3)} &= \frac{A}{x+2} + \frac{B}{x-3} \Bigg] (x+2)(x-3)\\
+> -5 &= A(x-3) + B(x+2)\\
+> -5 &= Ax -3A + Bx +2B\\
+> -5 &= (A+B)x + (-3A + 2B)
+> \end{align*}
+> 
+> By systems of equations,
+> 
+> $$
+> \begin{cases}
+> A+B = 0 \implies A = -B\\
+> -3A + 2B = -5 \implies = -3(-B) + 2B = -5 \implies B = -1, A = 1
+> \end{cases}
+> $$
+>
+> By substitution,
+> 
+> \begin{align*}
+> x = 3: \;-5 &= 0 + B(3+2)\\
+> B &= -1
+> \end{align*}
+> 
+> \begin{align*}
+> x= -2: \; -5 &= A(-2-3) + 0\\
+> A &= 1
+> \end{align*}
+> 
+> </details>
+
+# Applications II
+
+## Arc length
+
+> <details>
+> 
+> Suppose a continuous function $f(x)$ continuous on $[a,b]$. We want to get the length of the curve from  $[a,b]$.
+> 
+> Let $\Delta x$ be the spacing of the values of $x$ when divided in to $n$ equal intervals.
+> 
+> $$\Delta x = x_i - x_{i-1} = \frac{b-a}{n} $$
+> 
+> We have two adjacent points, $P_{i-1}(x, f(x))$ and $P_i(x+\Delta x, f(x + \Delta x))$.
+> Rewriting the coordinates, we get $P_{i-1}(x_{i-1}, f(x_{i-1}))$ and $P_i(x_i, f(x_i))$.
+> Getting the distance between these two points,
+> 
+> $$|P_{i-1}P_i| = \sqrt{(x_i-x_{i-1})^2 + \left[ f(x_i)-f(x_{i-1}) \right]^2}$$
+> 
+> Recalling MVT for derivatives,
+> 
+> - $f$ is continuous on $[x_{i-1},x_i]$
+> 
+> - $f$ is differentiable on $(x_{i-1},x_i)$
+> 
+> $\implies \exists x_i^* \in (x_{i-1},x_i)$ such that 
+> 
+> $$f'(x_i^*) = \frac{f(x_i) - f(x_{i-1})}{x_i - x_{i-1}}$$
+> 
+> Going back to $|P_{i-1}P_i|$, 
+> 
+> \begin{align*}
+> |P_{i-1}P_i| &= \sqrt{(x_i-x_{i-1})^2 + \left[ f(x_i)-f(x_{i-1}) \right]^2}\\
+> &= \sqrt{(x_i-x_{i-1})^2 + \left[ f'(x_i^*) (x_i - x_{i-1}) \right]^2}\\
+> &= \sqrt{(\Delta x)^2 + \left[ f'(x_i^*) \Delta x \right]^2}\\
+> &= \sqrt{1+[f(x_i^*)]^2}\Delta x
+> \end{align*}
+> 
+> Let the length of the curve be $L$.
+> 
+> \begin{align*}
+> L &= \lim_{n\to\infty} \sum_{i=1}^n |P_{i-1}P_i|\\
+> &= \lim_{n\to\infty} \sum_{i=1}^n \sqrt{1+[f(x_i^*)]^2}\Delta x\\
+> L &= \int_a^b \sqrt{1+[f(x)]^2}dx\\
+> \end{align*}
+> 
+> </details>
+
+### The arc length formula
+
+If $f'$ is continuous on $[a,b]$, then the length $L$ of the curve $y = f(x)$, $a \leq x \leq b$, is given by
+
+$$ L = \int_a^b \sqrt{1+[f(x)]^2}dx $$ 
 
 <!-- ## Variable-separable differential equations and models for population growth -->

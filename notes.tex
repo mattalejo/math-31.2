@@ -1,0 +1,1870 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Mathematical Analysis IB},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Mathematical Analysis IB}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\begin{quote}
+\href{../math-31.2/notes.pdf}{Download the PDF copy of the notes here}
+\end{quote}
+
+\begin{quote}
+\href{../math-31.2/formulas.pdf}{Download the formula sheet here}
+\end{quote}
+
+\hypertarget{review-on-differentiation}{%
+\section*{Review on differentiation}\label{review-on-differentiation}}
+\addcontentsline{toc}{section}{Review on differentiation}
+
+\hypertarget{differentiability}{%
+\subsection{Differentiability}\label{differentiability}}
+
+Let \(f\) be a function on some open interval \(I\) containing \(x\).
+The derivative of \(f\) at \(x\), denoted by \(f'(x)\), is
+
+\[ f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} \]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{differentiation-rules}{%
+\subsubsection{Differentiation rules}\label{differentiation-rules}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle\frac{d}{dx}(cf(x))= cf'(x)\)
+\item
+  \(\displaystyle\frac{d}{dx}(f(x) \pm g(x)) = f'(x) \pm g'(x)\)
+\item
+  \(\displaystyle\frac{d}{dx}(f(x)g(x)) = f(x)g'(x) + g(x)f'(x)\)
+\item
+  \(\displaystyle\frac{d}{dx}\Big(\frac{f(x)}{g(x)}\Big) = \frac{g(x)f'(x)-f(x)g'(x)}{(g(x))^2}\)
+\item
+  \(\displaystyle\frac{d}{dx}(f(g(x))) = f'(g(x))g'(x)\)
+\end{enumerate}
+
+\hypertarget{differentiation-formulas-i}{%
+\subsubsection{Differentiation formulas
+I}\label{differentiation-formulas-i}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle\frac{d}{dx}(c)=0, c \in \mathbb{R}\)
+\item
+  \(\displaystyle\frac{d}{dx}(x^r)=rx^{r-1}, r \in \mathbb{R}\)
+\item
+  \(\displaystyle\frac{d}{dx}(\sin x)=\cos x\)
+\item
+  \(\displaystyle\frac{d}{dx}(\cos x)=\sin x\)
+\item
+  \(\displaystyle\frac{d}{dx}(\tan x)=\sec^2x\)
+\item
+  \(\displaystyle\frac{d}{dx}(\cot x)=-\csc^2x\)
+\item
+  \(\displaystyle\frac{d}{dx}(\sec x) = \sec x\tan x\)
+\item
+  \(\displaystyle\frac{d}{dx}(\csc x)=-\csc x\cot x\)
+\end{enumerate}
+
+\hypertarget{differentiation-formulas-ii}{%
+\subsubsection{Differentiation formulas
+II}\label{differentiation-formulas-ii}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle\frac{d}{dx}(e^x) = e^x\)
+\item
+  \(\displaystyle\frac{d}{dx}(\ln|x|) = \frac{1}{x}\)
+\item
+  \(\displaystyle\frac{d}{dx}(\sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}\)
+\item
+  \(\displaystyle\frac{d}{dx}(\tan^{-1}x) = \frac{1}{1+x^2}\)
+\item
+  \(\displaystyle\frac{d}{dx}(\sec^{-1}x) = \frac{1}{x \sqrt{x^2-1}}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{mean-value-theorem}{%
+\subsection{Mean value theorem}\label{mean-value-theorem}}
+
+Let \(f\) be a function that is continuous on \([a,b]\) and is
+differentiable on \((a,b)\). Then there is a number \(c\in(a,b)\) such
+that
+
+\[ f'(c)=\frac{f(b)-f(a)}{b-a} \]
+
+\hypertarget{consequences-of-mvt}{%
+\subsection{Consequences of MVT}\label{consequences-of-mvt}}
+
+\hypertarget{zero-derivative}{%
+\subsubsection{Zero derivative}\label{zero-derivative}}
+
+If \(f'(x)=0 \;\forall x\) in interval \(I\), then
+\(f(x)=c \;\forall x\in I\) for some constant \(C\).
+
+\hypertarget{equal-derivatives}{%
+\subsubsection{Equal derivatives}\label{equal-derivatives}}
+
+If \(f'(x)-g'(x)=0 \;\forall x\) in an interval \(I\), then
+\(f(x)=g(x)+C\) for some constant \(C\).
+
+\hypertarget{example}{%
+\paragraph*{Example}\label{example}}
+\addcontentsline{toc}{paragraph}{Example}
+
+\begin{quote}
+Let \(f(x)=\cos^{-1}x\) and \(g(x)=-\sin^{-1}x\).
+
+This implies that \(x \in [-1,1]\) and
+\(\displaystyle f(x),g(x) \in \Big[-\frac{\pi}{2},\frac{\pi}{2}\Big]\)
+
+\[ f'(x)=-\frac{1}{\sqrt{x^2+1}}\]
+
+\[ g'(x)=-\frac{1}{\sqrt{x^2+1}} \] Since \(f'(x)-g'(x)=0\) for
+\(x \in [-1,1]\), then \(f(x)-g(x)=C\) for some constant \(C\) by a
+corollary.
+
+\begin{align*}
+\cos^{-1}x - (-\sin^{-1}x)&=C \\
+\cos^{-1}x +\sin^{-1}x&=C
+\end{align*}
+
+Substituting \(x \in [-1,1]\), in this case, let's use \(x=0\),
+
+\begin{align*}
+\cos^{-1}(0) +\sin^{-1}(0)&=C \\
+0 + \frac{\pi}{2} &= C \\
+C &= \frac{\pi}{2} 
+\end{align*}
+
+\[ \therefore \forall x \in[-1,1],f(x)-g(x)= \frac{\pi}{2}\]
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{differentials}{%
+\subsection{Differentials}\label{differentials}}
+
+\begin{align*}
+f'(x)   &= \frac{dy}{dx}\\
+f'(x)dx &= dy
+\end{align*}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{indefinite-and-definite-integrals}{%
+\section{Indefinite and definite
+integrals}\label{indefinite-and-definite-integrals}}
+
+\hypertarget{indefinite-integral}{%
+\subsection{Indefinite integral}\label{indefinite-integral}}
+
+The main interpretation of derivative is the slope of a tangent line of
+a curve.
+
+\hypertarget{example-1}{%
+\paragraph*{Example}\label{example-1}}
+\addcontentsline{toc}{paragraph}{Example}
+
+\begin{quote}
+At any point \((x,y)\) on a particular curve \(y=F(x)\), the tangent
+line has a slope equal to \(4x-5\). If the curve contains the point
+\((3,7)\), find \(F(x)\).
+
+\textbf{Solution.} Since the slope is equal to \(4x-5\) for any point
+\((x,y)\), then the slope at \((3,7)\) is \(4(3)-5=7\).
+
+\(4x-5\) therefore represents the tangent slope for all values of \(x\).
+So
+
+\[ F'(x)=4x-5 \]
+
+By intuition, we can conclude that \(F(x)=2x^2-5x\).
+
+However given \(F(x)=2x^2-5x+1\), \(F'(x)\) remains the same. And so is
+\(F(x)=2x^2-5x-3\), \(F(x)=2x^2-5x+\pi\), and infinitely more functions.
+We can arbitrarily assign a constant \(k\), so that \(F(x)=2x^2-5x+k\).
+
+Substituting \((x,y)=(3,7),\)
+
+\begin{align*}
+7 &= 2(3)^2 - 5(3) +k\\
+7 &= 18 - 15 + k \\
+k &= 4 
+\end{align*}
+
+So \(F(x)=2x^2-5x+4\).
+\end{quote}
+
+\hypertarget{definition-of-an-antiderivative}{%
+\subsubsection{Definition of an
+antiderivative}\label{definition-of-an-antiderivative}}
+
+A function \(F\) is called an antiderivative of the function \(f\) on an
+interval \(I\) if \(F'(x) = f(x) \;\forall x \in I\).
+
+\(F(x)=2x^2-5x\) is a \textbf{possible} antiderivative of \(f(x)=4x-5\).
+\(F(x)=2x^2-5x+4\) is also a \textbf{possible} antiderivative of
+\(f(x)=4x-5\).
+
+\hypertarget{equal-derivatives-1}{%
+\subsubsection{Equal derivatives}\label{equal-derivatives-1}}
+
+If \(F'(x)=G'(x) \;\forall x\) in an interval \(I\), then
+\(F(x) = G(x) + C \;\forall x \in I\) for some constant \(C\).
+
+\hypertarget{integration-notation}{%
+\subsubsection{Integration notation}\label{integration-notation}}
+
+The collection of all antiderivatives of \(f\) is denoted by
+
+\[ \int f(x)dx \]
+
+which is read as ``the integral of \(f(x)dx\).''
+
+This collection is also called the \textbf{indefinite integral} of
+\(f\).
+
+The reverse process if differentiation is called
+\textbf{antidifferentiation} or \textbf{integration}.
+
+\(\displaystyle\int (4x-5)dx = 2x^2-5x+C\) for some constant \(C\).
+
+\(C\) is the constant of integration.
+
+\(\displaystyle\int \sin xdx = -\cos x+C\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{integration-rules}{%
+\subsubsection{Integration rules}\label{integration-rules}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle\int kf(x)dx = k \int f(x)dx\), \(k \in \mathbb{R}\)
+\item
+  \(\displaystyle\int f(x) \pm g(x) dx = \int f(x)dx \pm \int g(x)dx\)
+\end{enumerate}
+
+\hypertarget{integration-formulas-i}{%
+\subsubsection{Integration formulas I}\label{integration-formulas-i}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle\int kdx = kx + C, k \in \mathbb{R}\)
+\item
+  \(\displaystyle\int x^ndx = \frac{x^{n+1}}{n+1}+C, n \in \mathbb{R}, n \neq -1\)
+\end{enumerate}
+
+\hypertarget{integration-formulas-ii}{%
+\subsubsection{Integration formulas II}\label{integration-formulas-ii}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle\int \sin xdx = -\cos x + C\)
+\item
+  \(\displaystyle\int \cos xdx = \sin x + C\)
+\item
+  \(\displaystyle\int \sec^2xdx = \tan x + C\)
+\item
+  \(\displaystyle\int \csc^2xdx = -\cot x + C\)
+\item
+  \(\displaystyle\int \sec x\tan xdx = \sec x + C\)
+\item
+  \(\displaystyle\int \csc x\cot xdx = -\csc x +C\)
+\end{enumerate}
+
+\hypertarget{integration-formulas-iii}{%
+\subsubsection{Integration formulas
+III}\label{integration-formulas-iii}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle\int e^xdx =e^x +C\)
+\item
+  \(\displaystyle\int \frac{1}{x}dx=\ln|x|+C\)
+\item
+  \(\displaystyle\int \frac{1}{\sqrt{1-x^2}}dx = \sin^{-1}x +C\)
+\item
+  \(\displaystyle\int \frac{1}{1+x^2}dx = \tan^{-1}x +C\)
+\item
+  \(\displaystyle\int \frac{1}{x\sqrt{x^2-1}}dx= \sec^{-1}+C\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{substitution-rule}{%
+\subsection{Substitution rule}\label{substitution-rule}}
+
+\hypertarget{chain-rule-for-derivatives}{%
+\subsubsection{Chain rule for
+derivatives}\label{chain-rule-for-derivatives}}
+
+\[ \frac{d}{dx}(f(g(x)))=f'(g(x))g'(x) \]
+
+If follows that
+
+\[ \int f'(g(x))g'(x)dx = f(g(x))+C \]
+
+\hypertarget{example-2}{%
+\paragraph*{Example}\label{example-2}}
+\addcontentsline{toc}{paragraph}{Example}
+
+\begin{quote}
+Evaluate \(\int 2x\cos x^2dx\).
+
+\textbf{Preliminary work.} By intuition, we can get \(f(x)=sinx\) and
+\(g(x)=x^2\)
+
+\[ \int 2x\cos x^2dx = f(g(x)) = \sin x^2 \]
+
+\textbf{Solution.} Suppose that \(f'(x)=\frac{dy}{dx}\)
+
+\[ dy = f'(x)dx \]
+
+Let \(u=g(x)\), then \(g'(x)=\frac{du}{dx}\)
+
+\[ du = g'(x)dx \]
+
+Let \(u=x^2\)
+
+\begin{align*}
+du &=2xdx\\
+ \int 2x\cos x^2dx &= \int \cos udu\\
+ &=\sin u+C \\
+ &=\sin x^2+C
+\end{align*}
+\end{quote}
+
+\hypertarget{definition-of-the-substitution-rule}{%
+\subsubsection{Definition of the substitution
+rule}\label{definition-of-the-substitution-rule}}
+
+If \(u=g(x)\) is a differentiable function whose range is interval \(I\)
+and \(f\) is continuous on \(I\), then
+
+\[ \int f'(g(x))g'(x)dx = \int f(u)du \]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{definite-integrals}{%
+\subsection{Definite integrals}\label{definite-integrals}}
+
+\hypertarget{the-area-problem}{%
+\subsubsection{The area problem}\label{the-area-problem}}
+
+Let \(f\) be a continuous nonnegative function on \([a,b]\). Find the
+area of the regiom bounded by the curve \(y=f(x)\), the lines \(x=a\),
+\(x=b\), and the \(x\)-axis.
+
+\begin{quote}
+The area is often coined the \textbf{region under the curve}, which
+generally means the area in between the curve and the \(x\)-axis
+\end{quote}
+
+\hypertarget{example-3}{%
+\paragraph*{Example}\label{example-3}}
+\addcontentsline{toc}{paragraph}{Example}
+
+\begin{quote}
+Consider \(f(x) = x^2 +1\) on \([0,2]\).
+
+\textbf{Solution.} Let \(A\) be the area under the curve
+
+Using right endpoints (5 rectangles)
+
+\[ \Delta x = \frac{2-0}{5} = \frac{2}{5} = 0.4 \] Rectangle 1:
+\((\Delta x)(f(0.4)) = (0.4)(1.16)\)
+
+Rectangle 2: \((\Delta x)(f(0.8)) = (0.4)(1.64)\)
+
+Rectangle 3: \((\Delta x)(f(1.2)) = (0.4)(2.44)\)
+
+Rectangle 4: \((\Delta x)(f(1.6)) = (0.4)(3.56)\)
+
+Rectangle 5: \((\Delta x)(f(2.0)) = (0.4)(5)\)
+
+\[ A_5^+ = (0.4)(1.16) + (0.4)(1.64) + (0.4)(2.44) + (0.4)(3.56) +(0.4)(5) = 5.52 \]
+\(A_5^+\) is an overestimation of \(A\).
+
+Using left endpoints (5 rectangles):
+
+Rectangle 1: \((\Delta x)(f(0)) = (0.4)(1)\)
+
+Rectangle 2: \((\Delta x)(f(0.4)) = (0.4)(1.16)\)
+
+Rectangle 3: \((\Delta x)(f(0.8)) = (0.4)(1.64)\)
+
+Rectangle 4: \((\Delta x)(f(1.2)) = (0.4)(2.44)\)
+
+Rectangle 5: \((\Delta x)(f(1.6)) = (0.4)(3.56)\)
+
+\[ A_5^- = (0.4)(1) + (0.4)(1.16) + (0.4)(1.64) + (0.4)(2.44) + (0.4)(3.56) + =3.92 \]
+
+\(A_5^-\) is an underestimation of \(A\).
+
+We can increase the number of rectangles and compute the area \(A\) more
+\textbf{accurately} by computing the area as the number of rectangles
+approach infinity.
+
+Let the number of rectangles be \(n\)
+
+\[ \Delta x = \frac{2-0}{n}=\frac{2}{n} \] Let \(x_0\) be the first
+point: \(x_0=0\)
+
+\begin{align*}
+x_1 &= \frac{2}{n} & x_2 &= \frac{4}{n} & x_3 &= \frac{6}{n}\\
+x_4 &= \frac{8}{n} & x_5 &= \frac{10}{n} & x_6 &= \frac{12}{n}\\
+x_7 &= \frac{14}{n} &    &\cdots      & x_i &= \frac{2i}{n}
+\end{align*}\\
+
+\begin{align*}
+A_n &= R_1 + R_2 + R_3 + R_4 + \cdots + R_n\\
+&= \sum_{i=1}^n \Delta x (f(x_i))\\
+&= \sum_{i=1}^n \frac{2}{n} \Big[\Big(\frac{2i}{n}\Big)^2 +1\Big]\\
+&= \frac{2}{n} \sum_{i=1}^n \Big(\frac{4i^2}{n^2} +1\Big)\\
+&= \frac{2}{n} \Big[\sum_{i=1}^n \Big(\frac{4i^2}{n^2}\Big) + \sum_{i=1}^n(1)\Big]\\
+&= \frac{2}{n} \Big[\frac{4}{n^2}\sum_{i=1}^n (i^2) + \sum_{i=1}^n(1)\Big]\\
+&= \frac{2}{n} \Big[\frac{4}{n^2} \Big(\frac{(n)(n+1)(2n+1)}{6}\Big)+n\Big]\\
+&= \frac{8}{n^3} \frac{(n)(n+1)(2n+1)}{6} +2\\
+A_n &= \frac{4}{3}\Big(1+\frac{1}{n}\Big)\Big(2+\frac{1}{n}\Big) +2
+\end{align*}\\
+
+\begin{align*}
+A &= \lim_{n \to\infty} A_n\\
+&= \lim_{n \to \infty}  \sum_{i=1}^n \frac{2}{n} \Big[\Big(\frac{2i}{n}\Big)^2 +1\Big]\\
+&= \lim_{n \to \infty} \Big[ \frac{4}{3}\Big(1+\frac{1}{n}\Big)\Big(2+\frac{1}{n}\Big) +2\Big]\\
+&= \frac{4}{3}(1)(2)+ 2\\
+A &= \frac{14}{3}
+\end{align*}
+\end{quote}
+
+\hypertarget{riemann-sum}{%
+\subsubsection{Riemann sum}\label{riemann-sum}}
+
+\begin{quote}
+Let \(f\) be a function defined on \([a,b]\).
+
+Divide \([a,b]\) into \(n\) subintervals, each with width
+
+\[ \Delta x = \frac{b-a}{n} \]
+
+Let \(x_0=a, x_1,x_2, \ldots, x_n = b\),
+
+For each subinterval \([x_{i-1},x_i]\), choose a sample point \(x_i^*\)
+
+Compute the sum
+
+\[A_n = \sum_{i=1}^{n}f(x_i^*)\Delta x \]
+
+This is also called the \textbf{Riemann sum}.
+\end{quote}
+
+\[A_n = \sum_{i=1}^{n}f(x_i^*)\Delta x \]
+
+\hypertarget{definite-integral-and-integrability}{%
+\subsubsection{Definite integral and
+integrability}\label{definite-integral-and-integrability}}
+
+The definite integral of \(f\) from \(a\) to \(b\) is
+
+\[ \int_a^b f(x)dx = \lim_{x\to\infty}\sum_{i=1}^{n} f(x_i^*)\Delta x \]
+provided that such limit exists.
+
+We say that \(f\) is integrable on \([a,b]\)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{remarks-on-the-definite-integral}{%
+\subsubsection{Remarks on the definite
+integral}\label{remarks-on-the-definite-integral}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  If a function is continuous on \([a,b]\), it is integrable on
+  \([a,b]\).
+\item
+  If \(f\) is a nonnegative continuous function on \([a,b]\), then
+  \(\displaystyle\int_a^b f(x)dx\) is the area under the curve
+  \(y=f(x)\) from \(x=a\) and \(x=b\)
+\item
+  \(\displaystyle\int_a^b f(x)dx = \int_a^b f(y)dy\)
+\end{enumerate}
+
+\hypertarget{conventions-on-the-definite-integral}{%
+\subsubsection{Conventions on the definite
+integral}\label{conventions-on-the-definite-integral}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle\int_b^a f(x)dx = -\int_a^b f(x)dx\)
+\item
+  \(\displaystyle\int_a^a f(x)dx = 0\)
+\end{enumerate}
+
+\hypertarget{properties-of-the-definite-integral}{%
+\subsubsection{Properties of the definite
+integral}\label{properties-of-the-definite-integral}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle\int_a^b cf(x)dx = c\int_a^b f(x)dx\)
+\item
+  \(\displaystyle\int_a^b [f(x) \pm g(x)] dx = \int_a^b f(x) \pm \int_a^b g(x)\)
+\item
+  \(\displaystyle\int_a^c f(x)dx + \int_c^b f(x)dx = \int_a^b f(x)dx\)
+\item
+  If \(f(x)\geq0 \;\forall x \in[a,b]\), then
+  \(\displaystyle\int_a^b f(x)dx \geq 0\)
+\item
+  If \(f(x) \geq g(x)\;\forall x\in[a,b]\), then
+  \(\displaystyle\int_a^b f(x)dx \geq \int_a^b g(x)dx\)
+\item
+  If \(m \leq f(x) \leq M \;\forall x\in[a,b]\), then
+  \(\displaystyle m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{the-fundamental-theorem-of-calculus}{%
+\subsection{The Fundamental Theorem of
+Calculus}\label{the-fundamental-theorem-of-calculus}}
+
+\hypertarget{mean-value-theorem-for-integrals}{%
+\subsubsection{Mean Value Theorem for
+integrals}\label{mean-value-theorem-for-integrals}}
+
+\begin{quote}
+Proof
+
+Since \(f\) is continuous on \([a,b]\), then \(f\) is integrable on
+\([a,b]\) --- i.e.~\(\int_a^b f(x)dx\) has a value.
+
+Since f is continuous on {[}a,b{]}, by the \textbf{Extreme Value
+Theorem}, \(\exists m, M \in \mathbb{R}\) such that
+\(f(x_m) = m, f(x_M) = M, m \leq f(x) \leq M \;\forall x \in [a,b]\) and
+for some \(x_m, x_M \in [a,b]\).
+
+By Property 6 of the definite integral,
+\(\displaystyle m(b-a) \leq \int_a^b f(x)dx \leq M(b-a)\)
+
+\begin{align*}
+m      &\leq \frac{\int_a^b f(x)dx}{b-a} \leq& M \\
+f(x_m) &\leq \frac{\int_a^b f(x)dx}{b-a} \leq& f(x_M)  \\
+\end{align*}
+
+By the IVT, \(\exists c \in [a,b]\) such that
+
+\begin{align*}
+\frac{\int_a^b f(x)dx}{b-a} &= f(c)\\
+\int_a^b f(x)dx &= f(c)(b-a)
+\end{align*}
+\end{quote}
+
+If \(f\) is continuous on \([a,b]\), \(\exists c \in [a,b]\) such that
+
+\[ \int_b^a f(x)dx = f(c)(b-a) \]
+
+\hypertarget{average-value-of-a-function}{%
+\subsubsection{Average value of a
+function}\label{average-value-of-a-function}}
+
+\begin{quote}
+Proof
+
+Given a function continuous on \([a,b]\), we can get the average value
+of the function at \([a,b]\) by dividing the curve into \(n\)
+equal-width rectangles, getting the value of each sample points, and
+dividing by \(n\).
+
+Average area \(\displaystyle = \frac{\sum_{i=1}^n f(x_i^*)i}{n}\)
+
+But then,
+\(\displaystyle \Delta x = \frac{b-a}{n} \implies n = \frac{b-a}{\Delta x}\)
+
+\begin{align*}
+\frac{\sum_{i=1}^n f(x_i^*)}{n} &= \frac{\sum_{i=1}^n f(x_i^*)}{\frac{b-a}{\Delta x}}\\
+&= \frac{1}{b-a}\sum_{i=1}^n f(x_i^*) \Delta x
+\end{align*}
+
+We want to make \(n\) larger in order to make the average more accurate.
+
+\begin{align*}
+\lim_{n\to\infty}\frac{\sum_{i=1}^n f(x_i^*)}{n} &= \lim_{n\to\infty}\frac{1}{b-a}\sum_{i=1}^n f(x_i^*)i \Delta x\\
+&= \frac{1}{b-a}\lim_{n\to\infty}\sum_{i=1}^n f(x_i^*) \Delta x\\
+&= \frac{1}{b-a}\int_a^b f(x)dx
+\end{align*}
+
+Therefore, given function \(f\) that is continuous on \([a,b]\), there
+exists \(c \in [a,b]\) such that
+
+\[ f_{avg} = f(c) \]
+\end{quote}
+
+Let \(f\) be a continuous on \([a,b]\). The average value of \(f\) at
+\([a,b]\), denoted by \(f_{avg}\) is
+
+\[ f_{avg} = \frac{\int_a^b f(x)dx}{b-a} \]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{first-part-of-the-fundamental-theorem-of-calculus}{%
+\subsubsection{First part of the Fundamental Theorem of
+Calculus}\label{first-part-of-the-fundamental-theorem-of-calculus}}
+
+Let \(y=f(t)\) that is continuous on \([a,b]\).
+
+If \(x \in [a,b]\), then the function is also continuous on
+\([a,b] \implies\) the function is also continuous on \([a,x]\).
+
+\begin{align*}
+F(x) &= \int_a^x f(t)dt \\
+F(a) &= \int_a^a f(t)dt = 0 \\
+F(b) &= \int_a^b f(t)dt
+\end{align*}
+
+Let \(f\) be continuous on \([a,b]\). If f is the function defined by
+
+\[ F(x) = \int_a^x f(t)dt \]
+
+then \(F'(x) = f(x) \;\forall x \in [a,b]\).
+
+\begin{quote}
+Proof
+
+Let \(x, x+h \in [a,b], h\neq 0\).
+
+\[ F(x+h)-F(x) = \int_a^{x+h} f(t)dt -\int_a^x f(t)dt \]
+
+By the Property 3 of definite integrals, \begin{align*}
+\int_a^{x+h} f(t)dt -\int_a^x f(t)dt &= \int_a^x f(t)dt + \int_x^{x+h}f(t)dt -\int_a^x f(t)dt\\
+&= \int_x^{x+h}f(t)dt
+\end{align*}
+
+By the Mean Value Theorem for integrals, \(\exists c \in [x,x+h]\) such
+that
+
+\begin{align*}
+\int_x^{x+h}f(t)dt &= f(c)(x+h-x)\\
+&=hf(c)\\
+\implies F(x+h)-F(x) &= hf(c)\\
+\frac{F(x+h)-F(x)}{h} &= f(c)\\
+\lim_{h\to 0}\frac{F(x+h)-F(x)}{h} &= \lim_{h\to 0}f(c)
+\end{align*}
+
+Note that \(\displaystyle \lim_{h\to 0}x = x\) and
+\(\displaystyle \lim_{h\to 0}(x+h) = x \implies \lim_{h\to 0}c = x\) by
+Squeeze Theorem.
+
+Since \(f\) is continuous at \(x\),
+
+\[ \lim_{h\to 0}f(c) = f(x) \]
+
+\begin{align*}
+\implies F'(x) &= f(x) \;\forall x \in [a,b]\\
+\frac{d}{dx}\int_a^x f(t)dt &= f(x)
+\end{align*}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{second-part-of-the-fundamental-theorem-of-calculus}{%
+\subsubsection{Second part of the Fundamental Theorem of
+Calculus}\label{second-part-of-the-fundamental-theorem-of-calculus}}
+
+\begin{quote}
+Let's bring back \(f(x)=x^2+1\) on \([0,2]\).
+
+\(f\) is continuous on \([0,2] \implies f\) is integrable on \([0,2]\).
+
+\[ \implies \int_0^2 (x^2+1)dx = \frac{14}{3} \]
+
+Let \(\displaystyle F(x)= \frac{x^3}{3}+ x-1\).
+
+\begin{align*}
+F(2) &= \frac{2^3}{3}+2-1 = \frac{8}{3}+1 = \frac{11}{3}\\
+F(0) &= \frac{0^3}{3}+0-1 = 0-1 = - 1\\
+F(2) - F(0) &= \frac{11}{3} -(-1) = \frac{14}{3} \\
+\int_0^2 (x^2+1)dx &= F(2)-F(0)
+\end{align*}
+
+Observe that \(F'(x) = x^2 +1 \implies F(x)\) is the an antiderivative
+of \(x^2+1\).
+\end{quote}
+
+If a function \(f\) is continuous on \([a,b]\), then
+
+\[ \int_a^b f(x)dx = F(b)-F(a) \]
+
+where \(F\) is any antiderivative of \(f\) on \([a,b]\).
+
+\begin{quote}
+The following notations for \(F(b)-F(a)\) are very useful in evaluating
+definite integrals:
+
+\(\displaystyle F(x)\Big]_a^b\) or \(\displaystyle F(x)\Big|_a^b\)
+\end{quote}
+
+\begin{quote}
+Proof
+
+By FTC - Part 1, the function
+
+\[ \int_a^x f(t)dt \]
+
+is an antiderivative of f on \([a,b]\).
+
+By the Equal Derivatives Theorem,
+
+\[ \int_a^x f(t)dt = F(x) + C \]
+
+where \(F\) is any antiderivative of \(f\).
+
+\begin{align*}
+ x= b, \int_a^b f(t)dt &= F(b) + C \\
+ x=a , \int_a^a f(t)dt &= F(a) + C = 0 \\
+\int_a^b f(t)dt - \int_a^a f(t)dt &= [ F(b)+C ] - [F(a)+C] \\
+\int_a^b f(t)dt &= F(b)-F(a)
+\end{align*}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{application-i}{%
+\section{Application I}\label{application-i}}
+
+\hypertarget{areas-between-curves}{%
+\subsection{Areas between curves}\label{areas-between-curves}}
+
+\hypertarget{example-1-1}{%
+\paragraph*{Example 1}\label{example-1-1}}
+\addcontentsline{toc}{paragraph}{Example 1}
+
+\begin{quote}
+Find the area of the region under the curve \(y=x^2-1\) from \(x=-1\) to
+\(x=2\).
+
+\textbf{Solution.} Area is simply not \(\int_{-1}^2 (x^2-1)dx\) because
+\(\int_{-1}^1 (x^2-1)dx\) is negative and cancels the positive area.
+
+Therefore, we get \(\int_{-1}^1 -(x^2-1)dx\) to get the area of the
+curve between -1 and 1. \begin{align*}
+A &= \int_{-1}^1-(x^2-1)dx+\int_1^2(x^2-1)dx \\
+&= \Big(-\frac{x^3}{3}+x\Big)\Bigg|_{-1}^1+\Big(\frac{x^3}{3}-x\Big)\Bigg|_1^2\\
+&= \Big(\frac{1^3}{3}+1\Big)-\Big[\frac{(-1)^3}{3}+(-1)\Big]+\Big(\frac{2^3}{3}-2\Big)-\Big(\frac{1^3}{3}-1\Big)\\
+&= \frac{2}{3}+\frac{2}{3}+\frac{8}{3}-2+\frac{2}{3}\\
+A &= \frac{8}{3} 
+\end{align*}
+\end{quote}
+
+\hypertarget{example-2-1}{%
+\paragraph*{Example 2}\label{example-2-1}}
+\addcontentsline{toc}{paragraph}{Example 2}
+
+\begin{quote}
+Find the area of the region bounded by the curves of \(y=x^2\) and
+\(y = 4x-x^2\).
+
+\textbf{Solution.} Note that both curves intersect at \((0,0)\) and
+\((2,4)\).
+
+When we use Riemann sum, we only get the rectangles in between the
+region bounded by the area by subtracting the upper function
+(\(y=4x-x^2\)) to the lower function (\(y=x^2\))
+
+\[ \implies A_n = \sum [(4x-x^2)-x^2]\Delta x \]
+
+\begin{align*}
+A &= \int_0^2[(4x-x^2)-x^2]dx\\
+&= \int_0^2(4x-2x^2)dx\\
+&= \Big(2x^2-\frac{2x^3}{3}\Big)\Bigg|_0^2\\
+&= \Big[2(2)^2-\frac{2(2)^3}{3}\Big]-\Big[2(0)^2-\frac{2(0)^3}{3}\Big]\\
+&= \Big[8-\frac{16}{3}\Big]-0\\
+A &= \frac{8}{3}
+\end{align*}
+\end{quote}
+
+\hypertarget{example-3-1}{%
+\paragraph*{Example 3}\label{example-3-1}}
+\addcontentsline{toc}{paragraph}{Example 3}
+
+\begin{quote}
+Find the area of the region bounded by the curve \(y=\sqrt{x}\), the
+line \(x+2y =3\), and the \(x\)-axis.
+
+\textbf{Solution.} The graphs intersect at \((0,0)\), \((1,1)\), and
+\((3,0)\).
+
+\[ x+2y = 3 \implies y  = -\frac{1}{2}x + \frac{3}{2} \]
+
+\begin{align*}
+A &= \int_0^1 (\sqrt{x})dx + \int_1^3 \Big(-\frac{1}{2}(3-x)\Big)dx\\
+&= \Big(\frac{2x^{\frac{3}{2}}}{3}\Big) \Bigg|_0^1 + \Big(\frac{1}{2}(3x - \frac{x^2}{2})\Big)\Bigg|_1^3\\
+&= \frac{2(1)^{\frac{3}{2}}}{3} - \frac{2(0)^{\frac{3}{2}}} + \frac{1}{2}(3(3) - \frac{3^2}{2}) - \frac{1}{2}(3(1) - \frac{1^2}{2})\\
+&= \frac{2}{3}+ \frac{9}{4} - \frac{5}{4}\\
+&= \frac{8-27+15}{12}\\
+&= \frac{20}{12}\\
+A &= \frac{5}{3}
+\end{align*}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{volumes-and-volumes-of-revolution-using-disks-and-washers}{%
+\subsection{Volumes and volumes of revolution using disks and
+washers}\label{volumes-and-volumes-of-revolution-using-disks-and-washers}}
+
+\hypertarget{volume-of-a-right-cylinder}{%
+\subsubsection{Volume of a right
+cylinder}\label{volume-of-a-right-cylinder}}
+
+\[ V = ah \]
+
+\[ V_n = \sum_{i=1}^n A(x)\Delta x \]
+
+Let \(S\) be a solid that lies between \(x=a\) and \(x=b\). If the
+cross-sectional area of \(S\) in the plane \(P_x\) through \(x\) and
+perpendicular to the \(x\)-axis is \(A(x)\), where \(A\) is a continuous
+function on \([a,b]\), then the volume \(V\) of \(S\) is
+
+\[ V = \lim_{n \to\infty} \sum_{i=1}^n A(x_i^*)\Delta x = \int_b^a A(x)dx \]
+
+\hypertarget{example-1-2}{%
+\paragraph*{Example 1}\label{example-1-2}}
+\addcontentsline{toc}{paragraph}{Example 1}
+
+\begin{quote}
+Let us find the volume of a sphere of radius \(r\).
+
+\textbf{Solution.}
+
+radius of the cross-section circle at \(x = \sqrt{r^2-x^2}\)
+
+\begin{align*}
+A(x) &= \pi (\sqrt{r^2-x^2})^2\\
+&= \pi (r^2-x^2)
+\end{align*}
+
+\begin{align*}
+V_{\text{sphere}} &= \int_{-r}^r A(x)dx \\
+&= \int_{-r}^r \pi (r^2-x^2) dx \\
+&= \pi(r^2x - \frac{x^3}{3})\Big|_{-r}^r \\
+&= \pi\Bigg[r^2(r) - \frac{r^3}{3}\Bigg] - \pi\Bigg[r^2(-r) - \frac{(-r)^3}{3}\Bigg] \\
+V_{\text{sphere}} &= \frac{4}{3}\pi r^3
+\end{align*}
+\end{quote}
+
+\hypertarget{example-2-2}{%
+\paragraph*{Example 2}\label{example-2-2}}
+\addcontentsline{toc}{paragraph}{Example 2}
+
+\begin{quote}
+The base of a solid is the region bounded by \(y=x^2\) and \(y=4\). Its
+parallel cross-sections perpendicular to the base and the \(y\)-axis are
+squares. Find the volume of the solid.
+
+\textbf{Solution.} side of the cross-section at \(y = 2\sqrt{y}\)
+
+\[ A(y) = (2\sqrt{y})^2 = 4y \]
+
+\begin{align*}
+V &= \int_0^4 A(y)dy \\
+&=\int_0^4 4y dy \\
+&= 2y^2 \Big|_0^4 \\
+&= 2(4)^2 - 2(0)^2 \\
+V &= 32
+\end{align*}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{volume-of-solids-of-revolution}{%
+\subsubsection{Volume of solids of
+revolution}\label{volume-of-solids-of-revolution}}
+
+If we revolve a region about a line, we obtain a \textbf{solid of
+revolution}.
+
+\hypertarget{example-1-3}{%
+\paragraph*{Example 1}\label{example-1-3}}
+\addcontentsline{toc}{paragraph}{Example 1}
+
+\begin{quote}
+Consider the region under the curve \(y=x^2 +1\) from \(x=-1\) to
+\(x=2\). We revolve this region about the \(x\)-axis.
+
+\textbf{Solution.} radius of the cross-section at \(x = f(x)\)
+
+\[ A(x) = \pi [f(x)]^2 \]
+
+\begin{align*}
+V &= \int_{-1}^2 \pi (x^2+1)^2 dx \\
+&= \int_{-1}^2 \pi (x^4 +2x^2 +1) dx \\
+&= \pi \Bigg(\frac{x^5}{5}+\frac{2x^3}{3}+x\Bigg) |_{-1}^2 \\
+&= \pi\Bigg[\frac{2^5}{5}+\frac{2(2)^3}{3}+2\Bigg] - \pi\Bigg[\frac{(-1)^5}{5}+\frac{2(-1)^3}{3}+(-1)\Bigg] \\
+V &= \frac{78\pi}{5}
+\end{align*}
+\end{quote}
+
+The cross-section of a solid of revolution is always a circle.
+
+\hypertarget{example-2-3}{%
+\paragraph*{Example 2}\label{example-2-3}}
+\addcontentsline{toc}{paragraph}{Example 2}
+
+\begin{quote}
+A solid is obtained by revolving about the \(x\)-axis the region bounded
+by \(x=y^2\) and \(2y=x\). Find the volume of the solid.
+
+\textbf{Solution.}
+
+\begin{align*}
+V &= \int_0^4 \pi(\sqrt{x})^2 dx - \int_0^4 \pi\Big(\frac{x}{2}\Big)^2 dx \\
+&= \int_0^4 \pi (x) dx - \int_0^4 \pi \frac{x^4}{4} dx \\
+V &= \frac{8\pi}{3}
+\end{align*}
+\end{quote}
+
+\hypertarget{example-3-2}{%
+\paragraph*{Example 3}\label{example-3-2}}
+\addcontentsline{toc}{paragraph}{Example 3}
+
+\begin{quote}
+A solid is obtained by revolving about the y-axis the region bounded by
+\(2x=y^2\), \(y=4\), and the \(y\)-axis. Find the volume of the solid.
+
+\textbf{Solution.}
+
+\begin{align*}
+V &= \int_0^4 \pi (\frac{y^2}{2})^2 dy \\
+&= \int_0^4 \pi (\frac{y^4}{4}) dy \\
+&= \frac{\pi y^5}{20} \Bigg|_0^4 \\
+V &= \frac{256\pi}{5}
+\end{align*}
+\end{quote}
+
+\hypertarget{volumes-by-cylindrical-shells}{%
+\subsection{Volumes by cylindrical
+shells}\label{volumes-by-cylindrical-shells}}
+
+There are times that disks-and-washers technique is not the best way to
+solve a volume problem -- e.g.~\(y = 4x-x\) rotated about the
+\(y\)-axis.
+
+\hypertarget{volume-of-a-cylindrical-shell}{%
+\subsubsection{Volume of a cylindrical
+shell}\label{volume-of-a-cylindrical-shell}}
+
+\begin{quote}
+Let \(r_1\) be the inner radius of the cylinder, \(r_2\) be the outer
+(and larger) radius of the cylinder. \(r\) be the average of both
+
+\begin{align*}
+\Delta r &= r_2 - r_1 \\
+r &= \frac{r_2+r_1}{2}
+\end{align*}
+
+\begin{align*}
+V_{\text{cylindrical shell}} &= \pi r_2^2 h - r_1^2 h \\
+&= \pi(r_2^2 - r_1^2)h \\
+&= \pi(r_2+r_1)h(r_2-r_1) \\
+&= 2\pi \Bigg(\frac{r_2+r_1}{2}\Bigg) h \Delta r \\
+V_{\text{cylindrical shell}} &= 2\pi r h \Delta r
+\end{align*}
+
+Given a curve \(y=f(x)\) in \([a,b]\) rotated about the \(y\)-axis, the
+Riemann sum of the volume is
+
+\[ V = \sum 2\pi r h \Delta r \]
+
+In this context, \(r = x\) (horizontal distance), \(h = f(x)\) (vertical
+distance), and \(\Delta r = \Delta x\)
+
+\begin{align*}
+V &= \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x \\
+&= \int_a^b 2\pi xf(x)dx
+\end{align*}
+\end{quote}
+
+The volume of a solid obtained by rotating about the \(y\)-axis the
+region under the curve \(y = f(x)\) (continuous and nonnegative) from
+\(x=a\) (nonnegative) to \(x = b\) is
+
+\[ V = \lim_{n \to\infty} \sum_{i=1}^n 2\pi x_i^* f(x_i^*) \Delta x = \int_a^b 2\pi xf(x)dx \]
+
+\hypertarget{example-1-4}{%
+\paragraph*{Example 1}\label{example-1-4}}
+\addcontentsline{toc}{paragraph}{Example 1}
+
+\begin{quote}
+A solid is obtained by revolving about the \(y\)-axis the region bounded
+by \(y = 4x - x^2\) and the \(x\)-axis. Use cylindrical shells to find
+the volume of the solid.
+
+\textbf{Solution.}
+
+\begin{align*}
+V &= \int_0^4 2 \pi x (4x-x^2) dx \\
+&= \int_0^4 2 \pi (4x^2 - x^3)dx \\
+&= 2\pi \Big( \frac{4}{3}x^3 - \frac{x^4}{4} \Big) \Bigg|_0^4\\
+&= 2\pi \Big[ \frac{4}{3} (4)^3 - \frac{4^4}{4} \Big] - 0\\
+&= \frac{128\pi}{3}
+\end{align*}
+\end{quote}
+
+\hypertarget{example-2-4}{%
+\paragraph*{Example 2}\label{example-2-4}}
+\addcontentsline{toc}{paragraph}{Example 2}
+
+\begin{quote}
+A solid is obatined by revolving about the \(x\)-axis the region bounded
+by \(y = \sqrt{x}\), \(y = 2-x\), and the \(x\)-axis. Find the volume of
+the solid.
+
+\textbf{Solution.}
+
+\emph{Disks:}
+
+\(y = \sqrt{x}\) and \(y = 2-x\) intersect at \((1,1)\)
+
+\(\forall x \in [0,1]\), \(\sqrt{x} \leq 2-x \implies\) we use
+\(\sqrt{x}\) at this interval
+
+\(\forall x \in [1,2]\), \(2-x \leq \sqrt{x} \implies\) we use \(2-x\)
+at this interval
+
+\begin{align*}
+V &= \int_0^1 \pi (\sqrt{x})^2 dx + \int_1^2 \pi (2-x)^2 dx \\
+&= \int_0^1 \pi x dx + \int_1^2 \pi (x^2 - 4x +4) dx
+\end{align*}
+
+(This exercise is left to the reader lol don't wanna solve this myself)
+
+\emph{cylindrical shell:}
+
+\(y = \sqrt{x}\) and \(y = 2-x\) intersect at \((1,1)\).
+
+\[ y = \sqrt{x} \implies x = y^2 \] \[ y = 2-x \implies x = 2-y \]
+
+\[ V = \int_0^1 2\pi y (2-y^2-y) dy \]
+
+(Just solve this yourselves)
+\end{quote}
+
+\hypertarget{example-3-3}{%
+\paragraph*{Example 3}\label{example-3-3}}
+\addcontentsline{toc}{paragraph}{Example 3}
+
+\begin{quote}
+A solid is obtained by the revolving about the line \(x=-2\) the region
+bounded by \(y=x^3\), \(y=8\), and the \(y\)-axis. Find the volume of
+the solid.
+
+\textbf{Solution.}
+
+\emph{disks:}
+\(\displaystyle V = \int_0^8 \pi \big[ (\sqrt[3]{y} +2)^2 -2^2 \big] dy = \frac{336\pi}{5}\)
+
+\emph{cylindrical shells:}
+\(\displaystyle V = \int_0^2 2\pi (x+2)(8-x^3) dx = \frac{336\pi}{5}\)
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{techniques-of-integration}{%
+\section{Techniques of integration}\label{techniques-of-integration}}
+
+\hypertarget{integration-by-parts}{%
+\subsection{Integration by parts}\label{integration-by-parts}}
+
+\hypertarget{product-rule-and-the-differentials}{%
+\subsubsection{Product rule and the
+differentials}\label{product-rule-and-the-differentials}}
+
+\begin{quote}
+Recalling the product rule in derivatives,
+
+\begin{align*}
+\frac{d}{dx} (f(x)g(x)) &= f(x)g'(x) + g(x)f'(x)\\
+d(f(x)g(x)) &= f(x)g'(x)dx + g(x)f'(x)dx
+\end{align*}
+
+Let \(u = f(x)\), \(v=g(x)\)
+
+\(du = f'(x)dx\), \(dv = g'(x)dx\)
+
+\begin{align*}
+d(f(x)g(x)) = f(x)g'(x)dx +g(x)f'(x)dx \implies d(uv) &= udv + vdu\\
+udv &= d(uv) - vdu\\
+\int udv &= \int d(uv)- \int vdu\\
+\int udv &= uv - \int vdu
+\end{align*}
+\end{quote}
+
+\[ \int f(x)g'(x)dx = f(x)g(x) - \int g(x)f'(x)dx \] Letting
+\(u = f(x)\), \(v=g(x) \implies du = f'(x)dx\), \(dv = g'(x)dx\),
+
+\[ \int udv = uv - \int vdu \]
+
+\begin{quote}
+This is also called the \textbf{integration-by-parts formula}.
+\end{quote}
+
+\hypertarget{integration-by-parts-and-definite-integrals}{%
+\subsubsection{Integration by parts and definite
+integrals}\label{integration-by-parts-and-definite-integrals}}
+
+Combining the integration-by-parts formula and FTC2,
+
+\[ \int_a^b f(x)g'(x)dx = f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)dx \]
+
+\hypertarget{example-1-5}{%
+\paragraph*{Example 1}\label{example-1-5}}
+\addcontentsline{toc}{paragraph}{Example 1}
+
+\begin{quote}
+Evaluate \(\displaystyle\int \ln x dx\)
+
+\textbf{Preliminary work.}
+
+\[ \int \ln x dx \implies x > 0 \]
+
+Let \(u = 1\), \(dv = \ln x dx\)
+
+\(du = 0\), \(v = \int \ln x dx\)
+
+Note that this solution is not correct because we just went back to our
+original statement, leading us nowhere.
+
+\textbf{Solution.} Let \(u = \ln x\), \(dv = dx\)
+
+\(du = \frac{1}{x}dx\), \(v = \int dx = x + C\)
+
+Following the integration-by-parts formula,
+
+\begin{align*}
+\int \ln x dx &= (\ln x)(x+c) - \int (x+C)\frac{1}{x} dx\\
+&= x \ln x + C \ln x - \int (1+\frac{C}{x})dx\\
+&= x \ln x + C \ln x - (x + C \ln |x| + C_1)\\
+&= x \ln x + C \ln x - x - C \ln |x| - C_1\text{;  note that  }x > 0\text{, thus }\ln|x| = \ln x\\
+&= x \ln x - x + C
+\end{align*}
+\end{quote}
+
+\begin{quote}
+Note that the contribution of \(+C\) in \(v\) just cancels at
+\(uv - \int vdu\), so it is \textbf{not necessary} to put \(+C\) when
+using integration by parts.
+\end{quote}
+
+\hypertarget{example-2-5}{%
+\paragraph*{Example 2}\label{example-2-5}}
+\addcontentsline{toc}{paragraph}{Example 2}
+
+\begin{quote}
+Evaluate \(\displaystyle \int t^2 \sin {\beta t} dt\)
+
+\textbf{Solution.} Let \(u = t^2\), \(dv = \sin {\beta t} dt\)
+
+\(du = 2tdt\),
+\(v = \int \sin {\beta t} dt = -\dfrac{\cos {\beta t}}{\beta}\)
+
+\begin{align*}
+\int t^2 \sin \beta t dt  = -\frac{t^2\cos{\beta t}}{\beta} - \int -\frac{2t\cos{\beta t}}{\beta}dt
+= -\frac{t^2\cos{\beta t}}{\beta} - \int \frac{2}{\beta} t \cos{\beta t}dt
+\end{align*}
+
+Let \(u = t\), \(dv = \cos{\beta t}dt\)
+
+\(du = dt\), \(v = \dfrac{\sin{\beta t}}{{\beta}}\)
+
+\begin{align*}
+-\frac{t^2\cos{\beta t}}{\beta} - \int \frac{2}{\beta} t\cos{\beta t}dt &= -\frac{t^2\cos{\beta t}}{\beta} - \frac{2}{\beta}\Big(\frac{t \sin{\beta t}}{{\beta}} - \int \frac{\sin{\beta t}}{{\beta}}dt\Big)\\
+&= -\frac{t^2\cos{\beta t}}{\beta} - \frac{2t \sin{\beta t}}{\beta^2} - \frac{2}{\beta} \Big(\int \frac{\sin{\beta t}}{\beta} dt\Big)\\
+&= -\frac{t^2\cos{\beta t}}{\beta} - \frac{2t \sin{\beta t}}{\beta^2} + \frac{2\cos {\beta t}}{\beta^3} + C
+\end{align*}
+\end{quote}
+
+\hypertarget{example-3-4}{%
+\paragraph*{Example 3}\label{example-3-4}}
+\addcontentsline{toc}{paragraph}{Example 3}
+
+\begin{quote}
+Evaluate \(\displaystyle \int e^x \sin {\pi x}dx\)
+
+\textbf{Solution.} Let \(u = \sin {\pi x}\), \(dv = e^x dx\)
+
+\(du = \pi \cos {\pi x}dx\), \(v = e^x\)
+
+By integration by parts,
+
+\[ \int e^x \sin {\pi x}dx = e^x \sin {\pi x} - \pi \int e^x \cos {\pi x}dx \]
+
+Let \(u = \cos {\pi x}\), \(dv = e^xdx\)
+
+\(du = -\pi \sin {\pi x}\), \(v = e^x\)
+
+By integration by parts,
+
+\begin{align*}
+\int e^x \sin {\pi x}dx = e^x \sin {\pi x} - \pi \int e^x \cos {\pi x}dx &= e^x \sin {\pi x} - \pi \Big(e^x\cos {\pi x} - \pi \int - e^x \sin {\pi x}dx \Big)\\
+&=  e^x \sin {\pi x} - \pi e^x\cos {\pi x} - \pi^2 \int  e^x \sin {\pi x}dx \\
+\int e^x \sin {\pi x}dx + \pi^2 \int  e^x \sin {\pi x}dx &= e^x \sin {\pi x} - \pi e^x\cos {\pi x}\\
+(1 + \pi^2) \int e^x \sin {\pi x}dx &= e^x \sin {\pi x} - \pi e^x\cos {\pi x}\\
+\int e^x \sin {\pi x}dx &= \frac{e^x \sin {\pi x} - \pi e^x\cos {\pi x}}{1 + \pi^2} + C
+\end{align*}
+\end{quote}
+
+\hypertarget{example-4-definite-integral}{%
+\paragraph*{Example 4 (definite
+integral)}\label{example-4-definite-integral}}
+\addcontentsline{toc}{paragraph}{Example 4 (definite integral)}
+
+\begin{quote}
+Evaluate \(\displaystyle \int_0^1 \tan^{-1}x dx\).
+
+\textbf{Solution.} We shall first get the antiderivative of the function
+before evaluating the definite integral.
+
+Let \(u = \arctan x\), \(dv = dx\)
+
+\(du = \dfrac{1}{x^2+1}dx\) , \(v = x\)
+
+By integration by parts,
+
+\[ \int \tan^{-1}x dx = x\arctan x - \int \frac{x}{x^2+1}dx \]
+
+Let \(u = x^2 + 1 \implies du = 2xdx\)
+
+Using the substitution rule,
+
+\begin{align*}
+x\arctan x - \int \frac{x}{x^2+1}dx &= x\arctan x - \frac{1}{2}\int \frac{1}{u}du\\
+&= x\arctan x - \frac{\ln |u|}{2}\\
+&= x\arctan x - \frac{\ln |x^2+1|}{2}\text{, note that }\forall x \in \mathbb{R}, x^2+1 > 0 \\
+&= x\arctan x - \frac{\ln (x^2+1)}{2}
+\end{align*}
+
+By FTC2,
+
+\begin{align*}
+\int_0^1 \tan^{-1}x dx &= (x\arctan x - \frac{\ln (x^2+1)}{2}) |_0^1\\
+&= [\arctan 1 - \frac{\ln (1^2+1)}{2}] - [ - \frac{\ln (0^2+1)}{2}]\\
+&= \frac{\pi - 2\ln(2)}{4}
+\end{align*}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{trigonometric-integrals}{%
+\subsection{Trigonometric integrals}\label{trigonometric-integrals}}
+
+\hypertarget{trigonometric-identities}{%
+\subsubsection{Trigonometric
+identities}\label{trigonometric-identities}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\displaystyle \sin^2 x + \cos^2 x = 1\)
+\item
+  \(\displaystyle \tan^2 x + 1 = sec^2 x\)
+\item
+  \(\displaystyle \cot^2 x + 1 = csc^2 x\)
+\item
+  \(\displaystyle \sin^2 x = \frac{1}{2}(1-\cos 2x)\)
+\item
+  \(\displaystyle \cos^2 x = \frac{1}{2}(1+\cos 2x)\)
+\item
+  \(\displaystyle \sin A\cos B = \frac{1}{2}[\sin(A-B)+\sin(A+B)]\)
+\item
+  \(\displaystyle \sin A\sin B = \frac{1}{2}[\cos(A-B) ]- \cos(A+B)]\)
+\item
+  \(\displaystyle \cos A\cos B = \frac{1}{2}[\cos(A-B)+\cos(A+B)]\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{integrals-of-trigonometric-functions}{%
+\subsubsection{Integrals of trigonometric
+functions}\label{integrals-of-trigonometric-functions}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\displaystyle \int \tan x dx = \ln |\sec x| +C\)
+\end{enumerate}
+
+\begin{quote}
+\begin{align*}
+\int \tan x dx = \int \frac{\sin x}{\cos x} dx &= -\ln|\cos x| + C\\
+&= \ln|\sec x| + C
+\end{align*}
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \(\displaystyle \int \sec x dx = \ln|\sec x + \tan x| + C\)
+\end{enumerate}
+
+\begin{quote}
+\begin{align*}
+\int \sec x dx &= \int sec x \frac{\sec x + \tan x}{\sec x + \tan x} dx\\
+&= \int \frac{\sec^2 + \sec x\tan x}{\sec x + \tan x}dx\\
+&= \ln |\sec x + \tan x| + C
+\end{align*}
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  \(\displaystyle \int \cot x dx = \ln|\sin x| + C\)
+\item
+  \(\displaystyle \int \csc x dx = \ln|\csc x - \cot x| + C\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{example-1-6}{%
+\paragraph*{Example 1}\label{example-1-6}}
+\addcontentsline{toc}{paragraph}{Example 1}
+
+\begin{quote}
+Evaluate \(\displaystyle \int \sqrt{cos \theta} sin^3 \theta d\theta\).
+
+\textbf{Solution.}
+
+\begin{align*}
+\int \sqrt{\cos \theta} \sin^3 \theta d\theta &= \int \sqrt{\cos \theta}\sin^2 \theta \sin \theta d\theta \\
+&= \int \sqrt{\cos \theta}(1 - \cos^2 \theta) \sin \theta d\theta
+\end{align*}
+
+Let \(u = \sqrt{\cos \theta}\)
+
+\(\implies u^2 = \cos \theta\)
+
+\(\implies 2udu = -\sin \theta d\theta\)
+
+\(\implies -2udu = \sin \theta d\theta\)
+
+\begin{align*}
+\int \sqrt{\cos \theta}(1 - \cos^2 \theta) \sin \theta d\theta &= \int u(1-u^4)(-2u)du \\
+&= \int (-2u^2 + 2u^6)du \\
+&= -\frac{2}{3}u^3 +\frac{2}{7} u^7 + C \\
+&= -\frac{2}{3}(\cos \theta)^{3/2} + \frac{2}{7}(\cos \theta)^{7/2}+C
+\end{align*}
+\end{quote}
+
+\hypertarget{example-2-6}{%
+\paragraph*{Example 2}\label{example-2-6}}
+\addcontentsline{toc}{paragraph}{Example 2}
+
+\begin{quote}
+Evaluate \(\displaystyle \int \tan^2 t \sec^4 t dt\).
+
+\textbf{Solution.}
+
+\begin{align*}
+\int \tan^2 t \sec^4 t dt &= \int \tan^2 t \sec^2 t \sec^2 t dt \\
+&= \int \tan^2 t (1 + \tan^2 t) \sec^2 t dt
+\end{align*}
+
+Let \(u = \tan t \implies du = \sec^2 t dt\).
+
+\begin{align*}
+\int \tan^2 t (1 + \tan^2 t) \sec^2 t dt &= \int u^2 (1+u^2) du \\
+&= \int (u^2 + u^4)du\\
+&= \frac{u^3}{3} + \frac{u^5}{5}\\
+&= \frac{\tan^5 t}{5} + \frac{\tan^3 t}{3} + C
+\end{align*}
+\end{quote}
+
+\hypertarget{example-3-definite-integral}{%
+\paragraph*{Example 3 (definite
+integral)}\label{example-3-definite-integral}}
+\addcontentsline{toc}{paragraph}{Example 3 (definite integral)}
+
+\begin{quote}
+Evaluate \(\displaystyle \int_{\pi/4}^{\pi/2} \csc^5 x \cot^3 x dx\).
+
+\begin{align*}
+\int_{\pi/4}^{\pi/2} \csc^5 x \cot^3 x dx &= \int_{\pi/4}^{\pi/2} \csc^4 x \cot^2 x \csc x\cot x dx\\
+&= \int_{\pi/4}^{\pi/2} \csc^4 x (\csc^2 x - 1) \csc x\cot x dx
+\end{align*}
+
+Let
+\(u = \csc x \implies du = -\csc x \cot x dx \implies -du = \csc x \cot x dx\)
+
+\(x = \dfrac{\pi}{4} \implies u = \sqrt{2}\)
+
+\(x = \dfrac{\pi}{2} \implies u = 1\)
+
+\begin{align*}
+\int_{\pi/4}^{\pi/2} \csc^4 x (\csc^2 x - 1) \csc x\cot x dx &= \int_{\sqrt{2}}^1 u^4(u^2-1)(-du)\\
+&= \int_{\sqrt{2}}^1 - u^6 + u^4 du\\
+&= \int_1^{\sqrt{2}} u^6 - u^4 du\\
+&= \frac{u^7}{7} - \frac{u^5}{5} \Bigg|_1^{\sqrt{2}}\\
+&= \frac{8\sqrt{2}}{7} - \frac{4\sqrt{2}}{5} - \frac{1}{7} + \frac{1}{5}\\
+&= \frac{40\sqrt{2}-28\sqrt{2} -5 +7}{35}\\
+&= \frac{12\sqrt{2} +2}{35}
+\end{align*}
+\end{quote}
+
+\hypertarget{example-4-definite-integral-1}{%
+\paragraph*{Example 4 (definite
+integral)}\label{example-4-definite-integral-1}}
+\addcontentsline{toc}{paragraph}{Example 4 (definite integral)}
+
+\begin{quote}
+Evaluate \(\displaystyle \int_0^{\pi/2} \cos 5t \cos 10t dt\).
+
+\begin{align*}
+\int_0^{\pi/2} \cos 5t \cos 10t dt &= \int_0^{\pi/2} \frac{1}{2} [\cos(5t-10t) + cos(5t+10t)]dt\\
+&= \int_0^{\pi/2} \frac{1}{2} [\cos(-5t)+\cos 15t]dt \text{; note that } \cos(-5t) = \cos{5t} \;\forall t\\
+&= \int_0^{\pi/2} \frac{1}{2} \cos 5t + \frac{1}{2}\cos 15t\\
+&= \frac{1}{10}\sin 5t + \frac{1}{30} \sin 15t \Bigg|_0^{\pi/2}\\
+&= \frac{1}{10}\sin {\frac{5\pi}{2}} + \frac{1}{30} \sin {\frac{15\pi}{2}} - 0\\
+&= \frac{1}{15}
+\end{align*}
+\end{quote}
+
+\hypertarget{example-5}{%
+\paragraph*{Example 5}\label{example-5}}
+\addcontentsline{toc}{paragraph}{Example 5}
+
+\begin{quote}
+Evaluate \(\displaystyle \int \frac{\sin^2(1/t)}{t^2}dt\).
+
+Let
+\(u = \dfrac{1}{t} \implies du = -\dfrac{1}{t^2} \implies -du = \dfrac{1}{t^2}\)
+
+\[ \int \frac{\sin^2(1/t)}{t^2}dt = \int -\sin^2 u du \]
+
+Note that \(\sin^2 u = \frac{1}{2}(1-\cos 2u)\)
+
+\begin{align*}
+\int -\sin^2 u du &= \int -\frac{1}{2}(1-cos2u)du\\
+&= -\frac{1}{2}(u - \frac{sin 2u}{2})\\
+&= -\frac{1}{2t} + \frac{\sin (2/t)}{4} + C
+\end{align*}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{trigonometric-substitution}{%
+\subsection{Trigonometric
+substitution}\label{trigonometric-substitution}}
+
+\hypertarget{circular-functions}{%
+\subsubsection{Circular functions}\label{circular-functions}}
+
+\[ x^2 + y^2 = r^2 \]
+
+which proves that trigonometric functions are also circular functions
+
+\[\sin \theta = \frac{y}{r} \implies y = r\sin \theta\]
+\[\cos \theta = \frac{x}{r} \implies x = r\cos \theta\]
+
+We can therefore rename \((x,y)\) to \((r\cos \theta, r\sin \theta)\).
+It implies that for every \((x,y)\) coordinates, there corresponds
+\((r, \theta)\) coordinates.
+
+\hypertarget{recall}{%
+\paragraph*{Recall}\label{recall}}
+\addcontentsline{toc}{paragraph}{Recall}
+
+\begin{quote}
+Evaluate \(\displaystyle \int_{-2}^{2} \sqrt{4-x^2}dx\).
+
+\textbf{Intuitive solution.} Observe that the function is a semicircle
+with r=2, thus the integral looks for the area of the semicircle.
+
+\[ \int_{-2}^{2} \sqrt{4-x^2}dx = \frac{1}{2}\pi2^2 = 2\pi\]
+
+\textbf{Solution.} Let \(y = \sqrt{4-x^2}\).
+
+\(y^2 = 4-x^2\)
+
+\(x^2 + y^2 = 4\)
+
+\(r^2 = 4 \implies r = 2\)
+
+\((x,y) = (x,\sqrt{4-x^2}) = (2\cos \theta, 2\sin \theta)\)
+
+\(x = 2 \cos \theta \implies dx = 2(-\sin \theta)d\theta\)
+
+\(\sqrt{4-x^2} = 2 \sin \theta\)
+
+\begin{align*}
+\int_{-2}^{2} \sqrt{4-x^2}dx &= \int_{\pi}^0(2\sin \theta)(-2\sin\theta d\theta) \text{; note that we converted the } x \text{-value to} \theta \text{-value}\\
+&= \int_{\pi}^0 -4\sin^2 \theta d\theta\\
+&= \int_0^{\pi} -4\sin^2 \theta d\theta\\
+&= \int_0^{\pi} \frac{4}{2}(1-cos 2\theta) d\theta\\
+&= \int_0^{\pi} 2(1-cos 2\theta) d\theta\\
+&= 2x - \frac{sin 2\theta}{2} \Bigg|_0^{\pi}\\
+&= 2\pi - 0 - 0\\
+&= 2\pi
+\end{align*}
+\end{quote}
+
+\hypertarget{trigonometric-substitutions}{%
+\subsubsection{Trigonometric
+substitutions}\label{trigonometric-substitutions}}
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule
+\begin{minipage}[b]{0.30\columnwidth}\centering
+Expression\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\centering
+Substitution\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\centering
+Identity\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.30\columnwidth}\centering
+\(\sqrt{a^2-x^2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\(x = a\sin \theta, -\dfrac{\pi}{2} \leq \theta \leq \dfrac{\pi}{2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\(1 - \sin^2 \theta = \cos^2 \theta\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\centering
+\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\centering
+\(\sqrt{a^2+x^2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\(x = a\tan \theta, -\dfrac{\pi}{2} \leq \theta \leq \dfrac{\pi}{2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\(1 - \tan^2 \theta = \sec^2 \theta\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\centering
+\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\centering
+\(\sqrt{x^2-a^2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\(x = a \sec \theta, 0 \leq \theta \leq \dfrac{\pi}{2}\) or
+\(\pi \leq \theta \leq \dfrac{3\pi}{2}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\(\sec^2 \theta - 1 = \tan^2 \theta\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\centering
+\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
+\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{example-1-7}{%
+\paragraph*{Example 1}\label{example-1-7}}
+\addcontentsline{toc}{paragraph}{Example 1}
+
+\begin{quote}
+Evaluate \(\displaystyle \int_0^1 \frac{dx}{(x^2+1)^2}\)
+
+\[ \int_0^1 \frac{dx}{(x^2+1)^2} = \int_0^1 \frac{dx}{(\sqrt{x^2+1})^4} \]
+
+Visualizing a right triangle with legs \(x\) and \(1\),
+
+\(x = \tan \theta \implies dx = \sec^2 \theta d\theta\)
+
+\(\cos \theta =\dfrac{1}{\sqrt{x^2 +1}} \implies \sqrt{x^2 +1} = \sec \theta\)
+
+\(x = 0 \implies 0 = \tan \theta \implies \theta = 0\)
+
+\(x = 1 \implies \theta = \dfrac{\pi}{4}\)
+
+\begin{align*}
+\int_0^1 \frac{dx}{(\sqrt{x^2+1})^4} &= \int_0^{\pi/4} \frac{\sec^2 \theta}{\sec^4 \theta} d\theta \\
+&= \int_0^{\pi/4} \frac{1}{\sec^2 \theta} d\theta \\
+&= \int_0^{\pi/4} \cos^2 \theta d\theta \\
+&= \int_0^{\pi/4} \frac{1}{2} (1 + \cos 2 \theta) d\theta  \\
+&= \frac{1}{2} \Big(\theta + \frac{\sin 2\theta}{2}\Big) \Bigg|_0^{\pi/4}\\
+\end{align*}
+
+(solution to be continued)
+\end{quote}
+
+\hypertarget{example-2-7}{%
+\paragraph*{Example 2}\label{example-2-7}}
+\addcontentsline{toc}{paragraph}{Example 2}
+
+\begin{quote}
+Evaluate \(\displaystyle \int \frac{\sqrt{x^2-1}}{x^4}dx\).
+
+Solution.
+
+By trigonometric substitution,
+
+\(x = \sec \theta \implies dx = \sec \theta \tan \theta d\theta\)
+
+\(\sqrt{x^2 -1} = \tan \theta\)
+
+\begin{align*}
+\int \frac{\sqrt{x^2-1}}{x^4}dx &= \int \frac{\tan\theta}{\sec^4 \theta} (\sec \theta \tan \theta d\theta)\\
+&= \int \frac{\tan^2\theta}{\sec^3 \theta} d\theta\\
+&= \int \sin^2\theta \cos\theta d\theta\\
+&= \frac{\sin^3 \theta}{3} + C\\
+&= \frac{1}{3}(\frac{\sqrt{x^2-1}}{x})^3 + C\\
+&= \frac{(x^2-1)^{3/2}}{3x^3} + C\\
+\end{align*}
+\end{quote}
+
+\hypertarget{example-3-5}{%
+\paragraph*{Example 3}\label{example-3-5}}
+\addcontentsline{toc}{paragraph}{Example 3}
+
+\begin{quote}
+Evaluate \(\displaystyle \int \frac{x^2}{(3+4x-4x^2)^{3/2}}dx\).
+
+\textbf{Solution.}
+
+\[ \int \frac{x^2}{(3+4x-4x^2)^{3/2}}dx = \int \frac{x^2}{[4 - (2x-1)^2]^{3/2}} dx \]
+
+Let there be a triangle with legs \(2x-1\) and \(\sqrt{4-(2x-1)^2}\)
+
+\(2x-1 = 2 \sin \theta \implies x = \dfrac{1+2\sin\theta}{2}\)
+
+\(2dx = 2\cos \theta d \theta\)
+
+\(dx = \cos \theta d\theta\)
+
+\(\sqrt{4-(2x-1)^2} = 2\cos \theta\)
+
+\begin{align*}
+\int \frac{x^2}{[4 - (2x-1)^2]^{3/2}} dx &= \int \frac{\Big(\dfrac{1+ 2\sin\theta}{2}\Big)^2}{2\cos^3 \theta} \cos\theta d\theta\\
+&= \int \frac{1 + 4\sin \theta + 4 \sin^2 \theta}{32 \cos \theta} d\theta\\
+&= \frac{1}{32} \int(\sec^2\theta + 4 \tan \theta \sec\theta + 4 \tan^2 \theta) d\theta\\
+&= \frac{1}{32}\tan \theta + \frac{1}{8} \sec \theta + \frac{1}{8} \tan \theta - \frac{1}{8} \theta + C\\
+&= \frac{5}{32}\tan \theta + \frac{1}{8} \sec \theta - \frac{1}{8} \theta + C\\ 
+&= \frac{5}{32} \frac{2x-1}{\sqrt{3+4x-4x^2}} + \frac{1}{8} \frac{2}{\sqrt{3+4x-4x^2}} - \frac{1}{8}\arcsin \Big(\frac{2x-1}{2}\Big) + C
+\end{align*}
+\end{quote}
+
+\hypertarget{integration-of-rational-functions-by-partial-fractions}{%
+\subsection{Integration of rational functions by partial
+fractions}\label{integration-of-rational-functions-by-partial-fractions}}
+
+\hypertarget{quick-review}{%
+\paragraph*{Quick review}\label{quick-review}}
+\addcontentsline{toc}{paragraph}{Quick review}
+
+\begin{quote}
+\(\displaystyle\int \frac{2}{3-2x}dx = \ln |3-2x| + C\)
+
+\(\displaystyle\int \frac{2}{(3-2x)^2} dx = \frac{1}{3-2x} +C\)
+
+\(\displaystyle\int \frac{x}{x^2 + 4} dx = \frac{1}{2}\ln(x^2+4) + C \text{; note that } x^2 + 4 \geq 0 \;\forall x \in \mathbb{R}\)
+
+\(\displaystyle\int \frac{x}{(x^2 +4)^2} dx = -\frac{1}{2(x^2+4)} + C\)
+
+\(\displaystyle\int \frac{1}{x^2 + a^2} dx = \frac{1}{a}\arctan \left( \frac{x}{a} \right) + C\)
+\end{quote}
+
+\hypertarget{partial-fractions}{%
+\subsubsection{Partial fractions}\label{partial-fractions}}
+
+\hypertarget{example-4}{%
+\paragraph*{Example}\label{example-4}}
+\addcontentsline{toc}{paragraph}{Example}
+
+\begin{quote}
+\[ \frac{1}{x+2} - \frac{1}{x-3} = \frac{x-2-(x+2)}{(x+2)(x-3)} = \frac{-5}{(x+2)(x-3)} \]
+
+This is an identity because it is true for all \(x\).
+
+\[\implies \frac{-5}{(x+2)(x-3)} = \frac{A}{x+2} + \frac{B}{x-3},\; A,B \in \mathbb{R} \]
+
+\begin{align*} 
+(x+2)(x-3) \Bigg[ \frac{-5}{(x+2)(x-3)} &= \frac{A}{x+2} + \frac{B}{x-3} \Bigg] (x+2)(x-3)\\
+-5 &= A(x-3) + B(x+2)\\
+-5 &= Ax -3A + Bx +2B\\
+-5 &= (A+B)x + (-3A + 2B)
+\end{align*}
+
+By systems of equations,
+
+\[
+\begin{cases}
+A+B = 0 \implies A = -B\\
+-3A + 2B = -5 \implies = -3(-B) + 2B = -5 \implies B = -1, A = 1
+\end{cases}
+\]
+
+By substitution,
+
+\begin{align*}
+x = 3: \;-5 &= 0 + B(3+2)\\
+B &= -1
+\end{align*}
+
+\begin{align*}
+x= -2: \; -5 &= A(-2-3) + 0\\
+A &= 1
+\end{align*}
+\end{quote}
+
+\hypertarget{applications-ii}{%
+\section{Applications II}\label{applications-ii}}
+
+\hypertarget{arc-length}{%
+\subsection{Arc length}\label{arc-length}}
+
+\begin{quote}
+Suppose a continuous function \(f(x)\) continuous on \([a,b]\). We want
+to get the length of the curve from \([a,b]\).
+
+Let \(\Delta x\) be the spacing of the values of \(x\) when divided in
+to \(n\) equal intervals.
+
+\[\Delta x = x_i - x_{i-1} = \frac{b-a}{n} \]
+
+We have two adjacent points, \(P_{i-1}(x, f(x))\) and
+\(P_i(x+\Delta x, f(x + \Delta x))\). Rewriting the coordinates, we get
+\(P_{i-1}(x_{i-1}, f(x_{i-1}))\) and \(P_i(x_i, f(x_i))\). Getting the
+distance between these two points,
+
+\[|P_{i-1}P_i| = \sqrt{(x_i-x_{i-1})^2 + \left[ f(x_i)-f(x_{i-1}) \right]^2}\]
+
+Recalling MVT for derivatives,
+
+\begin{itemize}
+\item
+  \(f\) is continuous on \([x_{i-1},x_i]\)
+\item
+  \(f\) is differentiable on \((x_{i-1},x_i)\)
+\end{itemize}
+
+\(\implies \exists x_i^* \in (x_{i-1},x_i)\) such that
+
+\[f'(x_i^*) = \frac{f(x_i) - f(x_{i-1})}{x_i - x_{i-1}}\]
+
+Going back to \(|P_{i-1}P_i|\),
+
+\begin{align*}
+|P_{i-1}P_i| &= \sqrt{(x_i-x_{i-1})^2 + \left[ f(x_i)-f(x_{i-1}) \right]^2}\\
+&= \sqrt{(x_i-x_{i-1})^2 + \left[ f'(x_i^*) (x_i - x_{i-1}) \right]^2}\\
+&= \sqrt{(\Delta x)^2 + \left[ f'(x_i^*) \Delta x \right]^2}\\
+&= \sqrt{1+[f(x_i^*)]^2}\Delta x
+\end{align*}
+
+Let the length of the curve be \(L\).
+
+\begin{align*}
+L &= \lim_{n\to\infty} \sum_{i=1}^n |P_{i-1}P_i|\\
+&= \lim_{n\to\infty} \sum_{i=1}^n \sqrt{1+[f(x_i^*)]^2}\Delta x\\
+L &= \int_a^b \sqrt{1+[f(x)]^2}dx\\
+\end{align*}
+\end{quote}
+
+\hypertarget{the-arc-length-formula}{%
+\subsubsection{The arc length formula}\label{the-arc-length-formula}}
+
+If \(f'\) is continuous on \([a,b]\), then the length \(L\) of the curve
+\(y = f(x)\), \(a \leq x \leq b\), is given by
+
+\[ L = \int_a^b \sqrt{1+[f(x)]^2}dx \]
+
+\end{document}
