@@ -1,7 +1,5 @@
 ---
 output: 
-  pdf_document:
-    keep_tex: true
   html_document:
     number_sections: true
     css: style.css
@@ -13,6 +11,8 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
+  pdf_document:
+    keep_tex: true
 title: "Mathematical Analysis IB"
 ---
 
