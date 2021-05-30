@@ -1530,4 +1530,53 @@ If $f'$ is continuous on $[a,b]$, then the length $L$ of the curve $y = f(x)$, $
 
 $$ L = \int_a^b \sqrt{1+[f(x)]^2}dx $$ 
 
-<!-- ## Variable-separable differential equations and models for population growth -->
+## Differential equations
+
+> incomplete
+
+### Models for population growth
+
+Malthus (c. 1798) said that in an ideal population, the rate of growth of a population is proportional to the size of the population.
+
+Let $P$ be a function of time stating the number of individuals in a population at time $t$.
+
+\begin{align*}
+\frac{dP}{dt} &\propto P\\
+\implies\frac{dP}{dt} &= kP; k \text{ is the proportionality constant}\\
+\frac{\dfrac{dP}{dt}}{P} &= k
+\end{align*}
+
+This equations is known as the **simple growth model**.
+
+Verholst (c. 1838) mentioned that Malthus's population model is only correct for small populations, and that population growth is bounded by environmental restrictions. 
+
+Let $M$ be the carrying capacity of the environment.
+
+Then when the population surpasses $M$, the population growth pattern changes.
+
+$$\frac{\dfrac{dP}{dt}}{P} = k\left(1-\frac{P}{M}\right)$$
+
+Note that when $P > M$, then the proportion becomes negative.
+
+This is knows as the **logistic model**.
+
+### Differential equation
+
+A **differential equation** is an equation that contains an unknown function and one or more of its derivatives.
+
+### Simple growth model
+
+The solution of the initial-value problem
+
+$$ \frac{dP}{dt} = kP, P(0) = P_0 $$
+
+is
+
+$$P(t) = P_0e^{kt} $$
+
+### Logistic model
+
+The solution fo the initial-value problem
+
+$$\dfrac{\dfrac{dP}{dt}}{P} = k \left(1-\frac{P}{M}\right)$$
+

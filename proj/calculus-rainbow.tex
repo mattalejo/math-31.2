@@ -1,0 +1,225 @@
+% Preamble
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{gensymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+
+
+\title{The Calculus of Rainbows}
+\author{
+Matt Alejo
+\and
+Joshua de Luna
+\and
+Althea Loyola
+}
+\date{7 June 2021}
+
+
+% Document proper
+\begin{document}
+\setstretch{1.15}
+
+\maketitle
+
+\section{Introduction}
+
+A rainbow is a meteorological phenomenon that usually occurs after rain, characterized by a circular spectrum of light appearing in the sky. Because of its beauty and the difficulty of explaining the phenomenon, rainbows have a place in legends in different cultures. In Greco-Roman mythology, the rainbow was considered to be a path made by Iris, a messenger, between Earth and Heaven. In the Bible's Genesis flood narrative God put the rainbow in the sky after flooding the world to wash away sin as the sign of his promise that he would never again destroy the earth with a flood.\\
+
+With scientific breakthroughs and discoveries throughout the history of humanity, the legends that attempt to explain the existence of rainbows are relegated to creative literature, while rainbows are explained to be optical illusions due to the reflection and refraction of light. This paper goes through the scientific explanation of rainbows and uses Calculus and Physics to derive the underlying mathematics from the phenomenon of rainbows.
+
+\section{Scientific explanation}
+
+\subsection{Fermat's principle of optics}
+
+\subsection{Snell's law}
+
+When light passes from a medium to another with different speed, it causes the light ray to bend. Consequently, it causes a change in the index of refraction, which is the ratio of the speed of light in a vacuum and the speed of light in a medium. This change in the index of refraction affects the direction of the propagation of light, bending it as it passes through the medium.
+The law of Refraction or Snell's Law is the relationship between the incident angle and the refracted angle in two different mediums. “Snell's Law states that the ratio of the sine of the angles of incidence and transmission is equal to the ratio of the refractive index of the materials at the interface.” The mathematical formula for Snell’s Law is 
+
+\begin{equation} \label{refract}
+\frac{n_1}{n_2} = \frac{\sin \theta_1}{\sin \theta_2}
+\end{equation}
+
+Where $n_1$ and $n_2$ are the indices of refraction from the incident medium and the outgoing medium, and the theta is the incident angle and the refracted angle. This formula can be derived from Fermat’s Principle of Last Time.
+
+
+\subsection{Law of reflection}
+
+\subsection{Light wavelengths and their refractive interactions}
+
+
+\begin{table}[]
+\centering
+\def\arraystretch{1.5}
+\begin{tabular}{|c|c|c|}
+\hline
+Wavelength (nm) & Refractive Index & Color  \\ \hline
+400             & 1.3445           & Violet \\ \hline
+450             & 1.3406           & Indigo \\ \hline
+500             & 1.3377           & Blue   \\ \hline
+550             & 1.3356           & Green  \\ \hline
+600             & 1.3339           & Yellow \\ \hline
+650             & 1.3326           & Orange \\ \hline
+700             & 1.3314           & Red    \\ \hline
+\end{tabular}
+\end{table}
+
+
+\section{Mathematical derivation}
+
+\subsection{The angle of a primary rainbow}
+
+The figure shows a ray of sunlight entering a spherical raindrop at $A$. Some of the light
+is reflected, but the line $AB$ shows the path of the part that enters the drop. \\
+
+Notice that the light is refracted toward the normal line $AO$. Since there is a change in the medium of the passing light, Snell’s law applied. \
+
+\begin{equation} \label{eq:snell}
+\sin \alpha = k \sin \beta
+\end{equation}
+
+where $\alpha$ is the angle of incidence, $\beta$ is the angle of refraction, and $k \approx 4/3$ is the approximate ratio between the index of refraction of water and the index of refraction of air. Note that the angle of refraction of air is very close to 1, so it can be assumed that $k$ is the index of refraction of water.\\
+
+At $B$ some of the light passes through the drop and is refracted into the air, but some of the light is also internally reflected, as represented by $BC$. Note that the angle of incidence equals the angle of reflection. When the ray reaches $C$, part of it is reflected, but for the time being, we are more interested in the part that leaves the raindrop at $C$. (Notice that it is refracted away from the normal line.) \\
+
+The angle of deviation $D(\alpha)$ is the amount of clockwise rotation that the ray has undergone during the stage of refraction, internal reflection, and another refraction. Using Geometry, 
+
+\begin{align*}
+D(\alpha) &= (\alpha - \beta) + (\pi - 2\beta) +(\alpha - beta) \\
+&= \pi + 2\alpha - 4\beta\\
+\end{align*}
+
+Using Equation \ref{eq:snell} to isolate $\beta$ in terms of $\alpha$,
+
+\begin{align*}
+\sin \alpha &= k \sin \beta\\
+\frac{\sin \alpha}{k} &= \sin \beta\\
+\beta &= \arcsin \left(\frac{\sin \alpha}{k} \right)
+\end{align*}
+
+Substituting $\beta$,
+
+\begin{equation}\notag
+D(\alpha) = \pi + 2\alpha - 4\arcsin \left( \frac{\sin \alpha}{k} \right)
+\end{equation}
+
+Getting the derivative of $D$,
+
+\begin{align*}
+D’(\alpha) &= 0 + 2 - 4 \frac{1}{ \sqrt{1 -  \left( \dfrac{\sin \alpha}{k} \right) ^2 } } \left(  \dfrac{\cos \alpha}{k} \right) \\
+D(\alpha) &= 2 - \frac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}}
+\end{align*}
+
+To get the minimum of $D’(\alpha)$, we shall equate it to $0$.
+
+\begin{align*}
+2 - \frac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}} &= 0\\
+2 &=  \frac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}}
+\end{align*}
+
+It is good to note that since $k>1$, then $1-\dfrac{\sin^2 \alpha}{k} >0$ for all $\alpha$.
+
+\begin{align*}
+2 k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}} &= 4 \cos \alpha\\
+k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}} &= 2\cos \alpha
+\end{align*}
+
+Squaring both sides,
+
+\begin{align*}
+k^2 \left(1 -  \frac{\sin^2 \alpha}{k^2} \right) &= 4 \cos^2 \alpha\\
+k^2 - \sin^2 \alpha &= 4 \cos^2 \alpha\\
+k^2 &= \sin^2 \alpha + 4 \cos^2 \alpha\\
+k^2 &= \sin^2 \alpha + \cos^2 \alpha + 3\cos^2 \alpha\\
+k^2 &= 1 + 3\cos^2 \alpha\\
+\sqrt{\frac{k^2 -1}{3}} &= \cos \alpha\\
+\alpha &=  \arccos \sqrt{\frac{k^2 -1}{3}}
+\end{align*}
+
+$D(\alpha)$ is minimum when 
+
+\begin{equation}\label{min}
+\alpha =  \arccos \sqrt{\frac{k^2 -1}{3}}
+\end{equation}
+
+Substituting $k \approx \dfrac{4}{3}$,
+
+\begin{align*}
+\alpha &\approx  \arccos \sqrt{\dfrac{ \left( \dfrac{4}{3} \right)^2 -1}{3}}\\
+&\approx \arccos \sqrt{\dfrac{ \dfrac{16}{9} -1}{3}}\\
+&\approx \arccos \sqrt{\dfrac{7}{27}}\\
+\alpha &\approx 1.0366\\
+\alpha &\approx 59.4 \degree
+\end{align*}
+
+$D(\alpha)$ is minimum at $\alpha \approx 59.4 \degree$.\\
+
+Substituting $\alpha \approx  59.4 \degree$,
+
+\begin{align*}
+\min(D(\alpha)) \approx D(1.0366) &\approx \pi + 2\alpha - 4\arcsin \left( \frac{\sin \alpha}{\dfrac{4}{3}} \right)\\
+&\approx \pi + 2(1.0366) -  4\arcsin \left( \frac{\sin (1.0366)}{\dfrac{4}{3}} \right)\\
+&\approx 138 \degree
+\end{align*}
+
+The minimum value of the deviation is $D(\alpha) \approx 138 \degree$ which occurs when $\alpha \approx 59.4 \degree$.\\
+
+The minimum deviation angle has huge significance since $D’(\alpha) \approx 0$ implies that $\Delta D/\Delta \alpha \approx 0$, which means that light rays deviate by approximately the same amount at $\alpha \approx 59.4 \degree$. This implies that there is a concentration of rays coming from near the direction of the minimum deviation, causing the formation of the rainbow from these concentrated light rays.\\
+
+The figure shows that the angle of elevation from the observer up to the highest point on the rainbow is $180 \degree - 138 \degree = 42 \degree$. This angle is called the {\itshape rainbow angle}.
+
+\subsection{Colors in a primary rainbow}
+
+Sunlight comprises a range of wavelengths, from the reds with the longest wavelengths and the violets with the shortest wavelengths. As Newton discovered in his prism experiments of
+1666, the index of refraction is different for each color in a phenomenon called dispersion.
+For red light, the refractive index is $k \approx 1.3318$, whereas for violet light it is $k \approx 1.3435$.\\
+
+As previously mentioned in Equation \ref{min}, the minimum of $D(\alpha)$ is when $\alpha = \arccos \sqrt{\dfrac{k^2 -1}{3}}$\\
+
+Substituting $k \approx 1.3318$ for red light,
+
+\begin{equation}\notag
+\alpha \approx \arccos \sqrt{\dfrac{(1.3318^2 -1}{3}}
+\approx 1.0381
+\end{equation}
+
+Substituting $\alpha \approx 1.0381$ and $k \approx 1.3318$ on $D(\alpha)$,
+
+\begin{align*}
+D(1.0381) &= \pi + 2(1.0381) - 4\arcsin \left( \frac{\sin 1.0381}{1.3318} \right)\\
+&\approx 2.4041\\
+&\approx 137.7 \degree
+\end{align*}
+
+The rainbow angle of the red light is $\approx 180 \degree - 137.7 \degree \approx 42.3 \degree$.\\
+
+Substituting $k \approx 1.3435$ for violet light,
+
+\begin{equation}\notag
+\alpha \approx \arccos \sqrt{\dfrac{(1.3435^2 -1}{3}}
+\approx 1.0263
+\end{equation}
+
+Substituting $\alpha \approx 1.0263$ and $k \approx 1.3435$ on $D(\alpha)$,
+
+\begin{align*}
+D(1.0263) = \pi + 2(1.0263) - 4\arcsin \left( \frac{\sin 1.0263}{1.3435} \right)
+\approx 2.4334
+\approx 139.4 \degree
+\end{align*}
+
+The rainbow angle of the violet light is $\approx 180 \degree - 139.4 \degree = 40.6 \degree$.\\
+
+As observed in the calculations, the rainbow angle of the red light ($42.3 \degree$) is larger than the rainbow angle of the violet light ($40.6 \degree$). This implies that the rainbow’s color appears red on top, violet on the bottom, and all other visible light wavelengths in between.
+
+\subsection{Double rainbows}
+
+\subsection{Colors in a secondary rainbow}
+
+\section{Conclusion}
+
+\end{document}
