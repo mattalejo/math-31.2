@@ -2,10 +2,256 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
 \usepackage{tikz}
 \usepackage{gensymb}
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}
+\usepackage{float}
+\usepackage{xcolor}
+
+\usepackage{graphicx,tipa}
+
+\usepackage[style=numeric]{biblatex}
+\addbibresource{calculus-rainbow.bib}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\newcommand{\reflection}
+{
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-4.100471663842028,-0.5) rectangle (3.290690084294631,4.2126654282396805);
+\draw [shift={(0,0)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (90:0.1986871437671145) arc (90:135:0.1986871437671145) -- cycle;
+\draw [shift={(0,0)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (45:0.1986871437671145) arc (45:90:0.1986871437671145) -- cycle;
+\draw [line width=0.5pt,color=qqzzff,domain=-4.100471663842028:3.290690084294631] plot(\x,{(-0-0*\x)/1});
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt] (0,-1.9135215045796783) -- (0,4.2126654282396805);
+\draw [line width=0.5pt,color=ffqqqq,domain=-4.100471663842028:0] plot(\x,{(-0--1.7073841328406107*\x)/-1.7073841328406107});
+\draw [line width=0.5pt,color=ffqqqq,domain=0:3.290690084294631] plot(\x,{(-0--1.345*\x)/1.345});
+\draw[line width=0.5pt,color=ttffcc,fill=ttffcc,fill opacity=0.25](-4.1667007117644,0.0004979803768565896)--(-4.1667007117644,-1.9135215045796783)--(3.356919132217002,-1.9135215045796783)--(3.356919132217002,0.0004979803768565896);
+\draw [line width=0.5pt] (-1.991118522263103,1.991118522263103)-- (-2,0);
+\draw [line width=0.5pt] (0,0)-- (1,0);
+\draw [line width=0.5pt] (0,0)-- (-2,0);
+\draw [line width=0.5pt] (1,0)-- (1,1);
+\draw [line width=0.5pt] (-2,0)-- (1,0);
+\begin{scriptsize}
+\draw[color=qqzzff] (-4.040865520711893,0.12964462382548092) node {};
+\draw [fill=uuuuuu] (0,0) circle (1pt);
+\draw[color=uuuuuu] (0.05208964089066468,0.12964462382548092) node [below right = 1pt]{$P$};
+\draw[color=ffqqqq] (-0.908231553983722,0.8581641509715668) node [above right]{$d_1$};
+\draw[color=ffqqqq] (0.7673633584522769,0.6793457215811639) node [above left]{$d_2$};
+\draw [fill=uuuuuu] (1,1) circle (1pt);
+\draw[color=uuuuuu] (1.0521482645184743,1.1297032474532898) node [above]{$B$};
+\draw [fill=black] (-1.991118522263103,1.991118522263103) circle (1pt);
+\draw[color=black] (-1.9414047015727174,2.136384775873336) node {$A$};
+\draw[color=black] (-2.0804857022096974,1.0767200091153926) node [left]{$y_1$};
+\draw[color=black] (0.5223158811395023,-0.02930509118821055) node [above]{$a-x$};
+\draw[color=black] (-0.9744606019060935,0.18262786216337806) node {$x$};
+\draw[color=black] (1.1316231220253201,0.5800021496976068) node [right]{$y_2$};
+\draw[color=black] (-0.4777427424883073,-0.02930509118821055) node [below]{$a$};
+\draw[color=qqwuqq] (0.2507767846577792,0.1561362429944295) node [above left=4pt]{$\theta_1$};
+\draw[color=qqwuqq] (0.31038292778791354,0.1561362429944295) node [above = 4pt]{$\theta_2$};
+\end{scriptsize}
+\end{tikzpicture}
+}
+
+\newcommand{\snells}
+{
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-3.3011195111302225,-3) rectangle (3.004591388226776,3.962995645536179);
+\draw [shift={(0,0)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (90:0.27336896962530344) arc (90:120.96375653207352:0.27336896962530344) -- cycle;
+\draw [shift={(0,0)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-90:0.27336896962530344) arc (-90:-45:0.27336896962530344) -- cycle;
+\draw [line width=0.5pt,color=qqzzcc,domain=-3.3011195111302225:3.004591388226776] plot(\x,{(-0-0*\x)/1});
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt] (0,-3.4658809179106473) -- (0,4.962995645536179);
+\draw [line width=0.5pt,color=ffqqqq,domain=-3.3011195111302225:0] plot(\x,{(-0--0.7641661333767144*\x)/-0.45849968002602864});
+\draw [line width=0.5pt,color=ffqqqq,domain=0:3.004591388226776] plot(\x,{(-0-0.6418678951944565*\x)/0.6418678951944565});
+\draw [line width=0.5pt] (-1.751712643960778,0)-- (0,0);
+\draw [line width=0.5pt] (0,0)-- (1.28,0);
+\draw [line width=0.5pt] (-1.751712643960778,0)-- (-1.75,2.9166666666666665);
+\draw [line width=0.5pt] (1.28,0)-- (1.28,-1.28);
+\draw[line width=0.5pt,color=ttffcc,fill=ttffcc,fill opacity=0.25](-3.3922425010053234,-0.003207302656816285)--(-3.3922425010053234,-3.4658809179106473)--(3.0957143781018774,-3.4658809179106473)--(3.0957143781018774,-0.003207302656816285);
+\begin{scriptsize}
+\draw[color=qqzzcc] (-3.2191088202426315,0.18359482658714038) node {};
+\draw[color=black] (-0.0389164736016018,4.921990300092383) node {};
+\draw [fill=uuuuuu] (0,0) circle (1pt);
+\draw[color=uuuuuu] (0.07043111424851956,0.1744825275996303) node [below left=3pt]{$C$};
+\draw[color=ffqqqq] (-0.27583624727686473,0.36584080633734206) node [above left=18pt]{$d_1$};
+\draw[color=ffqqqq] (0.4531476717239443,-0.10799874101318223) node [below = 10.5pt]{$d_2$};
+\draw[color=qqwuqq] (0.14332950614860046,0.22004402253718072) node [above left = 4pt]{$\theta_1$};
+\draw[color=qqwuqq] (0.21622789804868137,-0.08066184405065198) node [below = 4pt]{$\theta_2$};
+\draw [fill=uuuuuu] (-1.751712643960778,0) circle (1pt);
+\draw[color=uuuuuu] (-1.6791302913534223,0.19270712557465047) node {};
+\draw [fill=uuuuuu] (1.28,0) circle (1pt);
+\draw[color=uuuuuu] (1.3552652714874454,0.19270712557465047) node {};
+\draw[color=black] (-0.8407987845024917,-0.03510034911310157) node [above]{$x$};
+\draw[color=black] (0.6718428474241871,-0.03510034911310157) node [above ] {$a-x$};
+\draw [fill=uuuuuu] (-1.75,2.9166666666666665) circle (1pt);
+\draw[color=uuuuuu] (-1.6791302913534223,3.0904182036028565) node {$A$};
+\draw [fill=uuuuuu] (1.28,-1.28) circle (1pt);
+\draw[color=uuuuuu] (1.3552652714874454,-1.1012393306517811) node [below=6pt]{$B$};
+\draw[color=black] (-1.569782703503301,1.5686642726886728) node [left=0.5pt]{$y_1$};
+\draw[color=black] (1.163906992749733,-0.527164494438646) node [right=0.5pt]{$y_2$};
+\end{scriptsize}
+\end{tikzpicture}
+}
+\newcommand{\primary}
+{
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+
+\clip(-6.208079428623365,-4.88103785801355) rectangle (7,3.330141435297047);
+\draw [shift={(-2.23606797749979,2)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (138.18968510422138:0.28665495726070117) arc (138.18968510422138:180:0.28665495726070117) -- cycle;
+\draw [shift={(-2.23606797749979,2)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-41.810314895778596:0.28665495726070117) arc (-41.810314895778596:-11.8103148957786:0.28665495726070117) -- cycle;
+\draw [shift={(2.850084796318772,0.9364916731037085)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (168.1896851042214:0.28665495726070117) arc (168.1896851042214:198.1896851042214:0.28665495726070117) -- cycle;
+\draw [shift={(2.850084796318772,0.9364916731037085)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-161.8103148957786:0.28665495726070117) arc (-161.8103148957786:-131.81031489577862:0.28665495726070117) -- cycle;
+\draw [shift={(-0.6140168188189818,-2.9364916731037085)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-143.6206297915572:0.28665495726070117) arc (-143.6206297915572:-101.81031489577859:0.28665495726070117) -- cycle;
+\draw [shift={(6.086727470566947,2)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-143.6206297915572:0.28665495726070117) arc (-143.6206297915572:0:0.28665495726070117) -- cycle;
+\draw [shift={(-0.6140168188189818,-2.9364916731037085)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (48.18968510422141:0.28665495726070117) arc (48.18968510422141:78.18968510422141:0.28665495726070117) -- cycle;
+\draw [line width=0.5pt,color=qqzzcc] (0,0) circle (3cm);
+\draw [line width=0.5pt,color=ccqqqq,domain=-6.208079428623365:-2.23606797749979] plot(\x,{(-5.52786404500042-0*\x)/-2.76393202250021});
+\draw [line width=0.5pt,color=ffqqqq,domain=-6.208079428623365:-0.6140168188189818] plot(\x,{(--5.256544921989533-1.55890472129316*\x)/-2.116041634551027});
+\draw [line width=0.5pt,color=ffqqqq] (2.850084796318772,0.9364916731037085)-- (-0.6140168188189818,-2.9364916731037085);
+\draw [line width=0.5pt,color=ffqqqq] (-2.23606797749979,2)-- (2.850084796318772,0.9364916731037085);
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt,domain=-2.7300584533700087:8.430433722156438] plot(\x,{(-5.256544921989533--1.55890472129316*\x)/2.116041634551027});
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt,domain=-5:8.430433722156438] plot(\x,{(--5.52786404500042-0*\x)/2.76393202250021});
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt,domain=-6.208079428623365:0] plot(\x,{(-0--2*\x)/-2.23606797749979});
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt,domain=-6.208079428623365:0] plot(\x,{(-0-2.9364916731037085*\x)/-0.6140168188189818});
+\draw [rotate around={0:(0,0)},line width=0.5pt,color=zzffff,fill=zzffff,fill opacity=0.25] (0,0) ellipse (3cm and 3cm);
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt] (0,0)-- (2.850084796318772,0.9364916731037085);
+\draw [line width=0.5pt, draw=qqzzcc] (0,0) circle (3cm);
+\begin{scriptsize}
+\draw [fill=uuuuuu] (-2.23606797749979,2) circle (0.5pt);
+\draw[color=uuuuuu] (-2.156689366005456,2.1850068384627845) node [anchor=south east]{$A$};
+\draw [fill=uuuuuu] (0,0) circle (0.5pt);
+\draw[color=uuuuuu] (0.07921930062801302,0.18797730287988548) node {$O$};
+\draw[color=qqwuqq] (-2.166244531247479,2.156341342736714) node[ left=8pt] {$\alpha$};
+\draw[color=qqwuqq] (-1.8986999044708248,2.0225690293483862) node [below right = 0.5pt]{$\beta$};
+\draw [fill=uuuuuu] (2.850084796318772,0.9364916731037085) circle (0.5pt);
+\draw[color=uuuuuu] (2.9266585427509777,1.1243834965981825) node {$B$};
+\draw[color=qqwuqq] (2.8693275512988374,1.0192766789359249) node [left = 6pt]{$\beta$};
+\draw[color=qqwuqq] (2.8979930470249076,0.9428353569997373) node[below left= 6pt] {$\beta$};
+\draw [fill=uuuuuu] (-0.6140168188189818,-2.9364916731037085) circle (0.5pt);
+\draw[color=uuuuuu] (-0.541866440103506,-2.7454584264213104) node [anchor=east]{$C$};
+\draw[color=qqwuqq] (-0.5132009443774359,-3.013003053197967) node [below left =6pt]{$\alpha$};
+\draw [fill=uuuuuu] (6.086727470566947,2) circle (0.5pt);
+\draw[color=uuuuuu] (6.165859559796901,2.1850068384627845) node {};
+\draw[color=qqwuqq] (6.337852534153321,1.9079070464441048) node [below = 4pt]{$D(\alpha)$};
+\draw[color=qqwuqq] (-0.37942863098910873,-2.7167929306952403) node [above= 4pt]{$\beta$};
+\end{scriptsize}
+\end{tikzpicture}
+}
+
+\newcommand{\primarycolor}
+{
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.8]
+
+\clip(-6.46924489473801,-6.191518174827493) rectangle (3.023218480966734,3.967438049025187);
+
+\draw [rotate around={0:(0,0)},line width=0.25pt,color=ttffcc,fill=ttffcc,fill opacity=0.25] (0,0) ellipse (3cm and 3cm);
+
+\draw [line width=0.5pt, draw=qqzzcc] (0,0) circle (3cm);
+
+%red
+
+\draw [line width=0.5pt, draw=myviolet] (-1.522457840938142,2.584980101)-- (2.7978098337965394,1.082709625851447);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.522457840938142, draw=myviolet] plot(\x,{(-5.66929687567797-0*\x)/-2.193168478737922});
+\draw [line width=0.5pt, draw=myviolet] (2.79780983379654,1.082709625851447)-- (0.6142485544560807,-2.9364432079215526);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.6142485544560807, draw=myviolet] plot(\x,{(--3.5519844101822113-0.9249782549023493*\x)/-1.0161333432758997});
+
+% orange
+
+\draw [line width=0.5pt, draw=myindigo] (-1.5256042352006474,2.58312441)-- (2.7994604216279537,1.0784346747664604);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5256042352006474, draw=myindigo] plot(\x,{(-5.657099504847531-0*\x)/-2.190022084475417});
+\draw [line width=0.5pt, draw=myindigo] (2.799460421627954,1.0784346747664604)-- (0.6016966061149287,-2.9390408629669946);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.6016966061149287, draw=myindigo] plot(\x,{(--3.549434531558556-0.9218696303918201*\x)/-1.0189544287751555});
+
+%yellow
+
+\draw [line width=0.5pt, draw=myblue] (-1.5290087088629778,2.581110685)-- (2.8012343878394748,1.0738183758837456);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5290087088629778, draw=myblue] plot(\x,{(-5.6439020792788295-0*\x)/-2.1866176108130864});
+\draw [line width=0.5pt, draw=myblue] (2.8012343878394748,1.0738183758837456)-- (0.5881253151603842,-2.9417866363262135);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.5881253151603842, draw=myblue] plot(\x,{(--3.5466675006620205-0.9185051879132415*\x)/-1.0219882402140028});
+
+%green
+
+\draw [line width=0.5pt, draw=mygreen] (-1.5334542960831044,2.578472013)-- (2.803532157795635,1.0678049635611138);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5334542960831044, draw=mygreen] plot(\x,{(-5.626669490386022-0*\x)/-2.18217202359296});
+\draw [line width=0.5pt, draw=mygreen] (2.803532157795635,1.0678049635611138)-- (0.5704203050195396,-2.945270900209591);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.5704203050195396, draw=mygreen] plot(\x,{(--3.543041738976674-0.9141107372279382*\x)/-1.0259207101154784});
+
+%blue
+
+\draw [line width=0.5pt, draw=myyellow] (-1.5389359535390779,2.575204095)-- (2.8063364904842576,1.0604128923096425);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5389359535390779, draw=myyellow] plot(\x,{(-5.605421944423016-0*\x)/-2.1766903661369863});
+\draw [line width=0.5pt, draw=myyellow] (2.806336490484257,1.0604128923096425)-- (0.5486156646238993,-2.9494102550390098);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.5486156646238993, draw=myyellow] plot(\x,{(--3.5385513393077326-0.9086906836594855*\x)/-1.0307244950954204});
+
+%indigo
+
+\draw [line width=0.5pt, draw=myorange] (-1.5464879817929291,2.570675966)-- (2.810148103015898,1.05027026955739);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5464879817929291, draw=myorange] plot(\x,{(-5.576151792125362-0*\x)/-2.169138337883135});
+\draw [line width=0.5pt, draw=myorange] (2.8101481030158975,1.05027026955739)-- (0.5186258999216984,-2.9548311586164124);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.5186258999216984, draw=myorange] plot(\x,{(--3.532329301618131-0.9012216452518325*\x)/-1.0372614373863676});
+
+%violet
+
+\draw [line width=0.5pt, draw=myred] (-1.5566119463587236,2.564558295)-- (2.8151645805619148,1.0367489495290845);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5566119463587236, draw=myred] plot(\x,{(-5.536918220115211-0*\x)/-2.1590143733173406});
+\draw [line width=0.5pt, draw=myred] (2.8151645805619148,1.0367489495290845)-- (0.4785192094328503,-2.9615906817458355);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.4785192094328503, draw=myred] plot(\x,{(--3.5239230968623514-0.8912072824037787*\x)/-1.045878254458771});
+
+\end{tikzpicture}
+}
+
+\newcommand{\secondary}
+{
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-8,-5.5) rectangle (3.430433722156438,3.330141435297047);
+\draw [shift={(-1.0770329614269012,-2.8)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (180:0.5576249556023645) arc (180:248.96053021868272:0.5576249556023645) -- cycle;
+\draw [shift={(-1.0770329614269012,-2.8)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (24.51948074501533:0.5576249556023645) arc (24.51948074501533:68.96053021868276:0.5576249556023645) -- cycle;
+\draw [shift={(2.820479778289686,-1.022200479484804)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (160.0784312713479:0.5576249556023645) arc (160.0784312713479:204.51948074501533:0.5576249556023645) -- cycle;
+\draw [shift={(2.820479778289686,-1.022200479484804)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (115.63738179768048:0.5576249556023645) arc (115.63738179768048:160.0784312713479:0.5576249556023645) -- cycle;
+\draw [shift={(0.9669788773499723,2.839885886925562)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-108.80366767598697:0.5576249556023645) arc (-108.80366767598697:-64.36261820231954:0.5576249556023645) -- cycle;
+\draw [shift={(0.9669788773499723,2.839885886925562)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-153.2447171496544:0.5576249556023645) arc (-153.2447171496544:-108.80366767598697:0.5576249556023645) -- cycle;
+\draw [shift={(-2.858210938600653,0.9113891761830262)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (162.31423337667817:0.5576249556023645) arc (162.31423337667817:231.27476359536095:0.5576249556023645) -- cycle;
+\draw [shift={(-5.8342792390694145,-2.8)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (0:0.5576249556023645) arc (0:231.27476359536095:0.5576249556023645) -- cycle;
+\draw [line width=0.5pt,color=qqzzff] (0,0) circle (3cm);
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt,domain=-12.729178337151982:0] plot(\x,{(-0-2.8*\x)/-1.0770329614269012});
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt] (0,0)-- (2.820479778289686,-1.022200479484804);
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt,domain=-12.729178337151982:0] plot(\x,{(-0--0.9113891761830262*\x)/-2.858210938600653});
+\draw [line width=0.5pt,dash pattern=on 1pt off 1pt] (0,0)-- (0.9669788773499723,2.839885886925562);
+\draw [line width=0.5pt,color=ffqqqq] (-1.0770329614269012,-2.8)-- (2.820479778289686,-1.022200479484804);
+\draw [line width=0.5pt,color=ffqqqq] (2.820479778289686,-1.022200479484804)-- (0.9669788773499723,2.839885886925562);
+\draw [line width=0.5pt,color=ffqqqq] (0.9669788773499723,2.839885886925562)-- (-2.858210938600653,0.9113891761830262);
+\draw [line width=0.5pt,color=ffqqqq,domain=-12.729178337151982:-1.0770329614269012] plot(\x,{(--8.17056619074427-0*\x)/-2.9180593538372395});
+\draw [line width=0.5pt,color=ffqqqq,domain=-12.729178337151982:-2.858210938600653] plot(\x,{(-5.52727962259094-1.5400480331769655*\x)/-1.2349252301939693});
+\draw [rotate around={0:(0,0)},line width=0.5pt,color=ttffcc,fill=ttffcc,fill opacity=0.25] (0,0) ellipse (3cm and 3cm);
+\begin{scriptsize}
+\draw [fill=black] (0,0) circle (2.5pt);
+\draw[color=black] (0.337833122463426,0.2911964584027634) node {$O$};
+\draw [fill=uuuuuu] (-1.0770329614269012,-2.8) circle (0.5pt);
+\draw[color=uuuuuu] (-0.9632917739420913,-2.9616157826110254) node {$A$};
+\draw[color=qqwuqq] (-1.3722167413838253,-3.147490767811813) node [below left]{$\alpha$};
+\draw[color=qqwuqq] (-0.21979183313893852,-2.088003352167322) node [left]{$\beta$};
+\draw [fill=uuuuuu] (2.820479778289686,-1.022200479484804) circle (0.5pt);
+\draw[color=uuuuuu] (3.2560703901158004,-0.9355784439224368) node {$B$};
+\draw[color=qqwuqq] (2.3266954641118596,-0.8612284498421217) node [below left]{$\beta$};
+\draw[color=qqwuqq] (2.5311579478327264,-0.28501599571967917) node [below left]{$\beta$};
+\draw [fill=uuuuuu] (0.9669788773499723,2.839885886925562) circle (0.5pt);
+\draw[color=uuuuuu] (1.1185080603067363,3.209433726055134) node {$C$};
+\draw[color=qqwuqq] (1.5460205262685491,2.149946310410643) node [left = 10pt]{$\beta$};
+\draw[color=qqwuqq] (0.7653455884252388,2.2800588000511945) node [ left = 4pt]{$\beta$};
+\draw [fill=uuuuuu] (-2.858210938600653,0.9113891761830262) circle (0.5pt);
+\draw[color=uuuuuu] (-3.0450916081909187,1.4622088651677274) node {$D$};
+\draw[color=qqwuqq] (-3.435429077112574,0.867408912525206) node [left = 2pt]{$\alpha$};
+\draw [fill=uuuuuu] (-5.8342792390694145,-2.8) circle (0.5pt);
+\draw[color=uuuuuu] (-5.53581640988148,-2.998790779651183) node {$E$};
+\draw[color=qqwuqq] (-5.888978881762978,-1.9021283669665343) node [below]{$D(\alpha)$};
+\end{scriptsize}
+\end{tikzpicture}
+}
 
 
 \title{The Calculus of Rainbows}
@@ -21,7 +267,17 @@ Althea Loyola
 
 % Document proper
 \begin{document}
-\setstretch{1.15}
+
+\definecolor{zzffff}{rgb}{0.6,1,1}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\definecolor{ccqqqq}{rgb}{0.8,0,0}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqzzcc}{rgb}{0,0.6,1}
+\definecolor{ttffcc}{rgb}{0.2,1,0.8}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+\definecolor{qqzzff}{rgb}{0,0.6,1}
+\setstretch{1.05}
 
 \maketitle
 
@@ -33,50 +289,217 @@ With scientific breakthroughs and discoveries throughout the history of humanity
 
 \section{Scientific explanation}
 
-\subsection{Fermat's principle of optics}
+\subsection{Fermat's principle of optics} \label{fermat}
 
-\subsection{Snell's law}
+Fermat's principle states that the path taken by a ray between two given points
+is the path that can be traversed in the least time. In an ideal scenario -- in a vacuum -- the path of least time is the path least distance, the line, as descibed by the equation
 
-When light passes from a medium to another with different speed, it causes the light ray to bend. Consequently, it causes a change in the index of refraction, which is the ratio of the speed of light in a vacuum and the speed of light in a medium. This change in the index of refraction affects the direction of the propagation of light, bending it as it passes through the medium.
-The law of Refraction or Snell's Law is the relationship between the incident angle and the refracted angle in two different mediums. “Snell's Law states that the ratio of the sine of the angles of incidence and transmission is equal to the ratio of the refractive index of the materials at the interface.” The mathematical formula for Snell’s Law is 
-
-\begin{equation} \label{refract}
-\frac{n_1}{n_2} = \frac{\sin \theta_1}{\sin \theta_2}
+\begin{equation} \label{distance}
+d = vt
 \end{equation}
 
-Where $n_1$ and $n_2$ are the indices of refraction from the incident medium and the outgoing medium, and the theta is the incident angle and the refracted angle. This formula can be derived from Fermat’s Principle of Last Time.
+where $d$ is the distance, $v$ is the velocity, and $t$ is the time.\\
+
+However, when there are interferences to the path of the light, the path may take a different path, not a straight line, but the path of least time as suggested by Fermat.
 
 
-\subsection{Law of reflection}
+\subsection{Snell's law} \label{snells}
 
-\subsection{Light wavelengths and their refractive interactions}
+The first case of Fermat's principle of optics is when light passes through two different objects. The phase velocity of light is computed as
 
+\begin{equation} \label{phase}
+v = \dfrac{c}{n}
+\end{equation}
 
-\begin{table}[]
+where $v$ is the phase velocity of light, $c$ is the velocity of light in a vacuum, and $n$ is the refractive index of the medium the light is passing through.\\
+
+Now, we consider a light ray travelling from point $A$ to point $B$ with different refractive indices, $n_1$ and $n_2$, respectively.\\
+
+\begin{figure}[H]
 \centering
-\def\arraystretch{1.5}
+\snells
+\caption{Refraction of light passing through different mediums.}
+\label{fig:snell}
+\end{figure}
+
+Figure \ref{fig:snell} visualizes how light behaves when there is a change in the medium it travels to The calculation can be visualized using the figure below. Using the Pythagorean Theorem,\\
+
+\begin{align}
+d_1 &= \sqrt{x^2 + y_1^2} \nonumber\\
+d_2 &= \sqrt{(a-x)^2 +  qy_2^2} \nonumber
+\end{align}
+
+From Equation \eqref{distance},
+
+\begin{align}
+d_1 &= v_1 t_1 & d_2 &= v_2 t_2 \nonumber\\
+t_1 &= \dfrac{d_1}{v_1} & t_2 &= \dfrac{d_2}{v_2}\nonumber\\
+t_1 &= \dfrac{\sqrt{x^2 + y_1^2}}{v_1} & t_2 &= \dfrac{\sqrt{(a-x)^2 + qy_2^2}}{v_2} \nonumber\\
+\end{align}
+
+We can then create a function $T(x)$ that measures the total time depending on the value of $x$.
+
+\begin{equation}
+T(x) = t_1 + t_2 =\dfrac{\sqrt{(a-x)^2 + qy_2^2}}{v_1} + \dfrac{\sqrt{(a-x)^2 + qy_2^2}}{v_2} 
+\end{equation}
+
+Getting the derivative of $T$,
+
+\begin{align}
+T'(x) &= (2x) \left( \dfrac{1}{2} \right) \left(\dfrac{(x^2 + y_1^2)^{-1/2}}{v_1} \right) - 2(a-x)\left( \dfrac{1}{2} \right) \left( \dfrac{[(a-x)^2+y_2^2]^{-1/2}}{v_2} \right) \nonumber\\
+T'(x) &= (x) \dfrac{(x^2 + y_1^2)^{-1/2}}{v_1} - (a-x)\dfrac{[(a-x)^2+y_2^2]^{-1/2}}{v_2}
+\end{align}
+
+To get the minimum $T$, we can equate $T'(x) = 0$.
+
+\begin{align}
+(x) \dfrac{(x^2 + y_1^2)^{-1/2}}{v_1} - (a-x)\dfrac{[(a-x)^2+y_2^2]^{-1/2}}{v_2} &= 0  \nonumber \\
+\dfrac{1}{v_1} \dfrac{x}{(x^2 + y_1^2)^{1/2}}  -  \dfrac{1}{v_2} \dfrac{a-x}{[(a-x)^2 + y_2^2]^{1/2}}  &= 0
+\end{align}
+
+Observe from the figure that
+
+\begin{align}
+\sin \theta_1 &= \dfrac{x}{d_1} = \dfrac{x}{\sqrt{x^2 + y_1^2}} =\dfrac{x}{(x^2 +y_1^2)^{1/2}} \\
+\sin \theta_2 &= \dfrac{a-x}{d_2} = \dfrac{a-x}{\sqrt{(a-x)^2 + y_2^2}} = \dfrac{a-x}{[(a-x)^2 + y_2^2]^{1/2}} 
+\end{align}
+
+giving us
+
+\begin{align} 
+\dfrac{1}{v_1}\dfrac{x}{(x^2 + y_1^2)^{1/2}} - \dfrac{1}{v_2} \dfrac{a-x}{[(a-x)^2 + y_2^2]^{1/2}} &= 0 \nonumber\\
+\sin(\theta_1)\dfrac{1}{v_1} - \sin(\theta_2)\dfrac{1}{v_2} &= 0 \label{protosnell}
+\end{align}
+
+Using Equation \eqref{phase},
+
+\begin{align}
+v_1 &= \dfrac{c}{n_1} & v_2 &= \dfrac{c}{n_1} \nonumber\\
+\dfrac{1}{v_1} &= \dfrac{n_1}{c} & \dfrac{1}{v_2} &= \dfrac{n_2}{c}
+\end{align}
+
+Substituting these to Equation \eqref{protosnell},
+
+\begin{align}
+\sin(\theta_1)\dfrac{1}{v_1} - \sin(\theta_2)\dfrac{1}{v_2} &= 0 \nonumber\\
+\sin(\theta_1)\dfrac{n_1}{c} - \sin(\theta_2)\dfrac{n_2}{c} &= 0 \nonumber\\
+\sin(\theta_1)\dfrac{n_1}{c} &= \sin(\theta_2)\dfrac{n_2}{c} \nonumber\\
+n_1 \sin(\theta_1) &= n_2 \sin(\theta_2) \label{refract}
+\end{align}
+
+Equation \eqref{refract} is what we call the law of refraction or {\itshape Snell's law}. Snell's Law is shows the relationship between the incident angle and the refracted angle in two different mediums. 
+
+\subsection{Law of reflection} \label{reflection}
+
+Another case of Fermat's principle of optics is if rather than passing through, the light ray bounces back.\\
+
+
+\begin{figure}[H]
+\centering
+\reflection
+\caption{A light ray getting reflected at a flat surface}
+\label{fig:reflect}
+\end{figure}
+
+Figure \ref{fig:reflect} shows a ray of light from point $A$ reflects off the surface at point $P$ before arriving at point $B$, a horizontal distance $a$ from point $A$.\\
+
+Using the Pythagorean theorem,
+
+\begin{align}
+d_1 &= \sqrt{x^2 + y_1^2} \nonumber\\
+d_2 &= \sqrt{(a-x)^2 +y_2^2} \nonumber
+\end{align}
+
+Using Equation \eqref{distance},
+
+\begin{align}
+d_1 &= vt_1 & d_2 &= vt_2 & \text{ note that the velocity of light at } d_1 \text{ and } d_2 \text{ are equal} \nonumber\\
+t_1 &= \dfrac{d_1}{v} & t_2 &= \dfrac{d_2}{v}
+\end{align}
+
+We can then create a function $T(x)$ that measures the total time depending on the value of $x$
+
+\begin{equation} 
+T(x) = t_1 + t_2 = \dfrac{\sqrt{x^2 +y_1^2}}{v} + \dfrac{\sqrt{(a-x)^2 + y_2^2}}{v}
+\end{equation}
+
+Getting the derivative of $T$,
+
+\begin{equation}
+T'(x) = \dfrac{x}{v\sqrt{x^2 + y_1^2}} + \dfrac{-(a-x)}{v\sqrt{(a-x)^2 + y_2^2}}
+\end{equation}
+
+Equating $T'(x) = 0$ to get the minimum value,
+
+\begin{align}
+\dfrac{x}{v\sqrt{x^2 + y_1^2}} + \dfrac{-(a-x)}{v\sqrt{(a-x)^2 + y_2^2}} &= 0 \nonumber\\
+\dfrac{x}{v\sqrt{x^2 + y_1^2}} &= \dfrac{a-x}{v\sqrt{(a-x)^2 + y_2^2}}\nonumber\\
+\dfrac{x}{\sqrt{x^2 + y_1^2}} &= \dfrac{a-x}{\sqrt{(a-x)^2 + y_2^2}} \label{protoreflect}
+\end{align}
+
+Observe from Figure \ref{fig:reflect} that
+
+\begin{align}
+\sin \theta_1 &= \dfrac{x}{\sqrt{x^2 + y_1^2}} \\
+\sin \theta_2 &= \dfrac{a-x}{\sqrt{(a-x)^2 + y_2^2}} 
+\end{align}
+
+Substituting these to Equation \eqref{protoreflect},
+
+\begin{align}
+\sin \theta_1 &= \sin \theta_2 \nonumber\\
+\theta_1 &= \theta_2 \label{reflect}
+\end{align}
+
+Equation \eqref{reflect} is what we call the law of reflection, showing that the angle of incidence $\theta_1$ is equal to the angle of reflection $\theta_2$.\\
+
+Rough surfaces contain varying planes that diffuses light at different angles at the point where the light ray bounces. This is what we call {\itshape diffused reflection}.  On the other hand, when light is directed in a smooth plane like polished metal or a glass mirror, the light ray is reflected at an angle equal to the incident angle with respect to the line perpendicular to the plane. This is what we call {\itshape specular reflection}
+
+\subsection{Light wavelengths and their refractive interactions} \label{indices}
+
+\definecolor{myred}{HTML}{B53737}
+\definecolor{myorange}{HTML}{FF6600}
+\definecolor{myyellow}{HTML}{FFD400}
+\definecolor{mygreen}{HTML}{006400}
+\definecolor{myblue}{HTML}{1C4966}
+\definecolor{myindigo}{HTML}{4B0082}
+\definecolor{myviolet}{HTML}{3c1361}
+
+\begin{table}[H]
+\centering
+\def\arraystretch{1.25}
 \begin{tabular}{|c|c|c|}
 \hline
-Wavelength (nm) & Refractive Index & Color  \\ \hline
-400             & 1.3445           & Violet \\ \hline
-450             & 1.3406           & Indigo \\ \hline
-500             & 1.3377           & Blue   \\ \hline
-550             & 1.3356           & Green  \\ \hline
-600             & 1.3339           & Yellow \\ \hline
-650             & 1.3326           & Orange \\ \hline
-700             & 1.3314           & Red    \\ \hline
+{\bfseries Wavelength (nm)} & {\bfseries Refractive Index} & {\bfseries Color}  \\ \hline
+400             & 1.3445           & \textcolor{myviolet}{Violet} \\ \hline
+450             & 1.3406           & \textcolor{myindigo}{Indigo} \\ \hline
+500             & 1.3377           & \textcolor{myblue}{Blue}   \\ \hline
+550             & 1.3356           & \textcolor{mygreen}{Green}  \\ \hline
+600             & 1.3339           & \textcolor{myyellow}{Yellow} \\ \hline
+650             & 1.3326           & \textcolor{myorange}{Orange} \\ \hline
+700             & 1.3314           & \textcolor{myred}{Red}    \\ \hline
 \end{tabular}
+\caption{Visible light wavelengths and their corresponding refractive indices on water}
 \end{table}
 
 
 \section{Mathematical derivation}
 
-\subsection{The angle of a primary rainbow}
+\subsection{The angle of a primary rainbow} \label{sec:primary}
 
-The figure shows a ray of sunlight entering a spherical raindrop at $A$. Some of the light
+
+\begin{figure}[H]
+\centering
+\primary
+\caption{Formation of a primary rainbow, showing Snell’s Law and the Law of Reflection at work.}
+\label{primary}
+\end{figure}
+
+
+Figure \ref{primary} shows a ray of sunlight entering a spherical raindrop at $A$. Some of the light
 is reflected, but the line $AB$ shows the path of the part that enters the drop. \\
 
-Notice that the light is refracted toward the normal line $AO$. Since there is a change in the medium of the passing light, Snell’s law applied. \
+Notice that the light is refracted toward the normal line $AO$. Since there is a change in the medium of the passing light, Snell’s law applies. 
 
 \begin{equation} \label{eq:snell}
 \sin \alpha = k \sin \beta
@@ -88,69 +511,69 @@ At $B$ some of the light passes through the drop and is refracted into the air, 
 
 The angle of deviation $D(\alpha)$ is the amount of clockwise rotation that the ray has undergone during the stage of refraction, internal reflection, and another refraction. Using Geometry, 
 
-\begin{align*}
-D(\alpha) &= (\alpha - \beta) + (\pi - 2\beta) +(\alpha - beta) \\
-&= \pi + 2\alpha - 4\beta\\
-\end{align*}
+\begin{align}
+D(\alpha) &= (\alpha - \beta) + (\pi - 2\beta) +(\alpha - beta) \nonumber\\
+D(\alpha) &= \pi + 2\alpha - 4\beta\\
+\end{align}
 
-Using Equation \ref{eq:snell} to isolate $\beta$ in terms of $\alpha$,
+Using Equation \eqref{eq:snell} to isolate $\beta$ in terms of $\alpha$,
 
-\begin{align*}
-\sin \alpha &= k \sin \beta\\
-\frac{\sin \alpha}{k} &= \sin \beta\\
-\beta &= \arcsin \left(\frac{\sin \alpha}{k} \right)
-\end{align*}
+\begin{align}
+\sin \alpha &= k \sin \beta \nonumber\\
+\dfrac{\sin \alpha}{k} &= \sin \beta \nonumber\\
+\beta &= \arcsin \left(\dfrac{\sin \alpha}{k} \right) \label{beta}
+\end{align}
 
-Substituting $\beta$,
+Substituting $\beta$ on Equation \eqref{beta},
 
-\begin{equation}\notag
-D(\alpha) = \pi + 2\alpha - 4\arcsin \left( \frac{\sin \alpha}{k} \right)
+\begin{equation}
+D(\alpha) = \pi + 2\alpha - 4\arcsin \left( \dfrac{\sin \alpha}{k} \right)
 \end{equation}
 
 Getting the derivative of $D$,
 
-\begin{align*}
-D’(\alpha) &= 0 + 2 - 4 \frac{1}{ \sqrt{1 -  \left( \dfrac{\sin \alpha}{k} \right) ^2 } } \left(  \dfrac{\cos \alpha}{k} \right) \\
-D(\alpha) &= 2 - \frac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}}
-\end{align*}
+\begin{align}
+D’(\alpha) &= 0 + 2 - 4 \left[ \frac{1}{ \sqrt{1 -  \left( \dfrac{\sin \alpha}{k} \right) ^2 } } \right] \left(  \dfrac{\cos \alpha}{k} \right) \nonumber \\
+D(\alpha) &= 2 - \dfrac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}}
+\end{align}
 
 To get the minimum of $D’(\alpha)$, we shall equate it to $0$.
 
-\begin{align*}
-2 - \frac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}} &= 0\\
-2 &=  \frac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}}
-\end{align*}
+\begin{align}
+2 - \dfrac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}} &= 0 \nonumber\\
+2 &=  \dfrac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}}
+\end{align}
 
 It is good to note that since $k>1$, then $1-\dfrac{\sin^2 \alpha}{k} >0$ for all $\alpha$.
 
-\begin{align*}
-2 k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}} &= 4 \cos \alpha\\
+\begin{align}
+2 k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}} &= 4 \cos \alpha \nonumber\\
 k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}} &= 2\cos \alpha
-\end{align*}
+\end{align}
 
 Squaring both sides,
 
-\begin{align*}
-k^2 \left(1 -  \frac{\sin^2 \alpha}{k^2} \right) &= 4 \cos^2 \alpha\\
-k^2 - \sin^2 \alpha &= 4 \cos^2 \alpha\\
-k^2 &= \sin^2 \alpha + 4 \cos^2 \alpha\\
-k^2 &= \sin^2 \alpha + \cos^2 \alpha + 3\cos^2 \alpha\\
-k^2 &= 1 + 3\cos^2 \alpha\\
-\sqrt{\frac{k^2 -1}{3}} &= \cos \alpha\\
-\alpha &=  \arccos \sqrt{\frac{k^2 -1}{3}}
-\end{align*}
+\begin{align}
+k^2 \left(1 -  \dfrac{\sin^2 \alpha}{k^2} \right) &= 4 \cos^2 \alpha \nonumber\\
+k^2 - \sin^2 \alpha &= 4 \cos^2 \alpha \nonumber\\
+k^2 &= \sin^2 \alpha + 4 \cos^2 \alpha \nonumber\\
+k^2 &= \sin^2 \alpha + \cos^2 \alpha + 3\cos^2 \alpha \nonumber\\
+k^2 &= 1 + 3\cos^2 \alpha \nonumber\\
+\sqrt{\dfrac{k^2 -1}{3}} &= \cos \alpha \nonumber\\
+\alpha &=  \arccos \sqrt{\dfrac{k^2 -1}{3}}
+\end{align}
 
 $D(\alpha)$ is minimum when 
 
 \begin{equation}\label{min}
-\alpha =  \arccos \sqrt{\frac{k^2 -1}{3}}
+\alpha =  \arccos \sqrt{\dfrac{k^2 -1}{3}}
 \end{equation}
 
 Substituting $k \approx \dfrac{4}{3}$,
 
 \begin{align*}
-\alpha &\approx  \arccos \sqrt{\dfrac{ \left( \dfrac{4}{3} \right)^2 -1}{3}}\\
-&\approx \arccos \sqrt{\dfrac{ \dfrac{16}{9} -1}{3}}\\
+\alpha &\approx  \arccos \sqrt{\dfrac{ \left( \dfrac{4}{3} \right)^2 -1}{3}} \\
+&\approx \arccos \sqrt{\dfrac{16/9 -1}{3}}\\
 &\approx \arccos \sqrt{\dfrac{7}{27}}\\
 \alpha &\approx 1.0366\\
 \alpha &\approx 59.4 \degree
@@ -161,36 +584,36 @@ $D(\alpha)$ is minimum at $\alpha \approx 59.4 \degree$.\\
 Substituting $\alpha \approx  59.4 \degree$,
 
 \begin{align*}
-\min(D(\alpha)) \approx D(1.0366) &\approx \pi + 2\alpha - 4\arcsin \left( \frac{\sin \alpha}{\dfrac{4}{3}} \right)\\
-&\approx \pi + 2(1.0366) -  4\arcsin \left( \frac{\sin (1.0366)}{\dfrac{4}{3}} \right)\\
+\min(D(\alpha)) \approx D(1.0366) &\approx \pi + 2\alpha - 4\arcsin \left( \dfrac{\sin \alpha}{4/3} \right)\\
+&\approx \pi + 2(1.0366) -  4\arcsin \left( \dfrac{\sin 1.0366}{4/3} \right)\\
 &\approx 138 \degree
 \end{align*}
 
 The minimum value of the deviation is $D(\alpha) \approx 138 \degree$ which occurs when $\alpha \approx 59.4 \degree$.\\
 
-The minimum deviation angle has huge significance since $D’(\alpha) \approx 0$ implies that $\Delta D/\Delta \alpha \approx 0$, which means that light rays deviate by approximately the same amount at $\alpha \approx 59.4 \degree$. This implies that there is a concentration of rays coming from near the direction of the minimum deviation, causing the formation of the rainbow from these concentrated light rays.\\
+The minimum deviation angle has huge significance since $D’(\alpha) \approx 0$ implies that $\Delta D/\Delta \alpha \approx 0$, which means that light rays deviate by approximately the same amount at $\alpha \approx 59.4 \degree$. This implies that there is a concentration of rays coming from near the direction of the minimum deviation, causing the formation of the rainbow from these concentrated light rays \cite[219]{stewart21}.\\
 
 The figure shows that the angle of elevation from the observer up to the highest point on the rainbow is $180 \degree - 138 \degree = 42 \degree$. This angle is called the {\itshape rainbow angle}.
 
-\subsection{Colors in a primary rainbow}
+\subsection{Colors in a primary rainbow} \label{sec:primary}
 
 Sunlight comprises a range of wavelengths, from the reds with the longest wavelengths and the violets with the shortest wavelengths. As Newton discovered in his prism experiments of
 1666, the index of refraction is different for each color in a phenomenon called dispersion.
 For red light, the refractive index is $k \approx 1.3318$, whereas for violet light it is $k \approx 1.3435$.\\
 
-As previously mentioned in Equation \ref{min}, the minimum of $D(\alpha)$ is when $\alpha = \arccos \sqrt{\dfrac{k^2 -1}{3}}$\\
+As previously mentioned in Equation \eqref{min}, the minimum of $D(\alpha)$ is when $\alpha = \arccos \sqrt{\dfrac{k^2 -1}{3}}$\\
 
 Substituting $k \approx 1.3318$ for red light,
 
-\begin{equation}\notag
-\alpha \approx \arccos \sqrt{\dfrac{(1.3318^2 -1}{3}}
-\approx 1.0381
-\end{equation}
+\begin{align*}
+\alpha &= \arccos \sqrt{\dfrac{1.3318^2 -1}{3}}\\
+&\approx 1.0381
+\end{align*}
 
 Substituting $\alpha \approx 1.0381$ and $k \approx 1.3318$ on $D(\alpha)$,
 
 \begin{align*}
-D(1.0381) &= \pi + 2(1.0381) - 4\arcsin \left( \frac{\sin 1.0381}{1.3318} \right)\\
+D(1.0381) &= \pi + 2(1.0381) - 4\arcsin \left( \dfrac{\sin 1.0381}{1.3318} \right)\\
 &\approx 2.4041\\
 &\approx 137.7 \degree
 \end{align*}
@@ -199,27 +622,140 @@ The rainbow angle of the red light is $\approx 180 \degree - 137.7 \degree \appr
 
 Substituting $k \approx 1.3435$ for violet light,
 
-\begin{equation}\notag
-\alpha \approx \arccos \sqrt{\dfrac{(1.3435^2 -1}{3}}
-\approx 1.0263
-\end{equation}
+\begin{align*}
+\alpha &= \arccos \sqrt{\dfrac{1.3435^2 -1}{3}}\\
+&\approx 1.0263
+\end{align*}
 
 Substituting $\alpha \approx 1.0263$ and $k \approx 1.3435$ on $D(\alpha)$,
 
 \begin{align*}
-D(1.0263) = \pi + 2(1.0263) - 4\arcsin \left( \frac{\sin 1.0263}{1.3435} \right)
-\approx 2.4334
-\approx 139.4 \degree
+D(1.0263) &= \pi + 2(1.0263) - 4\arcsin \left( \dfrac{\sin 1.0263}{1.3435} \right)\\
+&\approx 2.4334\\
+&\approx 139.4 \degree
 \end{align*}
 
 The rainbow angle of the violet light is $\approx 180 \degree - 139.4 \degree = 40.6 \degree$.\\
 
-As observed in the calculations, the rainbow angle of the red light ($42.3 \degree$) is larger than the rainbow angle of the violet light ($40.6 \degree$). This implies that the rainbow’s color appears red on top, violet on the bottom, and all other visible light wavelengths in between.
+\begin{figure}[H]
+\centering
+\primarycolor
+\caption{Colors of the rainbow based on their respective minimum $\alpha$ value and refractive indices.}
+\label{fig:primarycolor}
+\end{figure}
+
+As observed in the calculations and as visualized in Figure \ref{fig:primarycolor}, the rainbow angle of the red light ($42.3 \degree$) is larger than the rainbow angle of the violet light ($40.6 \degree$). This implies that the rainbow’s color appears red on top, violet on the bottom, and all other visible light wavelengths in between.
 
 \subsection{Double rainbows}
+
+There are instances where another fainter rainbow appears in addition of the stronger rainbow. This phenomenon is called {\itshape double rainbow}, and the fainter rainbow is colloquially known as the {\itshape secondary rainbow}. 
+
+\begin{figure}[H]
+\centering
+\secondary
+\caption{Formation of a secondary rainbow. Compared to the primary rainbow, the light ray is internally reflected twice.}
+\label{fig:secondary}
+\end{figure}
+
+As visulized in Figure \ref{fig:secondary}, this phenomenon results from the part of a ray that enters a raindrop and is refracted at $A$, reflected twice (at $B$ and $C$), and refracted as it leaves the drop at $D$. Whereas $D(\alpha)$ is the amount of {\itshape clockwise} deviation, in secondary rainbows, the deviation angle $D(\alpha)$ refers to the total amount of counterclockwise rotation that the ray undergoes in this four-stage process.\\
+
+As seen in Figure \ref{fig:secondary}, the light ray has undergone two refractions and two internal reflections. The refractions deviate the ray by $\alpha - \beta$ while the internal reflections deviate the ray by $\pi - 2\beta$. Therefore, the angle of deviation $D(\alpha)$ is
+
+\begin{align}
+D(\alpha) &= (\alpha - \beta) + (\pi - 2\beta) + (\pi - 2\beta) + (\alpha - \beta) \nonumber \\
+D(\alpha) &= 2\pi + 2\alpha - 6\beta \label{eq:secondary}
+\end{align}
+
+Using Equation \eqref{eq:snell} to get $\beta$ in terms of $\alpha$,
+
+\begin{align*}
+\sin \alpha &= k \sin \beta\\
+\beta &= \arcsin \left( \frac{\sin \alpha}{k} \right)
+\end{align*}
+
+Substuting $\beta$ on Equation \eqref{eq:secondary},
+
+\begin{align}
+D(\alpha) &= 2\pi + 2\alpha - 6\beta \nonumber\\
+D(\alpha) &= 2\pi + 2\alpha - 6 \arcsin \left( \frac{\sin \alpha}{k} \right)
+\end{align}
+
+In order to get the minimum value of $D$, we can equate its derivative, $D'(\alpha) = 0$.
+
+\begin{align}
+D'(\alpha) &= 0 + 2 - 6 \left[ \frac{1}{\sqrt{1- \left( \dfrac{\sin \alpha}{k}\right)^2}}\right]\left(\dfrac{\cos \alpha}{k}\right) \nonumber\\
+D'(\alpha) &= 2 - \dfrac{6\cos \alpha}{k\sqrt{1-\dfrac{\sin^2 \alpha}{k^2}}}
+\end{align}
+
+Equating $D'(\alpha) = 0$,
+
+\begin{align}
+0 &= 2 - \dfrac{6\cos \alpha}{k\sqrt{1-\dfrac{\sin^2 \alpha}{k^2}}}\nonumber\\
+\dfrac{6\cos \alpha}{k\sqrt{1-\dfrac{\sin^2 \alpha}{k^2}}} &= 2
+\end{align}
+
+As mentioned in Section \ref{sec:primary}, since $k>1$, then $1-\dfrac{\sin^2 \alpha}{k} >0$ for all $\alpha$.
+
+\begin{align}
+\dfrac{6\cos \alpha}{k\sqrt{1-\dfrac{\sin^2 \alpha}{k^2}}} &= 2\nonumber\\
+6\cos \alpha &= 2k\sqrt{1-\dfrac{\sin^2 \alpha}{k^2}}\nonumber\\
+3\cos \alpha &= k\sqrt{1-\dfrac{\sin^2 \alpha}{k^2}}
+\end{align}
+
+Squaring both sides,
+
+\begin{align}
+9\cos^2 \alpha &= k^2\left( 1- \dfrac{\sin^2\alpha}{k^2}\right) \nonumber\\
+9\cos^2 \alpha &= k^2 - \sin^2 \alpha \nonumber\\
+k^2 &= \sin^2 \alpha +9 \cos^2 \alpha \nonumber\\
+k^2 &= \sin^2 \alpha + \cos^2 \alpha + 8\cos^2 \alpha \nonumber\\
+k^2 &= 1 + 8\cos^2 \alpha \nonumber\\
+\cos^2 \alpha &= \frac{k^2-1}{8} \nonumber\\
+\cos \alpha &= \sqrt{\frac{k^2-1}{8}} \nonumber\\
+\end{align}
+
+This shows that $D(\alpha)$ is minimum when 
+
+\begin{equation}
+\cos \alpha = \sqrt{\frac{k^2-1}{8}}
+\end{equation}
+
+Taking $k = 4/3$,
+
+\begin{align*}
+\cos \alpha &= \sqrt{\frac{(4/3)^2-1}{8}}
+&= \sqrt{\frac{16/9-1}{8}}
+&= \sqrt{\frac{7/9}{8}}
+\cos \alpha &= \sqrt{\frac{7}{72}}
+\alpha &= \arccos \sqrt{\frac{7}{72}}
+\alpha &\approx 1.2537
+\alpha &\approx 71.8 \degree
+\end{align*}
+
+When $k=4/3$, $D(\alpha)$ is minimum when $\alpha = 71.8 \degree$.
+
+\begin{align*}
+\min(D(\alpha)) \approx D(1.2537) = 2\pi + 2(1.2537) - 6 \arcsin \left( \frac{\sin 1.2537}{4/3} \right)
+\approx 4.031
+\approx 231 \degree
+\end{align*}
+
+As mentioned in Section \ref{sec:primary}, $dD/da \approx 0$ implies that light rays converge at that certain angle, meaning that it is the best angle to properly see the rainbow.\\
+
+Let $D_2(\alpha)$ be the clockwise deviation angle of the light ray. This means that $D(\alpha) + D_2(\alpha) = 2\pi$\\
+
+Since $D$ is minimum $D(\alpha) = 231\degree$, then $D_2(\alpha) = 360\degree - 231\degree = 129 \degree$.\\
+
+The rainbow angle is $180 \degree - 129\degree = 51\degree$. Note that in Section \ref{sec:primarycolor}, the maximum rainbow angle is on the red bow at $\approx 42.4 \degree$. This means that the secondary rainbow is {\itshape always} above the primary rainbow.
 
 \subsection{Colors in a secondary rainbow}
 
 \section{Conclusion}
+
+Using the principles of light rays, laws of refraction and reflection, the rainbow angle deviations and locations were calculated. Applying the concept of Snell’s Law, the minimum angle of deviation of the primary rainbow was shown, which is at 138 degrees. The angle of deviation of the primary rainbow is the amount of clockwise rotation the ray has undergone, and at minimum angle of deviation, the rainbow is at its brightest as the rays are deviated by approximately the same amount. It is elevated at 42 degrees from the observer to the highest point of the rainbow, which is called the rainbow angle. To explain the colors in the bow, the different refraction index of each color was used. Higher refraction index has the smaller rainbow angle there is, illustrating the order of the seven colors that can be seen from a rainbow.\\
+ 
+Above the primary rainbow is the secondary rainbow that is fainter than the first. The minimum angle of deviation is at 231 degrees, but the angle of deviation in the secondary rainbow is in counterclockwise rotation and is equivalent to 129 degrees in a clockwise rotation. The bow is elevated higher than the primary one, which general rainbow angle is at 51 degrees elevation from the observer to the highest point of the bow. In the secondary rainbow, the rainbow angle gets larger as the index of refraction gets bigger. Consequently, the order of the colors in the secondary rainbow is in opposite of the primary rainbow.
+
+\printbibliography
 
 \end{document}
