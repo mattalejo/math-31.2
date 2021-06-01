@@ -10,11 +10,15 @@
 \usepackage{setspace}
 \usepackage{float}
 \usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \usepackage{graphicx,tipa}
 
-\usepackage[style=numeric]{biblatex}
+\usepackage[style=numeric, sorting=none]{biblatex}
 \addbibresource{calculus-rainbow.bib}
+
 
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.15}
@@ -123,7 +127,7 @@
 \draw [line width=0.5pt, draw=qqzzcc] (0,0) circle (3cm);
 \begin{scriptsize}
 \draw [fill=uuuuuu] (-2.23606797749979,2) circle (0.5pt);
-\draw[color=uuuuuu] (-2.156689366005456,2.1850068384627845) node [anchor=south east]{$A$};
+\draw[color=uuuuuu] (-2.156689366005456,2.1850068384627845) node [anchor=south east]{$C$};
 \draw [fill=uuuuuu] (0,0) circle (0.5pt);
 \draw[color=uuuuuu] (0.07921930062801302,0.18797730287988548) node {$O$};
 \draw[color=qqwuqq] (-2.166244531247479,2.156341342736714) node[ left=8pt] {$\alpha$};
@@ -133,7 +137,7 @@
 \draw[color=qqwuqq] (2.8693275512988374,1.0192766789359249) node [left = 6pt]{$\beta$};
 \draw[color=qqwuqq] (2.8979930470249076,0.9428353569997373) node[below left= 6pt] {$\beta$};
 \draw [fill=uuuuuu] (-0.6140168188189818,-2.9364916731037085) circle (0.5pt);
-\draw[color=uuuuuu] (-0.541866440103506,-2.7454584264213104) node [anchor=east]{$C$};
+\draw[color=uuuuuu] (-0.541866440103506,-2.7454584264213104) node [anchor=east]{$A$};
 \draw[color=qqwuqq] (-0.5132009443774359,-3.013003053197967) node [below left =6pt]{$\alpha$};
 \draw [fill=uuuuuu] (6.086727470566947,2) circle (0.5pt);
 \draw[color=uuuuuu] (6.165859559796901,2.1850068384627845) node {};
@@ -155,24 +159,24 @@
 
 %red
 
-\draw [line width=0.5pt, draw=myviolet] (-1.522457840938142,2.584980101)-- (2.7978098337965394,1.082709625851447);
-\draw [line width=0.5pt,domain=-6.46924489473801:-1.522457840938142, draw=myviolet] plot(\x,{(-5.66929687567797-0*\x)/-2.193168478737922});
-\draw [line width=0.5pt, draw=myviolet] (2.79780983379654,1.082709625851447)-- (0.6142485544560807,-2.9364432079215526);
-\draw [line width=0.5pt,domain=-6.46924489473801:0.6142485544560807, draw=myviolet] plot(\x,{(--3.5519844101822113-0.9249782549023493*\x)/-1.0161333432758997});
+\draw [line width=0.5pt, draw=myred] (-1.522457840938142,2.584980101)-- (2.7978098337965394,1.082709625851447);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.522457840938142, draw=myred] plot(\x,{(-5.66929687567797-0*\x)/-2.193168478737922});
+\draw [line width=0.5pt, draw=myred] (2.79780983379654,1.082709625851447)-- (0.6142485544560807,-2.9364432079215526);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.6142485544560807, draw=myred] plot(\x,{(--3.5519844101822113-0.9249782549023493*\x)/-1.0161333432758997});
 
 % orange
 
-\draw [line width=0.5pt, draw=myindigo] (-1.5256042352006474,2.58312441)-- (2.7994604216279537,1.0784346747664604);
-\draw [line width=0.5pt,domain=-6.46924489473801:-1.5256042352006474, draw=myindigo] plot(\x,{(-5.657099504847531-0*\x)/-2.190022084475417});
-\draw [line width=0.5pt, draw=myindigo] (2.799460421627954,1.0784346747664604)-- (0.6016966061149287,-2.9390408629669946);
-\draw [line width=0.5pt,domain=-6.46924489473801:0.6016966061149287, draw=myindigo] plot(\x,{(--3.549434531558556-0.9218696303918201*\x)/-1.0189544287751555});
+\draw [line width=0.5pt, draw=myorange] (-1.5256042352006474,2.58312441)-- (2.7994604216279537,1.0784346747664604);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5256042352006474, draw=myorange] plot(\x,{(-5.657099504847531-0*\x)/-2.190022084475417});
+\draw [line width=0.5pt, draw=myorange] (2.799460421627954,1.0784346747664604)-- (0.6016966061149287,-2.9390408629669946);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.6016966061149287, draw=myorange] plot(\x,{(--3.549434531558556-0.9218696303918201*\x)/-1.0189544287751555});
 
 %yellow
 
-\draw [line width=0.5pt, draw=myblue] (-1.5290087088629778,2.581110685)-- (2.8012343878394748,1.0738183758837456);
-\draw [line width=0.5pt,domain=-6.46924489473801:-1.5290087088629778, draw=myblue] plot(\x,{(-5.6439020792788295-0*\x)/-2.1866176108130864});
-\draw [line width=0.5pt, draw=myblue] (2.8012343878394748,1.0738183758837456)-- (0.5881253151603842,-2.9417866363262135);
-\draw [line width=0.5pt,domain=-6.46924489473801:0.5881253151603842, draw=myblue] plot(\x,{(--3.5466675006620205-0.9185051879132415*\x)/-1.0219882402140028});
+\draw [line width=0.5pt, draw=myyellow] (-1.5290087088629778,2.581110685)-- (2.8012343878394748,1.0738183758837456);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5290087088629778, draw=myyellow] plot(\x,{(-5.6439020792788295-0*\x)/-2.1866176108130864});
+\draw [line width=0.5pt, draw=myyellow] (2.8012343878394748,1.0738183758837456)-- (0.5881253151603842,-2.9417866363262135);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.5881253151603842, draw=myyellow] plot(\x,{(--3.5466675006620205-0.9185051879132415*\x)/-1.0219882402140028});
 
 %green
 
@@ -183,24 +187,24 @@
 
 %blue
 
-\draw [line width=0.5pt, draw=myyellow] (-1.5389359535390779,2.575204095)-- (2.8063364904842576,1.0604128923096425);
-\draw [line width=0.5pt,domain=-6.46924489473801:-1.5389359535390779, draw=myyellow] plot(\x,{(-5.605421944423016-0*\x)/-2.1766903661369863});
-\draw [line width=0.5pt, draw=myyellow] (2.806336490484257,1.0604128923096425)-- (0.5486156646238993,-2.9494102550390098);
-\draw [line width=0.5pt,domain=-6.46924489473801:0.5486156646238993, draw=myyellow] plot(\x,{(--3.5385513393077326-0.9086906836594855*\x)/-1.0307244950954204});
+\draw [line width=0.5pt, draw=myblue] (-1.5389359535390779,2.575204095)-- (2.8063364904842576,1.0604128923096425);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5389359535390779, draw=myblue] plot(\x,{(-5.605421944423016-0*\x)/-2.1766903661369863});
+\draw [line width=0.5pt, draw=myblue] (2.806336490484257,1.0604128923096425)-- (0.5486156646238993,-2.9494102550390098);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.5486156646238993, draw=myblue] plot(\x,{(--3.5385513393077326-0.9086906836594855*\x)/-1.0307244950954204});
 
 %indigo
 
-\draw [line width=0.5pt, draw=myorange] (-1.5464879817929291,2.570675966)-- (2.810148103015898,1.05027026955739);
-\draw [line width=0.5pt,domain=-6.46924489473801:-1.5464879817929291, draw=myorange] plot(\x,{(-5.576151792125362-0*\x)/-2.169138337883135});
-\draw [line width=0.5pt, draw=myorange] (2.8101481030158975,1.05027026955739)-- (0.5186258999216984,-2.9548311586164124);
-\draw [line width=0.5pt,domain=-6.46924489473801:0.5186258999216984, draw=myorange] plot(\x,{(--3.532329301618131-0.9012216452518325*\x)/-1.0372614373863676});
+\draw [line width=0.5pt, draw=myindigo] (-1.5464879817929291,2.570675966)-- (2.810148103015898,1.05027026955739);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5464879817929291, draw=myindigo] plot(\x,{(-5.576151792125362-0*\x)/-2.169138337883135});
+\draw [line width=0.5pt, draw=myindigo] (2.8101481030158975,1.05027026955739)-- (0.5186258999216984,-2.9548311586164124);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.5186258999216984, draw=myindigo] plot(\x,{(--3.532329301618131-0.9012216452518325*\x)/-1.0372614373863676});
 
 %violet
 
-\draw [line width=0.5pt, draw=myred] (-1.5566119463587236,2.564558295)-- (2.8151645805619148,1.0367489495290845);
-\draw [line width=0.5pt,domain=-6.46924489473801:-1.5566119463587236, draw=myred] plot(\x,{(-5.536918220115211-0*\x)/-2.1590143733173406});
-\draw [line width=0.5pt, draw=myred] (2.8151645805619148,1.0367489495290845)-- (0.4785192094328503,-2.9615906817458355);
-\draw [line width=0.5pt,domain=-6.46924489473801:0.4785192094328503, draw=myred] plot(\x,{(--3.5239230968623514-0.8912072824037787*\x)/-1.045878254458771});
+\draw [line width=0.5pt, draw=myviolet] (-1.5566119463587236,2.564558295)-- (2.8151645805619148,1.0367489495290845);
+\draw [line width=0.5pt,domain=-6.46924489473801:-1.5566119463587236, draw=myviolet] plot(\x,{(-5.536918220115211-0*\x)/-2.1590143733173406});
+\draw [line width=0.5pt, draw=myviolet] (2.8151645805619148,1.0367489495290845)-- (0.4785192094328503,-2.9615906817458355);
+\draw [line width=0.5pt,domain=-6.46924489473801:0.4785192094328503, draw=myviolet] plot(\x,{(--3.5239230968623514-0.8912072824037787*\x)/-1.045878254458771});
 
 \end{tikzpicture}
 }
@@ -277,9 +281,20 @@ Althea Loyola
 \definecolor{ttffcc}{rgb}{0.2,1,0.8}
 \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
 \definecolor{qqzzff}{rgb}{0,0.6,1}
+\definecolor{myred}{HTML}{B53737}
+\definecolor{myorange}{HTML}{FF6600}
+\definecolor{myyellow}{HTML}{FFD400}
+\definecolor{mygreen}{HTML}{006400}
+\definecolor{myblue}{HTML}{1C4966}
+\definecolor{myindigo}{HTML}{4B0082}
+\definecolor{myviolet}{HTML}{3c1361}
+
+
 \setstretch{1.05}
 
 \maketitle
+
+\tableofcontents
 
 \section{Introduction}
 
@@ -287,12 +302,12 @@ A rainbow is a meteorological phenomenon that usually occurs after rain, charact
 
 With scientific breakthroughs and discoveries throughout the history of humanity, the legends that attempt to explain the existence of rainbows are relegated to creative literature, while rainbows are explained to be optical illusions due to the reflection and refraction of light. This paper goes through the scientific explanation of rainbows and uses Calculus and Physics to derive the underlying mathematics from the phenomenon of rainbows.
 
-\section{Scientific explanation}
+\section{Scientific concepts}
 
 \subsection{Fermat's principle of optics} \label{fermat}
 
 Fermat's principle states that the path taken by a ray between two given points
-is the path that can be traversed in the least time. In an ideal scenario -- in a vacuum -- the path of least time is the path least distance, the line, as descibed by the equation
+is the path that can be traversed in the least time. In an ideal scenario -- in a vacuum -- the path of least time is also the path of least distance, the line, as descibed by the equation
 
 \begin{equation} \label{distance}
 d = vt
@@ -302,10 +317,9 @@ where $d$ is the distance, $v$ is the velocity, and $t$ is the time.\\
 
 However, when there are interferences to the path of the light, the path may take a different path, not a straight line, but the path of least time as suggested by Fermat.
 
-
 \subsection{Snell's law} \label{snells}
 
-The first case of Fermat's principle of optics is when light passes through two different objects. The phase velocity of light is computed as
+The first case of Fermat's principle of optics is when light passes through two different objects \cite{hilburnnd}. The phase velocity of light is computed as
 
 \begin{equation} \label{phase}
 v = \dfrac{c}{n}
@@ -334,7 +348,7 @@ From Equation \eqref{distance},
 \begin{align}
 d_1 &= v_1 t_1 & d_2 &= v_2 t_2 \nonumber\\
 t_1 &= \dfrac{d_1}{v_1} & t_2 &= \dfrac{d_2}{v_2}\nonumber\\
-t_1 &= \dfrac{\sqrt{x^2 + y_1^2}}{v_1} & t_2 &= \dfrac{\sqrt{(a-x)^2 + qy_2^2}}{v_2} \nonumber\\
+t_1 &= \dfrac{\sqrt{x^2 + y_1^2}}{v_1} & t_2 &= \dfrac{\sqrt{(a-x)^2 + qy_2^2}}{v_2}
 \end{align}
 
 We can then create a function $T(x)$ that measures the total time depending on the value of $x$.
@@ -350,11 +364,11 @@ T'(x) &= (2x) \left( \dfrac{1}{2} \right) \left(\dfrac{(x^2 + y_1^2)^{-1/2}}{v_1
 T'(x) &= (x) \dfrac{(x^2 + y_1^2)^{-1/2}}{v_1} - (a-x)\dfrac{[(a-x)^2+y_2^2]^{-1/2}}{v_2}
 \end{align}
 
-To get the minimum $T$, we can equate $T'(x) = 0$.
+As mentioned in Section \ref{fermat}, light rays take the path of least time. Thus we can get the minimum time by equating $T'(x) = 0$.
 
 \begin{align}
 (x) \dfrac{(x^2 + y_1^2)^{-1/2}}{v_1} - (a-x)\dfrac{[(a-x)^2+y_2^2]^{-1/2}}{v_2} &= 0  \nonumber \\
-\dfrac{1}{v_1} \dfrac{x}{(x^2 + y_1^2)^{1/2}}  -  \dfrac{1}{v_2} \dfrac{a-x}{[(a-x)^2 + y_2^2]^{1/2}}  &= 0
+\dfrac{1}{v_1} \dfrac{x}{(x^2 + y_1^2)^{1/2}}  -  \dfrac{1}{v_2} \dfrac{a-x}{[(a-x)^2 + y_2^2]^{1/2}}  &= 0 \label{badsnell}
 \end{align}
 
 Observe from the figure that
@@ -364,7 +378,7 @@ Observe from the figure that
 \sin \theta_2 &= \dfrac{a-x}{d_2} = \dfrac{a-x}{\sqrt{(a-x)^2 + y_2^2}} = \dfrac{a-x}{[(a-x)^2 + y_2^2]^{1/2}} 
 \end{align}
 
-giving us
+thus, when substituted to Equation \eqref{badsnell}, gives us
 
 \begin{align} 
 \dfrac{1}{v_1}\dfrac{x}{(x^2 + y_1^2)^{1/2}} - \dfrac{1}{v_2} \dfrac{a-x}{[(a-x)^2 + y_2^2]^{1/2}} &= 0 \nonumber\\
@@ -387,7 +401,7 @@ Substituting these to Equation \eqref{protosnell},
 n_1 \sin(\theta_1) &= n_2 \sin(\theta_2) \label{refract}
 \end{align}
 
-Equation \eqref{refract} is what we call the law of refraction or {\itshape Snell's law}. Snell's Law is shows the relationship between the incident angle and the refracted angle in two different mediums. 
+Equation \eqref{refract} is what we call the law of refraction or {\itshape Snell's law}. Snell's Law is shows the relationship between the incident angle and the refracted angle in two different mediums \cite{flens20}. 
 
 \subsection{Law of reflection} \label{reflection}
 
@@ -429,7 +443,7 @@ Getting the derivative of $T$,
 T'(x) = \dfrac{x}{v\sqrt{x^2 + y_1^2}} + \dfrac{-(a-x)}{v\sqrt{(a-x)^2 + y_2^2}}
 \end{equation}
 
-Equating $T'(x) = 0$ to get the minimum value,
+According to Section \ref{fermat}, light rays take the path of least time, thus equating $T'(x) = 0$ gets the least time.
 
 \begin{align}
 \dfrac{x}{v\sqrt{x^2 + y_1^2}} + \dfrac{-(a-x)}{v\sqrt{(a-x)^2 + y_2^2}} &= 0 \nonumber\\
@@ -465,9 +479,15 @@ Rough surfaces contain varying planes that diffuses light at different angles at
 \definecolor{myindigo}{HTML}{4B0082}
 \definecolor{myviolet}{HTML}{3c1361}
 
+Using mathematical tools, Descartes had an objective of improving the explanation of rainbows. By studying the passage of a light ray through a glass sphere with water inside. “He concluded that the primary arc was created by a single reflection inside the drop, while the secondary one may be caused by two inner reflections.” \cite[9]{corradi16} Descartes understood roughly why the rainbow is located where it is, but he was fairly straightforward in declaring that he didn't understand why the rainbow showed different colors. \\
+
+Isaac Newton discovered that different wavelengths have different refractive index, an important piece of information Descartes lacked resulting on his inconclusive explanation of the different colors of the rainbow \cite{casselman09}. According to Newton, the decomposition of light causes the production of “iridescent figures” by the prisms. Newton was also able to illustrate that blue light is refracted more than red, explaining the main components of the rainbow \cite[9]{corradi16}.
+
+
 \begin{table}[H]
 \centering
 \def\arraystretch{1.25}
+\caption{Visible light wavelengths and their corresponding refractive indices on water \cite{lavennd}}
 \begin{tabular}{|c|c|c|}
 \hline
 {\bfseries Wavelength (nm)} & {\bfseries Refractive Index} & {\bfseries Color}  \\ \hline
@@ -479,14 +499,12 @@ Rough surfaces contain varying planes that diffuses light at different angles at
 650             & 1.3326           & \textcolor{myorange}{Orange} \\ \hline
 700             & 1.3314           & \textcolor{myred}{Red}    \\ \hline
 \end{tabular}
-\caption{Visible light wavelengths and their corresponding refractive indices on water}
 \end{table}
 
 
 \section{Mathematical derivation}
 
 \subsection{The angle of a primary rainbow} \label{sec:primary}
-
 
 \begin{figure}[H]
 \centering
@@ -496,8 +514,7 @@ Rough surfaces contain varying planes that diffuses light at different angles at
 \end{figure}
 
 
-Figure \ref{primary} shows a ray of sunlight entering a spherical raindrop at $A$. Some of the light
-is reflected, but the line $AB$ shows the path of the part that enters the drop. \\
+Figure \ref{primary} shows a ray of sunlight entering a spherical raindrop at $A$. The figure assumes ideal conditions such as the raindrops being perfectly spherical and that the light rays meet no interference. As the light ray enters the raindrop, some of the light is reflected, but the line $AB$ shows the path of the part that enters the drop. \\
 
 Notice that the light is refracted toward the normal line $AO$. Since there is a change in the medium of the passing light, Snell’s law applies. 
 
@@ -512,7 +529,7 @@ At $B$ some of the light passes through the drop and is refracted into the air, 
 The angle of deviation $D(\alpha)$ is the amount of clockwise rotation that the ray has undergone during the stage of refraction, internal reflection, and another refraction. Using Geometry, 
 
 \begin{align}
-D(\alpha) &= (\alpha - \beta) + (\pi - 2\beta) +(\alpha - beta) \nonumber\\
+D(\alpha) &= (\alpha - \beta) + (\pi - 2\beta) +(\alpha - \beta) \nonumber\\
 D(\alpha) &= \pi + 2\alpha - 4\beta\\
 \end{align}
 
@@ -537,7 +554,7 @@ D’(\alpha) &= 0 + 2 - 4 \left[ \frac{1}{ \sqrt{1 -  \left( \dfrac{\sin \alpha}
 D(\alpha) &= 2 - \dfrac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}}
 \end{align}
 
-To get the minimum of $D’(\alpha)$, we shall equate it to $0$.
+To get the minimum of $D(\alpha)$, we shall equate $D(\alpha)$ to $0$.
 
 \begin{align}
 2 - \dfrac{4 \cos \alpha}{k \sqrt{1 -  \dfrac{\sin^2 \alpha}{k^2}}} &= 0 \nonumber\\
@@ -557,7 +574,7 @@ Squaring both sides,
 k^2 \left(1 -  \dfrac{\sin^2 \alpha}{k^2} \right) &= 4 \cos^2 \alpha \nonumber\\
 k^2 - \sin^2 \alpha &= 4 \cos^2 \alpha \nonumber\\
 k^2 &= \sin^2 \alpha + 4 \cos^2 \alpha \nonumber\\
-k^2 &= \sin^2 \alpha + \cos^2 \alpha + 3\cos^2 \alpha \nonumber\\
+k^2 &= \sin^2 \alpha + \cos^2 \alpha + 3\cos^2 \alpha; & \text{note that } \sin^2 \alpha + \cos^2 \alpha = 1 \nonumber\\
 k^2 &= 1 + 3\cos^2 \alpha \nonumber\\
 \sqrt{\dfrac{k^2 -1}{3}} &= \cos \alpha \nonumber\\
 \alpha &=  \arccos \sqrt{\dfrac{k^2 -1}{3}}
@@ -572,7 +589,7 @@ $D(\alpha)$ is minimum when
 Substituting $k \approx \dfrac{4}{3}$,
 
 \begin{align*}
-\alpha &\approx  \arccos \sqrt{\dfrac{ \left( \dfrac{4}{3} \right)^2 -1}{3}} \\
+\alpha &\approx  \arccos \sqrt{\dfrac{(4/3 )^2 -1}{3}} \\
 &\approx \arccos \sqrt{\dfrac{16/9 -1}{3}}\\
 &\approx \arccos \sqrt{\dfrac{7}{27}}\\
 \alpha &\approx 1.0366\\
@@ -595,7 +612,7 @@ The minimum deviation angle has huge significance since $D’(\alpha) \approx 0$
 
 The figure shows that the angle of elevation from the observer up to the highest point on the rainbow is $180 \degree - 138 \degree = 42 \degree$. This angle is called the {\itshape rainbow angle}.
 
-\subsection{Colors in a primary rainbow} \label{sec:primary}
+\subsection{Colors in a primary rainbow} \label{sec:primarycolor}
 
 Sunlight comprises a range of wavelengths, from the reds with the longest wavelengths and the violets with the shortest wavelengths. As Newton discovered in his prism experiments of
 1666, the index of refraction is different for each color in a phenomenon called dispersion.
@@ -637,14 +654,22 @@ D(1.0263) &= \pi + 2(1.0263) - 4\arcsin \left( \dfrac{\sin 1.0263}{1.3435} \righ
 
 The rainbow angle of the violet light is $\approx 180 \degree - 139.4 \degree = 40.6 \degree$.\\
 
+
 \begin{figure}[H]
 \centering
 \primarycolor
-\caption{Colors of the rainbow based on their respective minimum $\alpha$ value and refractive indices.}
+\caption{Colors of the rainbow produced in a raindrop based on their respective minimum $D\alpha)$ value and refractive indices. Note that color produced is violet (on top) and red (on the bottom).}
 \label{fig:primarycolor}
 \end{figure}
 
-As observed in the calculations and as visualized in Figure \ref{fig:primarycolor}, the rainbow angle of the red light ($42.3 \degree$) is larger than the rainbow angle of the violet light ($40.6 \degree$). This implies that the rainbow’s color appears red on top, violet on the bottom, and all other visible light wavelengths in between.
+\begin{figure}[H]
+\centering
+
+\caption{However, from the perspective of a person, each wavelength of light of the rainbow comes from different droplets of light, thus the rainbow seen by an observer in the ground is red (on top) and violet (on the bottom)}
+\label{fig:primarycolor2}
+\end{figure}
+
+As observed in the calculations and as visualized in Figure \ref{fig:primarycolor2}, the rainbow angle of the red light ($42.3 \degree$) is larger than the rainbow angle of the violet light ($40.6 \degree$). This implies that the rainbow’s color appears red on top, violet on the bottom, and all other visible light wavelengths in between.
 
 \subsection{Double rainbows}
 
@@ -723,26 +748,26 @@ This shows that $D(\alpha)$ is minimum when
 Taking $k = 4/3$,
 
 \begin{align*}
-\cos \alpha &= \sqrt{\frac{(4/3)^2-1}{8}}
-&= \sqrt{\frac{16/9-1}{8}}
-&= \sqrt{\frac{7/9}{8}}
-\cos \alpha &= \sqrt{\frac{7}{72}}
-\alpha &= \arccos \sqrt{\frac{7}{72}}
-\alpha &\approx 1.2537
-\alpha &\approx 71.8 \degree
+\cos \alpha &= \sqrt{\frac{(4/3)^2-1}{8}}\\
+&= \sqrt{\frac{16/9-1}{8}}\\
+&= \sqrt{\frac{7/9}{8}}\\
+\cos \alpha &= \sqrt{\frac{7}{72}}\\
+\alpha &= \arccos \sqrt{\frac{7}{72}}\\
+\alpha &\approx 1.2537\\
+\alpha &\approx 71.8 \degree\\
 \end{align*}
 
 When $k=4/3$, $D(\alpha)$ is minimum when $\alpha = 71.8 \degree$.
 
 \begin{align*}
-\min(D(\alpha)) \approx D(1.2537) = 2\pi + 2(1.2537) - 6 \arcsin \left( \frac{\sin 1.2537}{4/3} \right)
-\approx 4.031
-\approx 231 \degree
+\min(D(\alpha)) \approx D(1.2537) &= 2\pi + 2(1.2537) - 6 \arcsin \left( \frac{\sin 1.2537}{4/3} \right)\\
+&\approx 4.031\\
+&\approx 231 \degree\\
 \end{align*}
 
-As mentioned in Section \ref{sec:primary}, $dD/da \approx 0$ implies that light rays converge at that certain angle, meaning that it is the best angle to properly see the rainbow.\\
+As mentioned in Section \ref{sec:primary}, $dD/da \approx 0$ implies that light rays converge at that certain angle, meaning that it is the optimum angle to properly see the rainbow \cite[219]{stewart21}.\\
 
-Let $D_2(\alpha)$ be the clockwise deviation angle of the light ray. This means that $D(\alpha) + D_2(\alpha) = 2\pi$\\
+Let $D_2(\alpha)$ be the clockwise deviation angle of the light ray. This means that $D(\alpha) + D_2(\alpha) = 2\pi$.\\
 
 Since $D$ is minimum $D(\alpha) = 231\degree$, then $D_2(\alpha) = 360\degree - 231\degree = 129 \degree$.\\
 

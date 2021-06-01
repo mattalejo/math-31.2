@@ -18,7 +18,140 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
+  \datalist[entry]{none/global//global/global}
+    \entry{hilburnnd}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4dd73ec58643c2bfc39250abe923bb01}{%
+           family={Hilburn},
+           familyi={H\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{4dd73ec58643c2bfc39250abe923bb01}
+      \strng{fullhash}{4dd73ec58643c2bfc39250abe923bb01}
+      \strng{bibnamehash}{4dd73ec58643c2bfc39250abe923bb01}
+      \strng{authorbibnamehash}{4dd73ec58643c2bfc39250abe923bb01}
+      \strng{authornamehash}{4dd73ec58643c2bfc39250abe923bb01}
+      \strng{authorfullhash}{4dd73ec58643c2bfc39250abe923bb01}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A derivation of Snell’s law}
+      \verb{urlraw}
+      \verb http://dev.physicslab.org/Document.aspx?doctype=3&filename=GeometricOptics_LeastTime.xml
+      \endverb
+      \verb{url}
+      \verb http://dev.physicslab.org/Document.aspx?doctype=3&filename=GeometricOptics_LeastTime.xml
+      \endverb
+    \endentry
+    \entry{flens20}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3978bcb3772b9ba4fb9dfd86e4d7f839}{%
+           family={Flens},
+           familyi={F\bibinitperiod},
+           given={Hannah},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3978bcb3772b9ba4fb9dfd86e4d7f839}
+      \strng{fullhash}{3978bcb3772b9ba4fb9dfd86e4d7f839}
+      \strng{bibnamehash}{3978bcb3772b9ba4fb9dfd86e4d7f839}
+      \strng{authorbibnamehash}{3978bcb3772b9ba4fb9dfd86e4d7f839}
+      \strng{authornamehash}{3978bcb3772b9ba4fb9dfd86e4d7f839}
+      \strng{authorfullhash}{3978bcb3772b9ba4fb9dfd86e4d7f839}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Snell’s law}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://eng.libretexts.org/Bookshelves/Materials_Science/Supplemental_Modules_(Materials_Science)/Optical_Properties/Snell%27s_Law
+      \endverb
+      \verb{url}
+      \verb https://eng.libretexts.org/Bookshelves/Materials_Science/Supplemental_Modules_(Materials_Science)/Optical_Properties/Snell%27s_Law
+      \endverb
+    \endentry
+    \entry{corradi16}{article}{}
+      \name{author}{1}{}{%
+        {{hash=59a29963210a9b3216f79f63f0703fd0}{%
+           family={Corradi},
+           familyi={C\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{59a29963210a9b3216f79f63f0703fd0}
+      \strng{fullhash}{59a29963210a9b3216f79f63f0703fd0}
+      \strng{bibnamehash}{59a29963210a9b3216f79f63f0703fd0}
+      \strng{authorbibnamehash}{59a29963210a9b3216f79f63f0703fd0}
+      \strng{authornamehash}{59a29963210a9b3216f79f63f0703fd0}
+      \strng{authorfullhash}{59a29963210a9b3216f79f63f0703fd0}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Lettera Matematica}
+      \field{month}{5}
+      \field{title}{A short history of the rainbow}
+      \field{volume}{4}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1007/s40329-016-0127-3
+      \endverb
+    \endentry
+    \entry{casselman09}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cd6325b08ebeaded4aa6725463d5a0ae}{%
+           family={Casselman},
+           familyi={C\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd6325b08ebeaded4aa6725463d5a0ae}
+      \strng{fullhash}{cd6325b08ebeaded4aa6725463d5a0ae}
+      \strng{bibnamehash}{cd6325b08ebeaded4aa6725463d5a0ae}
+      \strng{authorbibnamehash}{cd6325b08ebeaded4aa6725463d5a0ae}
+      \strng{authornamehash}{cd6325b08ebeaded4aa6725463d5a0ae}
+      \strng{authorfullhash}{cd6325b08ebeaded4aa6725463d5a0ae}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The mathematics of rainbows}
+      \verb{urlraw}
+      \verb http://www.ams.org/publicoutreach/feature-column/fcarc-rainbows
+      \endverb
+      \verb{url}
+      \verb http://www.ams.org/publicoutreach/feature-column/fcarc-rainbows
+      \endverb
+    \endentry
+    \entry{lavennd}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3572f8e295effbb69b9a570734ccae0a}{%
+           family={Laven},
+           familyi={L\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{3572f8e295effbb69b9a570734ccae0a}
+      \strng{fullhash}{3572f8e295effbb69b9a570734ccae0a}
+      \strng{bibnamehash}{3572f8e295effbb69b9a570734ccae0a}
+      \strng{authorbibnamehash}{3572f8e295effbb69b9a570734ccae0a}
+      \strng{authornamehash}{3572f8e295effbb69b9a570734ccae0a}
+      \strng{authorfullhash}{3572f8e295effbb69b9a570734ccae0a}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Refractive index of water}
+      \verb{urlraw}
+      \verb http://www.philiplaven.com/p20.html
+      \endverb
+      \verb{url}
+      \verb http://www.philiplaven.com/p20.html
+      \endverb
+    \endentry
     \entry{stewart21}{book}{}
       \name{author}{3}{}{%
         {{hash=37b12c56a8629449e8994f442b4d8c35}{%
@@ -46,8 +179,8 @@
       \strng{authorbibnamehash}{8c2e089119d86e1d86575538a3037b00}
       \strng{authornamehash}{8c2e089119d86e1d86575538a3037b00}
       \strng{authorfullhash}{8c2e089119d86e1d86575538a3037b00}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{9}
