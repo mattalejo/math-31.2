@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber calculus-rainbow"] 1622539511 "calculus-rainbow.bcf" "calculus-rainbow.bbl" "calculus-rainbow" 1622539717
-  "calculus-rainbow.bcf" 1622539716 106811 8613b483c88dd98b75e3cb7d8596d1b1 "pdflatex"
+["biber calculus-rainbow"] 1622540343 "calculus-rainbow.bcf" "calculus-rainbow.bbl" "calculus-rainbow" 1622540442
+  "calculus-rainbow.bcf" 1622540442 106811 8613b483c88dd98b75e3cb7d8596d1b1 "pdflatex"
   "calculus-rainbow.bib" 1622535386 1584 d25bfd331ed2fff00aa8ad5835620428 ""
   (generated)
-  "calculus-rainbow.blg"
   "calculus-rainbow.bbl"
-["pdflatex"] 1622539710 "c:/Users/mttal/Google Drive/1-freshie/2-sem/4-qtr/math-31.2/proj/calculus-rainbow.tex" "calculus-rainbow.pdf" "calculus-rainbow" 1622539717
+  "calculus-rainbow.blg"
+["pdflatex"] 1622540435 "c:/Users/mttal/Google Drive/1-freshie/2-sem/4-qtr/math-31.2/proj/calculus-rainbow.tex" "calculus-rainbow.pdf" "calculus-rainbow" 1622540442
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -238,18 +238,18 @@
   "C:/Users/mttal/AppData/Roaming/MiKTeX/tex/latex/tipa/t3enc.def" 1080621840 26483 c461a68c34040cb0d96c43e86c012a6d ""
   "C:/Users/mttal/AppData/Roaming/MiKTeX/tex/latex/tipa/tipa.sty" 1080621840 21394 82fa9965637ca62399434739ae5998f6 ""
   "C:/Users/mttal/AppData/Roaming/MiKTeX/tex/latex/was/gensymb.sty" 1081479500 4755 29d19942d7123701aa6a3876b9ba11b1 ""
-  "c:/Users/mttal/Google Drive/1-freshie/2-sem/4-qtr/math-31.2/proj/calculus-rainbow.tex" 1622539702 51395 a70f6ae027f603c26da32a5b6700734f ""
-  "calculus-rainbow.aux" 1622539716 9800 d591090ab2e7b04a2efb908bd5cbcc0d "pdflatex"
-  "calculus-rainbow.bbl" 1622539513 8541 316522d68313b576e7767e64a7c6cf1b "biber calculus-rainbow"
-  "calculus-rainbow.out" 1622539716 807 0100a43f9c890dfbfe8ad39ae9b7bdef "pdflatex"
-  "calculus-rainbow.run.xml" 1622539716 2433 df8b57dee1704a296a4ca6e590e850bd "pdflatex"
-  "calculus-rainbow.tex" 1622539702 51395 a70f6ae027f603c26da32a5b6700734f ""
-  "calculus-rainbow.toc" 1622539716 1552 1a8b40763606f2a05e5d3f5b2e6e43c8 "pdflatex"
+  "c:/Users/mttal/Google Drive/1-freshie/2-sem/4-qtr/math-31.2/proj/calculus-rainbow.tex" 1622540434 51468 a37f95a58b0ad4882bc1d0c21645b2c0 ""
+  "calculus-rainbow.aux" 1622540442 9800 d591090ab2e7b04a2efb908bd5cbcc0d "pdflatex"
+  "calculus-rainbow.bbl" 1622540346 8541 316522d68313b576e7767e64a7c6cf1b "biber calculus-rainbow"
+  "calculus-rainbow.out" 1622540442 807 0100a43f9c890dfbfe8ad39ae9b7bdef "pdflatex"
+  "calculus-rainbow.run.xml" 1622540442 2433 df8b57dee1704a296a4ca6e590e850bd "pdflatex"
+  "calculus-rainbow.tex" 1622540434 51468 a37f95a58b0ad4882bc1d0c21645b2c0 ""
+  "calculus-rainbow.toc" 1622540442 1552 1a8b40763606f2a05e5d3f5b2e6e43c8 "pdflatex"
   (generated)
   "calculus-rainbow.bcf"
-  "calculus-rainbow.out"
-  "calculus-rainbow.run.xml"
   "calculus-rainbow.pdf"
+  "calculus-rainbow.out"
   "calculus-rainbow.toc"
   "calculus-rainbow.log"
   "calculus-rainbow.aux"
+  "calculus-rainbow.run.xml"

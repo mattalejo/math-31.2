@@ -2,17 +2,17 @@
 [0] Config.pm:315> INFO - Logfile is 'calculus-rainbow.blg'
 [108] biber-MSWIN64:330> INFO - === 
 [130] Biber.pm:415> INFO - Reading 'calculus-rainbow.bcf'
-[235] Biber.pm:952> INFO - Found 8 citekeys in bib section 0
-[254] Biber.pm:4334> INFO - Processing section 0
-[269] Biber.pm:4523> INFO - Looking for bibtex format file 'calculus-rainbow.bib' for section 0
-[278] bibtex.pm:1682> INFO - LaTeX decoding ...
-[291] bibtex.pm:1494> INFO - Found BibTeX data source 'calculus-rainbow.bib'
-[314] Utils.pm:395> WARN - month field 'October' in entry 'flens20' is not an integer - this will probably not sort properly.
-[319] Utils.pm:395> WARN - month field 'May' in entry 'corradi16' is not an integer - this will probably not sort properly.
-[368] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[368] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[368] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[368] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
-[381] bbl.pm:651> INFO - Writing 'calculus-rainbow.bbl' with encoding 'UTF-8'
-[384] bbl.pm:754> INFO - Output to calculus-rainbow.bbl
-[385] Biber.pm:128> INFO - WARNINGS: 2
+[273] Biber.pm:952> INFO - Found 8 citekeys in bib section 0
+[294] Biber.pm:4334> INFO - Processing section 0
+[310] Biber.pm:4523> INFO - Looking for bibtex format file 'calculus-rainbow.bib' for section 0
+[316] bibtex.pm:1682> INFO - LaTeX decoding ...
+[328] bibtex.pm:1494> INFO - Found BibTeX data source 'calculus-rainbow.bib'
+[350] Utils.pm:395> WARN - month field 'October' in entry 'flens20' is not an integer - this will probably not sort properly.
+[355] Utils.pm:395> WARN - month field 'May' in entry 'corradi16' is not an integer - this will probably not sort properly.
+[405] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[405] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[405] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[405] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[416] bbl.pm:651> INFO - Writing 'calculus-rainbow.bbl' with encoding 'UTF-8'
+[420] bbl.pm:754> INFO - Output to calculus-rainbow.bbl
+[420] Biber.pm:128> INFO - WARNINGS: 2
