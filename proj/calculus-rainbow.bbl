@@ -73,6 +73,33 @@
       \verb https://eng.libretexts.org/Bookshelves/Materials_Science/Supplemental_Modules_(Materials_Science)/Optical_Properties/Snell%27s_Law
       \endverb
     \endentry
+    \entry{refractionnd}{online}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labeltitlesource}{title}
+      \field{title}{Refraction of light}
+      \verb{urlraw}
+      \verb http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/refr.html
+      \endverb
+      \verb{url}
+      \verb http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/refr.html
+      \endverb
+    \endentry
+    \entry{reflectionnd}{online}{}
+      \list{institution}{1}{%
+        {Lumen Learning}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labeltitlesource}{title}
+      \field{title}{The law of reflection}
+      \verb{urlraw}
+      \verb https://courses.lumenlearning.com/physics/chapter/25-2-the-law-of-reflection/
+      \endverb
+      \verb{url}
+      \verb https://courses.lumenlearning.com/physics/chapter/25-2-the-law-of-reflection/
+      \endverb
+    \endentry
     \entry{corradi16}{article}{}
       \name{author}{1}{}{%
         {{hash=59a29963210a9b3216f79f63f0703fd0}{%
@@ -87,8 +114,8 @@
       \strng{authorbibnamehash}{59a29963210a9b3216f79f63f0703fd0}
       \strng{authornamehash}{59a29963210a9b3216f79f63f0703fd0}
       \strng{authorfullhash}{59a29963210a9b3216f79f63f0703fd0}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Lettera Matematica}
@@ -114,8 +141,8 @@
       \strng{authorbibnamehash}{cd6325b08ebeaded4aa6725463d5a0ae}
       \strng{authornamehash}{cd6325b08ebeaded4aa6725463d5a0ae}
       \strng{authorfullhash}{cd6325b08ebeaded4aa6725463d5a0ae}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The mathematics of rainbows}
@@ -140,8 +167,8 @@
       \strng{authorbibnamehash}{3572f8e295effbb69b9a570734ccae0a}
       \strng{authornamehash}{3572f8e295effbb69b9a570734ccae0a}
       \strng{authorfullhash}{3572f8e295effbb69b9a570734ccae0a}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Refractive index of water}
@@ -179,8 +206,8 @@
       \strng{authorbibnamehash}{8c2e089119d86e1d86575538a3037b00}
       \strng{authornamehash}{8c2e089119d86e1d86575538a3037b00}
       \strng{authorfullhash}{8c2e089119d86e1d86575538a3037b00}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{9}

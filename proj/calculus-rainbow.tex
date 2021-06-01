@@ -103,7 +103,7 @@
 }
 \newcommand{\primary}
 {
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.8]
 
 \clip(-6.208079428623365,-4.88103785801355) rectangle (7,3.330141435297047);
 \draw [shift={(-2.23606797749979,2)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (138.18968510422138:0.28665495726070117) arc (138.18968510422138:180:0.28665495726070117) -- cycle;
@@ -133,7 +133,7 @@
 \draw[color=qqwuqq] (-2.166244531247479,2.156341342736714) node[ left=8pt] {$\alpha$};
 \draw[color=qqwuqq] (-1.8986999044708248,2.0225690293483862) node [below right = 0.5pt]{$\beta$};
 \draw [fill=uuuuuu] (2.850084796318772,0.9364916731037085) circle (0.5pt);
-\draw[color=uuuuuu] (2.9266585427509777,1.1243834965981825) node {$B$};
+\draw[color=uuuuuu] (2.9266585427509777,1.1243834965981825) node [right] {$B$};
 \draw[color=qqwuqq] (2.8693275512988374,1.0192766789359249) node [left = 6pt]{$\beta$};
 \draw[color=qqwuqq] (2.8979930470249076,0.9428353569997373) node[below left= 6pt] {$\beta$};
 \draw [fill=uuuuuu] (-0.6140168188189818,-2.9364916731037085) circle (0.5pt);
@@ -149,7 +149,7 @@
 
 \newcommand{\primarycolor}
 {
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.8]
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.6]
 
 \clip(-6.46924489473801,-6.191518174827493) rectangle (3.023218480966734,3.967438049025187);
 
@@ -209,9 +209,28 @@
 \end{tikzpicture}
 }
 
+\newcommand{\primarycolorpers}
+{
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=1.2]
+\clip(-1.6481524516351462,-0.183021382422293) rectangle (5.512524834546647,5.850242118742894);
+\draw [line width=2pt,domain=-1.6481524516351462:5.512524834546647] plot(\x,{(-0-0*\x)/1});
+\draw[line width=0.75pt,draw=myviolet, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6145562845*(\x)});
+\draw[line width=0.75pt,draw=myindigo, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.620945365*(\x)});
+\draw[line width=0.75pt,draw=myblue, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6257073969*(\x)});
+\draw[line width=0.75pt,draw=mygreen, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6291615751*(\x)});
+\draw[line width=0.75pt,draw=myyellow, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6319613238*(\x)});
+\draw[line width=0.75pt,draw=myorange, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6341043966*(\x)});
+\draw[line width=0.75pt,draw=myred, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.636084205*(\x)});
+\begin{scriptsize}
+\draw [fill=uuuuuu] (0,0) circle (2.5pt);
+\draw[color=uuuuuu] (-0.07955947629757938,0.12208791120282789) node [above left]{observer};
+\end{scriptsize}
+\end{tikzpicture}
+}
+
 \newcommand{\secondary}
 {
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.75]
 \clip(-8,-5.5) rectangle (3.430433722156438,3.330141435297047);
 \draw [shift={(-1.0770329614269012,-2.8)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (180:0.5576249556023645) arc (180:248.96053021868272:0.5576249556023645) -- cycle;
 \draw [shift={(-1.0770329614269012,-2.8)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (24.51948074501533:0.5576249556023645) arc (24.51948074501533:68.96053021868276:0.5576249556023645) -- cycle;
@@ -252,11 +271,36 @@
 \draw[color=qqwuqq] (-3.435429077112574,0.867408912525206) node [left = 2pt]{$\alpha$};
 \draw [fill=uuuuuu] (-5.8342792390694145,-2.8) circle (0.5pt);
 \draw[color=uuuuuu] (-5.53581640988148,-2.998790779651183) node {$E$};
-\draw[color=qqwuqq] (-5.888978881762978,-1.9021283669665343) node [below]{$D(\alpha)$};
+\draw[color=qqwuqq] (-5.888978881762978,-1.9021283669665343) node []{$D(\alpha)$};
 \end{scriptsize}
 \end{tikzpicture}
 }
 
+\newcommand{\secondarycolor}
+{
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=1.2]
+\clip(-1.6481524516351462,-0.183021382422293) rectangle (5.512524834546647,6.1);
+\draw [line width=2pt,domain=-1.6481524516351462:5.512524834546647] plot(\x,{(-0-0*\x)/1});
+\draw[line width=0.75pt,draw=myviolet, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6145562845*(\x)});
+\draw[line width=0.75pt,draw=myindigo, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.620945365*(\x)});
+\draw[line width=0.75pt,draw=myblue, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6257073969*(\x)});
+\draw[line width=0.75pt,draw=mygreen, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6291615751*(\x)});
+\draw[line width=0.75pt,draw=myyellow, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6319613238*(\x)});
+\draw[line width=0.75pt,draw=myorange, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6341043966*(\x)});
+\draw[line width=0.75pt,draw=myred, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.636084205*(\x)});
+\draw[line width=0.75pt,draw=myviolet,smooth,samples=100,domain=0:7] plot(\x,{0.7544984823*(\x)});
+\draw[line width=0.75pt,draw=myindigo,smooth,samples=100,domain=0:7] plot(\x,{0.7451804338*(\x)});
+\draw[line width=0.75pt,draw=myblue,smooth,samples=100,domain=0:7] plot(\x,{0.7380829482*(\x)});
+\draw[line width=0.75pt,draw=mygreen,smooth,samples=100,domain=0:7] plot(\x,{0.7328511044*(\x)});
+\draw[line width=0.75pt,draw=myyellow,smooth,samples=100,domain=0:7] plot(\x,{0.7285578515*(\x)});
+\draw[line width=0.75pt,draw=myorange,smooth,samples=100,domain=0:7] plot(\x,{0.7252392408*(\x)});
+\draw[line width=0.75pt,draw=myred,smooth,samples=100,domain=0:7] plot(\x,{0.7221482199*(\x)});
+\begin{scriptsize}
+\draw [fill=uuuuuu] (0,0) circle (2.5pt);
+\draw[color=uuuuuu] (-0.07955947629757938,0.12208791120282789) node [above left]{observer};
+\end{scriptsize}
+\end{tikzpicture}
+}
 
 \title{The Calculus of Rainbows}
 \author{
@@ -467,7 +511,7 @@ Substituting these to Equation \eqref{protoreflect},
 
 Equation \eqref{reflect} is what we call the law of reflection, showing that the angle of incidence $\theta_1$ is equal to the angle of reflection $\theta_2$.\\
 
-Rough surfaces contain varying planes that diffuses light at different angles at the point where the light ray bounces. This is what we call {\itshape diffused reflection}.  On the other hand, when light is directed in a smooth plane like polished metal or a glass mirror, the light ray is reflected at an angle equal to the incident angle with respect to the line perpendicular to the plane. This is what we call {\itshape specular reflection}
+Rough surfaces contain varying planes that diffuses light at different angles at the point where the light ray bounces. This is what we call {\itshape diffused reflection} \cite{refractionnd}.  On the other hand, when light is directed in a smooth plane like polished metal or a glass mirror, the light ray is reflected at an angle equal to the incident angle with respect to the line perpendicular to the plane. This is what we call {\itshape specular reflection} \cite{reflectionnd}.
 
 \subsection{Light wavelengths and their refractive interactions} \label{indices}
 
@@ -530,7 +574,7 @@ The angle of deviation $D(\alpha)$ is the amount of clockwise rotation that the 
 
 \begin{align}
 D(\alpha) &= (\alpha - \beta) + (\pi - 2\beta) +(\alpha - \beta) \nonumber\\
-D(\alpha) &= \pi + 2\alpha - 4\beta\\
+D(\alpha) &= \pi + 2\alpha - 4\beta
 \end{align}
 
 Using Equation \eqref{eq:snell} to isolate $\beta$ in terms of $\alpha$,
@@ -538,13 +582,13 @@ Using Equation \eqref{eq:snell} to isolate $\beta$ in terms of $\alpha$,
 \begin{align}
 \sin \alpha &= k \sin \beta \nonumber\\
 \dfrac{\sin \alpha}{k} &= \sin \beta \nonumber\\
-\beta &= \arcsin \left(\dfrac{\sin \alpha}{k} \right) \label{beta}
+\beta &= \sin^{-1} \left(\dfrac{\sin \alpha}{k} \right) \label{beta}
 \end{align}
 
 Substituting $\beta$ on Equation \eqref{beta},
 
 \begin{equation}
-D(\alpha) = \pi + 2\alpha - 4\arcsin \left( \dfrac{\sin \alpha}{k} \right)
+D(\alpha) = \pi + 2\alpha - 4\sin^{-1} \left( \dfrac{\sin \alpha}{k} \right)
 \end{equation}
 
 Getting the derivative of $D$,
@@ -574,24 +618,29 @@ Squaring both sides,
 k^2 \left(1 -  \dfrac{\sin^2 \alpha}{k^2} \right) &= 4 \cos^2 \alpha \nonumber\\
 k^2 - \sin^2 \alpha &= 4 \cos^2 \alpha \nonumber\\
 k^2 &= \sin^2 \alpha + 4 \cos^2 \alpha \nonumber\\
-k^2 &= \sin^2 \alpha + \cos^2 \alpha + 3\cos^2 \alpha; & \text{note that } \sin^2 \alpha + \cos^2 \alpha = 1 \nonumber\\
+k^2 &= \sin^2 \alpha + \cos^2 \alpha + 3\cos^2 \alpha 
+\end{align}
+
+Note that $\sin^2 \alpha + \cos^2 \alpha = 1$.
+
+\begin{align}
 k^2 &= 1 + 3\cos^2 \alpha \nonumber\\
 \sqrt{\dfrac{k^2 -1}{3}} &= \cos \alpha \nonumber\\
-\alpha &=  \arccos \sqrt{\dfrac{k^2 -1}{3}}
+\alpha &=  \cos^{-1} \sqrt{\dfrac{k^2 -1}{3}}
 \end{align}
 
 $D(\alpha)$ is minimum when 
 
 \begin{equation}\label{min}
-\alpha =  \arccos \sqrt{\dfrac{k^2 -1}{3}}
+\alpha =  \cos^{-1} \sqrt{\dfrac{k^2 -1}{3}}
 \end{equation}
 
 Substituting $k \approx \dfrac{4}{3}$,
 
 \begin{align*}
-\alpha &\approx  \arccos \sqrt{\dfrac{(4/3 )^2 -1}{3}} \\
-&\approx \arccos \sqrt{\dfrac{16/9 -1}{3}}\\
-&\approx \arccos \sqrt{\dfrac{7}{27}}\\
+\alpha &\approx  \cos^{-1} \sqrt{\dfrac{(4/3 )^2 -1}{3}} \\
+&\approx \cos^{-1} \sqrt{\dfrac{16/9 -1}{3}}\\
+&\approx \cos^{-1} \sqrt{\dfrac{7}{27}}\\
 \alpha &\approx 1.0366\\
 \alpha &\approx 59.4 \degree
 \end{align*}
@@ -601,8 +650,8 @@ $D(\alpha)$ is minimum at $\alpha \approx 59.4 \degree$.\\
 Substituting $\alpha \approx  59.4 \degree$,
 
 \begin{align*}
-\min(D(\alpha)) \approx D(1.0366) &\approx \pi + 2\alpha - 4\arcsin \left( \dfrac{\sin \alpha}{4/3} \right)\\
-&\approx \pi + 2(1.0366) -  4\arcsin \left( \dfrac{\sin 1.0366}{4/3} \right)\\
+\min(D(\alpha)) \approx D(1.0366) &\approx \pi + 2\alpha - 4\sin^{-1} \left( \dfrac{\sin \alpha}{4/3} \right)\\
+&\approx \pi + 2(1.0366) -  4\sin^{-1} \left( \dfrac{\sin 1.0366}{4/3} \right)\\
 &\approx 138 \degree
 \end{align*}
 
@@ -615,22 +664,22 @@ The figure shows that the angle of elevation from the observer up to the highest
 \subsection{Colors in a primary rainbow} \label{sec:primarycolor}
 
 Sunlight comprises a range of wavelengths, from the reds with the longest wavelengths and the violets with the shortest wavelengths. As Newton discovered in his prism experiments of
-1666, the index of refraction is different for each color in a phenomenon called dispersion.
+1666, the index of refraction is different for each color in a phenomenon called dispersion \cite[219]{stewart21}.
 For red light, the refractive index is $k \approx 1.3318$, whereas for violet light it is $k \approx 1.3435$.\\
 
-As previously mentioned in Equation \eqref{min}, the minimum of $D(\alpha)$ is when $\alpha = \arccos \sqrt{\dfrac{k^2 -1}{3}}$\\
+As previously mentioned in Equation \eqref{min}, the minimum of $D(\alpha)$ is when $\alpha = \cos^{-1} \sqrt{\dfrac{k^2 -1}{3}}$\\
 
 Substituting $k \approx 1.3318$ for red light,
 
 \begin{align*}
-\alpha &= \arccos \sqrt{\dfrac{1.3318^2 -1}{3}}\\
+\alpha &= \cos^{-1} \sqrt{\dfrac{1.3318^2 -1}{3}}\\
 &\approx 1.0381
 \end{align*}
 
 Substituting $\alpha \approx 1.0381$ and $k \approx 1.3318$ on $D(\alpha)$,
 
 \begin{align*}
-D(1.0381) &= \pi + 2(1.0381) - 4\arcsin \left( \dfrac{\sin 1.0381}{1.3318} \right)\\
+D(1.0381) &= \pi + 2(1.0381) - 4\sin^{-1} \left( \dfrac{\sin 1.0381}{1.3318} \right)\\
 &\approx 2.4041\\
 &\approx 137.7 \degree
 \end{align*}
@@ -640,14 +689,14 @@ The rainbow angle of the red light is $\approx 180 \degree - 137.7 \degree \appr
 Substituting $k \approx 1.3435$ for violet light,
 
 \begin{align*}
-\alpha &= \arccos \sqrt{\dfrac{1.3435^2 -1}{3}}\\
+\alpha &= \cos^{-1} \sqrt{\dfrac{1.3435^2 -1}{3}}\\
 &\approx 1.0263
 \end{align*}
 
 Substituting $\alpha \approx 1.0263$ and $k \approx 1.3435$ on $D(\alpha)$,
 
 \begin{align*}
-D(1.0263) &= \pi + 2(1.0263) - 4\arcsin \left( \dfrac{\sin 1.0263}{1.3435} \right)\\
+D(1.0263) &= \pi + 2(1.0263) - 4\sin^{-1} \left( \dfrac{\sin 1.0263}{1.3435} \right)\\
 &\approx 2.4334\\
 &\approx 139.4 \degree
 \end{align*}
@@ -658,20 +707,20 @@ The rainbow angle of the violet light is $\approx 180 \degree - 139.4 \degree = 
 \begin{figure}[H]
 \centering
 \primarycolor
-\caption{Colors of the rainbow produced in a raindrop based on their respective minimum $D\alpha)$ value and refractive indices. Note that color produced is violet (on top) and red (on the bottom).}
+\caption{Colors of the rainbow produced in a raindrop based on their respective minimum $D(\alpha)$ value and refractive indices. Note that color produced is violet (on top) and red (on the bottom).}
 \label{fig:primarycolor}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-
+\primarycolorpers
 \caption{However, from the perspective of a person, each wavelength of light of the rainbow comes from different droplets of light, thus the rainbow seen by an observer in the ground is red (on top) and violet (on the bottom)}
 \label{fig:primarycolor2}
 \end{figure}
 
 As observed in the calculations and as visualized in Figure \ref{fig:primarycolor2}, the rainbow angle of the red light ($42.3 \degree$) is larger than the rainbow angle of the violet light ($40.6 \degree$). This implies that the rainbow’s color appears red on top, violet on the bottom, and all other visible light wavelengths in between.
 
-\subsection{Double rainbows}
+\subsection{Double rainbows} \label{sec:secondary}
 
 There are instances where another fainter rainbow appears in addition of the stronger rainbow. This phenomenon is called {\itshape double rainbow}, and the fainter rainbow is colloquially known as the {\itshape secondary rainbow}. 
 
@@ -695,21 +744,21 @@ Using Equation \eqref{eq:snell} to get $\beta$ in terms of $\alpha$,
 
 \begin{align*}
 \sin \alpha &= k \sin \beta\\
-\beta &= \arcsin \left( \frac{\sin \alpha}{k} \right)
+\beta &= \sin^{-1} \left( \frac{\sin \alpha}{k} \right)
 \end{align*}
 
 Substuting $\beta$ on Equation \eqref{eq:secondary},
 
 \begin{align}
 D(\alpha) &= 2\pi + 2\alpha - 6\beta \nonumber\\
-D(\alpha) &= 2\pi + 2\alpha - 6 \arcsin \left( \frac{\sin \alpha}{k} \right)
+D(\alpha) &= 2\pi + 2\alpha - 6 \sin^{-1} \left( \frac{\sin \alpha}{k} \right)
 \end{align}
 
 In order to get the minimum value of $D$, we can equate its derivative, $D'(\alpha) = 0$.
 
 \begin{align}
 D'(\alpha) &= 0 + 2 - 6 \left[ \frac{1}{\sqrt{1- \left( \dfrac{\sin \alpha}{k}\right)^2}}\right]\left(\dfrac{\cos \alpha}{k}\right) \nonumber\\
-D'(\alpha) &= 2 - \dfrac{6\cos \alpha}{k\sqrt{1-\dfrac{\sin^2 \alpha}{k^2}}}
+D'(\alpha) &= 2 - \dfrac{6\cos \alpha}{k\sqrt{1-\dfrac{\sin^2 \alpha}{k^2}}} \label{eq:derivativesec}
 \end{align}
 
 Equating $D'(\alpha) = 0$,
@@ -733,26 +782,31 @@ Squaring both sides,
 9\cos^2 \alpha &= k^2\left( 1- \dfrac{\sin^2\alpha}{k^2}\right) \nonumber\\
 9\cos^2 \alpha &= k^2 - \sin^2 \alpha \nonumber\\
 k^2 &= \sin^2 \alpha +9 \cos^2 \alpha \nonumber\\
-k^2 &= \sin^2 \alpha + \cos^2 \alpha + 8\cos^2 \alpha \nonumber\\
+k^2 &= \sin^2 \alpha + \cos^2 \alpha + 8\cos^2 \alpha
+\end{align}
+
+Note that $\sin^2 \alpha + \cos^2 \alpha = 1$.
+
+\begin{align}
 k^2 &= 1 + 8\cos^2 \alpha \nonumber\\
 \cos^2 \alpha &= \frac{k^2-1}{8} \nonumber\\
-\cos \alpha &= \sqrt{\frac{k^2-1}{8}} \nonumber\\
+\cos \alpha &= \sqrt{\frac{k^2-1}{8}} \nonumber
 \end{align}
 
 This shows that $D(\alpha)$ is minimum when 
 
-\begin{equation}
+\begin{equation} \label{eq:cossec}
 \cos \alpha = \sqrt{\frac{k^2-1}{8}}
 \end{equation}
 
-Taking $k = 4/3$,
+Substituting $k = 4/3$,
 
 \begin{align*}
 \cos \alpha &= \sqrt{\frac{(4/3)^2-1}{8}}\\
 &= \sqrt{\frac{16/9-1}{8}}\\
 &= \sqrt{\frac{7/9}{8}}\\
 \cos \alpha &= \sqrt{\frac{7}{72}}\\
-\alpha &= \arccos \sqrt{\frac{7}{72}}\\
+\alpha &= \cos^{-1} \sqrt{\frac{7}{72}}\\
 \alpha &\approx 1.2537\\
 \alpha &\approx 71.8 \degree\\
 \end{align*}
@@ -760,20 +814,86 @@ Taking $k = 4/3$,
 When $k=4/3$, $D(\alpha)$ is minimum when $\alpha = 71.8 \degree$.
 
 \begin{align*}
-\min(D(\alpha)) \approx D(1.2537) &= 2\pi + 2(1.2537) - 6 \arcsin \left( \frac{\sin 1.2537}{4/3} \right)\\
+\min(D(\alpha)) \approx D(1.2537) &= 2\pi + 2(1.2537) - 6 \sin^{-1} \left( \frac{\sin 1.2537}{4/3} \right)\\
 &\approx 4.031\\
 &\approx 231 \degree\\
 \end{align*}
 
 As mentioned in Section \ref{sec:primary}, $dD/da \approx 0$ implies that light rays converge at that certain angle, meaning that it is the optimum angle to properly see the rainbow \cite[219]{stewart21}.\\
 
-Let $D_2(\alpha)$ be the clockwise deviation angle of the light ray. This means that $D(\alpha) + D_2(\alpha) = 2\pi$.\\
+Let $D_2(\alpha)$ be the clockwise deviation angle of the light ray. This means that $D(\alpha) + D_2(\alpha) = 2\pi = 360\degree$.\\
 
-Since $D$ is minimum $D(\alpha) = 231\degree$, then $D_2(\alpha) = 360\degree - 231\degree = 129 \degree$.\\
+Since $\min(D(\alpha)) = 231\degree$, then $D_2(\alpha) = 360\degree - 231\degree = 129 \degree$.\\
 
-The rainbow angle is $180 \degree - 129\degree = 51\degree$. Note that in Section \ref{sec:primarycolor}, the maximum rainbow angle is on the red bow at $\approx 42.4 \degree$. This means that the secondary rainbow is {\itshape always} above the primary rainbow.
+Therefore, the rainbow angle of the secondary rainbow is $180 \degree - 129\degree = 51\degree$. Note that in Section \ref{sec:primarycolor}, the maximum rainbow angle is on the red bow at $\approx 42.4 \degree$. This means that the secondary rainbow is {\itshape always} above the primary rainbow.
 
 \subsection{Colors in a secondary rainbow}
+
+From Section \ref{sec:secondary}, we get the following equations:
+
+\begin{equation}
+\begin{cases}
+D(\alpha) + D_2(\alpha) = 2\pi\\
+\text{rainbow angle} = \pi - D_2(\alpha) 
+\end{cases}
+\label{eq:system}
+\end{equation}
+
+From the system of equations at \eqref{eq:system}, we can infer that
+
+\begin{equation}
+\text{rainbow angle} = D(\alpha) - \pi
+\end{equation}
+
+As previously mentioned in Equation \ref{eq:cossec}, $D(\alpha)$ is minimum when
+
+\begin{align}
+\cos \alpha = \sqrt{\frac{k^2-1}{8}} \nonumber\\
+\alpha = \cos^{-1} \sqrt{\frac{k^2-1}{8}}
+\end{align}
+
+Substituting $k \approx 1.3318$ for red light,
+
+\begin{align*}
+\alpha &= \cos^{-1} \sqrt{\frac{1.3318^2-1}{8}}\\
+&\approx 1.2546
+\end{align*}
+
+Substituting $a \approx 1.2546$ and $k \approx 1.3318$ on $D(\alpha)$ from Equation \ref{eq:derivativesec},
+
+\begin{align*}
+D(1.2546) &= 2\pi + 2(1.2546) - 6 \sin^{-1}{\frac{\sin 1.2546}{1.3318}}\\
+&\approx 4.0243\\
+&\approx 230.6 \degree
+\end{align*}
+
+The rainbow angle of the red bow is $\approx 230.6\degree - 180\degree = 50.6\degree$.\\
+
+Substituting $k \approx 1.3435$ for the violet bow,
+
+\begin{align*}
+\alpha &= \cos^{-1} \sqrt{\frac{1.3435^2-1}{8}}\\
+&\approx 1.2480
+\end{align*}
+
+Substituting $a \approx 1.2546$ and $k \approx 1.3318$ on $D(\alpha)$,
+
+\begin{align*}
+D(1.2480) &= 2\pi + 2(1.2480) - 6 \sin^{-1}{\frac{\sin 1.2480}{1.3435}}\\
+&\approx 4.0772\\
+&\approx 233.6 \degree
+\end{align*}
+
+The rainbow angle of the violet bow is $\approx 233.6\degree - 180\degree = 53.6\degree$.\\
+
+As observed in the calculations, the rainbow angle of the violet bow ($53.6\degree$) is larger than the rainbow angle of the red bow ($50.6\degree$). This implies the that the secondary rainbow appears violet on top and red on the bottom, inverted of what the primary rainbow is at Section \ref{sec:primarycolor}.
+
+\begin{figure}[H]
+\centering
+\secondarycolor
+\caption{Rainbow angles of the corresponding colors. Note that the one above is the secondary rainbow while the one below is the primary rainbow. Notice that the arrangement of colors are inverted.}
+\label{fig:seccolor}
+\end{figure}
 
 \section{Conclusion}
 
