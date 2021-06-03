@@ -1867,4 +1867,95 @@ If \(f'\) is continuous on \([a,b]\), then the length \(L\) of the curve
 
 \[ L = \int_a^b \sqrt{1+[f(x)]^2}dx \]
 
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{differential-equations}{%
+\subsection{Differential equations}\label{differential-equations}}
+
+\begin{quote}
+incomplete
+\end{quote}
+
+\hypertarget{models-for-population-growth}{%
+\subsubsection{Models for population
+growth}\label{models-for-population-growth}}
+
+Malthus (c.~1798) said that in an ideal population, the rate of growth
+of a population is proportional to the size of the population.
+
+Let \(P\) be a function of time stating the number of individuals in a
+population at time \(t\).
+
+\begin{align*}
+\frac{dP}{dt} &\propto P\\
+\implies\frac{dP}{dt} &= kP; k \text{ is the proportionality constant}\\
+\frac{\dfrac{dP}{dt}}{P} &= k
+\end{align*}
+
+This equations is known as the \textbf{simple growth model}.
+
+Verholst (c.~1838) mentioned that Malthus's population model is only
+correct for small populations, and that population growth is bounded by
+environmental restrictions.
+
+Let \(M\) be the carrying capacity of the environment.
+
+Then when the population surpasses \(M\), the population growth pattern
+changes.
+
+\[\frac{\dfrac{dP}{dt}}{P} = k\left(1-\frac{P}{M}\right)\]
+
+Note that when \(P > M\), then the proportion becomes negative.
+
+This is knows as the \textbf{logistic model}.
+
+\hypertarget{differential-equation}{%
+\subsubsection{Differential equation}\label{differential-equation}}
+
+A \textbf{differential equation} is an equation that contains an unknown
+function and one or more of its derivatives.
+
+\hypertarget{differential-equation-terminologies}{%
+\paragraph*{Differential equation
+terminologies}\label{differential-equation-terminologies}}
+\addcontentsline{toc}{paragraph}{Differential equation terminologies}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{order} - highest order of the derivative that appears
+\item
+  \textbf{solution} - the equation that satisfies the differential
+  equation
+\item
+  \textbf{solve} - refers to finding \textbf{ALL} equations that
+  satisfies the differential equation
+\item
+  \textbf{initial-value problem} - finding the solution to the
+  differential equation with an initial condition given -- e.g.~a
+  coordinate
+\end{itemize}
+
+\hypertarget{simple-growth-model}{%
+\subsubsection{Simple growth model}\label{simple-growth-model}}
+
+The solution of the initial-value problem
+
+\[ \frac{dP}{dt} = kP, P(0) = P_0 \]
+
+is
+
+\[P(t) = P_0e^{kt} \]
+
+\hypertarget{logistic-model}{%
+\subsubsection{Logistic model}\label{logistic-model}}
+
+The solution fo the initial-value problem
+
+\[\dfrac{\dfrac{dP}{dt}}{P} = k \left(1-\frac{P}{M}\right)\]
+
+is
+
+\[ P(t) = \frac{M}{1-Ae^{kt}}, A = \frac{M-P_0}{P_0} \]
+
 \end{document}

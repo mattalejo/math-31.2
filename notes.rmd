@@ -1,5 +1,7 @@
 ---
 output: 
+  pdf_document:
+    keep_tex: true
   html_document:
     number_sections: true
     css: style.css
@@ -11,8 +13,6 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
-  pdf_document:
-    keep_tex: true
 title: "Mathematical Analysis IB"
 ---
 
@@ -1530,6 +1530,8 @@ If $f'$ is continuous on $[a,b]$, then the length $L$ of the curve $y = f(x)$, $
 
 $$ L = \int_a^b \sqrt{1+[f(x)]^2}dx $$ 
 
+***
+
 ## Differential equations
 
 > incomplete
@@ -1564,6 +1566,13 @@ This is knows as the **logistic model**.
 
 A **differential equation** is an equation that contains an unknown function and one or more of its derivatives.
 
+#### Differential equation terminologies {-}
+
+- **order** - highest order of the derivative that appears
+- **solution** - the equation that satisfies the differential equation
+- **solve** - refers to finding **ALL** equations that satisfies the differential equation
+- **initial-value problem** - finding the solution to the differential equation with an initial condition given -- e.g. a coordinate
+
 ### Simple growth model
 
 The solution of the initial-value problem
@@ -1580,3 +1589,6 @@ The solution fo the initial-value problem
 
 $$\dfrac{\dfrac{dP}{dt}}{P} = k \left(1-\frac{P}{M}\right)$$
 
+is
+
+$$ P(t) = \frac{M}{1-Ae^{kt}}, A = \frac{M-P_0}{P_0} $$
