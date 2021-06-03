@@ -1630,7 +1630,7 @@ Identity\strut
 \end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
 \(x = a\tan \theta, -\dfrac{\pi}{2} \leq \theta \leq \dfrac{\pi}{2}\)\strut
 \end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\centering
-\(1 - \tan^2 \theta = \sec^2 \theta\)\strut
+\(1 + \tan^2 \theta = \sec^2 \theta\)\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.30\columnwidth}\centering
 \strut
@@ -1847,15 +1847,15 @@ Going back to \(|P_{i-1}P_i|\),
 |P_{i-1}P_i| &= \sqrt{(x_i-x_{i-1})^2 + \left[ f(x_i)-f(x_{i-1}) \right]^2}\\
 &= \sqrt{(x_i-x_{i-1})^2 + \left[ f'(x_i^*) (x_i - x_{i-1}) \right]^2}\\
 &= \sqrt{(\Delta x)^2 + \left[ f'(x_i^*) \Delta x \right]^2}\\
-&= \sqrt{1+[f(x_i^*)]^2}\Delta x
+&= \sqrt{1+[f'(x_i^*)]^2}\Delta x
 \end{align*}
 
 Let the length of the curve be \(L\).
 
 \begin{align*}
 L &= \lim_{n\to\infty} \sum_{i=1}^n |P_{i-1}P_i|\\
-&= \lim_{n\to\infty} \sum_{i=1}^n \sqrt{1+[f(x_i^*)]^2}\Delta x\\
-L &= \int_a^b \sqrt{1+[f(x)]^2}dx\\
+&= \lim_{n\to\infty} \sum_{i=1}^n \sqrt{1+[f'(x_i^*)]^2}\Delta x\\
+L &= \int_a^b \sqrt{1+[f'(x)]^2}dx\\
 \end{align*}
 \end{quote}
 
@@ -1921,7 +1921,6 @@ terminologies}\label{differential-equation-terminologies}}
 \addcontentsline{toc}{paragraph}{Differential equation terminologies}
 
 \begin{itemize}
-\tightlist
 \item
   \textbf{order} - highest order of the derivative that appears
 \item
@@ -1934,28 +1933,28 @@ terminologies}\label{differential-equation-terminologies}}
   \textbf{initial-value problem} - finding the solution to the
   differential equation with an initial condition given -- e.g.~a
   coordinate
+
+  \hypertarget{simple-growth-model}{%
+  \subsubsection{Simple growth model}\label{simple-growth-model}}
+
+  The solution of the initial-value problem
+
+  \[ \frac{dP}{dt} = kP, P(0) = P_0 \]
+
+  is
+
+  \[P(t) = P_0e^{kt} \]
+
+  \hypertarget{logistic-model}{%
+  \subsubsection{Logistic model}\label{logistic-model}}
+
+  The solution fo the initial-value problem
+
+  \[\dfrac{\dfrac{dP}{dt}}{P} = k \left(1-\frac{P}{M}\right)\]
+
+  is
+
+  \[ P(t) = \frac{M}{1-Ae^{kt}}, A = \frac{M-P_0}{P_0} \]
 \end{itemize}
-
-\hypertarget{simple-growth-model}{%
-\subsubsection{Simple growth model}\label{simple-growth-model}}
-
-The solution of the initial-value problem
-
-\[ \frac{dP}{dt} = kP, P(0) = P_0 \]
-
-is
-
-\[P(t) = P_0e^{kt} \]
-
-\hypertarget{logistic-model}{%
-\subsubsection{Logistic model}\label{logistic-model}}
-
-The solution fo the initial-value problem
-
-\[\dfrac{\dfrac{dP}{dt}}{P} = k \left(1-\frac{P}{M}\right)\]
-
-is
-
-\[ P(t) = \frac{M}{1-Ae^{kt}}, A = \frac{M-P_0}{P_0} \]
 
 \end{document}

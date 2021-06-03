@@ -1,5 +1,7 @@
 ---
 output: 
+  pdf_document:
+    keep_tex: true
   html_document:
     number_sections: true
     css: style.css
@@ -11,8 +13,6 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
-  pdf_document:
-    keep_tex: true
 title: "Mathematical Analysis IB"
 ---
 
@@ -1326,7 +1326,7 @@ We can therefore rename $(x,y)$ to $(r\cos \theta, r\sin \theta)$. It implies th
 |:-:                |:-:                                                                                                 |:-:                                    |
 | $\sqrt{a^2-x^2}$  | $x = a\sin \theta, -\dfrac{\pi}{2} \leq \theta \leq \dfrac{\pi}{2}$                                | $1 - \sin^2 \theta = \cos^2 \theta$   |
 ||||
-| $\sqrt{a^2+x^2}$  | $x = a\tan \theta, -\dfrac{\pi}{2} \leq \theta \leq \dfrac{\pi}{2}$                                | $1 - \tan^2 \theta = \sec^2 \theta$   |
+| $\sqrt{a^2+x^2}$  | $x = a\tan \theta, -\dfrac{\pi}{2} \leq \theta \leq \dfrac{\pi}{2}$                                | $1 + \tan^2 \theta = \sec^2 \theta$   |
 ||||
 | $\sqrt{x^2-a^2}$  | $x = a \sec \theta, 0 \leq \theta \leq \dfrac{\pi}{2}$ or $\pi \leq \theta \leq \dfrac{3\pi}{2}$   | $\sec^2 \theta - 1 = \tan^2 \theta$   |
 ||||
