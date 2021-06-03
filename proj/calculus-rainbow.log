@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.15)  1 JUN 2021 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.15)  3 JUN 2021 13:27
 entering extended mode
 **"c:/Users/mttal/Google Drive/1-freshie/2-sem/4-qtr/math-31.2/proj/calculus-rainbow.tex"
 ("c:/Users/mttal/Google Drive/1-freshie/2-sem/4-qtr/math-31.2/proj/calculus-rainbow.tex"
@@ -738,28 +738,28 @@ File: pgflibraryarrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
  (calculus-rainbow.aux)
 \openout1 = `calculus-rainbow.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 317.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 317.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 323.
+LaTeX Font Info:    ... okay on input line 323.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 323.
+LaTeX Font Info:    ... okay on input line 323.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 323.
+LaTeX Font Info:    ... okay on input line 323.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 323.
+LaTeX Font Info:    ... okay on input line 323.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 323.
+LaTeX Font Info:    ... okay on input line 323.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 323.
+LaTeX Font Info:    ... okay on input line 323.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 323.
+LaTeX Font Info:    ... okay on input line 323.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 323.
+LaTeX Font Info:    ... okay on input line 323.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 323.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 323.
  (C:\Users\mttal\AppData\Roaming\MiKTeX\tex/latex/tipa\t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 317.
+LaTeX Font Info:    ... okay on input line 323.
  ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count436
@@ -777,14 +777,14 @@ LaTeX Font Info:    ... okay on input line 317.
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
-LaTeX Info: Redefining \celsius on input line 317.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 317.
+LaTeX Info: Redefining \celsius on input line 323.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 323.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 317.
-Package gensymb Info: Using \Omega for \ohm on input line 317.
+LaTeX Info: Redefining \ohm on input line 323.
+Package gensymb Info: Using \Omega for \ohm on input line 323.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -822,7 +822,7 @@ Package gensymb Warning: Not defining \micro.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 317.
+Package hyperref Info: Link coloring ON on input line 323.
 ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (C:\Users\mttal\AppData\Roaming\MiKTeX\tex/latex/refcount\refcount.sty
@@ -832,9 +832,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count442
 )
-LaTeX Info: Redefining \ref on input line 317.
-LaTeX Info: Redefining \pageref on input line 317.
-LaTeX Info: Redefining \nameref on input line 317.
+LaTeX Info: Redefining \ref on input line 323.
+LaTeX Info: Redefining \pageref on input line 323.
+LaTeX Info: Redefining \nameref on input line 323.
  (calculus-rainbow.out) (calculus-rainbow.out)
 \@outlinefile=\write5
 \openout5 = `calculus-rainbow.out'.
@@ -854,20 +854,20 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'calculus-rainbow.bbl' found.
  (calculus-rainbow.bbl)
-Package biblatex Info: Reference section=0 on input line 317.
-Package biblatex Info: Reference segment=0 on input line 317.
+Package biblatex Info: Reference section=0 on input line 323.
+Package biblatex Info: Reference segment=0 on input line 323.
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.17} (current compat level: 1.15).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 340.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 346.
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 340.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 346.
  ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 340.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 346.
  (C:\Users\mttal\AppData\Roaming\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) (calculus-rainbow.toc)
@@ -875,160 +875,160 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \openout6 = `calculus-rainbow.toc'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
 
  []
 
 [1
 
 {C:/Users/mttal/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
 [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 462--463
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 512--513
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 526--527
+Underfull \hbox (badness 10000) in paragraph at lines 532--533
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 561--562
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 571--572
+Underfull \hbox (badness 10000) in paragraph at lines 577--578
 
  []
 
 [7]
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 599.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 605.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 599.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 605.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 648--649
+Underfull \hbox (badness 10000) in paragraph at lines 654--655
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--659
+Underfull \hbox (badness 10000) in paragraph at lines 664--665
 
  []
 
 [9]
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 660.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 666.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--661
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 666--669
+Underfull \hbox (badness 10000) in paragraph at lines 666--667
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--671
+Underfull \hbox (badness 10000) in paragraph at lines 672--675
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--688
+Underfull \hbox (badness 10000) in paragraph at lines 676--677
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--694
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 704--705
+Underfull \hbox (badness 10000) in paragraph at lines 710--711
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
 
  []
 
 [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 822--823
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 824--825
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 826--827
-
- []
-
-[14]
 Underfull \hbox (badness 10000) in paragraph at lines 828--829
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 872--873
+Underfull \hbox (badness 10000) in paragraph at lines 830--831
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 832--833
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 834--835
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 878--879
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 889--890
+Underfull \hbox (badness 10000) in paragraph at lines 895--896
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 902--903
+Underfull \hbox (badness 10000) in paragraph at lines 908--909
 
  []
 
 [16]
-Overfull \hbox (3.43484pt too wide) in paragraph at lines 907--907
+Overfull \hbox (3.43484pt too wide) in paragraph at lines 913--913
 \OT1/cmtt/m/n/12 Bookshelves / Materials _ Science / Supplemental _ Modules _ (Materials _ Science )
  []
 
 
-Overfull \hbox (41.11351pt too wide) in paragraph at lines 907--907
+Overfull \hbox (41.11351pt too wide) in paragraph at lines 913--913
 []\OT1/cmr/m/n/12 Bill Cas-sel-man. \OT1/cmr/m/it/12 The math-e-mat-ics of rain-bows\OT1/cmr/m/n/12 . \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : [][]$\OT1/cmtt/m/n/12 http : / / www . ams . org / publicoutreach /
  []
 
@@ -1042,15 +1042,15 @@ Package logreq Info: Writing requests to 'calculus-rainbow.run.xml'.
 Here is how much of TeX's memory you used:
  39696 strings out of 480236
  914436 string characters out of 2890393
- 1667922 words of memory out of 3000000
+ 1667069 words of memory out of 3000000
  55590 multiletter control sequences out of 15000+200000
  547126 words of font info for 78 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,14n,119p,949b,1466s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on calculus-rainbow.pdf (17 pages, 276553 bytes).
+Output written on calculus-rainbow.pdf (17 pages, 276949 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
+ 325 PDF objects out of 1000 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

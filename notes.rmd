@@ -1,7 +1,5 @@
 ---
 output: 
-  pdf_document:
-    keep_tex: true
   html_document:
     number_sections: true
     css: style.css
@@ -13,6 +11,8 @@ output:
     includes:
       in_header: header.html
       after_body: footer.html
+  pdf_document:
+    keep_tex: true
 title: "Mathematical Analysis IB"
 ---
 
@@ -1511,15 +1511,15 @@ We can therefore rename $(x,y)$ to $(r\cos \theta, r\sin \theta)$. It implies th
 > |P_{i-1}P_i| &= \sqrt{(x_i-x_{i-1})^2 + \left[ f(x_i)-f(x_{i-1}) \right]^2}\\
 > &= \sqrt{(x_i-x_{i-1})^2 + \left[ f'(x_i^*) (x_i - x_{i-1}) \right]^2}\\
 > &= \sqrt{(\Delta x)^2 + \left[ f'(x_i^*) \Delta x \right]^2}\\
-> &= \sqrt{1+[f(x_i^*)]^2}\Delta x
+> &= \sqrt{1+[f'(x_i^*)]^2}\Delta x
 > \end{align*}
 > 
 > Let the length of the curve be $L$.
 > 
 > \begin{align*}
 > L &= \lim_{n\to\infty} \sum_{i=1}^n |P_{i-1}P_i|\\
-> &= \lim_{n\to\infty} \sum_{i=1}^n \sqrt{1+[f(x_i^*)]^2}\Delta x\\
-> L &= \int_a^b \sqrt{1+[f(x)]^2}dx\\
+> &= \lim_{n\to\infty} \sum_{i=1}^n \sqrt{1+[f'(x_i^*)]^2}\Delta x\\
+> L &= \int_a^b \sqrt{1+[f'(x)]^2}dx\\
 > \end{align*}
 > 
 > </details>
@@ -1573,22 +1573,22 @@ A **differential equation** is an equation that contains an unknown function and
 - **solve** - refers to finding **ALL** equations that satisfies the differential equation
 - **initial-value problem** - finding the solution to the differential equation with an initial condition given -- e.g. a coordinate
 
-### Simple growth model
-
-The solution of the initial-value problem
-
-$$ \frac{dP}{dt} = kP, P(0) = P_0 $$
-
-is
-
-$$P(t) = P_0e^{kt} $$
-
-### Logistic model
-
-The solution fo the initial-value problem
-
-$$\dfrac{\dfrac{dP}{dt}}{P} = k \left(1-\frac{P}{M}\right)$$
-
-is
-
-$$ P(t) = \frac{M}{1-Ae^{kt}}, A = \frac{M-P_0}{P_0} $$
+  ### Simple growth model
+  
+  The solution of the initial-value problem
+  
+  $$ \frac{dP}{dt} = kP, P(0) = P_0 $$
+  
+  is
+  
+  $$P(t) = P_0e^{kt} $$
+  
+  ### Logistic model
+  
+  The solution fo the initial-value problem
+  
+  $$\dfrac{\dfrac{dP}{dt}}{P} = k \left(1-\frac{P}{M}\right)$$
+  
+  is
+  
+  $$ P(t) = \frac{M}{1-Ae^{kt}}, A = \frac{M-P_0}{P_0} $$

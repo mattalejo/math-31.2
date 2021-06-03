@@ -11,6 +11,15 @@
 \usepackage{float}
 \usepackage{xcolor}
 \usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+
+\hypersetup{
+pdftitle={The Calculus of Rainbows},
+pdfsubject={Calculus},
+pdfauthor={Matt Alejo, Joshua de Luna, Althea Loyola},
+pdfkeywords={calculus, rainbows, snell}
+}
+
+
 \usepackage{caption}
 \usepackage{subcaption}
 
@@ -279,7 +288,7 @@
 \newcommand{\secondarycolor}
 {
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=1.2]
-\clip(-1.6481524516351462,-0.183021382422293) rectangle (5.512524834546647,6.1);
+\clip(-1.6481524516351462,-0.183021382422293) rectangle (5.512524834546647,4.7);
 \draw [line width=2pt,domain=-1.6481524516351462:5.512524834546647] plot(\x,{(-0-0*\x)/1});
 \draw[line width=0.75pt,draw=myviolet, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.6145562845*(\x)});
 \draw[line width=0.75pt,draw=myindigo, smooth,samples=100,domain=0:5.512524834546647] plot(\x,{0.620945365*(\x)});
@@ -351,7 +360,7 @@ With scientific breakthroughs and discoveries throughout the history of humanity
 \subsection{Fermat's principle of optics} \label{fermat}
 
 Fermat's principle states that the path taken by a ray between two given points
-is the path that can be traversed in the least time. In an ideal scenario -- in a vacuum -- the path of least time is also the path of least distance, the line, as descibed by the equation
+is the path that can be traversed in the least time. In an ideal scenario -- in a vacuum -- the path of least time is also the path of least distance, the line, as described by the equation
 
 \begin{equation} \label{distance}
 d = vt
@@ -731,7 +740,7 @@ There are instances where another fainter rainbow appears in addition of the str
 \label{fig:secondary}
 \end{figure}
 
-As visulized in Figure \ref{fig:secondary}, this phenomenon results from the part of a ray that enters a raindrop and is refracted at $A$, reflected twice (at $B$ and $C$), and refracted as it leaves the drop at $D$. Whereas $D(\alpha)$ is the amount of {\itshape clockwise} deviation, in secondary rainbows, the deviation angle $D(\alpha)$ refers to the total amount of counterclockwise rotation that the ray undergoes in this four-stage process.\\
+As visulized in Figure \ref{fig:secondary}, this phenomenon results from the part of a ray that enters a raindrop and is refracted at $A$, reflected twice (at $B$ and $C$), and refracted as it leaves the drop at $D$. Whereas, in Section \ref{sec:primary}, $D(\alpha)$ refers to the amount of {\itshape clockwise} deviation, in this section about secondary rainbows, the deviation angle $D(\alpha)$ refers to the total amount of {\itshape counterclockwise} rotation that the ray undergoes in this four-stage process.\\
 
 As seen in Figure \ref{fig:secondary}, the light ray has undergone two refractions and two internal reflections. The refractions deviate the ray by $\alpha - \beta$ while the internal reflections deviate the ray by $\pi - 2\beta$. Therefore, the angle of deviation $D(\alpha)$ is
 

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1622094674 "c:/Users/mttal/Google Drive/1-freshie/2-sem/4-qtr/math-31.2/formulas.tex" "formulas.pdf" "formulas" 1622094679
+["pdflatex"] 1622691431 "c:/Users/mttal/Google Drive/1-freshie/2-sem/4-qtr/math-31.2/formulas.tex" "formulas.pdf" "formulas" 1622691531
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1254938640 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1254938640 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc" 1254938640 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -84,7 +84,7 @@
   "C:/Program Files/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Program Files/MiKTeX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/mttal/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1602745962 10249250 8ce075b855ac947dbcaddbf76b40cc95 ""
-  "C:/Users/mttal/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1622094163 219470 e9eed01fdfeebb4a5c64b505e863ae7a ""
+  "C:/Users/mttal/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1622526270 221774 246cf7c48e9485b5ff6209f035ab6c54 ""
   "C:/Users/mttal/AppData/Roaming/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "C:/Users/mttal/AppData/Roaming/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
   "C:/Users/mttal/AppData/Roaming/MiKTeX/tex/generic/bitset/bitset.sty" 1575926576 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -119,9 +119,9 @@
   "C:/Users/mttal/AppData/Roaming/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1575571282 9715 b051d5b493d9fe5f4bc251462d039e5f ""
   "C:/Users/mttal/AppData/Roaming/MiKTeX/tex/latex/upquote/upquote.sty" 1335534756 1088 517e01cde97c1c0baf72e69d43aa5a2e ""
   "C:/Users/mttal/AppData/Roaming/MiKTeX/tex/latex/xurl/xurl.sty" 1579872758 4663 6f21789b0cc6c2f8101f8afd431a3cf7 ""
-  "c:/Users/mttal/Google Drive/1-freshie/2-sem/4-qtr/math-31.2/formulas.tex" 1622094671 19880 827cc36bf6226a803d6924a5ab0d0bb9 ""
-  "formulas.aux" 1622094677 20243 d7fa6dfd1eb18d9a05fddfa6566401a5 "pdflatex"
-  "formulas.tex" 1622094671 19880 827cc36bf6226a803d6924a5ab0d0bb9 ""
+  "c:/Users/mttal/Google Drive/1-freshie/2-sem/4-qtr/math-31.2/formulas.tex" 1622691530 20473 0d5c607ff3828b81becb578fe5d4ffaa ""
+  "formulas.aux" 1622691433 21096 3ecb09219339d72553152d0a1603b600 "pdflatex"
+  "formulas.tex" 1622691530 20473 0d5c607ff3828b81becb578fe5d4ffaa ""
   (generated)
   "formulas.aux"
   "formulas.log"

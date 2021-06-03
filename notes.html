@@ -4062,13 +4062,13 @@ A &amp;= 1
 |P_{i-1}P_i| &amp;= \sqrt{(x_i-x_{i-1})^2 + \left[ f(x_i)-f(x_{i-1}) \right]^2}\\
 &amp;= \sqrt{(x_i-x_{i-1})^2 + \left[ f&#39;(x_i^*) (x_i - x_{i-1}) \right]^2}\\
 &amp;= \sqrt{(\Delta x)^2 + \left[ f&#39;(x_i^*) \Delta x \right]^2}\\
-&amp;= \sqrt{1+[f(x_i^*)]^2}\Delta x
+&amp;= \sqrt{1+[f&#39;(x_i^*)]^2}\Delta x
 \end{align*}\]</span></p>
 <p>Let the length of the curve be <span class="math inline">\(L\)</span>.</p>
 <p><span class="math display">\[\begin{align*}
 L &amp;= \lim_{n\to\infty} \sum_{i=1}^n |P_{i-1}P_i|\\
-&amp;= \lim_{n\to\infty} \sum_{i=1}^n \sqrt{1+[f(x_i^*)]^2}\Delta x\\
-L &amp;= \int_a^b \sqrt{1+[f(x)]^2}dx\\
+&amp;= \lim_{n\to\infty} \sum_{i=1}^n \sqrt{1+[f&#39;(x_i^*)]^2}\Delta x\\
+L &amp;= \int_a^b \sqrt{1+[f&#39;(x)]^2}dx\\
 \end{align*}\]</span></p>
 </details>
 </blockquote>
@@ -4107,26 +4107,22 @@ L &amp;= \int_a^b \sqrt{1+[f(x)]^2}dx\\
 <div id="differential-equation-terminologies" class="section level4 unnumbered">
 <h4 class="unnumbered">Differential equation terminologies</h4>
 <ul>
-<li><strong>order</strong> - highest order of the derivative that appears</li>
-<li><strong>solution</strong> - the equation that satisfies the differential equation</li>
-<li><strong>solve</strong> - refers to finding <strong>ALL</strong> equations that satisfies the differential equation</li>
-<li><strong>initial-value problem</strong> - finding the solution to the differential equation with an initial condition given – e.g. a coordinate</li>
-</ul>
-</div>
-</div>
-<div id="simple-growth-model" class="section level3" number="4.2.3">
-<h3 number="4.2.3"><span class="header-section-number">4.2.3</span> Simple growth model</h3>
+<li><p><strong>order</strong> - highest order of the derivative that appears</p></li>
+<li><p><strong>solution</strong> - the equation that satisfies the differential equation</p></li>
+<li><p><strong>solve</strong> - refers to finding <strong>ALL</strong> equations that satisfies the differential equation</p></li>
+<li><p><strong>initial-value problem</strong> - finding the solution to the differential equation with an initial condition given – e.g. a coordinate</p>
+<h3 id="simple-growth-model">Simple growth model</h3>
 <p>The solution of the initial-value problem</p>
 <p><span class="math display">\[ \frac{dP}{dt} = kP, P(0) = P_0 \]</span></p>
 <p>is</p>
 <p><span class="math display">\[P(t) = P_0e^{kt} \]</span></p>
-</div>
-<div id="logistic-model" class="section level3" number="4.2.4">
-<h3 number="4.2.4"><span class="header-section-number">4.2.4</span> Logistic model</h3>
+<h3 id="logistic-model">Logistic model</h3>
 <p>The solution fo the initial-value problem</p>
 <p><span class="math display">\[\dfrac{\dfrac{dP}{dt}}{P} = k \left(1-\frac{P}{M}\right)\]</span></p>
 <p>is</p>
-<p><span class="math display">\[ P(t) = \frac{M}{1-Ae^{kt}}, A = \frac{M-P_0}{P_0} \]</span></p>
+<p><span class="math display">\[ P(t) = \frac{M}{1-Ae^{kt}}, A = \frac{M-P_0}{P_0} \]</span></p></li>
+</ul>
+</div>
 </div>
 </div>
 </div>

@@ -620,7 +620,34 @@ long division between \(P\) and \(Q\).
 If \(f'\) is continuous on \([a,b]\), then the length \(L\) of the curve
 \(y = f(x)\), \(a \leq x \leq b\), is given by
 
-\[ L = \int_a^b \sqrt{1+[f(x)]^2}dx \]
+\[ L = \int_a^b \sqrt{1+[f'(x)]^2}dx \]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{simple-growth-model}{%
+\subsection{Simple growth model}\label{simple-growth-model}}
+
+The solution of the initial-value problem
+
+\[ \frac{dP}{dt} = kP, P(0) = P_0 \]
+
+is
+
+\[P(t) = P_0e^{kt} \]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{logistic-model}{%
+\subsection{Logistic model}\label{logistic-model}}
+
+The solution fo the initial-value problem
+
+\[\dfrac{\dfrac{dP}{dt}}{P} = k \left(1-\frac{P}{M}\right)\]
+
+is
+
+\[ P(t) = \frac{M}{1-Ae^{kt}}, A = \frac{M-P_0}{P_0} \]
+
 
 \end{multicols}
 
